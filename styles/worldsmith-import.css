@@ -1,0 +1,35 @@
+.worldsmith-import-button {
+  flex: 0 0 100%;
+  margin: 4px 0 0;
+  white-space: nowrap;
+}
+
+.worldsmith-import-button i {
+  margin-right: 4px;
+}
+
+.worldsmith-import {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 4px 2px;
+}
+
+.worldsmith-import .form-group.stacked {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.worldsmith-import textarea {
+  width: 100%;
+  min-height: 160px;
+  font-family: var(--font-mono, monospace);
+  font-size: var(--font-size-12, 12px);
+  resize: vertical;
+}
+
+.worldsmith-import .hint {
+  margin: 0;
+  font-size: var(--font-size-12, 12px);
+  color: var(--color-text-dark-secondary, #4b4a44);
+}

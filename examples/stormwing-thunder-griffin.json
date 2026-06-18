@@ -1,0 +1,112 @@
+{
+  "identity": {
+    "name": "Stormwing, the Thunder Griffin",
+    "title": "Legendary Thunder Griffin",
+    "size": "large",
+    "type": "Mythical Creature",
+    "description": "Stormwing is a magnificent griffin with golden-brown feathers that shimmer like polished bronze in the sunlight. His powerful wings span nearly twenty feet, and his eagle-like head is crowned with a regal mane of white feathers. When he moves, there's a subtle crackle of static electricity in the air, and his talons occasionally spark with blue lightning. His lion-like body is muscular and sleek, built for both speed and power.",
+    "lore": "Born during a legendary thunderstorm that lasted for seven days and seven nights, Stormwing is said to be the offspring of a griffin and a storm elemental. The ancient texts speak of his kind as messengers of the storm gods, capable of riding the winds and calling down lightning. Stormwing himself has been bonded to only three riders in his long life, each one a legendary hero who rode him into battle against great evils."
+  },
+  "attributes": {
+    "cr": "8",
+    "ac": {
+      "value": 16,
+      "type": "Natural Armor"
+    },
+    "hp": {
+      "current": 85,
+      "max": 85
+    },
+    "hitDice": {
+      "dieSize": "d10",
+      "totalDice": 8,
+      "flatBonus": 24
+    },
+    "speed": {
+      "walk": 60,
+      "fly": 120
+    },
+    "abilities": {
+      "str": {
+        "value": 18,
+        "saveProficient": false
+      },
+      "dex": {
+        "value": 16,
+        "saveProficient": true,
+        "saveBonus": 6
+      },
+      "con": {
+        "value": 16,
+        "saveProficient": true,
+        "saveBonus": 6
+      },
+      "int": {
+        "value": 12,
+        "saveProficient": false
+      },
+      "wis": {
+        "value": 14,
+        "saveProficient": false
+      },
+      "cha": {
+        "value": 10,
+        "saveProficient": false
+      }
+    },
+    "proficiencies": {
+      "skills": [],
+      "languages": null
+    },
+    "vulnerabilities": "lightning",
+    "resistances": "thunder",
+    "senses": {
+      "darkvision": 60,
+      "passivePerception": 15
+    }
+  },
+  "numberOfAttacks": "Stormwing can make one beak attack and one talon attack per turn, or use Thunderous Dive or Lightning Call instead.",
+  "actions": [
+    {
+      "name": "Beak",
+      "description": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 1d8+4 piercing damage plus 1d6 lightning damage."
+    },
+    {
+      "name": "Talons",
+      "description": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 2d6+4 slashing damage."
+    },
+    {
+      "name": "Thunderous Dive",
+      "description": "Stormwing dives from at least 30 feet above a target. Make a beak attack with advantage. On a hit, the target takes an additional 4d6 thunder damage and must succeed on a DC 15 Strength saving throw or be knocked prone."
+    },
+    {
+      "name": "Lightning Call",
+      "description": "Once per short rest, Stormwing can call down a bolt of lightning. Choose a point within 60 feet. Each creature within 10 feet of that point must make a DC 15 Dexterity saving throw, taking 4d6 lightning damage on a failed save, or half as much on a successful one."
+    }
+  ],
+  "intelligence": "Average",
+  "carrying_capacity": "800 pounds",
+  "rider_capacity": "2",
+  "summoning_method": "1-hour ritual during a thunderstorm, consumes 500 gp worth of storm-touched materials (lightning-struck wood, thunder crystals)",
+  "bonding_ritual": "Daily 30-minute meditation during storms for 7 days, DC 15 Animal Handling check each day, 1000 gp total cost for ritual components",
+  "care_level": "High",
+  "preferred_environment": "High mountain peaks and stormy skies. Stormwing is most comfortable in areas with frequent thunderstorms and strong winds.",
+  "dietary_habits": "Primarily carnivorous, preferring fresh meat. Requires 15 pounds of meat daily, preferably from large game animals. Enjoys the occasional lightning-struck tree bark as a treat.",
+  "monthly_cost_gp": 150,
+  "daily_exercise": "2 hours of flight training and 1 hour of bonding exercises",
+  "housing_requirements": "Large open-air aviary with high perches, storm-shelter, and access to open sky. Must be at least 50 feet tall and 100 feet in diameter.",
+  "positive_care": [
+    "Well cared for: Stormwing's lightning damage increases by 1d6 (24 hours)",
+    "Thriving: Stormwing gains advantage on all attack rolls (1 hour)",
+    "Excellent bond: Stormwing's fly speed increases by 20 feet (8 hours)",
+    "Peak condition: Stormwing can use Lightning Call twice before requiring a short rest (until short rest)",
+    "Optimal: Stormwing and rider gain resistance to thunder damage (24 hours)"
+  ],
+  "negative_care": [
+    "Neglected: Stormwing's speed is reduced by 20 feet (24 hours)",
+    "Poor care: Stormwing has disadvantage on attack rolls (1 hour)",
+    "Abused: Stormwing cannot use Lightning Call until after a long rest (until long rest)",
+    "Stressed: Stormwing becomes easily startled, requiring DC 12 Animal Handling checks for basic commands (until proper care is restored)",
+    "Critical: Stormwing's lightning damage is reduced by 1d6 (24 hours)"
+  ]
+}

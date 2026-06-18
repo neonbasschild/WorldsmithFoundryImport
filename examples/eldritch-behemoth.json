@@ -1,0 +1,144 @@
+{
+  "identity": {
+    "name": "Eldritch Behemoth",
+    "title": "Harbinger of Chaos",
+    "size": "Gargantuan",
+    "type": "Aberration",
+    "subtype": "",
+    "alignment": "Chaotic Evil",
+    "description": "As you gaze upon this colossal monstrosity, a primal fear grips you. It towers over you, its form seemingly defying the very laws of nature. A web of fleshy tentacles writhes and pulsates, each tipped with razor-sharp claws that scrape against the fabric of reality. Myriad eyes, some glittering like diamonds, others burning with an infernal light, peer into your soul from every shadowed crevice. The air around it shimmers and distorts, reality warping with each grotesque twitch of its monstrous body. You can't help but question your sanity, wondering if even this world can contain such an aberration.",
+    "lore": "Legend has it that the Eldritch Behemoth is an ancient entity from the space between worlds. It is said to be a harbinger of chaos, bending reality with its mere presence."
+  },
+  "attributes": {
+    "ac": {
+      "value": 26,
+      "type": "Natural Armor"
+    },
+    "hp": {
+      "current": 650,
+      "max": 650
+    },
+    "hitDice": {
+      "dieSize": "d20",
+      "totalDice": 40,
+      "flatBonus": 300
+    },
+    "speed": {
+      "walk": 50,
+      "fly": 80
+    },
+    "abilities": {
+      "str": {
+        "value": 28,
+        "saveProficient": false
+      },
+      "dex": {
+        "value": 16,
+        "saveProficient": false
+      },
+      "con": {
+        "value": 30,
+        "saveProficient": true,
+        "saveBonus": 17
+      },
+      "int": {
+        "value": 22,
+        "saveProficient": true,
+        "saveBonus": 13
+      },
+      "wis": {
+        "value": 20,
+        "saveProficient": true,
+        "saveBonus": 12
+      },
+      "cha": {
+        "value": 26,
+        "saveProficient": true,
+        "saveBonus": 15
+      }
+    },
+    "proficiencies": {
+      "skills": [],
+      "languages": "Deep Speech"
+    },
+    "resistances": "acid, lightning, thunder",
+    "immunities": "poison, psychic",
+    "vulnerabilities": null,
+    "conditionImmunities": "charmed, frightened, paralyzed, poisoned",
+    "senses": {
+      "truesight": 120,
+      "passivePerception": 36
+    },
+    "cr": "25",
+    "xp": 125000
+  },
+  "numberOfAttacks": "Eldritch Behemoth can make one tentacle attack and one bite attack per turn, and can use Devour Magic as a bonus action.",
+  "features": [
+    {
+      "name": "Eldritch Aura",
+      "description": "Eldritch Behemoth emits an aura of eldritch energy within 30 ft. Creatures that start their turn in the aura take 30 (6d10) psychic damage and must succeed on a DC 20 Intelligence saving throw or be stunned until the start of their next turn."
+    },
+    {
+      "name": "Spellcasting",
+      "description": "Eldritch Behemoth's innate spellcasting ability is Charisma (spell save DC 23). It can cast the following spells: At will: Dispel Magic, Fear; 3/day: Confusion, Telekinesis; 1/day: Plane Shift, Dominate Monster."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Tentacle",
+      "description": "Melee Weapon Attack: +16 to hit, reach 20 ft., one target. Hit: 4d12+14 bludgeoning damage. The target is grappled (escape DC 20) and restrained, taking 4d10 psychic damage at the start of each of its turns while grappled."
+    },
+    {
+      "name": "Bite",
+      "description": "Melee Weapon Attack: +16 to hit, reach 15 ft., one target. Hit: 6d8+14 piercing damage. If the target is a creature, it must succeed on a DC 20 Constitution saving throw or be stunned until the end of its next turn."
+    },
+    {
+      "name": "Devour Magic",
+      "description": "Eldritch Behemoth devours a magical effect or spell within 60 ft. of it as a bonus action. The effect or spell is ended, and Eldritch Behemoth regains 50 hit points."
+    }
+  ],
+  "legendaryActions": {
+    "count": 3,
+    "actions": [
+      {
+        "cost": 1,
+        "name": "Detect",
+        "description": "Eldritch Behemoth makes a Wisdom (Perception) check."
+      },
+      {
+        "cost": 1,
+        "name": "Tentacle Attack",
+        "description": "Eldritch Behemoth makes a tentacle attack."
+      },
+      {
+        "cost": 2,
+        "name": "Telepathic Surge",
+        "description": "Eldritch Behemoth causes each creature of its choice in a 60-ft radius to make a DC 24 Intelligence saving throw, taking 77 (14d10) psychic damage on a failed save, or half as much damage on a successful one."
+      }
+    ]
+  },
+  "loot": [
+    {
+      "item": "Eldritch Shard",
+      "details": "A fragment of Eldritch Behemoth's essence, pulsating with arcane power. This shard, when used in spellcasting, grants the caster a +2 bonus to spell attack rolls. Its value is beyond standard appraisal due to its unique nature and potent magical properties.",
+      "quantity": 1
+    },
+    {
+      "item": "Behemoth Hide Armor",
+      "price": "5000 gp",
+      "details": "Crafted from the thick, nearly impervious hide of the Eldritch Behemoth, this armor offers an armor class of 18 and resistance to psychic and poison damage. Its rarity and durability make it a valuable item, worth approximately 5000 gold pieces.",
+      "quantity": 1
+    },
+    {
+      "item": "Abyssal Eye Orb",
+      "details": "This magical orb, containing one of Eldritch Behemoth's many eyes, enables its wielder to see into and interact with the Ethereal Plane. The orb can be used for up to 10 minutes per day. Due to its unique properties and connection to other planes, its value is considered invaluable.",
+      "quantity": 1
+    },
+    {
+      "item": "Eldritch Essence Vial",
+      "price": "1500 gp",
+      "details": "A small vial containing the concentrated essence of the Eldritch Behemoth. When consumed, it enhances the drinker's physical strength, granting a +4 bonus to Strength for 1 hour. The vial can be used once per day. Its rarity and potent effects give it a value of around 1500 gold pieces.",
+      "quantity": 1
+    }
+  ]
+}

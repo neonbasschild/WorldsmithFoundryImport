@@ -1,0 +1,45 @@
+{
+  "id": "worldsmith-foundry-import",
+  "title": "Worldsmith Foundry Import",
+  "description": "Convert and import Worldsmith creature/companion JSON exports into Foundry VTT as fully-statted dnd5e NPC actors.",
+  "version": "1.0.0",
+  "authors": [
+    {
+      "name": "Worldsmith Foundry Import contributors"
+    }
+  ],
+  "compatibility": {
+    "minimum": "13",
+    "verified": "14"
+  },
+  "relationships": {
+    "systems": [
+      {
+        "id": "dnd5e",
+        "type": "system",
+        "compatibility": {
+          "minimum": "5.0.0",
+          "verified": "5.0.4"
+        }
+      }
+    ]
+  },
+  "esmodules": [
+    "scripts/module.mjs"
+  ],
+  "styles": [
+    "styles/worldsmith-import.css"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "url": "https://github.com/worldsmith-foundry-import/worldsmith-foundry-import",
+  "manifest": "",
+  "download": "",
+  "license": "MIT",
+  "readme": "README.md"
+}
