@@ -1,17 +1,19 @@
 {
   "WORLDSMITH.AppTitle": "Import from Worldsmith",
   "WORLDSMITH.SidebarButton": "Import Worldsmith",
-  "WORLDSMITH.Intro": "Import Worldsmith creature and companion exports as dnd5e NPC actors. Upload one or more .json files and/or paste JSON below.",
+  "WORLDSMITH.Intro": "Import Worldsmith creatures, companions, and items as dnd5e actors and items. Upload one or more .json files and/or paste JSON below. The type of each entry is detected automatically.",
   "WORLDSMITH.Files": "Worldsmith JSON Files",
-  "WORLDSMITH.FilesHint": "You can select multiple files at once.",
+  "WORLDSMITH.FilesHint": "You can select multiple files at once, mixing creatures and items.",
   "WORLDSMITH.Paste": "Or Paste JSON",
-  "WORLDSMITH.PastePlaceholder": "Paste a single creature object or an array of creatures here...",
+  "WORLDSMITH.PastePlaceholder": "Paste a single creature/item object or an array of them here...",
   "WORLDSMITH.PastedJSON": "pasted JSON",
   "WORLDSMITH.Folder": "Destination Folder",
   "WORLDSMITH.NoFolder": "\u2014 None \u2014",
+  "WORLDSMITH.ActorFolders": "Actor Folders",
+  "WORLDSMITH.ItemFolders": "Item Folders",
   "WORLDSMITH.OpenSheet": "Open sheet after import",
   "WORLDSMITH.Import": "Import",
   "WORLDSMITH.Clear": "Clear",
   "WORLDSMITH.NoInput": "Select at least one file or paste some JSON before importing.",
-  "WORLDSMITH.ImportSuccess": "Imported {count} actor(s) from Worldsmith."
+  "WORLDSMITH.ImportSuccess": "Imported {actors} actor(s) and {items} item(s) from Worldsmith."
 }

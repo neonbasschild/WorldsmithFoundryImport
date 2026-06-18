@@ -40,13 +40,21 @@ export default class WorldsmithImportApp extends ApplicationV2 {
   async _renderHTML(context, options) {
     const t = key => game.i18n.localize(key);
 
-    const folders = game.folders
-      .filter(f => f.type === "Actor")
-      .map(f => ({ id: f.id, name: f.name }))
-      .sort((a, b) => a.name.localeCompare(b.name));
+    const esc = s => foundry.utils.escapeHTML?.(s) ?? s;
+    const folderGroup = (type, label) => {
+      const folders = game.folders
+        .filter(f => f.type === type)
+        .map(f => ({ id: f.id, name: f.name }))
+        .sort((a, b) => a.name.localeCompare(b.name));
+      if (!folders.length) return "";
+      return `<optgroup label="${esc(label)}">${folders
+        .map(f => `<option value="${f.id}">${esc(f.name)}</option>`)
+        .join("")}</optgroup>`;
+    };
 
     const folderOptions = [`<option value="">${t("WORLDSMITH.NoFolder")}</option>`]
-      .concat(folders.map(f => `<option value="${f.id}">${foundry.utils.escapeHTML?.(f.name) ?? f.name}</option>`))
+      .concat(folderGroup("Actor", t("WORLDSMITH.ActorFolders")))
+      .concat(folderGroup("Item", t("WORLDSMITH.ItemFolders")))
       .join("");
 
     const wrapper = document.createElement("div");
@@ -147,14 +155,16 @@ export default class WorldsmithImportApp extends ApplicationV2 {
     }
 
     this.#importing = true;
-    let totalCreated = 0;
+    let actorCount = 0;
+    let itemCount = 0;
     let totalFailed = 0;
 
     try {
       for (const source of sources) {
         try {
-          const actors = await importFromText(source.text, { folderId, renderSheet, label: source.label });
-          totalCreated += actors.length;
+          const { actors, items } = await importFromText(source.text, { folderId, renderSheet, label: source.label });
+          actorCount += actors.length;
+          itemCount += items.length;
         } catch (err) {
           totalFailed += 1;
           console.error(`${MODULE_ID} |`, err);
@@ -165,8 +175,12 @@ export default class WorldsmithImportApp extends ApplicationV2 {
       this.#importing = false;
     }
 
+    const totalCreated = actorCount + itemCount;
     if (totalCreated) {
-      ui.notifications.info(game.i18n.format("WORLDSMITH.ImportSuccess", { count: totalCreated }));
+      ui.notifications.info(game.i18n.format("WORLDSMITH.ImportSuccess", {
+        actors: actorCount,
+        items: itemCount
+      }));
     }
     if (totalCreated && !totalFailed) this.close();
   }

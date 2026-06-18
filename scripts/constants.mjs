@@ -15,6 +15,106 @@ export const ICONS = {
   loot: "icons/svg/chest.svg"
 };
 
+/** Default icons assigned to generated standalone items, keyed by dnd5e item type. */
+export const ITEM_ICONS = {
+  weapon: "icons/svg/sword.svg",
+  equipment: "icons/svg/shield.svg",
+  consumable: "icons/svg/tankard.svg",
+  tool: "icons/svg/anchor.svg",
+  loot: "icons/svg/item-bag.svg"
+};
+
+/** Map Worldsmith rarity words to dnd5e `itemRarity` keys. */
+export const RARITY_MAP = {
+  common: "common",
+  uncommon: "uncommon",
+  rare: "rare",
+  "very rare": "veryRare",
+  veryrare: "veryRare",
+  legendary: "legendary",
+  artifact: "artifact"
+};
+
+/** Map weapon property words to dnd5e weapon property keys. */
+export const WEAPON_PROPERTY_MAP = {
+  ammunition: "amm",
+  adamantine: "ada",
+  finesse: "fin",
+  firearm: "fir",
+  focus: "foc",
+  heavy: "hvy",
+  light: "lgt",
+  loading: "lod",
+  magical: "mgc",
+  reach: "rch",
+  reload: "rel",
+  returning: "ret",
+  silvered: "sil",
+  special: "spc",
+  thrown: "thr",
+  "two-handed": "two",
+  "two handed": "two",
+  twohanded: "two",
+  versatile: "ver"
+};
+
+/** Base weapons considered "simple" (everything else is treated as martial). */
+export const SIMPLE_WEAPONS = new Set([
+  "club", "dagger", "greatclub", "handaxe", "javelin", "lighthammer", "light hammer",
+  "mace", "quarterstaff", "sickle", "spear", "lightcrossbow", "light crossbow",
+  "dart", "shortbow", "sling"
+]);
+
+/** Base weapons that are ranged (drives simpleR/martialR classification). */
+export const RANGED_WEAPONS = new Set([
+  "lightcrossbow", "light crossbow", "handcrossbow", "hand crossbow", "heavycrossbow",
+  "heavy crossbow", "dart", "shortbow", "longbow", "sling", "blowgun", "net", "musket", "pistol"
+]);
+
+/** Map Worldsmith armor type words to dnd5e equipment type keys. */
+export const ARMOR_TYPE_MAP = {
+  light: "light",
+  "light armor": "light",
+  medium: "medium",
+  "medium armor": "medium",
+  heavy: "heavy",
+  "heavy armor": "heavy",
+  shield: "shield",
+  clothing: "clothing"
+};
+
+/**
+ * Map a Worldsmith item `category` to a dnd5e item type and (optionally) a
+ * default subtype key for that type.
+ */
+export const CATEGORY_MAP = {
+  weapon: { type: "weapon" },
+  armor: { type: "equipment" },
+  shield: { type: "equipment", subtype: "shield" },
+  potion: { type: "consumable", subtype: "potion" },
+  elixir: { type: "consumable", subtype: "potion" },
+  oil: { type: "consumable", subtype: "potion" },
+  poison: { type: "consumable", subtype: "poison" },
+  food: { type: "consumable", subtype: "food" },
+  scroll: { type: "consumable", subtype: "scroll" },
+  ammunition: { type: "consumable", subtype: "ammo" },
+  wand: { type: "consumable", subtype: "wand" },
+  rod: { type: "consumable", subtype: "rod" },
+  ring: { type: "equipment", subtype: "trinket" },
+  staff: { type: "weapon" },
+  "wondrous item": { type: "equipment", subtype: "trinket" },
+  wondrous: { type: "equipment", subtype: "trinket" },
+  trinket: { type: "equipment", subtype: "trinket" },
+  tool: { type: "tool" },
+  gear: { type: "loot" },
+  "adventuring gear": { type: "loot" },
+  treasure: { type: "loot" },
+  material: { type: "loot" }
+};
+
+/** dnd5e die steps used when calculating versatile damage. */
+export const DIE_STEPS = [4, 6, 8, 10, 12];
+
 /** Map Worldsmith size words to dnd5e size keys. */
 export const SIZE_MAP = {
   tiny: "tiny",
