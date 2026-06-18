@@ -13,8 +13,18 @@ import WorldsmithImportApp from "./import-app.mjs";
 /**
  * Public API exposed on the module and as a global for macros.
  */
+function openImporter() {
+  try {
+    return WorldsmithImportApp.show();
+  } catch (err) {
+    console.error(`${MODULE_ID} | Failed to open the import dialog`, err);
+    ui.notifications?.error(`Worldsmith Import: ${err.message}`);
+    return null;
+  }
+}
+
 const api = {
-  open: () => WorldsmithImportApp.show(),
+  open: openImporter,
   convertWorldsmith,
   createActorFromWorldsmith,
   importFromText
@@ -54,7 +64,7 @@ Hooks.on("renderActorDirectory", (app, html) => {
   button.type = "button";
   button.className = "worldsmith-import-button";
   button.innerHTML = `<i class="fas fa-dragon"></i> ${game.i18n.localize("WORLDSMITH.SidebarButton")}`;
-  button.addEventListener("click", () => WorldsmithImportApp.show());
+  button.addEventListener("click", () => openImporter());
 
   header.appendChild(button);
 });
