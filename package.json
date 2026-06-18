@@ -1,0 +1,11 @@
+{
+  "name": "worldsmith-foundry-import",
+  "version": "1.0.0",
+  "description": "Convert and import Worldsmith creature/companion JSON exports into Foundry VTT dnd5e NPC actors.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "test": "node test/convert.test.mjs"
+  },
+  "license": "MIT"
+}
