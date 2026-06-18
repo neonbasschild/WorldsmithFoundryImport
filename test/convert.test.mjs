@@ -131,11 +131,44 @@ function activitiesOf(item) {
   assert(hide.system.price.value === 5000 && hide.system.price.denomination === "gp", "loot price parsed");
 }
 
+// --- Whisker, the Guardian Monk (NPC creature) ----------------------------
+{
+  console.log("Whisker, the Guardian Monk");
+  const { actorData, warnings } = convertWorldsmith(load("whisker-guardian-monk.json"));
+  const s = actorData.system;
+
+  assert(actorData.name === "Whisker", "name imported");
+  assert(actorData.type === "npc", "actor type is npc");
+  assert(s.details.cr === 16, "CR 16");
+  assert(s.traits.size === "med", "size medium");
+  assert(s.details.type.value === "custom" && s.details.type.custom === "Tabaxi", "Tabaxi -> custom type");
+  assert(s.attributes.ac.flat === 21 && s.attributes.ac.calc === "flat", "Unarmored Defense -> flat AC 21");
+  assert(s.attributes.hp.formula === "20d8 + 60", "hp formula composed");
+  assert(s.attributes.movement.walk === 50, "walk speed 50");
+  assert(s.traits.dr.value.includes("cold") && s.traits.dr.value.includes("lightning"), "resistances cold/lightning");
+  assert(s.traits.languages.value.includes("celestial") && s.traits.languages.custom === "Tabaxi",
+    "languages mapped with Tabaxi as custom");
+  assert(s.abilities.dex.proficient === 1 && s.abilities.con.proficient === 0, "save proficiencies");
+  assert(s.resources.legact.max === 3, "3 legendary actions");
+
+  const find = n => actorData.items.find(i => i.name === n);
+  const staff = find("Quarterstaff (Masterwork)");
+  const staffAttack = Object.values(staff.system.activities).find(a => a.type === "attack");
+  assert(staffAttack?.attack.bonus === "13", "quarterstaff +13 to hit");
+  const flood = find("Mystic Flood");
+  const floodSave = Object.values(flood.system.activities).find(a => a.type === "save");
+  assert(floodSave?.save.ability[0] === "str" && floodSave.save.dc.formula === "19", "Mystic Flood DC 19 Str save");
+  assert(!!find("Ki Reservoir") && !!find("River Pearl"), "feature and loot items created");
+  assert(/Quest: Corruption in the Whispering River/.test(s.details.biography.value), "quest in biography");
+  console.log(`  warnings: ${warnings.length}`);
+}
+
 // --- Type detection -------------------------------------------------------
 {
   console.log("Type detection");
   assert(detectWorldsmithType(load("stormwing-thunder-griffin.json")) === "creature", "griffin detected as creature");
   assert(detectWorldsmithType(load("eldritch-behemoth.json")) === "creature", "behemoth detected as creature");
+  assert(detectWorldsmithType(load("whisker-guardian-monk.json")) === "creature", "whisker detected as creature");
   assert(detectWorldsmithType(load("blade-of-eternal-shadows.json")) === "item", "blade detected as item");
   assert(detectWorldsmithType(load("durins-forge-shop.json")) === "shop", "forge detected as shop");
   assert(detectWorldsmithType(load("crypt-of-the-shadow-drake-treasure.json")) === "treasure", "crypt detected as treasure");

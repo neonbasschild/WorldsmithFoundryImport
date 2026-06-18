@@ -161,6 +161,7 @@ Sample Worldsmith exports are included under [`examples/`](examples/):
 
 - `stormwing-thunder-griffin.json` — a CR 8 companion mount (creature).
 - `eldritch-behemoth.json` — a CR 25 legendary aberration with loot (creature).
+- `whisker-guardian-monk.json` — a CR 16 Tabaxi monk NPC with a quest (creature).
 - `blade-of-eternal-shadows.json` — a legendary magic longsword (item).
 - `durins-forge-shop.json` — a blacksmith shop with wares, magic items,
   services, and an owner (shop → Item Piles merchant).
