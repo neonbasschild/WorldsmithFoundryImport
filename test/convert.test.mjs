@@ -14,6 +14,7 @@ import { convertWorldsmith } from "../scripts/converter.mjs";
 import { convertWorldsmithItem } from "../scripts/item-converter.mjs";
 import { convertWorldsmithShop, convertWorldsmithTreasure } from "../scripts/shop-converter.mjs";
 import { convertWorldsmithQuest } from "../scripts/journal-converter.mjs";
+import { convertWorldsmithSpell } from "../scripts/spell-converter.mjs";
 import { detectWorldsmithType } from "../scripts/detect.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -174,6 +175,7 @@ function activitiesOf(item) {
   assert(detectWorldsmithType(load("durins-forge-shop.json")) === "shop", "forge detected as shop");
   assert(detectWorldsmithType(load("crypt-of-the-shadow-drake-treasure.json")) === "treasure", "crypt detected as treasure");
   assert(detectWorldsmithType(load("heist-of-the-sunfire-amulet-quest.json")) === "quest", "heist detected as quest");
+  assert(detectWorldsmithType(load("ethereal-chains-spell.json")) === "spell", "ethereal chains detected as spell");
 }
 
 // --- Blade of Eternal Shadows (item) --------------------------------------
@@ -357,6 +359,51 @@ function activitiesOf(item) {
   assert(/outcome depends entirely/.test(page("Resolution").text.content), "resolution page content");
   assert(journalData.flags["worldsmith-foundry-import"].kind === "quest", "quest flag set");
   console.log(`  warnings: ${warnings.length}`);
+}
+
+// --- Ethereal Chains (spell -> dnd5e spell item) --------------------------
+{
+  console.log("Ethereal Chains (spell)");
+  const { itemData, warnings } = convertWorldsmithSpell(load("ethereal-chains-spell.json"));
+  const s = itemData.system;
+
+  assert(itemData.name === "Ethereal Chains", "spell name imported");
+  assert(itemData.type === "spell", "item type is spell");
+  assert(s.level === 3, "spell level 3");
+  assert(s.school === "evo", "school evocation -> evo");
+  assert(s.properties.includes("vocal") && s.properties.includes("somatic"), "V/S components");
+  assert(s.properties.includes("concentration"), "concentration property");
+  assert(!s.properties.includes("material"), "no material component");
+  assert(!s.properties.includes("ritual"), "not ritual");
+  assert(s.activation.type === "bonus", "bonus action casting time");
+  assert(s.duration.value === "1" && s.duration.units === "minute", "1 minute duration");
+  assert(s.range.value === "30" && s.range.units === "ft", "range 30 ft parsed from description");
+  assert(s.method === "spell", "preparation method spell");
+
+  const activity = Object.values(s.activities)[0];
+  assert(activity.type === "save", "spell has a save activity");
+  assert(activity.save.ability[0] === "str", "Strength save");
+  assert(activity.save.dc.calculation === "spellcasting", "DC uses spellcasting");
+
+  assert(/Classes:<\/strong> Wizard, Warlock/.test(s.description.value), "classes appended to description");
+  assert(/Species:<\/strong> Elf, Gnome/.test(s.description.value), "species appended to description");
+  assert(/Lore/.test(s.description.value), "lore section present");
+  assert(itemData.flags["worldsmith-foundry-import"].kind === "spell", "spell flag set");
+  console.log(`  warnings: ${warnings.length}`);
+}
+
+// --- Damage spell activity (parsed from description) ----------------------
+{
+  console.log("Damage spell parsing");
+  const { itemData } = convertWorldsmithSpell({
+    name: "Flame Bolt", level: 1, school: "Evocation", verbal: true,
+    castingTime: "Action", duration: "Instantaneous",
+    description: "Make a ranged spell attack against a target within 60 feet. On a hit it takes 3d6 fire damage."
+  });
+  const act = Object.values(itemData.system.activities)[0];
+  assert(act.type === "attack", "ranged spell attack -> attack activity");
+  assert(act.attack.type.classification === "spell", "spell attack classification");
+  assert(act.damage.parts.some(p => p.types.includes("fire") && p.denomination === 6), "3d6 fire damage parsed");
 }
 
 // --- Embedded quest wrapper (creature/owner shape) ------------------------

@@ -198,6 +198,18 @@ export const ARMOR_BASE_ITEMS = {
   shield: { type: "shield", ac: 2 }
 };
 
+/** Map Worldsmith spell school names to dnd5e school keys. */
+export const SPELL_SCHOOL_MAP = {
+  abjuration: "abj",
+  conjuration: "con",
+  divination: "div",
+  enchantment: "enc",
+  evocation: "evo",
+  illusion: "ill",
+  necromancy: "nec",
+  transmutation: "trs"
+};
+
 /** Keyword → weapon property key for parsing mundane item descriptions. */
 export const WEAPON_KEYWORD_PROPERTIES = {
   versatile: "ver",

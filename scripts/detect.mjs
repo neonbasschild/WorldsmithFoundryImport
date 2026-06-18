@@ -5,9 +5,9 @@
 
 /**
  * Determine whether a parsed Worldsmith export describes a shop, treasure,
- * quest, creature, or item.
+ * quest, spell, creature, or item.
  * @param {object} data
- * @returns {"shop"|"treasure"|"quest"|"creature"|"item"}
+ * @returns {"shop"|"treasure"|"quest"|"spell"|"creature"|"item"}
  */
 export function detectWorldsmithType(data) {
   if (!data || typeof data !== "object") return "creature";
@@ -34,6 +34,12 @@ export function detectWorldsmithType(data) {
     || data.objectives !== undefined
     || data.resolution !== undefined
   ) return "quest";
+
+  // Spells carry a casting time, or a school together with a level.
+  if (
+    data.castingTime !== undefined
+    || (data.school !== undefined && data.level !== undefined)
+  ) return "spell";
 
   // Creatures carry an identity/attributes/abilities block.
   if (data.identity || data.attributes || data.abilities) return "creature";
