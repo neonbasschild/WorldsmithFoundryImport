@@ -261,6 +261,34 @@ function buildBiography(data) {
     sections.push(companion);
   }
 
+  // Roleplay details that some Worldsmith NPCs (e.g. shop owners) carry.
+  const ad = data.additionalDetails ?? {};
+  const adRows = [
+    ["History", ad.history],
+    ["Affiliations", ad.affiliations],
+    ["Fear", ad.fear],
+    ["Secret", ad.secret]
+  ].filter(([, value]) => value);
+  if (adRows.length) {
+    sections.push(`<hr><h3>Additional Details</h3><dl>${adRows
+      .map(([label, value]) => `<dt><strong>${escapeHTML(label)}</strong></dt><dd>${escapeHTML(String(value))}</dd>`)
+      .join("")}</dl>`);
+  }
+
+  const quest = data.quest?.data;
+  if (quest?.name) {
+    let q = `<hr><h3>Quest: ${escapeHTML(quest.name)}</h3>`;
+    if (quest.subtitle) q += `<p><em>${escapeHTML(quest.subtitle)}</em></p>`;
+    if (quest.gm_overview) q += textToHTML(quest.gm_overview);
+    const objectives = (quest.objectives ?? []).map(o => o.task).filter(Boolean);
+    if (objectives.length) {
+      q += `<p><strong>Objectives</strong></p><ul>${objectives
+        .map(o => `<li>${escapeHTML(o)}</li>`)
+        .join("")}</ul>`;
+    }
+    sections.push(q);
+  }
+
   return sections.join("");
 }
 

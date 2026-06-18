@@ -12,6 +12,7 @@ import { dirname, join } from "node:path";
 
 import { convertWorldsmith } from "../scripts/converter.mjs";
 import { convertWorldsmithItem } from "../scripts/item-converter.mjs";
+import { convertWorldsmithShop } from "../scripts/shop-converter.mjs";
 import { detectWorldsmithType } from "../scripts/detect.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -136,6 +137,7 @@ function activitiesOf(item) {
   assert(detectWorldsmithType(load("stormwing-thunder-griffin.json")) === "creature", "griffin detected as creature");
   assert(detectWorldsmithType(load("eldritch-behemoth.json")) === "creature", "behemoth detected as creature");
   assert(detectWorldsmithType(load("blade-of-eternal-shadows.json")) === "item", "blade detected as item");
+  assert(detectWorldsmithType(load("durins-forge-shop.json")) === "shop", "forge detected as shop");
 }
 
 // --- Blade of Eternal Shadows (item) --------------------------------------
@@ -171,6 +173,74 @@ function activitiesOf(item) {
     "usage text preserved in description");
   assert(/Lore/.test(s.description.value), "lore section present");
   assert(itemData.flags["worldsmith-foundry-import"].kind === "item", "item flag set");
+  console.log(`  warnings: ${warnings.length}`);
+}
+
+// --- Durin's Forge (shop -> Item Piles merchant) --------------------------
+{
+  console.log("Durin's Forge (shop)");
+  const { merchant, owners, warnings } = convertWorldsmithShop(load("durins-forge-shop.json"));
+
+  assert(merchant.name === "Durin's Forge", "merchant name imported");
+  assert(merchant.type === "npc", "merchant is an npc");
+
+  const pile = merchant.flags["item-piles"];
+  assert(pile?.data?.enabled === true && pile?.data?.type === "merchant", "actor item-piles merchant flag set");
+  const tokenPile = merchant.prototypeToken.flags["item-piles"];
+  assert(tokenPile?.data?.type === "merchant", "prototype token item-piles flag set");
+
+  // 9 standard items + 3 magic items + 6 services = 18 embedded items.
+  assert(merchant.items.length === 18, `expected 18 embedded items, got ${merchant.items.length}`);
+  assert(merchant.items.every(i => i.flags["item-piles"] && "item" in i.flags["item-piles"]),
+    "every embedded item carries an item-piles item flag");
+
+  const find = n => merchant.items.find(i => i.name === n);
+
+  const chainMail = find("Chain Mail");
+  assert(chainMail.type === "equipment" && chainMail.system.type.value === "heavy", "Chain Mail -> heavy armor");
+  assert(chainMail.system.armor.value === 16, "Chain Mail AC 16");
+  assert(chainMail.system.price.value === 75, "Chain Mail price 75 gp");
+
+  const shield = find("Shield");
+  assert(shield.type === "equipment" && shield.system.type.value === "shield", "Shield -> shield equipment");
+  assert(shield.system.armor.value === 2, "Shield AC bonus 2");
+
+  const battleaxe = find("Battleaxe");
+  assert(battleaxe.type === "weapon", "Battleaxe -> weapon");
+  assert(battleaxe.system.damage.base.denomination === 8, "Battleaxe base d8");
+  assert(battleaxe.system.damage.versatile?.denomination === 10, "Battleaxe versatile d10");
+  assert(battleaxe.system.properties.includes("ver"), "Battleaxe versatile property");
+
+  const longsword = find("Steel Longsword");
+  assert(longsword.type === "weapon" && longsword.system.type.baseItem === "longsword", "Steel Longsword -> longsword weapon");
+
+  const greatsword = find("Greatsword");
+  assert(greatsword.type === "weapon" && greatsword.system.damage.base.number === 2
+    && greatsword.system.damage.base.denomination === 6, "Greatsword 2d6");
+
+  // Magic items routed through the item converter.
+  const mithril = find("Mithril Sword");
+  assert(mithril.type === "weapon" && mithril.system.rarity === "uncommon", "Mithril Sword magic weapon");
+  assert(mithril.system.magicalBonus === 2, "Mithril Sword +2 bonus");
+  const enchantedShield = find("Enchanted Shield");
+  assert(enchantedShield.type === "equipment" && enchantedShield.system.type.value === "shield", "Enchanted Shield -> shield");
+
+  // Services.
+  const sharpening = find("Weapon Sharpening");
+  assert(!!sharpening, "service item created");
+  assert(sharpening.flags["item-piles"].item.isService === true, "service flagged isService");
+  assert(sharpening.system.price.value === 5, "service price parsed");
+  assert(/Price:/.test(sharpening.system.description.value), "service price text in description");
+
+  // Owner becomes a full NPC actor.
+  assert(owners.length === 1, "one owner actor created");
+  const borin = owners[0];
+  assert(borin.name === "Borin Ironhand", "owner name imported");
+  assert(borin.type === "npc", "owner is npc");
+  assert(borin.system.details.cr === 6, "owner CR 6");
+  assert(/Quest: Embers of an Old Technique/.test(borin.system.details.biography.value), "owner quest in biography");
+  assert(/Additional Details/.test(borin.system.details.biography.value), "owner additional details in biography");
+
   console.log(`  warnings: ${warnings.length}`);
 }
 

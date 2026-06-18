@@ -4,12 +4,20 @@
  */
 
 /**
- * Determine whether a parsed Worldsmith export describes a creature or an item.
+ * Determine whether a parsed Worldsmith export describes a shop, creature, or item.
  * @param {object} data
- * @returns {"creature"|"item"}
+ * @returns {"shop"|"creature"|"item"}
  */
 export function detectWorldsmithType(data) {
   if (!data || typeof data !== "object") return "creature";
+
+  // Shops carry inventory/services/owners collections.
+  if (
+    data.standard_items !== undefined
+    || data.magic_items !== undefined
+    || data.services !== undefined
+    || data.owners !== undefined
+  ) return "shop";
 
   // Creatures carry an identity/attributes/abilities block.
   if (data.identity || data.attributes || data.abilities) return "creature";

@@ -5,6 +5,8 @@ A [Foundry VTT](https://foundryvtt.com/) module that converts and imports
 
 - **Creatures / companions** → fully-statted NPC actors.
 - **Items** (weapons, armor, potions, wondrous items, etc.) → dnd5e items.
+- **Shops** → [Item Piles](https://fantasycomputer.works/FoundryVTT-ItemPiles/)
+  merchant actors, with their owners imported as separate NPCs.
 
 The type of each export is detected automatically.
 
@@ -62,6 +64,31 @@ Converts Worldsmith item exports into the matching dnd5e item type:
 - Flavor text, mechanical usage text, and lore are combined into the item
   description, and the original JSON is stored under the item's module flags.
 
+### Shops (Item Piles)
+
+Worldsmith shop exports become a single **Item Piles merchant** actor whose
+inventory is the shop's wares:
+
+- The actor is flagged as an Item Piles merchant (on both the actor and its
+  prototype token), so it opens directly as a merchant.
+- **Standard items** are converted to the best-fitting dnd5e type — weapons and
+  armor/shields are recognised by name and description (AC, damage dice,
+  properties), and anything else becomes loot. Each carries its price.
+- **Magic items** are converted with the full item importer (see above).
+- **Services** become Item Piles *service* items (flagged `isService`), with the
+  price parsed where possible and the original price text kept in the
+  description (useful for "Varies" / percentage prices).
+- **Owners** are imported as separate, fully-statted NPC actors (including their
+  roleplay details and any attached quest).
+- The shop description and lore are stored on the merchant's biography, and the
+  original JSON under the merchant's module flags.
+
+> **Requires [Item Piles](https://foundryvtt.com/packages/item-piles)** (and, on
+> dnd5e v5, the companion **Item Piles: D&D 5e** module that provides the system
+> integration). The merchant is created with the standard Item Piles flags, so
+> Item Piles fills in the remaining merchant defaults automatically. Prices use
+> each item's dnd5e `system.price`.
+
 ## Installation
 
 ### Manifest URL
@@ -81,7 +108,7 @@ for a released `module.json`.
 1. As a GM, open the **Actors** sidebar.
 2. Click **Import Worldsmith**.
 3. Select one or more Worldsmith `.json` files and/or paste JSON into the text
-   area (creatures and items may be mixed).
+   area (creatures, items, and shops may be mixed).
 4. Optionally choose a destination folder (Actor folders apply to creatures,
    Item folders to items) and whether to open the sheet(s).
 5. Click **Import**.
@@ -105,6 +132,7 @@ WorldsmithImport.detectWorldsmithType(parsedJson);
 // Convert without creating
 const { actorData } = WorldsmithImport.convertWorldsmith(parsedCreature);
 const { itemData } = WorldsmithImport.convertWorldsmithItem(parsedItem);
+const { merchant, owners } = WorldsmithImport.convertWorldsmithShop(parsedShop);
 ```
 
 ## Examples
@@ -114,13 +142,15 @@ Sample Worldsmith exports are included under [`examples/`](examples/):
 - `stormwing-thunder-griffin.json` — a CR 8 companion mount (creature).
 - `eldritch-behemoth.json` — a CR 25 legendary aberration with loot (creature).
 - `blade-of-eternal-shadows.json` — a legendary magic longsword (item).
+- `durins-forge-shop.json` — a blacksmith shop with wares, magic items,
+  services, and an owner (shop → Item Piles merchant).
 
 ## Development
 
 The conversion logic in `scripts/converter.mjs`, `scripts/item-converter.mjs`,
-`scripts/parsers.mjs`, `scripts/detect.mjs`, and `scripts/utils.mjs` is
-intentionally free of Foundry runtime dependencies so it can be unit-tested in
-plain Node:
+`scripts/shop-converter.mjs`, `scripts/parsers.mjs`, `scripts/detect.mjs`, and
+`scripts/utils.mjs` is intentionally free of Foundry runtime dependencies so it
+can be unit-tested in plain Node:
 
 ```bash
 node test/convert.test.mjs
