@@ -115,6 +115,116 @@ export const CATEGORY_MAP = {
 /** dnd5e die steps used when calculating versatile damage. */
 export const DIE_STEPS = [4, 6, 8, 10, 12];
 
+/* -------------------------------------------- */
+/*  Item Piles                                  */
+/* -------------------------------------------- */
+
+/** Item Piles module id. */
+export const ITEM_PILES_ID = "item-piles";
+
+/**
+ * Version stamped onto generated Item Piles flags. Kept intentionally low so a
+ * newer installed Item Piles runs its forward migrations and fills in any
+ * default fields it expects.
+ */
+export const ITEM_PILES_FLAG_VERSION = "3.0.0";
+
+/** Icon used for the generated merchant actor. */
+export const SHOP_ICON = "icons/svg/coins.svg";
+
+/* -------------------------------------------- */
+/*  Mundane shop item recognition               */
+/* -------------------------------------------- */
+
+/**
+ * Known base weapons keyed by the substring found in an item name, mapped to a
+ * dnd5e base item identifier. Longer keys are matched first.
+ */
+export const WEAPON_BASE_ITEMS = {
+  "light crossbow": "lightcrossbow",
+  "hand crossbow": "handcrossbow",
+  "heavy crossbow": "heavycrossbow",
+  "war pick": "warpick",
+  greatsword: "greatsword",
+  greataxe: "greataxe",
+  greatclub: "greatclub",
+  longsword: "longsword",
+  shortsword: "shortsword",
+  battleaxe: "battleaxe",
+  handaxe: "handaxe",
+  warhammer: "warhammer",
+  morningstar: "morningstar",
+  quarterstaff: "quarterstaff",
+  shortbow: "shortbow",
+  longbow: "longbow",
+  scimitar: "scimitar",
+  javelin: "javelin",
+  halberd: "halberd",
+  rapier: "rapier",
+  trident: "trident",
+  glaive: "glaive",
+  dagger: "dagger",
+  sickle: "sickle",
+  spear: "spear",
+  flail: "flail",
+  mace: "mace",
+  maul: "maul",
+  pike: "pike",
+  lance: "lance",
+  whip: "whip",
+  club: "club",
+  dart: "dart",
+  sling: "sling"
+};
+
+/**
+ * Known base armors keyed by the substring found in an item name, mapped to the
+ * dnd5e equipment type and a default armor class. Longer keys matched first.
+ */
+export const ARMOR_BASE_ITEMS = {
+  "studded leather": { type: "light", ac: 12 },
+  "leather armor": { type: "light", ac: 11 },
+  "chain mail": { type: "heavy", ac: 16, strength: 13 },
+  "chain shirt": { type: "medium", ac: 13 },
+  "scale mail": { type: "medium", ac: 14 },
+  "half plate": { type: "medium", ac: 15 },
+  "ring mail": { type: "heavy", ac: 14 },
+  "splint armor": { type: "heavy", ac: 17, strength: 15 },
+  "plate armor": { type: "heavy", ac: 18, strength: 15 },
+  breastplate: { type: "medium", ac: 14 },
+  "hide armor": { type: "medium", ac: 12 },
+  "padded armor": { type: "light", ac: 11 },
+  leather: { type: "light", ac: 11 },
+  shield: { type: "shield", ac: 2 }
+};
+
+/** Map Worldsmith spell school names to dnd5e school keys. */
+export const SPELL_SCHOOL_MAP = {
+  abjuration: "abj",
+  conjuration: "con",
+  divination: "div",
+  enchantment: "enc",
+  evocation: "evo",
+  illusion: "ill",
+  necromancy: "nec",
+  transmutation: "trs"
+};
+
+/** Keyword → weapon property key for parsing mundane item descriptions. */
+export const WEAPON_KEYWORD_PROPERTIES = {
+  versatile: "ver",
+  finesse: "fin",
+  thrown: "thr",
+  "two-handed": "two",
+  "two handed": "two",
+  "two hands": "two",
+  heavy: "hvy",
+  light: "lgt",
+  reach: "rch",
+  ammunition: "amm",
+  loading: "lod"
+};
+
 /** Map Worldsmith size words to dnd5e size keys. */
 export const SIZE_MAP = {
   tiny: "tiny",

@@ -8,9 +8,15 @@
 import { MODULE_ID } from "./constants.mjs";
 import { convertWorldsmith } from "./converter.mjs";
 import { convertWorldsmithItem } from "./item-converter.mjs";
+import { convertWorldsmithShop, convertWorldsmithTreasure } from "./shop-converter.mjs";
+import { convertWorldsmithQuest } from "./journal-converter.mjs";
+import { convertWorldsmithSpell } from "./spell-converter.mjs";
+import { convertWorldsmithFeat } from "./feat-converter.mjs";
 import { detectWorldsmithType } from "./detect.mjs";
 import {
-  createActorFromWorldsmith, createFromWorldsmith, createItemFromWorldsmith, importFromText
+  createActorFromWorldsmith, createFeatFromWorldsmith, createFromWorldsmith, createItemFromWorldsmith,
+  createJournalFromWorldsmith, createShopFromWorldsmith, createSpellFromWorldsmith,
+  createTreasureFromWorldsmith, importFromText
 } from "./importer.mjs";
 import WorldsmithImportApp from "./import-app.mjs";
 
@@ -32,8 +38,18 @@ const api = {
   detectWorldsmithType,
   convertWorldsmith,
   convertWorldsmithItem,
+  convertWorldsmithShop,
+  convertWorldsmithTreasure,
+  convertWorldsmithQuest,
+  convertWorldsmithSpell,
+  convertWorldsmithFeat,
   createActorFromWorldsmith,
   createItemFromWorldsmith,
+  createShopFromWorldsmith,
+  createTreasureFromWorldsmith,
+  createJournalFromWorldsmith,
+  createSpellFromWorldsmith,
+  createFeatFromWorldsmith,
   createFromWorldsmith,
   importFromText
 };

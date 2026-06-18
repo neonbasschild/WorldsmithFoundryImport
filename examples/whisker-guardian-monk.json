@@ -1,0 +1,163 @@
+{
+  "identity": {
+    "name": "Whisker",
+    "title": "Guardian Monk",
+    "size": "medium",
+    "type": "Tabaxi",
+    "alignment": "Neutral Good",
+    "description": "A formidable Tabaxi monk with silver-gray fur and piercing amber eyes. His movements are fluid and graceful, like water flowing over stones. He wears simple robes that seem to shimmer with an inner light, and carries a weathered quarterstaff that hums with ancient power.",
+    "lore": "Born a humble fisherman, Whisker's life changed forever when he encountered a mystical koi in the Whispering River. The celestial creature bestowed upon him a sacred charge: to protect the river and all its secrets. Over the years, his dedication and meditations have unveiled ancient truths and powers, transforming him into a guardian of the natural world."
+  },
+  "attributes": {
+    "ac": {
+      "value": 21,
+      "type": "Unarmored Defense"
+    },
+    "hp": {
+      "current": 160,
+      "max": 160
+    },
+    "hitDice": {
+      "dieSize": "d8",
+      "totalDice": 20,
+      "flatBonus": 60
+    },
+    "speed": {
+      "walk": 50
+    },
+    "abilities": {
+      "str": {
+        "value": 18,
+        "saveProficient": true,
+        "saveBonus": 10
+      },
+      "dex": {
+        "value": 22,
+        "saveProficient": true,
+        "saveBonus": 13
+      },
+      "con": {
+        "value": 18,
+        "saveProficient": false
+      },
+      "int": {
+        "value": 15,
+        "saveProficient": false
+      },
+      "wis": {
+        "value": 20,
+        "saveProficient": true,
+        "saveBonus": 11
+      },
+      "cha": {
+        "value": 16,
+        "saveProficient": false
+      }
+    },
+    "proficiencies": {
+      "skills": [],
+      "languages": "Common, Tabaxi, Aquan, Celestial"
+    },
+    "resistances": "cold, lightning",
+    "senses": {
+      "darkvision": 60,
+      "passivePerception": 25
+    },
+    "cr": "16"
+  },
+  "numberOfAttacks": "Whisker can make three melee attacks per turn (quarterstaff or unarmed strikes), and can use Whirlwind of Blows to make six unarmed strikes as a bonus action.",
+  "features": [
+    {
+      "name": "Elder Feline Agility",
+      "description": "Whisker can move with astonishing speed, tripling his movement speed until the end of his turn, usable twice per short rest."
+    },
+    {
+      "name": "Masterful Stunning Strike",
+      "description": "Whisker can spend 1 ki point to attempt a stunning strike, with the save DC increased to 19."
+    },
+    {
+      "name": "Ki Reservoir",
+      "description": "Whisker has 20 ki points which he can use to fuel various ki features, showing his advanced mastery over ki."
+    },
+    {
+      "name": "Supreme Evasion",
+      "description": "Whisker can automatically succeed on saving throws against effects he can see, such as spells and traps, when he chooses to use this ability, once per short rest."
+    },
+    {
+      "name": "Mind of the River",
+      "description": "Whisker can communicate telepathically with any creature within 100 feet that is in contact with water, reflecting his deep bond with the element."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Quarterstaff (Masterwork)",
+      "description": "Melee Weapon Attack: +13 to hit, reach 5 ft., one target. Hit: 1d8+7 bludgeoning damage, or 1d10+7 bludgeoning damage if used with two hands."
+    },
+    {
+      "name": "Enhanced Unarmed Strike",
+      "description": "Melee Weapon Attack: +13 to hit, reach 5 ft., one target. Hit: 1d8+6 bludgeoning damage."
+    },
+    {
+      "name": "Whirlwind of Blows",
+      "description": "Whisker can spend 2 ki points to make six additional unarmed strikes as a bonus action."
+    }
+  ],
+  "legendaryActions": {
+    "count": 3,
+    "actions": [
+      {
+        "cost": 1,
+        "name": "Elder Water Whip",
+        "description": "Whisker creates a massive whip of water, striking up to three creatures within 20 feet of him. Each target must make a DC 19 Dexterity saving throw, taking 2d8+6 bludgeoning damage on a failed save, or half as much damage on a successful one, and is pulled up to 10 feet closer to Whisker."
+      },
+      {
+        "cost": 2,
+        "name": "Mystic Flood",
+        "description": "Whisker calls forth a surge of water in a 30-foot radius centered on a point he can see within 120 feet. Each creature in the area must succeed on a DC 19 Strength saving throw or be knocked prone and take 2d10+7 bludgeoning damage."
+      },
+      {
+        "cost": 3,
+        "name": "Call of the Tempest",
+        "description": "Whisker summons a localized storm for 1 minute that grants him advantage on all attack rolls and imposes disadvantage on attack rolls against him. Usable once per long rest."
+      }
+    ]
+  },
+  "loot": [
+    {
+      "item": "Whisker's Quarterstaff",
+      "details": "A masterwork quarterstaff that hums with ancient power, granting +1 to attack and damage rolls, and can be used to cast Water Walk once per day.",
+      "quantity": 1
+    },
+    {
+      "item": "Guardian's Robes",
+      "details": "Simple robes that shimmer with inner light, providing AC 13 + Dexterity modifier and resistance to cold damage.",
+      "quantity": 1
+    },
+    {
+      "item": "River Pearl",
+      "details": "A rare pearl harvested from the depths of the Whispering River, highly valued by collectors and spellcasters.",
+      "quantity": 1
+    }
+  ],
+  "additionalDetails": {
+    "history": "Born a humble fisherman, Whisker's life changed forever when he encountered a mystical koi in the Whispering River. The celestial creature bestowed upon him a sacred charge: to protect the river and all its secrets. Over the years, his dedication and meditations have unveiled ancient truths and powers, transforming him into a guardian of the natural world.",
+    "affiliations": "Guardian of the Whispering River, ally of the Celestial Court, protector of the natural world",
+    "fear": "Despite his powers, Whisker fears the potential for corruption within himself, which could lead to the downfall of the very elements he strives to protect. He worries that his deep connection to the river might one day consume him entirely.",
+    "secret": "Whisker harbors a secret about the origins of the Whispering River's power - it is not just a river, but a living entity, an ancient water spirit that chose him as its guardian. This knowledge is known only to a select few."
+  },
+  "quest": {
+    "data": {
+      "name": "Corruption in the Whispering River",
+      "subtitle": "Cleanse the river’s heart before the taint spreads downstream.",
+      "gm_overview": "Whisker has sensed a malignant presence festering in the deepest bend of the Whispering River—something that poisons fish, twists water spirits, and stirs violent storms. He asks the party to help pinpoint the source and carry out a cleansing rite before nearby settlements are devastated.",
+      "objectives": [
+        {
+          "task": "Trace the corruption upriver and pinpoint the exact source of the blight."
+        },
+        {
+          "task": "Recover a sacred cleansing focus (koi-scale, river pearl, or shrine relic) and complete the cleansing rite with Whisker."
+        }
+      ]
+    }
+  }
+}

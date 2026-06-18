@@ -1,0 +1,17 @@
+{
+  "name": "Ethereal Chains",
+  "subtitle": "3rd-level Evocation (Binding)",
+  "level": 3,
+  "school": "Evocation",
+  "verbal": true,
+  "somatic": true,
+  "material": null,
+  "castingTime": "Bonus Action",
+  "duration": "1 minute",
+  "ritual": false,
+  "concentration": true,
+  "description": "Summoning ethereal chains from the arcane realms, you bind a single target within 30 feet. The target must succeed on a Strength saving throw or be restrained for the spell's duration. While restrained, the target suffers a -2 penalty to AC and Dexterity saving throws, and their movement speed is reduced to 0. Each round, the target can make another Strength saving throw, ending the effect on a success. The ethereal chains are visible only to the caster, shimmering with arcane energy.",
+  "classes": "Wizard, Warlock",
+  "species": "Elf, Gnome",
+  "lore": "Crafted by elven warlocks as a means of subduing foes without bloodshed, Ethereal Chains is a spell born from the need for control in chaotic battles. Its creation marked a shift in arcane tactics, focusing on hindrance and strategy over brute force."
+}

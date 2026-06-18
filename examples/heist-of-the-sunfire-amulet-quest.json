@@ -1,0 +1,45 @@
+{
+  "name": "The Heist of the Sunfire Amulet",
+  "subtitle": "Heist Quest",
+  "gm_overview": "In the heart of Glimmerhold, a city known for its dazzling lights and shadowy deals, lies the heavily guarded vault of the merchant prince, Talmon. Inside, among his vast collection of rare treasures, rests the Sunfire Amulet, a legendary artifact said to bestow its wearer with the power to control light and fire. The players are hired by a mysterious figure known only as 'The Raven' to infiltrate the vault during the upcoming Festival of Lights, where the city's distractions are at their peak. The heist involves navigating complex security systems, dealing with corrupt officials, and avoiding the attention of rival thieves who also seek the amulet.",
+  "objectives": [
+    {
+      "task": "Gather information on the vault's security from the local thieves' guild",
+      "quote": "'The guild knows everything that happens in this city. But they don't give information away for free.'"
+    },
+    {
+      "task": "Acquire necessary disguises and tools for the heist",
+      "quote": "'You'll need more than just luck to get past Talmon's security. You'll need the right tools and the right look.'"
+    },
+    {
+      "task": "Infiltrate the vault without triggering alarms",
+      "quote": "'The vault is protected by more than just guards. There are magical wards, mechanical traps, and who knows what else.'"
+    },
+    {
+      "task": "Retrieve the Sunfire Amulet and escape undetected",
+      "quote": "'The amulet is the prize, but getting out alive with it is the real challenge.'"
+    }
+  ],
+  "hook": "The dim light of a back-alley tavern flickers as a hooded figure slides into the seat across from you. 'The Raven sends his regards,' they whisper, placing a small, ornate key on the table. 'There's a vault in Glimmerhold that holds something precious - something that could change everything. But it's not just about the gold, friends. The amulet inside... it's said to hold the power of the sun itself. And there are others who want it too. The Festival of Lights begins in three days. That's when the city will be at its most distracted, and the vault at its most vulnerable. Are you in?'",
+  "rewards": [
+    {
+      "item": "5,000 gold pieces each",
+      "price": "5000 gp",
+      "details": "A substantial sum that can fund future adventures, purchase powerful equipment, or establish the party as wealthy individuals in the city.",
+      "quantity": null
+    },
+    {
+      "item": "Favor owed by The Raven",
+      "price": "n/a",
+      "details": "A master spy with extensive contacts throughout the region, The Raven's favor can open doors, provide information, or offer protection when needed.",
+      "quantity": null
+    },
+    {
+      "item": "One lesser item from Talmon's collection",
+      "price": "n/a",
+      "details": "The opportunity to choose one additional magical item or valuable treasure from the merchant prince's vast collection as a bonus reward.",
+      "quantity": null
+    }
+  ],
+  "resolution": "The heist's outcome depends entirely on the party's choices and skill. If successful, they emerge with the Sunfire Amulet and substantial wealth, but must deal with the consequences of their actions. The amulet's power draws attention from powerful factions, and the party may find themselves hunted by those who covet its power. If they fail, they face imprisonment, the wrath of Talmon's guards, or worse. The Raven's true identity and motives remain mysterious, and the party may discover that they've become pawns in a larger game of power and intrigue that extends far beyond Glimmerhold's walls."
+}

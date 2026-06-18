@@ -18,7 +18,7 @@ const MODULE_VERSION = "1.0.0";
  * @param {string|number|undefined} value
  * @returns {{value: number, denomination: string}}
  */
-function parsePrice(value) {
+export function parsePrice(value) {
   if (value === undefined || value === null || value === "") return { value: 0, denomination: "gp" };
   if (typeof value === "number") return { value: Math.max(0, value), denomination: "gp" };
   const match = String(value).match(/([\d,]+(?:\.\d+)?)\s*(pp|gp|ep|sp|cp)?/i);
@@ -34,7 +34,7 @@ function parsePrice(value) {
  * @param {string|undefined} rarity
  * @returns {string}
  */
-function parseRarity(rarity) {
+export function parseRarity(rarity) {
   if (!rarity) return "";
   return RARITY_MAP[String(rarity).trim().toLowerCase()] ?? "";
 }
@@ -44,7 +44,7 @@ function parseRarity(rarity) {
  * @param {string|null} properties
  * @returns {{keys: string[], unknown: string[]}}
  */
-function parseWeaponProperties(properties) {
+export function parseWeaponProperties(properties) {
   const keys = [];
   const unknown = [];
   for (const prop of splitList(properties)) {
@@ -56,21 +56,27 @@ function parseWeaponProperties(properties) {
 }
 
 /**
- * Parse a weapon base-damage string such as "1d8 slashing" or "2d6+1 fire".
+ * Parse a weapon base-damage string such as "1d8 slashing", "2d6+1 fire", or a
+ * versatile expression like "1d8/1d10 bludgeoning".
  * @param {string|null} damageDice
- * @returns {{number: number, denomination: number, bonus: string, types: string[]}|null}
+ * @returns {{number: number, denomination: number, bonus: string, types: string[],
+ *            versatile: {number: number, denomination: number}|null}|null}
  */
-function parseWeaponDamage(damageDice) {
+export function parseWeaponDamage(damageDice) {
   if (!damageDice) return null;
-  const match = String(damageDice).match(/(\d+)d(\d+)\s*(?:([+-])\s*(\d+))?\s*([A-Za-z]+)?/i);
+  const match = String(damageDice).match(
+    /(\d+)d(\d+)\s*(?:([+-])\s*(\d+))?(?:\s*\/\s*(\d+)d(\d+))?\s*([A-Za-z]+)?/i
+  );
   if (!match) return null;
-  const [, count, denom, sign, flat, typeWord] = match;
+  const [, count, denom, sign, flat, vCount, vDenom, typeWord] = match;
   const type = typeWord?.toLowerCase();
+  const types = type && DAMAGE_TYPES.has(type) ? [type] : [];
   return {
     number: Number(count),
     denomination: Number(denom),
     bonus: flat ? (sign === "-" ? `-${flat}` : flat) : "",
-    types: type && DAMAGE_TYPES.has(type) ? [type] : []
+    types,
+    versatile: vCount ? { number: Number(vCount), denomination: Number(vDenom) } : null
   };
 }
 
@@ -79,7 +85,7 @@ function parseWeaponDamage(damageDice) {
  * @param {number} denomination
  * @returns {number}
  */
-function stepDie(denomination) {
+export function stepDie(denomination) {
   const idx = DIE_STEPS.indexOf(denomination);
   if (idx === -1) return denomination;
   return DIE_STEPS[Math.min(idx + 1, DIE_STEPS.length - 1)];
@@ -194,9 +200,17 @@ function applyWeaponData(data, system, warnings) {
   };
 
   const base = parseWeaponDamage(wd.damageDice);
-  system.damage = { base: base ?? { number: null, denomination: null, bonus: "", types: [] } };
-  if (base && propertyKeys.includes("ver")) {
-    system.damage.versatile = { ...base, denomination: stepDie(base.denomination) };
+  if (base) {
+    const { versatile, ...baseDamage } = base;
+    system.damage = { base: baseDamage };
+    if (versatile) {
+      system.damage.versatile = { ...versatile, bonus: "", types: baseDamage.types };
+      if (!propertyKeys.includes("ver")) propertyKeys.push("ver");
+    } else if (propertyKeys.includes("ver")) {
+      system.damage.versatile = { ...baseDamage, denomination: stepDie(baseDamage.denomination) };
+    }
+  } else {
+    system.damage = { base: { number: null, denomination: null, bonus: "", types: [] } };
   }
 
   system.range = parseWeaponRange(wd.range, ranged);

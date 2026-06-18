@@ -1,0 +1,284 @@
+{
+  "name": "Durin's Forge",
+  "subtitle": "Medium Blacksmith & Armory",
+  "description": "Stepping into Durin's Forge, you're immediately immersed in a symphony of clanging hammers, crackling fires, and the aromatic scent of heated metal. The shop teems with activity as dwarven smiths expertly wield their tools, crafting exquisite weapons and armor. The walls are adorned with gleaming masterpieces, each a testament to the Ironhand family's legendary craftsmanship. The air hums with a palpable energy, fueled by the passion and dedication of those who forge dreams into reality. Behind the counter, you spot Borin Ironhand, a masterful dwarf with calloused hands and keen eyes, ready to assist with your needs.",
+  "owners": [
+    {
+      "data": {
+        "identity": {
+          "name": "Borin Ironhand",
+          "title": "Master Blacksmith",
+          "size": "medium",
+          "type": "Humanoid",
+          "subtype": "Dwarf",
+          "alignment": "Lawful Neutral",
+          "description": "A masterful and charismatic dwarf with calloused hands and keen eyes. His beard is braided with metal rings, and his muscular frame speaks of years at the forge. He moves with the confidence of one who knows his craft inside and out.",
+          "lore": "Borin Ironhand is the latest in a long line of master smiths from the Ironhand family, having learned the craft from his father and grandfather before him."
+        },
+        "attributes": {
+          "ac": {
+            "value": 16,
+            "type": "Chain Mail"
+          },
+          "hp": {
+            "current": 75,
+            "max": 75
+          },
+          "hitDice": {
+            "dieSize": "d8",
+            "totalDice": 10,
+            "flatBonus": 30
+          },
+          "speed": {
+            "walk": 25
+          },
+          "abilities": {
+            "str": {
+              "value": 18,
+              "saveProficient": true,
+              "saveBonus": 7
+            },
+            "dex": {
+              "value": 12,
+              "saveProficient": false
+            },
+            "con": {
+              "value": 16,
+              "saveProficient": true,
+              "saveBonus": 6
+            },
+            "int": {
+              "value": 14,
+              "saveProficient": false
+            },
+            "wis": {
+              "value": 16,
+              "saveProficient": false
+            },
+            "cha": {
+              "value": 14,
+              "saveProficient": false
+            }
+          },
+          "proficiencies": {
+            "skills": [],
+            "languages": "Common, Dwarvish, Giant"
+          },
+          "resistances": "fire, poison",
+          "senses": {
+            "darkvision": 60,
+            "passivePerception": 13
+          },
+          "cr": "6",
+          "xp": 2300
+        },
+        "numberOfAttacks": "Borin can make two warhammer attacks per turn.",
+        "features": [
+          {
+            "name": "Dwarven Resilience",
+            "description": "Borin has advantage on saving throws against poison and resistance against poison damage."
+          },
+          {
+            "name": "Master Craftsman",
+            "description": "Borin has advantage on all ability checks related to metalworking, weapon crafting, and armor smithing."
+          }
+        ],
+        "actions": [
+          {
+            "name": "Warhammer",
+            "description": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 1d8+5 bludgeoning damage."
+          },
+          {
+            "name": "Throwing Hammer",
+            "description": "Ranged Weapon Attack: +5 to hit, range 20/60 ft., one target. Hit: 1d6+4 bludgeoning damage."
+          }
+        ],
+        "loot": [
+          {
+            "item": "Masterwork Warhammer",
+            "price": "150 gp",
+            "details": "A finely crafted warhammer with dwarven runes and grants +1 to attack rolls.",
+            "quantity": 1
+          }
+        ],
+        "additionalDetails": {
+          "history": "Borin learned the craft from his father, Durin Ironhand, who was renowned throughout the region for his exceptional skill. The Ironhand family has been forging weapons and armor for over three centuries.",
+          "affiliations": "Member of the Dwarven Smiths' Guild, respected craftsman in the community",
+          "fear": "Losing the family's reputation for quality craftsmanship, disappointing his ancestors",
+          "secret": "Borin has been secretly studying ancient dwarven forging techniques that he discovered in his grandfather's journals"
+        },
+        "quest": {
+          "data": {
+            "name": "Embers of an Old Technique",
+            "subtitle": "Secure a lost dwarven forging page before it’s sold to enemies.",
+            "gm_overview": "Borin uncovered a page of ancient Ironhand forging notes—then it vanished from his locked office. He won’t involve the city watch (too many hands, too many bribes). He hires the party to retrieve the stolen page from a fence who plans to auction it to a rival smithing clan or mercenaries, and to ensure the thief is dealt with quietly so Durin’s Forge doesn’t become a target.",
+            "objectives": [
+              {
+                "task": "Find the fence holding Borin’s stolen forging notes and learn where the sale is happening."
+              },
+              {
+                "task": "Recover the page intact and prevent the buyer from acquiring copies (by bargain, theft, or intimidation)."
+              }
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "standard_items": [
+    {
+      "item": "Steel Longsword",
+      "price": "15 gp",
+      "details": "Well-balanced blade, masterfully crafted with a keen edge. The hilt is wrapped in fine leather for a secure grip."
+    },
+    {
+      "item": "Chain Mail",
+      "price": "75 gp",
+      "details": "Heavy armor, AC 16, disadvantage on stealth. Made from interlocking steel rings, providing excellent protection while maintaining flexibility."
+    },
+    {
+      "item": "Battleaxe",
+      "price": "10 gp",
+      "details": "Versatile weapon, 1d8/1d10 damage. The axe head is forged from high-quality steel and balanced for both one-handed and two-handed use."
+    },
+    {
+      "item": "Shield",
+      "price": "10 gp",
+      "details": "AC +2 bonus, requires free hand. A sturdy wooden shield reinforced with steel bands and a leather grip."
+    },
+    {
+      "item": "Dagger",
+      "price": "2 gp",
+      "details": "Light, finesse, thrown weapon. A well-balanced blade perfect for close combat or throwing, with a comfortable grip."
+    },
+    {
+      "item": "Warhammer",
+      "price": "15 gp",
+      "details": "A heavy hammer with a solid steel head, designed for crushing through armor. Versatile weapon dealing 1d8/1d10 bludgeoning damage."
+    },
+    {
+      "item": "Plate Armor",
+      "price": "1,500 gp",
+      "details": "The pinnacle of armor craftsmanship, AC 18, disadvantage on stealth. Requires 15 Strength. Custom-fitted for maximum protection."
+    },
+    {
+      "item": "Greatsword",
+      "price": "50 gp",
+      "details": "A massive two-handed blade, dealing 2d6 slashing damage. Requires two hands to wield effectively."
+    },
+    {
+      "item": "Leather Armor",
+      "price": "10 gp",
+      "details": "Light armor, AC 11 + Dex modifier. Made from supple, treated leather that provides basic protection without restricting movement."
+    }
+  ],
+  "services": [
+    {
+      "service": "Weapon Crafting",
+      "price": "Varies (50-500 gp)",
+      "details": "Custom weapon forging to your specifications, 1-4 weeks depending on complexity, requires 50% deposit. Includes consultation on design and materials."
+    },
+    {
+      "service": "Armor Repair",
+      "price": "50% of armor value",
+      "details": "Professional repair services for damaged armor, 2-5 days depending on extent of damage. Restores armor to full functionality."
+    },
+    {
+      "service": "Weapon Sharpening",
+      "price": "5 gp",
+      "details": "Restores weapon to peak condition with expert honing, same day service. Includes basic maintenance and oiling."
+    },
+    {
+      "service": "Armor Fitting",
+      "price": "10 gp",
+      "details": "Custom adjustments for perfect fit, 1-2 days. Ensures maximum comfort and protection with proper sizing."
+    },
+    {
+      "service": "Weapon Enchantment Consultation",
+      "price": "25 gp",
+      "details": "Expert advice on magical enhancements for weapons, including recommendations for enchanters and expected costs. One-hour consultation."
+    },
+    {
+      "service": "Armor Customization",
+      "price": "Varies (20-100 gp)",
+      "details": "Add decorative elements, heraldry, or functional modifications to existing armor. 3-7 days depending on complexity."
+    }
+  ],
+  "magic_items": [
+    {
+      "data": {
+        "name": "Mithril Sword",
+        "subtitle": "Mithril Sword",
+        "category": "weapon",
+        "rarity": "uncommon",
+        "weight": 3,
+        "value": 150,
+        "attunement": {
+          "required": true,
+          "condition": "Creature proficient with martial weapons"
+        },
+        "weaponData": {
+          "weaponType": "longsword",
+          "damageDice": "1d8 slashing",
+          "range": "5 ft",
+          "properties": "versatile, finesse, magical",
+          "masteries": null
+        },
+        "armorData": null,
+        "description": "A slender, gleaming sword with elven script etched along the blade. The mithril metal catches the light with an otherworldly shimmer, and the blade feels impossibly light in your hand.",
+        "usage": "This weapon grants a +2 bonus to attack rolls. The mithril construction makes the blade never dull and resistant to magical corrosion.",
+        "lore": "Forged by elven master smiths using rare mithril ore, this blade represents centuries of elven craftsmanship. The runes along the blade are said to contain ancient elven magic that enhances the wielder's skill in combat."
+      }
+    },
+    {
+      "data": {
+        "name": "Enchanted Shield",
+        "subtitle": "Enchanted Shield",
+        "category": "armor",
+        "rarity": "uncommon",
+        "weight": 6,
+        "value": 100,
+        "attunement": {
+          "required": true,
+          "condition": "Creature proficient with shields"
+        },
+        "weaponData": null,
+        "armorData": {
+          "armorType": "shield",
+          "baseAC": 2,
+          "stealthDisadvantage": "None",
+          "strengthReq": null
+        },
+        "description": "An ornate shield shimmering with a faint, protective magic aura. The surface is decorated with intricate runes that glow softly when danger approaches.",
+        "usage": "Provides a +2 bonus to AC. Once per day, as a reaction when you are hit by an attack, you can activate the shield's magic to cast the Shield spell, gaining +5 AC against that attack.",
+        "lore": "This shield was blessed by a cleric of Helm, the god of protection. The runes are prayers for divine protection that activate in times of need, creating a magical barrier against harm."
+      }
+    },
+    {
+      "data": {
+        "name": "Dwarven Warhammer",
+        "subtitle": "Dwarven Warhammer",
+        "category": "weapon",
+        "rarity": "uncommon",
+        "weight": 5,
+        "value": 120,
+        "attunement": {
+          "required": true,
+          "condition": "Creature proficient with martial weapons"
+        },
+        "weaponData": {
+          "weaponType": "warhammer",
+          "damageDice": "1d8/1d10 bludgeoning",
+          "range": "5 ft",
+          "properties": "versatile, magical",
+          "masteries": null
+        },
+        "armorData": null,
+        "description": "A hefty hammer with dwarven runes carved into the head and haft. The metal has a distinctive blue tint and the runes glow faintly when swung.",
+        "usage": "On a critical hit (19 or 20), the target must succeed on a DC 15 Constitution saving throw or be stunned until the end of their next turn.",
+        "lore": "Crafted by the master smiths of Clan Ironhand, this warhammer was forged using techniques passed down through generations. The runes are ancient dwarven battle magic that enhances the weapon's impact."
+      }
+    }
+  ],
+  "lore": "A legendary forge known for its masterful craftsmanship, run by the Ironhand family for generations. The forge was established by Durin Ironhand, a master smith who discovered a rare vein of mithril in the nearby mountains. His descendants have maintained the family's reputation for excellence, with each generation adding their own innovations to the craft. The forge has supplied weapons and armor to countless heroes and has survived through wars, famines, and even a dragon attack. The current owner, Borin Ironhand, continues the family tradition with pride and has expanded the business to include magical item crafting and repair services."
+}
