@@ -13,6 +13,7 @@ import { dirname, join } from "node:path";
 import { convertWorldsmith } from "../scripts/converter.mjs";
 import { convertWorldsmithItem } from "../scripts/item-converter.mjs";
 import { convertWorldsmithShop, convertWorldsmithTreasure } from "../scripts/shop-converter.mjs";
+import { convertWorldsmithQuest } from "../scripts/journal-converter.mjs";
 import { detectWorldsmithType } from "../scripts/detect.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -172,6 +173,7 @@ function activitiesOf(item) {
   assert(detectWorldsmithType(load("blade-of-eternal-shadows.json")) === "item", "blade detected as item");
   assert(detectWorldsmithType(load("durins-forge-shop.json")) === "shop", "forge detected as shop");
   assert(detectWorldsmithType(load("crypt-of-the-shadow-drake-treasure.json")) === "treasure", "crypt detected as treasure");
+  assert(detectWorldsmithType(load("heist-of-the-sunfire-amulet-quest.json")) === "quest", "heist detected as quest");
 }
 
 // --- Blade of Eternal Shadows (item) --------------------------------------
@@ -322,6 +324,48 @@ function activitiesOf(item) {
   assert(/Ancient Dragon Hoard|glitters with ancient wealth/.test(pile.system.details.biography.value),
     "treasure description in biography");
   console.log(`  warnings: ${warnings.length}`);
+}
+
+// --- The Heist of the Sunfire Amulet (quest -> journal entry) -------------
+{
+  console.log("The Heist of the Sunfire Amulet (quest)");
+  const { journalData, warnings } = convertWorldsmithQuest(load("heist-of-the-sunfire-amulet-quest.json"));
+
+  assert(journalData.name === "The Heist of the Sunfire Amulet", "journal name imported");
+  assert(Array.isArray(journalData.pages) && journalData.pages.length === 5, `expected 5 pages, got ${journalData.pages.length}`);
+  assert(journalData.pages.every(p => p.type === "text" && p.text.format === 1), "all pages are HTML text pages");
+  assert(journalData.pages.every((p, i) => p.sort === (i + 1) * 100), "pages sorted in order");
+
+  const page = n => journalData.pages.find(p => p.name === n);
+
+  const overview = page("Overview");
+  assert(!!overview && /Heist Quest/.test(overview.text.content), "overview has subtitle");
+  assert(/merchant prince, Talmon/.test(overview.text.content), "overview has gm overview text");
+
+  assert(/Raven sends his regards/.test(page("Adventure Hook").text.content), "hook page content");
+
+  const objectives = page("Objectives");
+  assert(/<ol>/.test(objectives.text.content), "objectives rendered as ordered list");
+  assert(/Gather information on the vault/.test(objectives.text.content), "objective task present");
+  assert(/<blockquote>/.test(objectives.text.content), "objective quote rendered as blockquote");
+
+  const rewards = page("Rewards");
+  assert(/5,000 gold pieces each/.test(rewards.text.content), "reward item present");
+  assert(/\(5000 gp\)/.test(rewards.text.content), "meaningful reward price shown");
+  assert(!/\(n\/a\)/i.test(rewards.text.content), "n/a reward price omitted");
+
+  assert(/outcome depends entirely/.test(page("Resolution").text.content), "resolution page content");
+  assert(journalData.flags["worldsmith-foundry-import"].kind === "quest", "quest flag set");
+  console.log(`  warnings: ${warnings.length}`);
+}
+
+// --- Embedded quest wrapper (creature/owner shape) ------------------------
+{
+  console.log("Embedded quest wrapper");
+  const wrapped = { data: { name: "Side Quest", gm_overview: "Do the thing.", objectives: [{ task: "Thing" }] } };
+  const { journalData } = convertWorldsmithQuest(wrapped);
+  assert(journalData.name === "Side Quest", "unwraps { data } quest shape");
+  assert(journalData.pages.length >= 1, "wrapped quest produces pages");
 }
 
 console.log(`\n${passed} passed, ${failed} failed`);

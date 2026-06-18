@@ -9,10 +9,11 @@ import { MODULE_ID } from "./constants.mjs";
 import { convertWorldsmith } from "./converter.mjs";
 import { convertWorldsmithItem } from "./item-converter.mjs";
 import { convertWorldsmithShop, convertWorldsmithTreasure } from "./shop-converter.mjs";
+import { convertWorldsmithQuest } from "./journal-converter.mjs";
 import { detectWorldsmithType } from "./detect.mjs";
 import {
   createActorFromWorldsmith, createFromWorldsmith, createItemFromWorldsmith,
-  createShopFromWorldsmith, createTreasureFromWorldsmith, importFromText
+  createJournalFromWorldsmith, createShopFromWorldsmith, createTreasureFromWorldsmith, importFromText
 } from "./importer.mjs";
 import WorldsmithImportApp from "./import-app.mjs";
 
@@ -36,10 +37,12 @@ const api = {
   convertWorldsmithItem,
   convertWorldsmithShop,
   convertWorldsmithTreasure,
+  convertWorldsmithQuest,
   createActorFromWorldsmith,
   createItemFromWorldsmith,
   createShopFromWorldsmith,
   createTreasureFromWorldsmith,
+  createJournalFromWorldsmith,
   createFromWorldsmith,
   importFromText
 };

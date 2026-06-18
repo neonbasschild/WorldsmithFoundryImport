@@ -8,6 +8,7 @@ import { MODULE_ID } from "./constants.mjs";
 import { convertWorldsmith } from "./converter.mjs";
 import { convertWorldsmithItem } from "./item-converter.mjs";
 import { convertWorldsmithShop, convertWorldsmithTreasure } from "./shop-converter.mjs";
+import { convertWorldsmithQuest } from "./journal-converter.mjs";
 import { detectWorldsmithType } from "./detect.mjs";
 
 /**
@@ -106,15 +107,34 @@ export async function createTreasureFromWorldsmith(data, { folderId = null, rend
 }
 
 /**
+ * Create a JournalEntry from a Worldsmith quest export.
+ * @param {object} data
+ * @param {object} [options]
+ * @param {string|null} [options.folderId]
+ * @param {boolean} [options.renderSheet]
+ * @returns {Promise<{actors: Actor[], items: Item[], journals: JournalEntry[]}>}
+ */
+export async function createJournalFromWorldsmith(data, { folderId = null, renderSheet = false } = {}) {
+  const { journalData, warnings } = convertWorldsmithQuest(data);
+  const folder = resolveFolder(folderId, "JournalEntry");
+  if (folder) journalData.folder = folder;
+
+  const journal = await JournalEntry.create(journalData, { renderSheet });
+  for (const warning of warnings) console.warn(`${MODULE_ID} | ${journalData.name}: ${warning}`);
+  return { actors: [], items: [], journals: journal ? [journal] : [] };
+}
+
+/**
  * Create the appropriate document(s) from a Worldsmith export.
  * @param {object} data
  * @param {object} [options]
- * @returns {Promise<{actors: Actor[], items: Item[]}>}
+ * @returns {Promise<{actors: Actor[], items: Item[], journals: JournalEntry[]}>}
  */
 export async function createFromWorldsmith(data, options = {}) {
   const type = detectWorldsmithType(data);
   if (type === "shop") return createShopFromWorldsmith(data, options);
   if (type === "treasure") return createTreasureFromWorldsmith(data, options);
+  if (type === "quest") return createJournalFromWorldsmith(data, options);
   if (type === "item") {
     const item = await createItemFromWorldsmith(data, options);
     return { actors: [], items: item ? [item] : [] };
@@ -132,7 +152,7 @@ export async function createFromWorldsmith(data, options = {}) {
  * @param {string|null} [options.folderId]
  * @param {boolean} [options.renderSheet]
  * @param {string} [options.label]
- * @returns {Promise<{actors: Actor[], items: Item[]}>}
+ * @returns {Promise<{actors: Actor[], items: Item[], journals: JournalEntry[]}>}
  */
 export async function importFromText(text, options = {}) {
   let parsed;
@@ -145,10 +165,12 @@ export async function importFromText(text, options = {}) {
   const entries = Array.isArray(parsed) ? parsed : [parsed];
   const actors = [];
   const items = [];
+  const journals = [];
   for (const entry of entries) {
     const result = await createFromWorldsmith(entry, options);
-    actors.push(...result.actors);
-    items.push(...result.items);
+    actors.push(...(result.actors ?? []));
+    items.push(...(result.items ?? []));
+    journals.push(...(result.journals ?? []));
   }
-  return { actors, items };
+  return { actors, items, journals };
 }

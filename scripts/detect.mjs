@@ -5,9 +5,9 @@
 
 /**
  * Determine whether a parsed Worldsmith export describes a shop, treasure,
- * creature, or item.
+ * quest, creature, or item.
  * @param {object} data
- * @returns {"shop"|"treasure"|"creature"|"item"}
+ * @returns {"shop"|"treasure"|"quest"|"creature"|"item"}
  */
 export function detectWorldsmithType(data) {
   if (!data || typeof data !== "object") return "creature";
@@ -26,6 +26,14 @@ export function detectWorldsmithType(data) {
     || data.notable_items !== undefined
     || data.currency !== undefined
   ) return "treasure";
+
+  // Quests carry a GM overview, hook, objectives, or resolution.
+  if (
+    data.gm_overview !== undefined
+    || data.hook !== undefined
+    || data.objectives !== undefined
+    || data.resolution !== undefined
+  ) return "quest";
 
   // Creatures carry an identity/attributes/abilities block.
   if (data.identity || data.attributes || data.abilities) return "creature";

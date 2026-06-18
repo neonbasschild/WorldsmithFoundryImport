@@ -55,6 +55,7 @@ export default class WorldsmithImportApp extends ApplicationV2 {
     const folderOptions = [`<option value="">${t("WORLDSMITH.NoFolder")}</option>`]
       .concat(folderGroup("Actor", t("WORLDSMITH.ActorFolders")))
       .concat(folderGroup("Item", t("WORLDSMITH.ItemFolders")))
+      .concat(folderGroup("JournalEntry", t("WORLDSMITH.JournalFolders")))
       .join("");
 
     const wrapper = document.createElement("div");
@@ -157,14 +158,18 @@ export default class WorldsmithImportApp extends ApplicationV2 {
     this.#importing = true;
     let actorCount = 0;
     let itemCount = 0;
+    let journalCount = 0;
     let totalFailed = 0;
 
     try {
       for (const source of sources) {
         try {
-          const { actors, items } = await importFromText(source.text, { folderId, renderSheet, label: source.label });
+          const { actors, items, journals } = await importFromText(source.text, {
+            folderId, renderSheet, label: source.label
+          });
           actorCount += actors.length;
           itemCount += items.length;
+          journalCount += journals.length;
         } catch (err) {
           totalFailed += 1;
           console.error(`${MODULE_ID} |`, err);
@@ -175,11 +180,12 @@ export default class WorldsmithImportApp extends ApplicationV2 {
       this.#importing = false;
     }
 
-    const totalCreated = actorCount + itemCount;
+    const totalCreated = actorCount + itemCount + journalCount;
     if (totalCreated) {
       ui.notifications.info(game.i18n.format("WORLDSMITH.ImportSuccess", {
         actors: actorCount,
-        items: itemCount
+        items: itemCount,
+        journals: journalCount
       }));
     }
     if (totalCreated && !totalFailed) this.close();

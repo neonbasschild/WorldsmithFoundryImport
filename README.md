@@ -8,6 +8,7 @@ A [Foundry VTT](https://foundryvtt.com/) module that converts and imports
 - **Shops** → [Item Piles](https://fantasycomputer.works/FoundryVTT-ItemPiles/)
   merchant actors, with their owners imported as separate NPCs.
 - **Treasure / loot** → Item Piles loot pile actors (with currency).
+- **Quests** → journal entries (one page per quest section).
 
 The type of each export is detected automatically.
 
@@ -108,6 +109,22 @@ party can loot:
 > Also **requires Item Piles** (loot piles work without the dnd5e companion, but
 > it is recommended for full price/currency support).
 
+### Quests
+
+Worldsmith quest exports become a **journal entry** with one text page per
+section that is present:
+
+- **Overview** (subtitle + GM overview)
+- **Adventure Hook**
+- **Objectives** (an ordered list, with each objective's quote as a blockquote)
+- **Rewards** (item, quantity, price, and details; non-prices like "n/a" are
+  omitted)
+- **Resolution**
+
+The original JSON is stored under the journal entry's module flags. (Quests that
+are embedded inside a creature or shop owner are also folded into that actor's
+biography; this handles the standalone quest exports.)
+
 ## Installation
 
 ### Manifest URL
@@ -153,6 +170,7 @@ const { actorData } = WorldsmithImport.convertWorldsmith(parsedCreature);
 const { itemData } = WorldsmithImport.convertWorldsmithItem(parsedItem);
 const { merchant, owners } = WorldsmithImport.convertWorldsmithShop(parsedShop);
 const { pile } = WorldsmithImport.convertWorldsmithTreasure(parsedTreasure);
+const { journalData } = WorldsmithImport.convertWorldsmithQuest(parsedQuest);
 ```
 
 ## Examples
@@ -167,13 +185,16 @@ Sample Worldsmith exports are included under [`examples/`](examples/):
   services, and an owner (shop → Item Piles merchant).
 - `crypt-of-the-shadow-drake-treasure.json` — a dragon hoard with coins, gems,
   and magic items (treasure → Item Piles loot pile).
+- `heist-of-the-sunfire-amulet-quest.json` — a heist quest with objectives,
+  hook, and rewards (quest → journal entry).
 
 ## Development
 
 The conversion logic in `scripts/converter.mjs`, `scripts/item-converter.mjs`,
-`scripts/shop-converter.mjs` (shops and treasure), `scripts/parsers.mjs`,
-`scripts/detect.mjs`, and `scripts/utils.mjs` is intentionally free of Foundry
-runtime dependencies so it can be unit-tested in plain Node:
+`scripts/shop-converter.mjs` (shops and treasure), `scripts/journal-converter.mjs`
+(quests), `scripts/parsers.mjs`, `scripts/detect.mjs`, and `scripts/utils.mjs` is
+intentionally free of Foundry runtime dependencies so it can be unit-tested in
+plain Node:
 
 ```bash
 node test/convert.test.mjs

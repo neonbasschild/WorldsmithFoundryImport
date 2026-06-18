@@ -1,7 +1,7 @@
 {
   "WORLDSMITH.AppTitle": "Import from Worldsmith",
   "WORLDSMITH.SidebarButton": "Import Worldsmith",
-  "WORLDSMITH.Intro": "Import Worldsmith creatures, companions, items, shops, and treasure. Creatures become dnd5e NPCs, items become dnd5e items, shops become Item Piles merchants (with their owners as separate NPCs), and treasure becomes Item Piles loot piles. Upload one or more .json files and/or paste JSON below; the type of each entry is detected automatically.",
+  "WORLDSMITH.Intro": "Import Worldsmith creatures, companions, items, shops, treasure, and quests. Creatures become dnd5e NPCs, items become dnd5e items, shops become Item Piles merchants (with their owners as separate NPCs), treasure becomes Item Piles loot piles, and quests become journal entries. Upload one or more .json files and/or paste JSON below; the type of each entry is detected automatically.",
   "WORLDSMITH.Files": "Worldsmith JSON Files",
   "WORLDSMITH.FilesHint": "You can select multiple files at once, mixing creatures and items.",
   "WORLDSMITH.Paste": "Or Paste JSON",
@@ -11,9 +11,10 @@
   "WORLDSMITH.NoFolder": "\u2014 None \u2014",
   "WORLDSMITH.ActorFolders": "Actor Folders",
   "WORLDSMITH.ItemFolders": "Item Folders",
+  "WORLDSMITH.JournalFolders": "Journal Folders",
   "WORLDSMITH.OpenSheet": "Open sheet after import",
   "WORLDSMITH.Import": "Import",
   "WORLDSMITH.Clear": "Clear",
   "WORLDSMITH.NoInput": "Select at least one file or paste some JSON before importing.",
-  "WORLDSMITH.ImportSuccess": "Imported {actors} actor(s) and {items} item(s) from Worldsmith."
+  "WORLDSMITH.ImportSuccess": "Imported {actors} actor(s), {items} item(s), and {journals} journal(s) from Worldsmith."
 }
