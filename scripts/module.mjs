@@ -7,7 +7,11 @@
 
 import { MODULE_ID } from "./constants.mjs";
 import { convertWorldsmith } from "./converter.mjs";
-import { createActorFromWorldsmith, importFromText } from "./importer.mjs";
+import { convertWorldsmithItem } from "./item-converter.mjs";
+import { detectWorldsmithType } from "./detect.mjs";
+import {
+  createActorFromWorldsmith, createFromWorldsmith, createItemFromWorldsmith, importFromText
+} from "./importer.mjs";
 import WorldsmithImportApp from "./import-app.mjs";
 
 /**
@@ -25,8 +29,12 @@ function openImporter() {
 
 const api = {
   open: openImporter,
+  detectWorldsmithType,
   convertWorldsmith,
+  convertWorldsmithItem,
   createActorFromWorldsmith,
+  createItemFromWorldsmith,
+  createFromWorldsmith,
   importFromText
 };
 

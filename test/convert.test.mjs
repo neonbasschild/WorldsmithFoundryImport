@@ -11,6 +11,8 @@ import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 
 import { convertWorldsmith } from "../scripts/converter.mjs";
+import { convertWorldsmithItem } from "../scripts/item-converter.mjs";
+import { detectWorldsmithType } from "../scripts/detect.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const examplesDir = join(__dirname, "..", "examples");
@@ -126,6 +128,50 @@ function activitiesOf(item) {
   const hide = findItem(actorData.items, "Behemoth Hide Armor");
   assert(!!hide && hide.type === "loot", "loot item created");
   assert(hide.system.price.value === 5000 && hide.system.price.denomination === "gp", "loot price parsed");
+}
+
+// --- Type detection -------------------------------------------------------
+{
+  console.log("Type detection");
+  assert(detectWorldsmithType(load("stormwing-thunder-griffin.json")) === "creature", "griffin detected as creature");
+  assert(detectWorldsmithType(load("eldritch-behemoth.json")) === "creature", "behemoth detected as creature");
+  assert(detectWorldsmithType(load("blade-of-eternal-shadows.json")) === "item", "blade detected as item");
+}
+
+// --- Blade of Eternal Shadows (item) --------------------------------------
+{
+  console.log("Blade of Eternal Shadows");
+  const { itemData, warnings } = convertWorldsmithItem(load("blade-of-eternal-shadows.json"));
+  const s = itemData.system;
+
+  assert(itemData.name === "Blade of Eternal Shadows", "item name imported");
+  assert(itemData.type === "weapon", "item type is weapon");
+  assert(s.rarity === "legendary", "rarity mapped to legendary");
+  assert(s.price.value === 75000 && s.price.denomination === "gp", "price 75000 gp");
+  assert(s.weight.value === 3, "weight 3");
+  assert(s.attunement === "required", "attunement required");
+
+  assert(s.type.value === "martialM", "longsword classified as martial melee");
+  assert(s.type.baseItem === "longsword", "base item longsword");
+
+  assert(s.damage.base.number === 1 && s.damage.base.denomination === 8, "base damage 1d8");
+  assert(s.damage.base.types.includes("slashing"), "base damage slashing");
+  assert(!!s.damage.versatile && s.damage.versatile.denomination === 10, "versatile steps up to d10");
+
+  assert(s.properties.includes("ver") && s.properties.includes("fin") && s.properties.includes("mgc"),
+    "properties versatile/finesse/magical mapped");
+  assert(s.range.reach === 5, "melee reach 5 ft");
+
+  assert(s.magicalBonus === 2, "+2 magical bonus parsed from usage");
+  assert(s.uses?.max === "3", "3 charges parsed");
+  assert(s.uses?.recovery?.[0]?.period === "dawn", "charges recharge at dawn");
+
+  assert(/Eternal Shadows command/.test(s.description.value), "flavor description present");
+  assert(/Properties/.test(s.description.value) && /veil of darkness/.test(s.description.value),
+    "usage text preserved in description");
+  assert(/Lore/.test(s.description.value), "lore section present");
+  assert(itemData.flags["worldsmith-foundry-import"].kind === "item", "item flag set");
+  console.log(`  warnings: ${warnings.length}`);
 }
 
 console.log(`\n${passed} passed, ${failed} failed`);

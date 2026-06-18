@@ -1,0 +1,23 @@
+{
+  "name": "Blade of Eternal Shadows",
+  "subtitle": "Legendary Weapon",
+  "category": "Weapon",
+  "rarity": "Legendary",
+  "weight": 3,
+  "value": 75000,
+  "attunement": {
+    "required": true,
+    "condition": "Creature proficient with martial weapons"
+  },
+  "weaponData": {
+    "weaponType": "longsword",
+    "damageDice": "1d8 slashing",
+    "range": "5 ft",
+    "properties": "versatile, finesse, magical",
+    "masteries": null
+  },
+  "armorData": null,
+  "description": "Forged in the depths of obsidian caverns, the Blade of Eternal Shadows commands respect at a glance. Its darksteel blade catches the light like liquid onyx. Runes dance faintly along the spine, glowing with a dark violet hum under the moon's gaze. The shadowed leather grip invites an almost symbiotic connection. Atop the pommel, a gem flickers with an otherworldly pulse. Even under the sun's gaze, the shadows cling to the weapon, making it seem more phantom than steel.",
+  "usage": "This weapon grants a +2 bonus to attack rolls and a +2 bonus to Stealth checks. It has 3 charges that recharge at dawn. As an action, you can expend 1 charge to cast a veil of darkness covering a 15-foot radius sphere. As a bonus action when you hit with an attack, you can expend 1 charge to add 1d6 necrotic damage to the damage roll.",
+  "lore": "Forged in an ancient era by a shadow-smith under a night deity's guidance, this blade was instrumental in secretive assassinations and grand battles fought under the cover of darkness, earning its reputation across histories and legends. The blade is said to contain the essence of the first shadow ever cast, making it both a weapon and a relic of primordial darkness."
+}
