@@ -1,7 +1,7 @@
 # Worldsmith Foundry Import
 
 A [Foundry VTT](https://foundryvtt.com/) module that converts and imports
-[Worldsmith](https://worldsmith.app/) creature and companion JSON exports into
+[Worldsmith](https://www.worldsmith.io/) creature and companion JSON exports into
 fully-statted **dnd5e** NPC actors.
 
 - **Foundry VTT:** v13+ (verified on v14)
