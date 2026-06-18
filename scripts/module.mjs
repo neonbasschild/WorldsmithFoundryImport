@@ -11,9 +11,10 @@ import { convertWorldsmithItem } from "./item-converter.mjs";
 import { convertWorldsmithShop, convertWorldsmithTreasure } from "./shop-converter.mjs";
 import { convertWorldsmithQuest } from "./journal-converter.mjs";
 import { convertWorldsmithSpell } from "./spell-converter.mjs";
+import { convertWorldsmithFeat } from "./feat-converter.mjs";
 import { detectWorldsmithType } from "./detect.mjs";
 import {
-  createActorFromWorldsmith, createFromWorldsmith, createItemFromWorldsmith,
+  createActorFromWorldsmith, createFeatFromWorldsmith, createFromWorldsmith, createItemFromWorldsmith,
   createJournalFromWorldsmith, createShopFromWorldsmith, createSpellFromWorldsmith,
   createTreasureFromWorldsmith, importFromText
 } from "./importer.mjs";
@@ -41,12 +42,14 @@ const api = {
   convertWorldsmithTreasure,
   convertWorldsmithQuest,
   convertWorldsmithSpell,
+  convertWorldsmithFeat,
   createActorFromWorldsmith,
   createItemFromWorldsmith,
   createShopFromWorldsmith,
   createTreasureFromWorldsmith,
   createJournalFromWorldsmith,
   createSpellFromWorldsmith,
+  createFeatFromWorldsmith,
   createFromWorldsmith,
   importFromText
 };

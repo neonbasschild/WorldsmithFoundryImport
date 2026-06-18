@@ -1,0 +1,20 @@
+{
+  "name": "Echo of the Ancients",
+  "subtitle": "Exploration - Ancestral",
+  "prerequisites": [
+    {
+      "type": "Species",
+      "details": "Must be an Elf or Dwarf"
+    },
+    {
+      "type": "Level",
+      "details": "Must be level 5 or higher"
+    },
+    {
+      "type": "Special Experience",
+      "details": "Must have explored an ancient ruin or recovered a lost artifact of their race"
+    }
+  ],
+  "lore": "Your deep connection to your ancestral roots manifests as an ethereal echo that guides you through ancient places.",
+  "mechanics": "You gain advantage on History, Arcana, and Investigation checks when the subject matter is directly related to your species's history. Upon entering an ancient site relevant to your heritage, your time spent exploring is cut in half. Once per day, you can perform a 10-minute ritual to ask your ancestors for guidance on a specific problem or challenge you face within an ancient site. Additionally, you gain a +2 bonus to AC and saving throws when fighting to defend an ancient site of your heritage from desecration or destruction."
+}

@@ -6,6 +6,7 @@ A [Foundry VTT](https://foundryvtt.com/) module that converts and imports
 - **Creatures / companions** → fully-statted NPC actors.
 - **Items** (weapons, armor, potions, wondrous items, etc.) → dnd5e items.
 - **Spells** → dnd5e spell items.
+- **Feats** → dnd5e feat items.
 - **Shops** → [Item Piles](https://fantasycomputer.works/FoundryVTT-ItemPiles/)
   merchant actors, with their owners imported as separate NPCs.
 - **Treasure / loot** → Item Piles loot pile actors (with currency).
@@ -81,6 +82,21 @@ Worldsmith spell exports become dnd5e **spell** items:
   plain utility activity, including any typed damage dice.
 - The available classes/species and lore are appended to the description; the
   original JSON is stored under the item's module flags.
+
+### Feats
+
+Worldsmith feat exports become dnd5e **feat** items:
+
+- The mechanics, flavor (lore), category (subtitle), and prerequisites are
+  combined into the description.
+- Prerequisites are also stored structurally: a numeric **level** requirement is
+  extracted into `system.prerequisites.level`, and the full prerequisite text is
+  put in `system.requirements`.
+- Limited-use phrasing ("once per day", "once per short/long rest", etc.) sets
+  the feat's uses and adds a utility activity that expends a use; combat-style
+  mechanics (attack/save/damage) generate the matching activity. Purely passive
+  feats get no activity.
+- The original JSON is stored under the item's module flags.
 
 ### Shops (Item Piles)
 
@@ -188,6 +204,7 @@ const { merchant, owners } = WorldsmithImport.convertWorldsmithShop(parsedShop);
 const { pile } = WorldsmithImport.convertWorldsmithTreasure(parsedTreasure);
 const { journalData } = WorldsmithImport.convertWorldsmithQuest(parsedQuest);
 const { itemData: spellData } = WorldsmithImport.convertWorldsmithSpell(parsedSpell);
+const { itemData: featData } = WorldsmithImport.convertWorldsmithFeat(parsedFeat);
 ```
 
 ## Examples
@@ -199,6 +216,8 @@ Sample Worldsmith exports are included under [`examples/`](examples/):
 - `whisker-guardian-monk.json` — a CR 16 Tabaxi monk NPC with a quest (creature).
 - `blade-of-eternal-shadows.json` — a legendary magic longsword (item).
 - `ethereal-chains-spell.json` — a 3rd-level concentration spell (spell).
+- `echo-of-the-ancients-feat.json` — a feat with prerequisites and a daily
+  ability (feat).
 - `durins-forge-shop.json` — a blacksmith shop with wares, magic items,
   services, and an owner (shop → Item Piles merchant).
 - `crypt-of-the-shadow-drake-treasure.json` — a dragon hoard with coins, gems,
@@ -210,9 +229,10 @@ Sample Worldsmith exports are included under [`examples/`](examples/):
 
 The conversion logic in `scripts/converter.mjs`, `scripts/item-converter.mjs`,
 `scripts/shop-converter.mjs` (shops and treasure), `scripts/journal-converter.mjs`
-(quests), `scripts/spell-converter.mjs` (spells), `scripts/parsers.mjs`,
-`scripts/detect.mjs`, and `scripts/utils.mjs` is intentionally free of Foundry
-runtime dependencies so it can be unit-tested in plain Node:
+(quests), `scripts/spell-converter.mjs` (spells), `scripts/feat-converter.mjs` (feats),
+`scripts/parsers.mjs`, `scripts/detect.mjs`, and `scripts/utils.mjs` is
+intentionally free of Foundry runtime dependencies so it can be unit-tested in
+plain Node:
 
 ```bash
 node test/convert.test.mjs

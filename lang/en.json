@@ -1,7 +1,7 @@
 {
   "WORLDSMITH.AppTitle": "Import from Worldsmith",
   "WORLDSMITH.SidebarButton": "Import Worldsmith",
-  "WORLDSMITH.Intro": "Import Worldsmith creatures, companions, items, spells, shops, treasure, and quests. Creatures become dnd5e NPCs, items and spells become dnd5e items, shops become Item Piles merchants (with their owners as separate NPCs), treasure becomes Item Piles loot piles, and quests become journal entries. Upload one or more .json files and/or paste JSON below; the type of each entry is detected automatically.",
+  "WORLDSMITH.Intro": "Import Worldsmith creatures, companions, items, spells, feats, shops, treasure, and quests. Creatures become dnd5e NPCs; items, spells, and feats become dnd5e items; shops become Item Piles merchants (with their owners as separate NPCs); treasure becomes Item Piles loot piles; and quests become journal entries. Upload one or more .json files and/or paste JSON below; the type of each entry is detected automatically.",
   "WORLDSMITH.Files": "Worldsmith JSON Files",
   "WORLDSMITH.FilesHint": "You can select multiple files at once, mixing creatures and items.",
   "WORLDSMITH.Paste": "Or Paste JSON",

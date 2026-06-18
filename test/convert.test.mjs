@@ -15,6 +15,7 @@ import { convertWorldsmithItem } from "../scripts/item-converter.mjs";
 import { convertWorldsmithShop, convertWorldsmithTreasure } from "../scripts/shop-converter.mjs";
 import { convertWorldsmithQuest } from "../scripts/journal-converter.mjs";
 import { convertWorldsmithSpell } from "../scripts/spell-converter.mjs";
+import { convertWorldsmithFeat } from "../scripts/feat-converter.mjs";
 import { detectWorldsmithType } from "../scripts/detect.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -176,6 +177,7 @@ function activitiesOf(item) {
   assert(detectWorldsmithType(load("crypt-of-the-shadow-drake-treasure.json")) === "treasure", "crypt detected as treasure");
   assert(detectWorldsmithType(load("heist-of-the-sunfire-amulet-quest.json")) === "quest", "heist detected as quest");
   assert(detectWorldsmithType(load("ethereal-chains-spell.json")) === "spell", "ethereal chains detected as spell");
+  assert(detectWorldsmithType(load("echo-of-the-ancients-feat.json")) === "feat", "echo detected as feat");
 }
 
 // --- Blade of Eternal Shadows (item) --------------------------------------
@@ -404,6 +406,41 @@ function activitiesOf(item) {
   assert(act.type === "attack", "ranged spell attack -> attack activity");
   assert(act.attack.type.classification === "spell", "spell attack classification");
   assert(act.damage.parts.some(p => p.types.includes("fire") && p.denomination === 6), "3d6 fire damage parsed");
+}
+
+// --- Echo of the Ancients (feat -> dnd5e feat item) -----------------------
+{
+  console.log("Echo of the Ancients (feat)");
+  const { itemData, warnings } = convertWorldsmithFeat(load("echo-of-the-ancients-feat.json"));
+  const s = itemData.system;
+
+  assert(itemData.name === "Echo of the Ancients", "feat name imported");
+  assert(itemData.type === "feat", "item type is feat");
+  assert(s.type.value === "feat", "system feature type is feat");
+  assert(s.prerequisites.level === 5, "level 5 prerequisite extracted");
+  assert(s.prerequisites.repeatable === false, "not repeatable");
+  assert(/Elf or Dwarf/.test(s.requirements) && /level 5/.test(s.requirements), "requirements text composed");
+  assert(s.uses && s.uses.max === "1" && s.uses.recovery[0].period === "day", "once per day -> 1 use/day");
+
+  const activity = Object.values(s.activities)[0];
+  assert(activity.type === "utility", "utility activity created for limited-use feat");
+  assert(activity.consumption.targets[0].type === "itemUses", "utility activity consumes item uses");
+
+  assert(/Exploration - Ancestral/.test(s.description.value), "subtitle in description");
+  assert(/Prerequisites:/.test(s.description.value), "prerequisites in description");
+  assert(/advantage on History/.test(s.description.value), "mechanics in description");
+  assert(itemData.flags["worldsmith-foundry-import"].kind === "feat", "feat flag set");
+  console.log(`  warnings: ${warnings.length}`);
+}
+
+// --- Passive feat with no uses (no activity) ------------------------------
+{
+  console.log("Passive feat parsing");
+  const { itemData } = convertWorldsmithFeat({
+    name: "Tough", mechanics: "Your hit point maximum increases by an amount equal to twice your level."
+  });
+  assert(Object.keys(itemData.system.activities ?? {}).length === 0, "purely passive feat has no activity");
+  assert(itemData.system.uses === undefined, "passive feat has no uses");
 }
 
 // --- Embedded quest wrapper (creature/owner shape) ------------------------

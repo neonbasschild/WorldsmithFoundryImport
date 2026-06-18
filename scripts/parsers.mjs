@@ -151,6 +151,10 @@ export function parseUses(text) {
     return { max: perDay[1], recovery: [{ period: "day", type: "recoverAll" }] };
   }
 
+  if (/once per day|once a day|once each day/i.test(text)) {
+    return { max: "1", recovery: [{ period: "day", type: "recoverAll" }] };
+  }
+
   const perRest = text.match(/once per (short|long) rest/i)
     || text.match(/once per (short|long)\b/i);
   if (perRest) {

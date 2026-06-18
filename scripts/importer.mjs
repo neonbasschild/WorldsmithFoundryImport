@@ -10,6 +10,7 @@ import { convertWorldsmithItem } from "./item-converter.mjs";
 import { convertWorldsmithShop, convertWorldsmithTreasure } from "./shop-converter.mjs";
 import { convertWorldsmithQuest } from "./journal-converter.mjs";
 import { convertWorldsmithSpell } from "./spell-converter.mjs";
+import { convertWorldsmithFeat } from "./feat-converter.mjs";
 import { detectWorldsmithType } from "./detect.mjs";
 
 /**
@@ -127,6 +128,25 @@ export async function createSpellFromWorldsmith(data, { folderId = null, renderS
 }
 
 /**
+ * Create a dnd5e feat item from a parsed Worldsmith feat object.
+ * @param {object} data
+ * @param {object} [options]
+ * @param {string|null} [options.folderId]
+ * @param {boolean} [options.renderSheet]
+ * @returns {Promise<Item|null>}
+ */
+export async function createFeatFromWorldsmith(data, { folderId = null, renderSheet = false } = {}) {
+  const { itemData, warnings } = convertWorldsmithFeat(data);
+  const folder = resolveFolder(folderId, "Item");
+  if (folder) itemData.folder = folder;
+
+  const item = await Item.create(itemData, { renderSheet });
+  if (!item) return null;
+  for (const warning of warnings) console.warn(`${MODULE_ID} | ${item.name}: ${warning}`);
+  return item;
+}
+
+/**
  * Create a JournalEntry from a Worldsmith quest export.
  * @param {object} data
  * @param {object} [options]
@@ -158,6 +178,10 @@ export async function createFromWorldsmith(data, options = {}) {
   if (type === "spell") {
     const spell = await createSpellFromWorldsmith(data, options);
     return { actors: [], items: spell ? [spell] : [] };
+  }
+  if (type === "feat") {
+    const feat = await createFeatFromWorldsmith(data, options);
+    return { actors: [], items: feat ? [feat] : [] };
   }
   if (type === "item") {
     const item = await createItemFromWorldsmith(data, options);
