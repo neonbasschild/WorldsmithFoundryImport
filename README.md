@@ -7,6 +7,7 @@ A [Foundry VTT](https://foundryvtt.com/) module that converts and imports
 - **Items** (weapons, armor, potions, wondrous items, etc.) → dnd5e items.
 - **Shops** → [Item Piles](https://fantasycomputer.works/FoundryVTT-ItemPiles/)
   merchant actors, with their owners imported as separate NPCs.
+- **Treasure / loot** → Item Piles loot pile actors (with currency).
 
 The type of each export is detected automatically.
 
@@ -89,6 +90,24 @@ inventory is the shop's wares:
 > Item Piles fills in the remaining merchant defaults automatically. Prices use
 > each item's dnd5e `system.price`.
 
+### Treasure / loot (Item Piles)
+
+Worldsmith treasure exports become an **Item Piles loot pile** actor that the
+party can loot:
+
+- The actor is flagged as an Item Piles pile (on both the actor and its
+  prototype token).
+- The hoard's coins are written to the actor's currency (cp/sp/gp/pp).
+- **Basic items** are converted to the best-fitting dnd5e type (weapons, armor,
+  or loot — gems, art objects, potions, and scrolls become loot), with their
+  quantity and price.
+- **Notable items** are converted with the full item importer.
+- The treasure description and lore are stored on the actor's biography, and the
+  original JSON under the actor's module flags.
+
+> Also **requires Item Piles** (loot piles work without the dnd5e companion, but
+> it is recommended for full price/currency support).
+
 ## Installation
 
 ### Manifest URL
@@ -133,6 +152,7 @@ WorldsmithImport.detectWorldsmithType(parsedJson);
 const { actorData } = WorldsmithImport.convertWorldsmith(parsedCreature);
 const { itemData } = WorldsmithImport.convertWorldsmithItem(parsedItem);
 const { merchant, owners } = WorldsmithImport.convertWorldsmithShop(parsedShop);
+const { pile } = WorldsmithImport.convertWorldsmithTreasure(parsedTreasure);
 ```
 
 ## Examples
@@ -144,13 +164,15 @@ Sample Worldsmith exports are included under [`examples/`](examples/):
 - `blade-of-eternal-shadows.json` — a legendary magic longsword (item).
 - `durins-forge-shop.json` — a blacksmith shop with wares, magic items,
   services, and an owner (shop → Item Piles merchant).
+- `crypt-of-the-shadow-drake-treasure.json` — a dragon hoard with coins, gems,
+  and magic items (treasure → Item Piles loot pile).
 
 ## Development
 
 The conversion logic in `scripts/converter.mjs`, `scripts/item-converter.mjs`,
-`scripts/shop-converter.mjs`, `scripts/parsers.mjs`, `scripts/detect.mjs`, and
-`scripts/utils.mjs` is intentionally free of Foundry runtime dependencies so it
-can be unit-tested in plain Node:
+`scripts/shop-converter.mjs` (shops and treasure), `scripts/parsers.mjs`,
+`scripts/detect.mjs`, and `scripts/utils.mjs` is intentionally free of Foundry
+runtime dependencies so it can be unit-tested in plain Node:
 
 ```bash
 node test/convert.test.mjs

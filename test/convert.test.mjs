@@ -12,7 +12,7 @@ import { dirname, join } from "node:path";
 
 import { convertWorldsmith } from "../scripts/converter.mjs";
 import { convertWorldsmithItem } from "../scripts/item-converter.mjs";
-import { convertWorldsmithShop } from "../scripts/shop-converter.mjs";
+import { convertWorldsmithShop, convertWorldsmithTreasure } from "../scripts/shop-converter.mjs";
 import { detectWorldsmithType } from "../scripts/detect.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -138,6 +138,7 @@ function activitiesOf(item) {
   assert(detectWorldsmithType(load("eldritch-behemoth.json")) === "creature", "behemoth detected as creature");
   assert(detectWorldsmithType(load("blade-of-eternal-shadows.json")) === "item", "blade detected as item");
   assert(detectWorldsmithType(load("durins-forge-shop.json")) === "shop", "forge detected as shop");
+  assert(detectWorldsmithType(load("crypt-of-the-shadow-drake-treasure.json")) === "treasure", "crypt detected as treasure");
 }
 
 // --- Blade of Eternal Shadows (item) --------------------------------------
@@ -241,6 +242,52 @@ function activitiesOf(item) {
   assert(/Quest: Embers of an Old Technique/.test(borin.system.details.biography.value), "owner quest in biography");
   assert(/Additional Details/.test(borin.system.details.biography.value), "owner additional details in biography");
 
+  console.log(`  warnings: ${warnings.length}`);
+}
+
+// --- The Crypt of the Shadow Drake (treasure -> Item Piles loot pile) -----
+{
+  console.log("The Crypt of the Shadow Drake (treasure)");
+  const { pile, warnings } = convertWorldsmithTreasure(load("crypt-of-the-shadow-drake-treasure.json"));
+
+  assert(pile.name === "The Crypt of the Shadow Drake", "pile name imported");
+  assert(pile.type === "npc", "pile is an npc");
+
+  const flag = pile.flags["item-piles"];
+  assert(flag?.data?.enabled === true && flag?.data?.type === "pile", "actor item-piles pile flag set");
+  const tokenFlag = pile.prototypeToken.flags["item-piles"];
+  assert(tokenFlag?.data?.type === "pile", "token item-piles pile flag set");
+  assert(tokenFlag !== flag, "actor and token flags are separate objects");
+
+  assert(pile.system.currency.cp === 125 && pile.system.currency.sp === 200
+    && pile.system.currency.gp === 90 && pile.system.currency.pp === 15, "currency imported");
+
+  // 4 basic items + 2 notable items = 6 embedded items.
+  assert(pile.items.length === 6, `expected 6 embedded items, got ${pile.items.length}`);
+  assert(pile.items.every(i => i.flags["item-piles"] && "item" in i.flags["item-piles"]),
+    "every embedded item carries an item-piles item flag");
+
+  const find = n => pile.items.find(i => i.name === n);
+
+  const rubies = find("Ruby Gemstones");
+  assert(rubies.system.quantity === 3, "Ruby Gemstones quantity 3");
+  assert(rubies.system.price.value === 300, "Ruby Gemstones price 300 gp");
+
+  const statuette = find("Celestial Stag Statuette");
+  assert(statuette.type === "loot", "Statuette -> loot");
+  assert(statuette.system.price.value === 250, "Statuette price 250 gp");
+
+  // Notable items routed through the item converter.
+  const blade = find("Blade of Eternal Shadows");
+  assert(blade.type === "weapon" && blade.system.rarity === "legendary", "Blade notable weapon");
+  assert(blade.system.quantity === 1, "Blade quantity from wrapper");
+  const shield = find("Shield of Radiance");
+  assert(shield.type === "equipment" && shield.system.type.value === "shield", "Shield of Radiance -> shield");
+  assert(shield.system.rarity === "rare", "Shield of Radiance rare");
+
+  assert(pile.flags["worldsmith-foundry-import"].kind === "treasure", "treasure flag set");
+  assert(/Ancient Dragon Hoard|glitters with ancient wealth/.test(pile.system.details.biography.value),
+    "treasure description in biography");
   console.log(`  warnings: ${warnings.length}`);
 }
 

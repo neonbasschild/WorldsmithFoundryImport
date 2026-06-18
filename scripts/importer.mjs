@@ -7,7 +7,7 @@
 import { MODULE_ID } from "./constants.mjs";
 import { convertWorldsmith } from "./converter.mjs";
 import { convertWorldsmithItem } from "./item-converter.mjs";
-import { convertWorldsmithShop } from "./shop-converter.mjs";
+import { convertWorldsmithShop, convertWorldsmithTreasure } from "./shop-converter.mjs";
 import { detectWorldsmithType } from "./detect.mjs";
 
 /**
@@ -88,6 +88,24 @@ export async function createShopFromWorldsmith(data, { folderId = null, renderSh
 }
 
 /**
+ * Create an Item Piles loot pile actor from a Worldsmith treasure export.
+ * @param {object} data
+ * @param {object} [options]
+ * @param {string|null} [options.folderId]
+ * @param {boolean} [options.renderSheet]
+ * @returns {Promise<{actors: Actor[], items: Item[]}>}
+ */
+export async function createTreasureFromWorldsmith(data, { folderId = null, renderSheet = false } = {}) {
+  const { pile, warnings } = convertWorldsmithTreasure(data);
+  const folder = resolveFolder(folderId, "Actor");
+  if (folder) pile.folder = folder;
+
+  const pileActor = await Actor.create(pile, { renderSheet });
+  for (const warning of warnings) console.warn(`${MODULE_ID} | ${pile.name}: ${warning}`);
+  return { actors: pileActor ? [pileActor] : [], items: [] };
+}
+
+/**
  * Create the appropriate document(s) from a Worldsmith export.
  * @param {object} data
  * @param {object} [options]
@@ -96,6 +114,7 @@ export async function createShopFromWorldsmith(data, { folderId = null, renderSh
 export async function createFromWorldsmith(data, options = {}) {
   const type = detectWorldsmithType(data);
   if (type === "shop") return createShopFromWorldsmith(data, options);
+  if (type === "treasure") return createTreasureFromWorldsmith(data, options);
   if (type === "item") {
     const item = await createItemFromWorldsmith(data, options);
     return { actors: [], items: item ? [item] : [] };

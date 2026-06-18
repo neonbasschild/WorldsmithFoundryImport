@@ -13,8 +13,8 @@
  */
 
 import {
-  ARMOR_BASE_ITEMS, ICONS, ITEM_PILES_FLAG_VERSION, ITEM_PILES_ID, MODULE_ID, SHOP_ICON,
-  WEAPON_BASE_ITEMS, WEAPON_KEYWORD_PROPERTIES
+  ARMOR_BASE_ITEMS, CURRENCY_MAP, ICONS, ITEM_PILES_FLAG_VERSION, ITEM_PILES_ID, MODULE_ID,
+  SHOP_ICON, WEAPON_BASE_ITEMS, WEAPON_KEYWORD_PROPERTIES
 } from "./constants.mjs";
 import { convertWorldsmith } from "./converter.mjs";
 import {
@@ -273,4 +273,111 @@ export function convertWorldsmithShop(data) {
   }
 
   return { merchant, owners, warnings };
+}
+
+/* -------------------------------------------- */
+/*  Treasure / loot piles                       */
+/* -------------------------------------------- */
+
+/**
+ * Build a dnd5e currency object from a Worldsmith currency block.
+ * @param {object|undefined} currency
+ * @returns {object}
+ */
+function buildCurrency(currency) {
+  const result = {};
+  for (const key of Object.values(CURRENCY_MAP)) {
+    if (currency?.[key] !== undefined) result[key] = toNumber(currency[key], 0);
+  }
+  return result;
+}
+
+/**
+ * Build the loot pile biography from the treasure's flavor text.
+ * @param {object} data
+ * @returns {string}
+ */
+function buildTreasureBiography(data) {
+  const sections = [];
+  if (data.subtitle) sections.push(`<p><em>${escapeHTML(data.subtitle)}</em></p>`);
+  if (data.description) sections.push(textToHTML(data.description));
+  if (data.lore) sections.push(`<hr><h3>Lore</h3>${textToHTML(data.lore)}`);
+  return sections.join("");
+}
+
+/**
+ * Convert a Worldsmith treasure/loot export into an Item Piles loot pile actor.
+ * @param {object} data  Parsed Worldsmith treasure JSON.
+ * @returns {{pile: object, warnings: string[]}}
+ */
+export function convertWorldsmithTreasure(data) {
+  const warnings = [];
+  if (!data || typeof data !== "object") {
+    throw new Error("Worldsmith treasure data must be an object.");
+  }
+
+  const items = [];
+
+  // Basic items (mundane gear, gems, potions, scrolls).
+  for (const entry of data.basic_items ?? []) {
+    items.push(withPileItemFlag(convertMundaneShopItem(entry)));
+  }
+
+  // Notable items reuse the standalone item converter.
+  for (const wrapper of data.notable_items ?? []) {
+    const itemSource = wrapper?.data ?? wrapper;
+    try {
+      const { itemData, warnings: itemWarnings } = convertWorldsmithItem(itemSource);
+      warnings.push(...itemWarnings);
+      if (wrapper?.quantity !== undefined) itemData.system.quantity = toNumber(wrapper.quantity, 1);
+      items.push(withPileItemFlag(itemData));
+    } catch (err) {
+      warnings.push(`Skipped a notable item: ${err.message}`);
+    }
+  }
+
+  const pileFlag = {
+    data: { enabled: true, type: "pile" },
+    version: ITEM_PILES_FLAG_VERSION
+  };
+
+  const pile = {
+    name: data.name || "Imported Treasure",
+    type: "npc",
+    img: ICONS.loot,
+    system: {
+      currency: buildCurrency(data.currency),
+      details: { biography: { value: buildTreasureBiography(data) } },
+      source: { custom: "Imported from Worldsmith" }
+    },
+    items,
+    prototypeToken: {
+      name: data.name || "Imported Treasure",
+      actorLink: false,
+      disposition: 0,
+      sight: { enabled: false },
+      flags: { [ITEM_PILES_ID]: foundryCloneFlag(pileFlag) }
+    },
+    flags: {
+      [ITEM_PILES_ID]: foundryCloneFlag(pileFlag),
+      [MODULE_ID]: {
+        imported: true,
+        kind: "treasure",
+        version: MODULE_VERSION,
+        source: data
+      }
+    }
+  };
+
+  return { pile, warnings };
+}
+
+/**
+ * Shallow clone a flag object so the actor and prototype token do not share the
+ * same nested reference.
+ * @param {object} flag
+ * @returns {object}
+ */
+function foundryCloneFlag(flag) {
+  return { data: { ...flag.data }, version: flag.version };
 }

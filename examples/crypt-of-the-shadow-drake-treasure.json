@@ -1,0 +1,90 @@
+{
+  "name": "The Crypt of the Shadow Drake",
+  "subtitle": "Ancient Dragon Hoard",
+  "description": "Nestled in the shadowy nook of a cavern, illuminated only by the occasional flicker of bioluminescent fungi, a large chest bound in iron and adorned with draconic motifs lies. Its lock, shaped like a dragon's maw, awaits to be opened. The treasure within glitters with ancient wealth and magical artifacts, each piece telling a story of the dragon's long reign.",
+  "currency": {
+    "cp": 125,
+    "sp": 200,
+    "gp": 90,
+    "pp": 15
+  },
+  "basic_items": [
+    {
+      "item": "Celestial Stag Statuette",
+      "price": "250 gp",
+      "details": "A silver statuette of a celestial stag, inlaid with moonstones. The craftsmanship is exquisite, suggesting it was created by master artisans.",
+      "quantity": 1
+    },
+    {
+      "item": "Ruby Gemstones",
+      "price": "300 gp",
+      "details": "Three flawless rubies worth 100gp each, each the size of a thumb. They catch the light beautifully, reflecting deep crimson hues.",
+      "quantity": 3
+    },
+    {
+      "item": "Elixir of Health",
+      "price": "50 gp",
+      "details": "A bubbling potion with a vibrant red hue, exuding a warm, comforting aroma. Player rolls 2d4+2 for healing amount.",
+      "quantity": 1
+    },
+    {
+      "item": "Scroll of Detect Magic",
+      "price": "25 gp",
+      "details": "An ancient scroll, its edges worn, written in a glowing arcane script. Spellcasting ability check DC 12 to use successfully.",
+      "quantity": 1
+    }
+  ],
+  "notable_items": [
+    {
+      "data": {
+        "name": "Blade of Eternal Shadows",
+        "subtitle": "Legendary Weapon",
+        "category": "Weapon",
+        "rarity": "Legendary",
+        "weight": 3,
+        "value": 75000,
+        "attunement": {
+          "required": true,
+          "condition": "Creature proficient with martial weapons"
+        },
+        "weaponData": {
+          "weaponType": "longsword",
+          "damageDice": "1d8 slashing",
+          "range": "5 ft",
+          "properties": "versatile, finesse, magical",
+          "masteries": null
+        },
+        "armorData": null,
+        "description": "Forged in the depths of obsidian caverns, the Blade of Eternal Shadows commands respect at a glance. Its darksteel blade catches the light like liquid onyx. Runes dance faintly along the spine, glowing with a dark violet hum under the moon's gaze. The shadowed leather grip invites an almost symbiotic connection. Atop the pommel, a gem flickers with an otherworldly pulse. Even under the sun's gaze, the shadows cling to the weapon, making it seem more phantom than steel.",
+        "usage": "This weapon grants a +2 bonus to attack rolls and a +2 bonus to Stealth checks. It has 3 charges that recharge at dawn. As an action, you can expend 1 charge to cast a veil of darkness covering a 15-foot radius sphere. As a bonus action when you hit with an attack, you can expend 1 charge to add 1d6 necrotic damage to the damage roll.",
+        "lore": "Forged in an ancient era by a shadow-smith under a night deity's guidance, this blade was instrumental in secretive assassinations and grand battles fought under the cover of darkness, earning its reputation across histories and legends. The blade is said to contain the essence of the first shadow ever cast, making it both a weapon and a relic of primordial darkness."
+      },
+      "quantity": 1
+    },
+    {
+      "data": {
+        "name": "Shield of Radiance",
+        "subtitle": "Shield of Radiance",
+        "category": "Armor",
+        "rarity": "Rare",
+        "weight": 6,
+        "value": 500,
+        "attunement": {
+          "required": true,
+          "condition": null
+        },
+        "weaponData": null,
+        "armorData": {
+          "armorType": "shield",
+          "baseAC": 2,
+          "stealthDisadvantage": "None",
+          "strengthReq": null
+        },
+        "description": "A radiant shield that glows with a soft light, crafted from enchanted silver and inlaid with holy symbols.",
+        "usage": "Provides +2 to AC and grants resistance to necrotic damage. The shield can be activated as an action to cast Light at will.",
+        "lore": "Forged by the celestial smiths of Mount Celestia, this shield was once wielded by a paladin who fought against the Shadow Drake itself."
+      },
+      "quantity": 1
+    }
+  ]
+}

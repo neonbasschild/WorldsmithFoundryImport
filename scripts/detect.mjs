@@ -4,9 +4,10 @@
  */
 
 /**
- * Determine whether a parsed Worldsmith export describes a shop, creature, or item.
+ * Determine whether a parsed Worldsmith export describes a shop, treasure,
+ * creature, or item.
  * @param {object} data
- * @returns {"shop"|"creature"|"item"}
+ * @returns {"shop"|"treasure"|"creature"|"item"}
  */
 export function detectWorldsmithType(data) {
   if (!data || typeof data !== "object") return "creature";
@@ -18,6 +19,13 @@ export function detectWorldsmithType(data) {
     || data.services !== undefined
     || data.owners !== undefined
   ) return "shop";
+
+  // Treasure / loot piles carry currency and basic/notable item collections.
+  if (
+    data.basic_items !== undefined
+    || data.notable_items !== undefined
+    || data.currency !== undefined
+  ) return "treasure";
 
   // Creatures carry an identity/attributes/abilities block.
   if (data.identity || data.attributes || data.abilities) return "creature";
