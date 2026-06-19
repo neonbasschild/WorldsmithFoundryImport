@@ -15,6 +15,7 @@ A [Foundry VTT](https://foundryvtt.com/) module that converts and imports
 - **Groups** → dnd5e faction/party group actors with member NPCs.
 - **Dungeons** → journal entries with room pages, plus encounter groups per room.
 - **Puzzles** → journal entries (overview, intro text, hints, solution, and failure consequence pages).
+- **Traps** → journal entries (overview, description, skill checks, and consequence pages).
 - **Roll tables** → Foundry rollable tables with ranged text results.
 
 The type of each export is detected automatically.
@@ -215,6 +216,15 @@ Worldsmith puzzle exports become a **journal entry**:
 - **Overview** (subtitle and DM description)
 - **Intro Text** (player-facing setup)
 - **Hints**, **Solution**, and **Failure Consequence** pages when present
+- Embedded actors, items, spells, and feats are imported alongside the journal
+
+### Traps
+
+Worldsmith trap exports become a **journal entry**:
+
+- **Overview** (trap type/subtitle and DM details)
+- **Description** (player-facing scene text)
+- **Skill Checks** and **Consequence** pages when present
 - Embedded actors, items, spells, and feats are imported alongside the journal
 
 ### Roll Tables

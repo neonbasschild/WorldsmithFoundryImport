@@ -138,7 +138,9 @@ export function convertWorldsmithQuest(data) {
       ? "Key Details"
       : quest.documentKind === "puzzle"
         ? "Intro Text"
-        : "Adventure Hook";
+        : quest.documentKind === "trap"
+          ? "Description"
+          : "Adventure Hook";
     addPage(hookTitle, textToHTML(quest.hook));
   }
 

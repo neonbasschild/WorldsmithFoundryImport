@@ -686,6 +686,28 @@ function activitiesOf(item) {
 }
 
 {
+  console.log("Structured trap (Senkei Kageblade Petal Trap)");
+  const raw = loadStructured("Senkei_Kageblade_Petal_Trap_9195.json");
+  const normalized = normalizeWorldsmithData(raw);
+  assert(detectWorldsmithType(normalized) === "trap", "trap type detected");
+  assert(normalized.documentKind === "trap", "trap document kind");
+  assert(normalized.name === "Senkei Kageblade Petal Trap", "trap name");
+  assert(normalized.subtitle.includes("Mechanical"), "trap subtitle parsed");
+  assert(normalized.gm_overview.includes("pressure plate"), "trap details parsed");
+  assert(normalized.hook.includes("dimly lit corridor"), "trap description parsed");
+  assert(normalized.sections.some(s => s.name === "Skill Checks"), "trap skill checks section");
+  assert(normalized.sections.some(s => s.name === "Consequence"), "trap consequence section");
+  assert(normalized.sections.find(s => s.name === "Skill Checks")?.content.includes("DC 13 Wisdom"), "trap skill checks content");
+  assert(normalized.sections.find(s => s.name === "Consequence")?.content.includes("6d6 slashing"), "trap consequence content");
+  const { journalData } = convertWorldsmithQuest(normalized);
+  assert(journalData.flags["worldsmith-foundry-import"].kind === "trap", "trap journal kind");
+  assert(journalData.pages.some(p => p.name === "Overview"), "trap overview page");
+  assert(journalData.pages.some(p => p.name === "Description"), "trap description page");
+  assert(journalData.pages.some(p => p.name === "Skill Checks"), "trap skill checks page");
+  assert(journalData.pages.some(p => p.name === "Consequence"), "trap consequence page");
+}
+
+{
   console.log("Structured roll table (Rumors of Otosan Uchi)");
   const raw = loadStructured("Rumors_of_Otosan_Uchi-table_f941.json");
   const normalized = normalizeWorldsmithData(raw);

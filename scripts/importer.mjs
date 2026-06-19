@@ -461,6 +461,7 @@ export async function createFromWorldsmith(data, options = {}) {
   if (type === "group") return createGroupFromWorldsmith(data, options);
   if (type === "dungeon") return createDungeonFromWorldsmith(data, options);
   if (type === "puzzle") return createJournalFromWorldsmith(data, options);
+  if (type === "trap") return createJournalFromWorldsmith(data, options);
   if (type === "rollTable") return createRollTableFromWorldsmith(data, options);
   if (type === "quest") return createJournalFromWorldsmith(data, options);
   if (type === "spell") {

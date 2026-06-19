@@ -86,6 +86,7 @@ function parseStructuredExport(data) {
   if (contentType === "group") return normalizeGroup(root, walk, data.items);
   if (contentType === "dungeon") return normalizeDungeon(root, walk, data.items);
   if (contentType === "puzzle") return normalizePuzzle(root, walk, data.items);
+  if (contentType === "trap") return normalizeTrap(root, walk, data.items);
   if (contentType === "rolltable") return normalizeRollTable(root, walk, data.items);
   if (contentType === "quest") return normalizeQuest(root, walk, data.items);
   if (contentType === "story") return normalizeStory(root, walk, data.items);
@@ -972,6 +973,32 @@ function normalizePuzzle(root, walk, items) {
   }
 
   return attachEmbeddedContent(puzzle, root, items);
+}
+
+const TRAP_SECTIONS = ["Skill Checks", "Consequence"];
+
+/**
+ * @param {object} root
+ * @param {object} walk
+ * @param {Record<string, object>} items
+ * @returns {object}
+ */
+function normalizeTrap(root, walk, items) {
+  const trap = {
+    name: root.name,
+    subtitle: walk.subtitle ?? "",
+    documentKind: "trap",
+    gm_overview: joinBlocks(walk.sections.Details, root.name),
+    hook: joinBlocks(walk.sections.Description, root.name),
+    sections: []
+  };
+
+  for (const header of TRAP_SECTIONS) {
+    const content = joinBlocks(walk.sections[header], root.name);
+    if (content) trap.sections.push({ name: header, content });
+  }
+
+  return attachEmbeddedContent(trap, root, items);
 }
 
 /**
