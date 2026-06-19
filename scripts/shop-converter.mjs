@@ -25,7 +25,7 @@ import { escapeHTML, textToHTML, toNumber } from "./utils.mjs";
 const MODULE_VERSION = "1.0.0";
 
 /** Wrap an item-creation object with the Item Piles "regular ware" flag. */
-function withPileItemFlag(itemData, pileItem = {}) {
+export function withPileItemFlag(itemData, pileItem = {}) {
   itemData.flags ??= {};
   itemData.flags[ITEM_PILES_ID] = { item: pileItem };
   return itemData;

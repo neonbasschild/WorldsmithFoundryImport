@@ -22,7 +22,8 @@ import { convertWorldsmithFeat } from "../scripts/feat-converter.mjs";
 import { detectWorldsmithType } from "../scripts/detect.mjs";
 import { isStructuredWorldsmith, normalizeWorldsmithData } from "../scripts/worldsmith-parser.mjs";
 import {
-  FEAT_COMPENDIUM_PACKS, SPELL_COMPENDIUM_PACKS, normalizeSrdName
+  FEAT_COMPENDIUM_PACKS, ITEM_COMPENDIUM_PACKS, ITEM_DOCUMENT_TYPES, SPELL_COMPENDIUM_PACKS,
+  normalizeSrdName, parseScrollSpellName, readWorldsmithItemName
 } from "../scripts/srd-lookup.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -801,8 +802,15 @@ function activitiesOf(item) {
   assert(normalizeSrdName("Spell: Fireball") === "fireball", "strip spell prefix");
   assert(normalizeSrdName("  False Life  ") === "false life", "trim and lowercase");
   assert(normalizeSrdName("Feat: Alert") === "alert", "strip feat prefix");
+  assert(normalizeSrdName("Magic Item: Bag of Holding") === "bag of holding", "strip magic item prefix");
+  assert(parseScrollSpellName("Spell Scroll (Guidance)") === "Guidance", "parse scroll spell name");
+  assert(parseScrollSpellName("Spell Scroll: Fireball") === "Fireball", "parse scroll spell colon form");
+  assert(readWorldsmithItemName({ item: "Potion of Healing" }) === "Potion of Healing", "read shop row name");
+  assert(readWorldsmithItemName({ name: "Longsword" }) === "Longsword", "read item name");
   assert(SPELL_COMPENDIUM_PACKS.includes("dnd5e.spells24"), "modern spell pack listed");
   assert(FEAT_COMPENDIUM_PACKS.includes("dnd5e.feats24"), "modern feat pack listed");
+  assert(ITEM_COMPENDIUM_PACKS.includes("dnd5e.equipment24"), "modern equipment pack listed");
+  assert(ITEM_DOCUMENT_TYPES.includes("consumable"), "consumable item type listed");
 }
 
 console.log(`\n${passed} passed, ${failed} failed`);

@@ -1,5 +1,5 @@
 /**
- * Resolve Worldsmith spell and feat names against the dnd5e system's SRD
+ * Resolve Worldsmith spell, feat, and item names against the dnd5e system's SRD
  * compendiums before falling back to custom item creation.
  *
  * Foundry-runtime only — requires game.packs from a loaded dnd5e world.
@@ -23,19 +23,42 @@ export const SPELL_COMPENDIUM_PACKS = [
  */
 export const FEAT_COMPENDIUM_PACKS = [
   "dnd5e.feats24",
-  "dnd5e.items",
+  "dnd5e.feats",
   "dnd5e.origins24",
   "dnd5e.classes24",
   "dnd5e.backgrounds",
   "dnd5e.classfeatures",
   "dnd5e.races",
-  "dnd5e.equipment24",
   "dnd5e.monsterfeatures",
   "dnd5e.monsterfeatures24"
 ];
 
 /**
- * Normalize a spell/feat name for compendium lookup.
+ * dnd5e compendium packs to search for equipment and magic items.
+ * @type {string[]}
+ */
+export const ITEM_COMPENDIUM_PACKS = [
+  "dnd5e.equipment24",
+  "dnd5e.equipment",
+  "dnd5e.items"
+];
+
+/**
+ * Item document types to search within equipment compendiums.
+ * @type {string[]}
+ */
+export const ITEM_DOCUMENT_TYPES = [
+  "weapon",
+  "equipment",
+  "consumable",
+  "tool",
+  "loot",
+  "container",
+  "backpack"
+];
+
+/**
+ * Normalize a spell/feat/item name for compendium lookup.
  * @param {string} name
  * @returns {string}
  */
@@ -45,6 +68,26 @@ export function normalizeSrdName(name) {
     .trim()
     .toLowerCase()
     .replace(/\s+/g, " ");
+}
+
+/**
+ * Extract a spell name from a scroll item label.
+ * @param {string} name
+ * @returns {string|null}
+ */
+export function parseScrollSpellName(name) {
+  const match = String(name ?? "").match(/spell\s+scroll\s*(?:\(\s*([^)]+)\s*\)|:\s*(.+))$/i);
+  return match?.[1]?.trim() || match?.[2]?.trim() || null;
+}
+
+/**
+ * Read the best display name from a Worldsmith item-like object or shop row.
+ * @param {object|null|undefined} data
+ * @returns {string}
+ */
+export function readWorldsmithItemName(data) {
+  if (!data || typeof data !== "object") return "";
+  return String(data.name ?? data.item ?? "").trim();
 }
 
 /**
@@ -66,22 +109,31 @@ function readIndexIdentifier(entry) {
 /**
  * @param {object} pack
  * @param {string} name
- * @param {string} documentType
+ * @param {string|string[]} documentType
  * @returns {object|null}
  */
 function findIndexEntry(pack, name, documentType) {
   const normalized = normalizeSrdName(name);
   const slug = slugifySrdName(name);
+  const types = Array.isArray(documentType) ? documentType : [documentType];
 
-  const byName = pack.index.find(entry =>
-    entry.type === documentType && normalizeSrdName(entry.name) === normalized
-  );
-  if (byName) return byName;
+  for (const type of types) {
+    const byName = pack.index.find(entry =>
+      entry.type === type && normalizeSrdName(entry.name) === normalized
+    );
+    if (byName) return byName;
+  }
 
   if (!slug) return null;
-  return pack.index.find(entry =>
-    entry.type === documentType && readIndexIdentifier(entry) === slug
-  ) ?? null;
+
+  for (const type of types) {
+    const bySlug = pack.index.find(entry =>
+      entry.type === type && readIndexIdentifier(entry) === slug
+    );
+    if (bySlug) return bySlug;
+  }
+
+  return null;
 }
 
 /**
@@ -105,7 +157,7 @@ async function getIndexedPack(packId) {
 /**
  * @param {string} name
  * @param {string[]} packIds
- * @param {string} documentType
+ * @param {string|string[]} documentType
  * @returns {Promise<{pack: object, entry: object, packId: string}|null>}
  */
 async function findInCompendiumPacks(name, packIds, documentType) {
@@ -139,6 +191,74 @@ export async function findSrdFeat(name) {
 }
 
 /**
+ * Find a matching SRD item in dnd5e equipment compendiums.
+ * @param {string} name
+ * @returns {Promise<{pack: object, entry: object, packId: string}|null>}
+ */
+export async function findSrdItem(name) {
+  return findInCompendiumPacks(name, ITEM_COMPENDIUM_PACKS, ITEM_DOCUMENT_TYPES);
+}
+
+/**
+ * Pick the best SRD compendium match for a Worldsmith item-like export.
+ * @param {object|null|undefined} data
+ * @returns {Promise<{pack: object, entry: object, packId: string}|null>}
+ */
+export async function findSrdMatch(data) {
+  const name = readWorldsmithItemName(data);
+  if (!name) return null;
+
+  if (data?.castingTime !== undefined || (data?.school !== undefined && data?.level !== undefined)) {
+    return await findSrdSpell(name);
+  }
+
+  if (data?.mechanics !== undefined || data?.prerequisites !== undefined) {
+    return await findSrdFeat(name);
+  }
+
+  if (/^spell:/i.test(name)) {
+    const match = await findSrdSpell(name);
+    if (match) return match;
+  }
+
+  if (/^feat:/i.test(name)) {
+    const match = await findSrdFeat(name);
+    if (match) return match;
+  }
+
+  if (/^magic item:/i.test(name)) {
+    const stripped = name.replace(/^Magic Item:\s*/i, "").trim();
+    const match = await findSrdItem(stripped) ?? await findSrdItem(name);
+    if (match) return match;
+  }
+
+  const scrollSpell = parseScrollSpellName(name);
+  if (scrollSpell) {
+    const scrollItem = await findSrdItem(name);
+    if (scrollItem) return scrollItem;
+    const spell = await findSrdSpell(scrollSpell);
+    if (spell) return spell;
+  }
+
+  return await findSrdItem(name)
+    ?? await findSrdSpell(name)
+    ?? await findSrdFeat(name);
+}
+
+/**
+ * Load compendium item data suitable for Item.create or actor embedding.
+ * @param {{pack: object, entry: object}} match
+ * @returns {Promise<object|null>}
+ */
+export async function getSrdItemCreateData(match) {
+  const source = await match.pack.getDocument(match.entry._id);
+  if (!source) return null;
+  const data = source.toObject();
+  delete data._id;
+  return data;
+}
+
+/**
  * Import a compendium index match into the world as an Item.
  * @param {{pack: object, entry: object}} match
  * @param {object} [options]
@@ -147,29 +267,16 @@ export async function findSrdFeat(name) {
  * @returns {Promise<Item|null>}
  */
 export async function importSrdCompendiumItem(match, { folderId = null, renderSheet = false } = {}) {
-  const { pack, entry } = match;
-  const source = await pack.getDocument(entry._id);
-  if (!source) return null;
-
-  let item;
-  if (typeof pack.importDocument === "function") {
-    item = await pack.importDocument(source, { keepId: false });
-  } else {
-    const data = source.toObject();
-    delete data._id;
-    item = await Item.create(data, { renderSheet });
-  }
-
-  if (!item) return null;
+  const itemData = await getSrdItemCreateData(match);
+  if (!itemData) return null;
 
   if (folderId) {
     const folder = game.folders?.get(folderId);
-    if (folder?.type === "Item" && item.folder?.id !== folderId) {
-      await item.update({ folder: folderId });
-    }
+    if (folder?.type === "Item") itemData.folder = folderId;
   }
 
-  if (renderSheet) item.sheet?.render(true);
+  const item = await Item.create(itemData, { renderSheet });
+  if (renderSheet) item?.sheet?.render(true);
   return item;
 }
 
