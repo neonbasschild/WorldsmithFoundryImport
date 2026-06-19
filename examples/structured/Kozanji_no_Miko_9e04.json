@@ -1,0 +1,5178 @@
+{
+  "rootId": "7af483ef-a1f6-447e-b187-be79276f54c4",
+  "items": {
+    "7af483ef-a1f6-447e-b187-be79276f54c4": {
+      "model_type": "structured",
+      "content_type": "dungeon",
+      "type": "section",
+      "name": "Kozanji no Miko",
+      "childrenIds": [
+        "7566a3d4-1675-4363-addb-4124b30986e5",
+        "ceea16fd-78dc-420d-b021-00a8adb0cbe0",
+        "a7c4b4c1-f6e8-4269-bcc0-e1d4184958b8",
+        "1f3c7838-ee1d-45a2-88f9-541b481fe7c9",
+        "1614cfd2-f644-41e2-a621-59769b29837f",
+        "3449b38a-03b8-46e8-8575-35d238bca9de",
+        "b6c0b5bd-0887-4d3c-a14c-8ca207aaa726",
+        "1a33786d-064e-4577-9d15-eda05332b82e",
+        "b3a3b867-a224-4f17-bce1-4979d2c77541",
+        "5fe61bff-e0a4-4c5c-8e35-9159b70a6d47",
+        "a8814da6-b614-41ff-8093-11e75658af58",
+        "538fa595-6731-4013-af92-6a7323d8c535",
+        "e7a99590-8775-4cf9-b2b0-02e4cc607790",
+        "64c50376-f927-4ae4-ba98-66c946216044"
+      ],
+      "parentId": null,
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Kozanji no Miko",
+                "textFormat": "h1"
+              }
+            ]
+          }
+        ],
+        "showTitle": true,
+        "styles": {
+          "borderBottom": "1px solid #882619"
+        }
+      },
+      "id": "7af483ef-a1f6-447e-b187-be79276f54c4",
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none"
+        },
+        "collapsible": false,
+        "isCollapsed": false,
+        "alternatingCollapsedBackground": "white"
+      }
+    },
+    "7566a3d4-1675-4363-addb-4124b30986e5": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Shrine of the Mountain’s Whisper",
+              "textFormat": "h4"
+            }
+          ]
+        }
+      ],
+      "parentId": "7af483ef-a1f6-447e-b187-be79276f54c4",
+      "id": "7566a3d4-1675-4363-addb-4124b30986e5"
+    },
+    "ceea16fd-78dc-420d-b021-00a8adb0cbe0": {
+      "type": "line",
+      "parentId": "7af483ef-a1f6-447e-b187-be79276f54c4",
+      "styles": {
+        "background": "linear-gradient(to right, #9D2A1F, transparent)",
+        "border": "none",
+        "height": "4px",
+        "width": "100%"
+      },
+      "id": "ceea16fd-78dc-420d-b021-00a8adb0cbe0",
+      "customStyles": {
+        "default": {
+          "background": "linear-gradient(to right, #9D2A1F, transparent)",
+          "border": "none",
+          "height": "4px",
+          "width": "100%"
+        }
+      }
+    },
+    "a7c4b4c1-f6e8-4269-bcc0-e1d4184958b8": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Lore",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "7af483ef-a1f6-447e-b187-be79276f54c4",
+      "id": "a7c4b4c1-f6e8-4269-bcc0-e1d4184958b8"
+    },
+    "1f3c7838-ee1d-45a2-88f9-541b481fe7c9": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "High in the mist-shrouded peaks of Rokugan lies ",
+              "textFormat": "description"
+            },
+            {
+              "text": "{{Kozanji_no_Miko}}",
+              "variable": true,
+              "textFormat": "description"
+            },
+            {
+              "text": ", an ancient mountain shrine once dedicated to the benevolent mountain kami. Centuries ago, an Oni siege shattered its sanctity, corrupting the shrine’s wards and trapping a humble monk—Akio—in spiritual limbo. Legends tell of a shattered Spirit Mirror that must be restored to cleanse the shrine’s heart and free the lost soul within.",
+              "textFormat": "description"
+            }
+          ]
+        }
+      ],
+      "parentId": "7af483ef-a1f6-447e-b187-be79276f54c4",
+      "id": "1f3c7838-ee1d-45a2-88f9-541b481fe7c9"
+    },
+    "1614cfd2-f644-41e2-a621-59769b29837f": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Layout",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "7af483ef-a1f6-447e-b187-be79276f54c4",
+      "id": "1614cfd2-f644-41e2-a621-59769b29837f"
+    },
+    "3449b38a-03b8-46e8-8575-35d238bca9de": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "A linear progression of five chambers winding inward. From the overgrown gatehouse, through a hall of whispering statues, into a hidden tea room, across a narrow ronin-patrolled corridor, and finally to the inner sanctum atop a raised altar.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "7af483ef-a1f6-447e-b187-be79276f54c4",
+      "id": "3449b38a-03b8-46e8-8575-35d238bca9de"
+    },
+    "b6c0b5bd-0887-4d3c-a14c-8ca207aaa726": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Objectives",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "7af483ef-a1f6-447e-b187-be79276f54c4",
+      "id": "b6c0b5bd-0887-4d3c-a14c-8ca207aaa726"
+    },
+    "1a33786d-064e-4577-9d15-eda05332b82e": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "numbered-list",
+          "children": [
+            {
+              "type": "list-item",
+              "children": [
+                {
+                  "text": "Enter and traverse the corrupted shrine.",
+                  "textFormat": "paragraph"
+                }
+              ]
+            },
+            {
+              "type": "list-item",
+              "children": [
+                {
+                  "text": "Solve the Oni-script puzzle to unlock the inner gate.",
+                  "textFormat": "paragraph"
+                }
+              ]
+            },
+            {
+              "type": "list-item",
+              "children": [
+                {
+                  "text": "Defeat the ronin guardians and the Oni Spirit boss.",
+                  "textFormat": "paragraph"
+                }
+              ]
+            },
+            {
+              "type": "list-item",
+              "children": [
+                {
+                  "text": "Restore the Spirit Mirror to cleanse the shrine.",
+                  "textFormat": "paragraph"
+                }
+              ]
+            },
+            {
+              "type": "list-item",
+              "children": [
+                {
+                  "text": "Rescue Monk Akio from spiritual imprisonment.",
+                  "textFormat": "paragraph"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "parentId": "7af483ef-a1f6-447e-b187-be79276f54c4",
+      "id": "1a33786d-064e-4577-9d15-eda05332b82e"
+    },
+    "b3a3b867-a224-4f17-bce1-4979d2c77541": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Rooms",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "7af483ef-a1f6-447e-b187-be79276f54c4",
+      "id": "b3a3b867-a224-4f17-bce1-4979d2c77541"
+    },
+    "5fe61bff-e0a4-4c5c-8e35-9159b70a6d47": {
+      "type": "section",
+      "name": "Overgrown Gatehouse",
+      "childrenIds": [
+        "c9decf28-e33f-465a-8575-80602387b741"
+      ],
+      "parentId": "7af483ef-a1f6-447e-b187-be79276f54c4",
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Overgrown Gatehouse",
+                "textFormat": "h2"
+              }
+            ]
+          }
+        ],
+        "showTitle": true,
+        "styles": {
+          "header": {
+            "borderBottom": "1px solid #882619"
+          }
+        }
+      },
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none",
+          "paddingTop": "4px"
+        },
+        "collapsible": false,
+        "isCollapsed": true,
+        "alternatingCollapsedBackground": "white",
+        "nestedCollapsible": true,
+        "wrapInnerWithContentDisplay": true
+      },
+      "id": "5fe61bff-e0a4-4c5c-8e35-9159b70a6d47"
+    },
+    "c9decf28-e33f-465a-8575-80602387b741": {
+      "type": "section",
+      "name": "Overgrown Gatehouse",
+      "childrenIds": [
+        "d4524f94-366d-48c4-8b12-80148bbdcd3a",
+        "858214d0-6949-4bc4-81df-ad7bbdb8fa34",
+        "2279402a-0f42-4226-a6e1-980e18dcc357",
+        "e4a3875f-2a32-4891-8e35-c1cb40db46e2",
+        "1a030af3-d74a-4211-bb3e-870f9a8596e4",
+        "5174e49a-1b76-4da9-b6bb-d35848bb4417",
+        "02e16143-e9ad-4944-9e49-a7e9ba5fc1dd",
+        "010e0ae5-2c85-47a0-b7d9-726b14b7ef7e",
+        "7da57d39-aa41-478c-ab1b-93a4744f913c",
+        "9438a183-093c-477d-8624-595ce8438bda"
+      ],
+      "parentId": "5fe61bff-e0a4-4c5c-8e35-9159b70a6d47",
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Overgrown Gatehouse",
+                "textFormat": "h1"
+              }
+            ]
+          }
+        ],
+        "showTitle": true
+      },
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none",
+          "paddingTop": "4px"
+        },
+        "collapsible": false,
+        "isCollapsed": false,
+        "alternatingCollapsedBackground": "white"
+      },
+      "id": "c9decf28-e33f-465a-8575-80602387b741",
+      "content_type": "encounter"
+    },
+    "d4524f94-366d-48c4-8b12-80148bbdcd3a": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Threshold of Vines and Stone",
+              "textFormat": "h4"
+            }
+          ]
+        }
+      ],
+      "parentId": "c9decf28-e33f-465a-8575-80602387b741",
+      "id": "d4524f94-366d-48c4-8b12-80148bbdcd3a"
+    },
+    "858214d0-6949-4bc4-81df-ad7bbdb8fa34": {
+      "type": "line",
+      "parentId": "c9decf28-e33f-465a-8575-80602387b741",
+      "styles": {
+        "background": "linear-gradient(to right, #9D2A1F, transparent)",
+        "border": "none",
+        "height": "4px",
+        "width": "100%"
+      },
+      "id": "858214d0-6949-4bc4-81df-ad7bbdb8fa34",
+      "customStyles": {
+        "default": {
+          "background": "linear-gradient(to right, #9D2A1F, transparent)",
+          "border": "none",
+          "height": "4px",
+          "width": "100%"
+        }
+      }
+    },
+    "2279402a-0f42-4226-a6e1-980e18dcc357": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Set the Scene",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "c9decf28-e33f-465a-8575-80602387b741",
+      "id": "2279402a-0f42-4226-a6e1-980e18dcc357"
+    },
+    "e4a3875f-2a32-4891-8e35-c1cb40db46e2": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "A moss-slick torii stands half-buried in ivy. Carved Oni faces leer from broken stone pillars. Chill mountain air seeps through cracks, carrying distant, mournful whispers.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "c9decf28-e33f-465a-8575-80602387b741",
+      "id": "e4a3875f-2a32-4891-8e35-c1cb40db46e2"
+    },
+    "1a030af3-d74a-4211-bb3e-870f9a8596e4": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Objective",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "c9decf28-e33f-465a-8575-80602387b741",
+      "id": "1a030af3-d74a-4211-bb3e-870f9a8596e4"
+    },
+    "5174e49a-1b76-4da9-b6bb-d35848bb4417": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Gain entry past the perimeter traps and clear the gatehouse.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "c9decf28-e33f-465a-8575-80602387b741",
+      "id": "5174e49a-1b76-4da9-b6bb-d35848bb4417"
+    },
+    "02e16143-e9ad-4944-9e49-a7e9ba5fc1dd": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Key Features",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "c9decf28-e33f-465a-8575-80602387b741",
+      "id": "02e16143-e9ad-4944-9e49-a7e9ba5fc1dd"
+    },
+    "010e0ae5-2c85-47a0-b7d9-726b14b7ef7e": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Crumbling Torii Gate: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Once bright vermilion, now streaked with lichen.",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Carved Oni Pillars: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Faces twisted in silent screams, six in total.",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Ivy-Choked Path: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Dexterity DC 12 to navigate without noise.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "c9decf28-e33f-465a-8575-80602387b741",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "010e0ae5-2c85-47a0-b7d9-726b14b7ef7e"
+    },
+    "7da57d39-aa41-478c-ab1b-93a4744f913c": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Traps",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "c9decf28-e33f-465a-8575-80602387b741",
+      "styles": {
+        "paddingTop": "8px"
+      },
+      "id": "7da57d39-aa41-478c-ab1b-93a4744f913c"
+    },
+    "9438a183-093c-477d-8624-595ce8438bda": {
+      "type": "section",
+      "name": "Shuriken Spring Trap",
+      "childrenIds": [
+        "2530b061-0d86-45dc-b93c-7ada95771f9b"
+      ],
+      "parentId": "c9decf28-e33f-465a-8575-80602387b741",
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Shuriken Spring Trap",
+                "textFormat": "h2"
+              }
+            ]
+          }
+        ],
+        "showTitle": true,
+        "styles": {
+          "header": {
+            "borderBottom": "1px solid #882619"
+          }
+        }
+      },
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none",
+          "paddingTop": "4px"
+        },
+        "collapsible": false,
+        "isCollapsed": true,
+        "alternatingCollapsedBackground": "white",
+        "nestedCollapsible": true,
+        "wrapInnerWithContentDisplay": true
+      },
+      "id": "9438a183-093c-477d-8624-595ce8438bda"
+    },
+    "2530b061-0d86-45dc-b93c-7ada95771f9b": {
+      "type": "section",
+      "name": "Shuriken Spring Trap",
+      "childrenIds": [
+        "e372fd0f-3de0-4a32-88e6-c2cb0c1d91ad",
+        "a4ec52d3-bc21-40b8-80e8-1718667670fc",
+        "de9a7682-6bbb-4184-a36f-08d7d91165f1",
+        "d316be6c-27f6-41d9-ba39-131b5b506cec",
+        "9ab00821-ec1d-4903-86cf-7fef0447d9e2",
+        "64443332-3d33-46d6-a10b-3799a15cf7d4",
+        "bbd8e43a-cf95-477c-9cf9-4603d494df0a",
+        "730ab063-71b3-4fe5-a7a1-46c7bb46b430"
+      ],
+      "parentId": "9438a183-093c-477d-8624-595ce8438bda",
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Shuriken Spring Trap",
+                "textFormat": "h1"
+              }
+            ]
+          }
+        ],
+        "showTitle": true
+      },
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none",
+          "paddingTop": "4px"
+        },
+        "collapsible": false,
+        "isCollapsed": false,
+        "alternatingCollapsedBackground": "white"
+      },
+      "id": "2530b061-0d86-45dc-b93c-7ada95771f9b",
+      "content_type": "trap"
+    },
+    "e372fd0f-3de0-4a32-88e6-c2cb0c1d91ad": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Details",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "2530b061-0d86-45dc-b93c-7ada95771f9b",
+      "id": "e372fd0f-3de0-4a32-88e6-c2cb0c1d91ad"
+    },
+    "a4ec52d3-bc21-40b8-80e8-1718667670fc": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Hidden in the base of each Oni pillar, a spring-loaded mechanism hurls razor-edged shuriken when triggered. Disable with Thieves’ Tools (DC 14) or take damage.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "2530b061-0d86-45dc-b93c-7ada95771f9b",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "a4ec52d3-bc21-40b8-80e8-1718667670fc"
+    },
+    "de9a7682-6bbb-4184-a36f-08d7d91165f1": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Description",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "2530b061-0d86-45dc-b93c-7ada95771f9b",
+      "id": "de9a7682-6bbb-4184-a36f-08d7d91165f1"
+    },
+    "d316be6c-27f6-41d9-ba39-131b5b506cec": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "As you step onto a worn stone slab before a pillar, a faint click echoes from within the pillar’s carvings.",
+              "textFormat": "description"
+            }
+          ]
+        }
+      ],
+      "parentId": "2530b061-0d86-45dc-b93c-7ada95771f9b",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "d316be6c-27f6-41d9-ba39-131b5b506cec"
+    },
+    "9ab00821-ec1d-4903-86cf-7fef0447d9e2": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Skill Checks",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "2530b061-0d86-45dc-b93c-7ada95771f9b",
+      "id": "9ab00821-ec1d-4903-86cf-7fef0447d9e2"
+    },
+    "64443332-3d33-46d6-a10b-3799a15cf7d4": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "DC 14 Dexterity (Thieves’ Tools): Disarm the shuriken spring mechanism safely.: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Success: No trap triggers. Failure: Trigger the trap.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "2530b061-0d86-45dc-b93c-7ada95771f9b",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "64443332-3d33-46d6-a10b-3799a15cf7d4"
+    },
+    "bbd8e43a-cf95-477c-9cf9-4603d494df0a": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Consequence",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "2530b061-0d86-45dc-b93c-7ada95771f9b",
+      "id": "bbd8e43a-cf95-477c-9cf9-4603d494df0a"
+    },
+    "730ab063-71b3-4fe5-a7a1-46c7bb46b430": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Each triggered pillar sprays shuriken at a target creature within 10 ft. Each creature must succeed on a DC 13 Dexterity save or take 2d4 piercing damage.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "2530b061-0d86-45dc-b93c-7ada95771f9b",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "730ab063-71b3-4fe5-a7a1-46c7bb46b430"
+    },
+    "a8814da6-b614-41ff-8093-11e75658af58": {
+      "type": "section",
+      "name": "Hall of Whispering Statues",
+      "childrenIds": [
+        "43bf982f-961b-4597-ace0-edd115614903"
+      ],
+      "parentId": "7af483ef-a1f6-447e-b187-be79276f54c4",
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Hall of Whispering Statues",
+                "textFormat": "h2"
+              }
+            ]
+          }
+        ],
+        "showTitle": true,
+        "styles": {
+          "header": {
+            "borderBottom": "1px solid #882619"
+          }
+        }
+      },
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none",
+          "paddingTop": "4px"
+        },
+        "collapsible": false,
+        "isCollapsed": true,
+        "alternatingCollapsedBackground": "white",
+        "nestedCollapsible": true,
+        "wrapInnerWithContentDisplay": true
+      },
+      "id": "a8814da6-b614-41ff-8093-11e75658af58"
+    },
+    "43bf982f-961b-4597-ace0-edd115614903": {
+      "type": "section",
+      "name": "Hall of Whispering Statues",
+      "childrenIds": [
+        "476c84c0-69ba-4b85-a611-188b009c3e0a",
+        "3d8c0d8b-4058-4709-b1e1-9910ad1e7d9d",
+        "704595e3-e663-4286-bb9a-6106721e4990",
+        "005da4e3-41d7-407c-9e87-040cda268d65",
+        "92eeca79-ff0a-4c33-adf1-8cc544e173cd",
+        "7486365e-3662-4592-9ddd-5020d9f1850f",
+        "5e7c1f6f-3402-40f4-a849-6962f193764f",
+        "bfedb58e-c04a-4f7c-806f-7ee09b394835",
+        "6bb40e8a-4081-46bc-b45f-89c52da99222",
+        "d947162f-28ef-466e-a346-0c2ba6e94e17"
+      ],
+      "parentId": "a8814da6-b614-41ff-8093-11e75658af58",
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Hall of Whispering Statues",
+                "textFormat": "h1"
+              }
+            ]
+          }
+        ],
+        "showTitle": true
+      },
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none",
+          "paddingTop": "4px"
+        },
+        "collapsible": false,
+        "isCollapsed": false,
+        "alternatingCollapsedBackground": "white"
+      },
+      "id": "43bf982f-961b-4597-ace0-edd115614903",
+      "content_type": "encounter"
+    },
+    "476c84c0-69ba-4b85-a611-188b009c3e0a": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Voices of the Mountain Kami",
+              "textFormat": "h4"
+            }
+          ]
+        }
+      ],
+      "parentId": "43bf982f-961b-4597-ace0-edd115614903",
+      "id": "476c84c0-69ba-4b85-a611-188b009c3e0a"
+    },
+    "3d8c0d8b-4058-4709-b1e1-9910ad1e7d9d": {
+      "type": "line",
+      "parentId": "43bf982f-961b-4597-ace0-edd115614903",
+      "styles": {
+        "background": "linear-gradient(to right, #9D2A1F, transparent)",
+        "border": "none",
+        "height": "4px",
+        "width": "100%"
+      },
+      "id": "3d8c0d8b-4058-4709-b1e1-9910ad1e7d9d",
+      "customStyles": {
+        "default": {
+          "background": "linear-gradient(to right, #9D2A1F, transparent)",
+          "border": "none",
+          "height": "4px",
+          "width": "100%"
+        }
+      }
+    },
+    "704595e3-e663-4286-bb9a-6106721e4990": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Set the Scene",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "43bf982f-961b-4597-ace0-edd115614903",
+      "id": "704595e3-e663-4286-bb9a-6106721e4990"
+    },
+    "005da4e3-41d7-407c-9e87-040cda268d65": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Twelve stone statues line a vaulted hall, their eyes inlaid with faintly glowing jade. Each statue’s mouth seems poised to speak, and a carved plaque bears an inscrutable Oni-script verse.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "43bf982f-961b-4597-ace0-edd115614903",
+      "id": "005da4e3-41d7-407c-9e87-040cda268d65"
+    },
+    "92eeca79-ff0a-4c33-adf1-8cc544e173cd": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Objective",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "43bf982f-961b-4597-ace0-edd115614903",
+      "id": "92eeca79-ff0a-4c33-adf1-8cc544e173cd"
+    },
+    "7486365e-3662-4592-9ddd-5020d9f1850f": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Solve the Oni-script puzzle to open the inner gate.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "43bf982f-961b-4597-ace0-edd115614903",
+      "id": "7486365e-3662-4592-9ddd-5020d9f1850f"
+    },
+    "5e7c1f6f-3402-40f4-a849-6962f193764f": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Key Features",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "43bf982f-961b-4597-ace0-edd115614903",
+      "id": "5e7c1f6f-3402-40f4-a849-6962f193764f"
+    },
+    "bfedb58e-c04a-4f7c-806f-7ee09b394835": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Twelve Jade-eyed Statues: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Each statue holds an animal-themed mask.",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Inscribed Plaque: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Oni script verse hints at facing east at dawn.",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Heavy Stone Gate: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Sealed by runes; slides aside if the puzzle is solved.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "43bf982f-961b-4597-ace0-edd115614903",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "bfedb58e-c04a-4f7c-806f-7ee09b394835"
+    },
+    "6bb40e8a-4081-46bc-b45f-89c52da99222": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Puzzles",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "43bf982f-961b-4597-ace0-edd115614903",
+      "styles": {
+        "paddingTop": "8px"
+      },
+      "id": "6bb40e8a-4081-46bc-b45f-89c52da99222"
+    },
+    "d947162f-28ef-466e-a346-0c2ba6e94e17": {
+      "type": "section",
+      "name": "Oni-Script Alignment Puzzle",
+      "childrenIds": [
+        "892f88f7-a933-4f9e-a6be-23a3d1782fd2"
+      ],
+      "parentId": "43bf982f-961b-4597-ace0-edd115614903",
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Oni-Script Alignment Puzzle",
+                "textFormat": "h2"
+              }
+            ]
+          }
+        ],
+        "showTitle": true,
+        "styles": {
+          "header": {
+            "borderBottom": "1px solid #882619"
+          }
+        }
+      },
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none",
+          "paddingTop": "4px"
+        },
+        "collapsible": false,
+        "isCollapsed": true,
+        "alternatingCollapsedBackground": "white",
+        "nestedCollapsible": true,
+        "wrapInnerWithContentDisplay": true
+      },
+      "id": "d947162f-28ef-466e-a346-0c2ba6e94e17"
+    },
+    "892f88f7-a933-4f9e-a6be-23a3d1782fd2": {
+      "type": "section",
+      "name": "Oni-Script Alignment Puzzle",
+      "childrenIds": [
+        "716a06d0-6c01-4956-a007-2cad73549647",
+        "aa8bfcfd-ad6f-484f-ba6a-51d35206cfc3",
+        "fe848a04-2e98-46d4-9f18-4b52b5aed577",
+        "3d200280-195b-4c57-a4ec-9a257470744c",
+        "85d12bbb-0cad-437b-a0e6-b9af2fed650a",
+        "d23a40bb-aa3e-4086-9e42-737ad9f0f347",
+        "dc2f3353-62cb-41ca-8111-4e7c8d82d6b6",
+        "095b4dd8-3203-4aa1-a889-aba5198d418e",
+        "c7334924-d0e1-4e64-8f3a-958821377da3",
+        "6b0b3129-db65-4792-a7bf-92f0f1f03768",
+        "eed5714b-6bf4-4472-a39d-b74d335f4e2f",
+        "7db35269-fa56-4250-89d1-14a73a731906"
+      ],
+      "parentId": "d947162f-28ef-466e-a346-0c2ba6e94e17",
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Oni-Script Alignment Puzzle",
+                "textFormat": "h1"
+              }
+            ]
+          }
+        ],
+        "showTitle": true
+      },
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none",
+          "paddingTop": "4px"
+        },
+        "collapsible": false,
+        "isCollapsed": false,
+        "alternatingCollapsedBackground": "white"
+      },
+      "id": "892f88f7-a933-4f9e-a6be-23a3d1782fd2",
+      "content_type": "puzzle"
+    },
+    "716a06d0-6c01-4956-a007-2cad73549647": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Glyphs of the East",
+              "textFormat": "h4"
+            }
+          ]
+        }
+      ],
+      "parentId": "892f88f7-a933-4f9e-a6be-23a3d1782fd2",
+      "id": "716a06d0-6c01-4956-a007-2cad73549647"
+    },
+    "aa8bfcfd-ad6f-484f-ba6a-51d35206cfc3": {
+      "type": "line",
+      "parentId": "892f88f7-a933-4f9e-a6be-23a3d1782fd2",
+      "styles": {
+        "background": "linear-gradient(to right, #9D2A1F, transparent)",
+        "border": "none",
+        "height": "4px",
+        "width": "100%"
+      },
+      "id": "aa8bfcfd-ad6f-484f-ba6a-51d35206cfc3",
+      "customStyles": {
+        "default": {
+          "background": "linear-gradient(to right, #9D2A1F, transparent)",
+          "border": "none",
+          "height": "4px",
+          "width": "100%"
+        }
+      }
+    },
+    "fe848a04-2e98-46d4-9f18-4b52b5aed577": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Intro Text",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "892f88f7-a933-4f9e-a6be-23a3d1782fd2",
+      "id": "fe848a04-2e98-46d4-9f18-4b52b5aed577"
+    },
+    "3d200280-195b-4c57-a4ec-9a257470744c": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "The jade eyes of the statues flicker as you study the plaque. The verse reads: “When the beast greets the dawn, the door shall yaw.”",
+              "textFormat": "description"
+            }
+          ]
+        }
+      ],
+      "parentId": "892f88f7-a933-4f9e-a6be-23a3d1782fd2",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "3d200280-195b-4c57-a4ec-9a257470744c"
+    },
+    "85d12bbb-0cad-437b-a0e6-b9af2fed650a": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Description",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "892f88f7-a933-4f9e-a6be-23a3d1782fd2",
+      "id": "85d12bbb-0cad-437b-a0e6-b9af2fed650a"
+    },
+    "d23a40bb-aa3e-4086-9e42-737ad9f0f347": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "A puzzle that, when solved, aligns the statues’ masks to face the rising sun, unlocking the gate. Reward: safe passage and morale boost.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "892f88f7-a933-4f9e-a6be-23a3d1782fd2",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "d23a40bb-aa3e-4086-9e42-737ad9f0f347"
+    },
+    "dc2f3353-62cb-41ca-8111-4e7c8d82d6b6": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Hints",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "892f88f7-a933-4f9e-a6be-23a3d1782fd2",
+      "id": "dc2f3353-62cb-41ca-8111-4e7c8d82d6b6"
+    },
+    "095b4dd8-3203-4aa1-a889-aba5198d418e": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "numbered-list",
+          "children": [
+            {
+              "type": "list-item",
+              "children": [
+                {
+                  "text": "Examine the masks for elemental symbols.",
+                  "textFormat": "paragraph"
+                }
+              ]
+            },
+            {
+              "type": "list-item",
+              "children": [
+                {
+                  "text": "Listen: a faint breeze comes from the eastern wall.",
+                  "textFormat": "paragraph"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "parentId": "892f88f7-a933-4f9e-a6be-23a3d1782fd2",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "095b4dd8-3203-4aa1-a889-aba5198d418e"
+    },
+    "c7334924-d0e1-4e64-8f3a-958821377da3": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Solution",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "892f88f7-a933-4f9e-a6be-23a3d1782fd2",
+      "id": "c7334924-d0e1-4e64-8f3a-958821377da3"
+    },
+    "6b0b3129-db65-4792-a7bf-92f0f1f03768": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "numbered-list",
+          "children": [
+            {
+              "type": "list-item",
+              "children": [
+                {
+                  "text": "Rotate each statue so that the mask representing the eastern animals (dragon, crane, koi) face the eastern niche.",
+                  "textFormat": "paragraph"
+                }
+              ]
+            },
+            {
+              "type": "list-item",
+              "children": [
+                {
+                  "text": "Align statues in groups of three by element: water (koi), air (crane), earth (turtle) toward east.",
+                  "textFormat": "paragraph"
+                }
+              ]
+            },
+            {
+              "type": "list-item",
+              "children": [
+                {
+                  "text": "Press the easternmost statue’s footplate simultaneously.",
+                  "textFormat": "paragraph"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "parentId": "892f88f7-a933-4f9e-a6be-23a3d1782fd2",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "6b0b3129-db65-4792-a7bf-92f0f1f03768"
+    },
+    "eed5714b-6bf4-4472-a39d-b74d335f4e2f": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Failure Consequence",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "892f88f7-a933-4f9e-a6be-23a3d1782fd2",
+      "id": "eed5714b-6bf4-4472-a39d-b74d335f4e2f"
+    },
+    "7db35269-fa56-4250-89d1-14a73a731906": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "A gust of spiritual wind slams the gate, dealing each creature 1d6 bludgeoning damage and resetting the puzzle.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "892f88f7-a933-4f9e-a6be-23a3d1782fd2",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "7db35269-fa56-4250-89d1-14a73a731906"
+    },
+    "538fa595-6731-4013-af92-6a7323d8c535": {
+      "type": "section",
+      "name": "Tea Ceremony Room",
+      "childrenIds": [
+        "14ea9734-5a87-4120-98e3-9685037cd8f0"
+      ],
+      "parentId": "7af483ef-a1f6-447e-b187-be79276f54c4",
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Tea Ceremony Room",
+                "textFormat": "h2"
+              }
+            ]
+          }
+        ],
+        "showTitle": true,
+        "styles": {
+          "header": {
+            "borderBottom": "1px solid #882619"
+          }
+        }
+      },
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none",
+          "paddingTop": "4px"
+        },
+        "collapsible": false,
+        "isCollapsed": true,
+        "alternatingCollapsedBackground": "white",
+        "nestedCollapsible": true,
+        "wrapInnerWithContentDisplay": true
+      },
+      "id": "538fa595-6731-4013-af92-6a7323d8c535"
+    },
+    "14ea9734-5a87-4120-98e3-9685037cd8f0": {
+      "type": "section",
+      "name": "Tea Ceremony Room",
+      "childrenIds": [
+        "db965afe-32f5-4bc9-855b-739f2ae20df2",
+        "12547ab6-cb91-4188-8202-ec25f4dedff9",
+        "d6d5eda6-385c-49a4-a1b1-0a3f08d9da4e",
+        "12ddde65-83f6-4585-ae5d-70aa1edfa7e6",
+        "9d5b5c7b-b24b-43cb-8af3-38e43f9d1d7f",
+        "e2e813cd-e187-4466-b2f1-b8a9cb41effb",
+        "15d86404-efea-4766-ba8d-da83cda690e6",
+        "5481df7c-ce3e-4e8b-b608-5b60c3f27fa2",
+        "16944bb6-faa0-47c2-b9a2-aa6fabe817db",
+        "7b3601e5-9b07-4e38-9337-8b2145bc49cb",
+        "01c52493-d3d6-43da-a7a5-4af496356cb9",
+        "7ee8b52a-cb78-4e24-b390-2b2e4a817b2c"
+      ],
+      "parentId": "538fa595-6731-4013-af92-6a7323d8c535",
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Tea Ceremony Room",
+                "textFormat": "h1"
+              }
+            ]
+          }
+        ],
+        "showTitle": true
+      },
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none",
+          "paddingTop": "4px"
+        },
+        "collapsible": false,
+        "isCollapsed": false,
+        "alternatingCollapsedBackground": "white"
+      },
+      "id": "14ea9734-5a87-4120-98e3-9685037cd8f0",
+      "content_type": "encounter"
+    },
+    "db965afe-32f5-4bc9-855b-739f2ae20df2": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Sanctum of Silence",
+              "textFormat": "h4"
+            }
+          ]
+        }
+      ],
+      "parentId": "14ea9734-5a87-4120-98e3-9685037cd8f0",
+      "id": "db965afe-32f5-4bc9-855b-739f2ae20df2"
+    },
+    "12547ab6-cb91-4188-8202-ec25f4dedff9": {
+      "type": "line",
+      "parentId": "14ea9734-5a87-4120-98e3-9685037cd8f0",
+      "styles": {
+        "background": "linear-gradient(to right, #9D2A1F, transparent)",
+        "border": "none",
+        "height": "4px",
+        "width": "100%"
+      },
+      "id": "12547ab6-cb91-4188-8202-ec25f4dedff9",
+      "customStyles": {
+        "default": {
+          "background": "linear-gradient(to right, #9D2A1F, transparent)",
+          "border": "none",
+          "height": "4px",
+          "width": "100%"
+        }
+      }
+    },
+    "d6d5eda6-385c-49a4-a1b1-0a3f08d9da4e": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Set the Scene",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "14ea9734-5a87-4120-98e3-9685037cd8f0",
+      "id": "d6d5eda6-385c-49a4-a1b1-0a3f08d9da4e"
+    },
+    "12ddde65-83f6-4585-ae5d-70aa1edfa7e6": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Low tables with cracked lacquer surfaces stand on tatami mats. A single scroll chest sits against the far wall, its lid slightly ajar. A faint scent of tea lingers amid stale air.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "14ea9734-5a87-4120-98e3-9685037cd8f0",
+      "id": "12ddde65-83f6-4585-ae5d-70aa1edfa7e6"
+    },
+    "9d5b5c7b-b24b-43cb-8af3-38e43f9d1d7f": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Objective",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "14ea9734-5a87-4120-98e3-9685037cd8f0",
+      "id": "9d5b5c7b-b24b-43cb-8af3-38e43f9d1d7f"
+    },
+    "e2e813cd-e187-4466-b2f1-b8a9cb41effb": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Locate and open the hidden passage beneath the scroll chest.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "14ea9734-5a87-4120-98e3-9685037cd8f0",
+      "id": "e2e813cd-e187-4466-b2f1-b8a9cb41effb"
+    },
+    "15d86404-efea-4766-ba8d-da83cda690e6": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Key Features",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "14ea9734-5a87-4120-98e3-9685037cd8f0",
+      "id": "15d86404-efea-4766-ba8d-da83cda690e6"
+    },
+    "5481df7c-ce3e-4e8b-b608-5b60c3f27fa2": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Tatami Floor: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Sound travels—Stealth DC 13 to move silently.",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Cracked Lacquer Tables: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Can be searched for hidden compartments (Investigation DC 12).",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Scroll Chest: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Contains a mechanical latch and possible trap.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "14ea9734-5a87-4120-98e3-9685037cd8f0",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "5481df7c-ce3e-4e8b-b608-5b60c3f27fa2"
+    },
+    "16944bb6-faa0-47c2-b9a2-aa6fabe817db": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Monsters",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "14ea9734-5a87-4120-98e3-9685037cd8f0",
+      "styles": {
+        "paddingTop": "8px"
+      },
+      "id": "16944bb6-faa0-47c2-b9a2-aa6fabe817db"
+    },
+    "7b3601e5-9b07-4e38-9337-8b2145bc49cb": {
+      "type": "section",
+      "name": "Kozanji Rats",
+      "childrenIds": [
+        "bd10e5ca-a20a-478e-8d04-4073c9fc4dc3"
+      ],
+      "parentId": "14ea9734-5a87-4120-98e3-9685037cd8f0",
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Kozanji Rats",
+                "textFormat": "h2"
+              }
+            ]
+          }
+        ],
+        "showTitle": true,
+        "styles": {
+          "header": {
+            "borderBottom": "1px solid #882619"
+          }
+        }
+      },
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none",
+          "paddingTop": "4px"
+        },
+        "collapsible": false,
+        "isCollapsed": true,
+        "alternatingCollapsedBackground": "white",
+        "nestedCollapsible": true,
+        "wrapInnerWithContentDisplay": true,
+        "maxHp": 7,
+        "currentHp": 7,
+        "armorClass": 12
+      },
+      "id": "7b3601e5-9b07-4e38-9337-8b2145bc49cb"
+    },
+    "bd10e5ca-a20a-478e-8d04-4073c9fc4dc3": {
+      "type": "section",
+      "name": "Kozanji Rats",
+      "childrenIds": [
+        "d408aa04-bbeb-4015-8536-fbe7222c449a",
+        "1fba6683-4f4e-416f-a6ce-4203194096db",
+        "a7f1bc2b-b694-4f4c-b5d2-889cefdd9aba",
+        "d5ea94b2-1c1f-4d77-bb56-d1166309ca69",
+        "b7a99d78-bfe9-4fa2-a2f0-11669452a4c7",
+        "d1595559-dce1-44fd-acc4-772a8e75f11d",
+        "bb37fe7d-ff40-49a0-b64a-dff70ded0bc2",
+        "fa9533f0-e349-465a-9aaa-23b88a66f2ef",
+        "fd7042c1-4c7c-40c5-923f-a017905f3b6f",
+        "e92258d7-caa8-4f8d-9609-b5d5e5602c1a",
+        "63b00261-441c-4264-be4b-c9689cd8d3a7",
+        "b365bcf2-0729-4886-a2d6-3e8c38004193",
+        "ef43da7e-c08a-4c80-a5a3-0732fa409a6e",
+        "f89cb7bb-19e5-4bfc-a673-10afc3cf48b8"
+      ],
+      "parentId": "7b3601e5-9b07-4e38-9337-8b2145bc49cb",
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Kozanji Rats",
+                "textFormat": "h1"
+              }
+            ]
+          }
+        ],
+        "showTitle": true
+      },
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none",
+          "paddingTop": "4px"
+        },
+        "collapsible": false,
+        "isCollapsed": false,
+        "alternatingCollapsedBackground": "white"
+      },
+      "id": "bd10e5ca-a20a-478e-8d04-4073c9fc4dc3",
+      "content_type": "monster"
+    },
+    "d408aa04-bbeb-4015-8536-fbe7222c449a": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Small Beast, Neutral • Scuttling Scavengers",
+              "textFormat": "h4"
+            }
+          ]
+        }
+      ],
+      "parentId": "bd10e5ca-a20a-478e-8d04-4073c9fc4dc3",
+      "styles": {
+        "paddingBottom": "4px"
+      },
+      "id": "d408aa04-bbeb-4015-8536-fbe7222c449a"
+    },
+    "1fba6683-4f4e-416f-a6ce-4203194096db": {
+      "type": "line",
+      "parentId": "bd10e5ca-a20a-478e-8d04-4073c9fc4dc3",
+      "styles": {
+        "background": "linear-gradient(to right, #9D2A1F, transparent)",
+        "border": "none",
+        "height": "4px",
+        "width": "100%"
+      },
+      "id": "1fba6683-4f4e-416f-a6ce-4203194096db",
+      "customStyles": {
+        "default": {
+          "background": "linear-gradient(to right, #9D2A1F, transparent)",
+          "border": "none",
+          "height": "4px",
+          "width": "100%"
+        }
+      }
+    },
+    "a7f1bc2b-b694-4f4c-b5d2-889cefdd9aba": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Description",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "bd10e5ca-a20a-478e-8d04-4073c9fc4dc3",
+      "id": "a7f1bc2b-b694-4f4c-b5d2-889cefdd9aba"
+    },
+    "d5ea94b2-1c1f-4d77-bb56-d1166309ca69": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Grey-furred rats the size of a large dog, eyes glowing faint orange.",
+              "textFormat": "description"
+            }
+          ]
+        }
+      ],
+      "parentId": "bd10e5ca-a20a-478e-8d04-4073c9fc4dc3",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "d5ea94b2-1c1f-4d77-bb56-d1166309ca69"
+    },
+    "b7a99d78-bfe9-4fa2-a2f0-11669452a4c7": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Lore",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "bd10e5ca-a20a-478e-8d04-4073c9fc4dc3",
+      "id": "b7a99d78-bfe9-4fa2-a2f0-11669452a4c7"
+    },
+    "d1595559-dce1-44fd-acc4-772a8e75f11d": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Corrupted by shrine incense, these giant rats grew bold and gnaw at sacred wood.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "bd10e5ca-a20a-478e-8d04-4073c9fc4dc3",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "d1595559-dce1-44fd-acc4-772a8e75f11d"
+    },
+    "bb37fe7d-ff40-49a0-b64a-dff70ded0bc2": {
+      "type": "line",
+      "parentId": "bd10e5ca-a20a-478e-8d04-4073c9fc4dc3",
+      "styles": {
+        "background": "linear-gradient(to right, #9D2A1F, transparent)",
+        "border": "none",
+        "height": "4px",
+        "width": "100%"
+      },
+      "id": "bb37fe7d-ff40-49a0-b64a-dff70ded0bc2",
+      "customStyles": {
+        "default": {
+          "background": "linear-gradient(to right, #9D2A1F, transparent)",
+          "border": "none",
+          "height": "4px",
+          "width": "100%"
+        }
+      }
+    },
+    "fa9533f0-e349-465a-9aaa-23b88a66f2ef": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Hit Points: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "7 (2d6 + 0)",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Armor Class: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "12 (natural)",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Speed: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "30 ft., climb 30 ft.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "bd10e5ca-a20a-478e-8d04-4073c9fc4dc3",
+      "id": "fa9533f0-e349-465a-9aaa-23b88a66f2ef"
+    },
+    "fd7042c1-4c7c-40c5-923f-a017905f3b6f": {
+      "type": "StatLine",
+      "content": {
+        "stats": [
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "STR"
+                  }
+                ]
+              }
+            ],
+            "value": 10,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Strength"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "DEX"
+                  }
+                ]
+              }
+            ],
+            "value": 15,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Dexterity"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "CON"
+                  }
+                ]
+              }
+            ],
+            "value": 11,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Constitution"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "INT"
+                  }
+                ]
+              }
+            ],
+            "value": 2,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Intelligence"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "WIS"
+                  }
+                ]
+              }
+            ],
+            "value": 12,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Wisdom"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "CHA"
+                  }
+                ]
+              }
+            ],
+            "value": 4,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Charisma"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "parentId": "bd10e5ca-a20a-478e-8d04-4073c9fc4dc3",
+      "displayMode": "values",
+      "id": "fd7042c1-4c7c-40c5-923f-a017905f3b6f",
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none"
+        },
+        "statLine": {
+          "width": "100%",
+          "display": "flex",
+          "alignItems": "center",
+          "backgroundColor": "transparent"
+        },
+        "name": {
+          "minWidth": "64px",
+          "fontWeight": "bold",
+          "backgroundColor": "transparent",
+          "color": "#58180D",
+          "flex": "1"
+        },
+        "value": {
+          "width": "32px",
+          "backgroundColor": "transparent",
+          "textAlign": "center",
+          "color": "#000000",
+          "fontFamily": "Noto Serif, Georgia, serif"
+        },
+        "description": {
+          "fontFamily": "Noto Serif, Georgia, serif",
+          "fontSize": "13px",
+          "fontWeight": "normal",
+          "backgroundColor": "transparent",
+          "color": "#000",
+          "lineHeight": "1.25",
+          "margin": "4px 0 0 0",
+          "textAlign": "left",
+          "whiteSpace": "normal",
+          "overflow": "visible",
+          "textOverflow": "clip",
+          "minWidth": "100px",
+          "flex": "1"
+        },
+        "topLine": {
+          "width": "100%",
+          "height": "4px",
+          "marginTop": "4px",
+          "marginBottom": "4px",
+          "background": "linear-gradient(to right, #9D2A1F, transparent)"
+        },
+        "bottomLine": {
+          "width": "100%",
+          "height": "4px",
+          "marginTop": "4px",
+          "marginBottom": "4px",
+          "background": "linear-gradient(to right, #9D2A1F, transparent)"
+        },
+        "showTopLine": true,
+        "showBottomLine": true
+      }
+    },
+    "e92258d7-caa8-4f8d-9609-b5d5e5602c1a": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Skills: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Stealth (+4)",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Senses: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Darkvision 30 ft., Passive Perception 11",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Challenge Rating: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "1/8",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Experience Points: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "25",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "bd10e5ca-a20a-478e-8d04-4073c9fc4dc3",
+      "id": "e92258d7-caa8-4f8d-9609-b5d5e5602c1a"
+    },
+    "63b00261-441c-4264-be4b-c9689cd8d3a7": {
+      "type": "line",
+      "parentId": "bd10e5ca-a20a-478e-8d04-4073c9fc4dc3",
+      "styles": {
+        "background": "linear-gradient(to right, #9D2A1F, transparent)",
+        "border": "none",
+        "height": "4px",
+        "width": "100%"
+      },
+      "id": "63b00261-441c-4264-be4b-c9689cd8d3a7",
+      "customStyles": {
+        "default": {
+          "background": "linear-gradient(to right, #9D2A1F, transparent)",
+          "border": "none",
+          "height": "4px",
+          "width": "100%"
+        }
+      }
+    },
+    "b365bcf2-0729-4886-a2d6-3e8c38004193": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Actions",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "bd10e5ca-a20a-478e-8d04-4073c9fc4dc3",
+      "id": "b365bcf2-0729-4886-a2d6-3e8c38004193"
+    },
+    "ef43da7e-c08a-4c80-a5a3-0732fa409a6e": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "One bite",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "bd10e5ca-a20a-478e-8d04-4073c9fc4dc3",
+      "id": "ef43da7e-c08a-4c80-a5a3-0732fa409a6e"
+    },
+    "f89cb7bb-19e5-4bfc-a673-10afc3cf48b8": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Bite: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 1d6 + 2 piercing damage.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "bd10e5ca-a20a-478e-8d04-4073c9fc4dc3",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "f89cb7bb-19e5-4bfc-a673-10afc3cf48b8"
+    },
+    "01c52493-d3d6-43da-a7a5-4af496356cb9": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Traps",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "14ea9734-5a87-4120-98e3-9685037cd8f0",
+      "styles": {
+        "paddingTop": "8px"
+      },
+      "id": "01c52493-d3d6-43da-a7a5-4af496356cb9"
+    },
+    "7ee8b52a-cb78-4e24-b390-2b2e4a817b2c": {
+      "type": "section",
+      "name": "Poison Needle Chest",
+      "childrenIds": [
+        "e186d67b-a9a4-4442-8dfe-e77b5ba611ac"
+      ],
+      "parentId": "14ea9734-5a87-4120-98e3-9685037cd8f0",
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Poison Needle Chest",
+                "textFormat": "h2"
+              }
+            ]
+          }
+        ],
+        "showTitle": true,
+        "styles": {
+          "header": {
+            "borderBottom": "1px solid #882619"
+          }
+        }
+      },
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none",
+          "paddingTop": "4px"
+        },
+        "collapsible": false,
+        "isCollapsed": true,
+        "alternatingCollapsedBackground": "white",
+        "nestedCollapsible": true,
+        "wrapInnerWithContentDisplay": true
+      },
+      "id": "7ee8b52a-cb78-4e24-b390-2b2e4a817b2c"
+    },
+    "e186d67b-a9a4-4442-8dfe-e77b5ba611ac": {
+      "type": "section",
+      "name": "Poison Needle Chest",
+      "childrenIds": [
+        "86ff7255-c9e6-4e55-bd17-acc798ab15c8",
+        "5dbb91e8-3093-40b3-8449-e82ffe8a4ca3",
+        "29187eef-c001-4603-bd12-917e65e9772d",
+        "9ccf85f2-4157-4ad6-97d5-2531a7e09cda",
+        "7482ea8b-cd14-40a0-96ca-c1aaf2e52342",
+        "3c321508-4a54-4547-a59f-8905de292d5b",
+        "3ebfd298-16c9-4a5b-9d01-b714166c214c",
+        "71ef840f-9bef-4c97-b055-f6a6613b14ec"
+      ],
+      "parentId": "7ee8b52a-cb78-4e24-b390-2b2e4a817b2c",
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Poison Needle Chest",
+                "textFormat": "h1"
+              }
+            ]
+          }
+        ],
+        "showTitle": true
+      },
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none",
+          "paddingTop": "4px"
+        },
+        "collapsible": false,
+        "isCollapsed": false,
+        "alternatingCollapsedBackground": "white"
+      },
+      "id": "e186d67b-a9a4-4442-8dfe-e77b5ba611ac",
+      "content_type": "trap"
+    },
+    "86ff7255-c9e6-4e55-bd17-acc798ab15c8": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Details",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "e186d67b-a9a4-4442-8dfe-e77b5ba611ac",
+      "id": "86ff7255-c9e6-4e55-bd17-acc798ab15c8"
+    },
+    "5dbb91e8-3093-40b3-8449-e82ffe8a4ca3": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "The scroll chest’s latch conceals a poisoned needle. A failed disarm injects toxin.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "e186d67b-a9a4-4442-8dfe-e77b5ba611ac",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "5dbb91e8-3093-40b3-8449-e82ffe8a4ca3"
+    },
+    "29187eef-c001-4603-bd12-917e65e9772d": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Description",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "e186d67b-a9a4-4442-8dfe-e77b5ba611ac",
+      "id": "29187eef-c001-4603-bd12-917e65e9772d"
+    },
+    "9ccf85f2-4157-4ad6-97d5-2531a7e09cda": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "A tiny pin jutting from the latch of the scroll chest gleams ominously.",
+              "textFormat": "description"
+            }
+          ]
+        }
+      ],
+      "parentId": "e186d67b-a9a4-4442-8dfe-e77b5ba611ac",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "9ccf85f2-4157-4ad6-97d5-2531a7e09cda"
+    },
+    "7482ea8b-cd14-40a0-96ca-c1aaf2e52342": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Skill Checks",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "e186d67b-a9a4-4442-8dfe-e77b5ba611ac",
+      "id": "7482ea8b-cd14-40a0-96ca-c1aaf2e52342"
+    },
+    "3c321508-4a54-4547-a59f-8905de292d5b": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "DC 15 Dexterity (Thieves’ Tools): Remove the needle without triggering it.: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Success: You open the chest safely. Failure: Needle pricks you.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "e186d67b-a9a4-4442-8dfe-e77b5ba611ac",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "3c321508-4a54-4547-a59f-8905de292d5b"
+    },
+    "3ebfd298-16c9-4a5b-9d01-b714166c214c": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Consequence",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "e186d67b-a9a4-4442-8dfe-e77b5ba611ac",
+      "id": "3ebfd298-16c9-4a5b-9d01-b714166c214c"
+    },
+    "71ef840f-9bef-4c97-b055-f6a6613b14ec": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "On a failure, target takes 1d4 piercing damage and must succeed on a DC 13 Constitution save or be poisoned (disadvantage on attacks and saves) for 1 minute.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "e186d67b-a9a4-4442-8dfe-e77b5ba611ac",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "71ef840f-9bef-4c97-b055-f6a6613b14ec"
+    },
+    "e7a99590-8775-4cf9-b2b0-02e4cc607790": {
+      "type": "section",
+      "name": "Corridor of the Fallen Ronin",
+      "childrenIds": [
+        "00b3eb99-12d1-42f7-b852-bd3cbe863f64"
+      ],
+      "parentId": "7af483ef-a1f6-447e-b187-be79276f54c4",
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Corridor of the Fallen Ronin",
+                "textFormat": "h2"
+              }
+            ]
+          }
+        ],
+        "showTitle": true,
+        "styles": {
+          "header": {
+            "borderBottom": "1px solid #882619"
+          }
+        }
+      },
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none",
+          "paddingTop": "4px"
+        },
+        "collapsible": false,
+        "isCollapsed": true,
+        "alternatingCollapsedBackground": "white",
+        "nestedCollapsible": true,
+        "wrapInnerWithContentDisplay": true
+      },
+      "id": "e7a99590-8775-4cf9-b2b0-02e4cc607790"
+    },
+    "00b3eb99-12d1-42f7-b852-bd3cbe863f64": {
+      "type": "section",
+      "name": "Corridor of the Fallen Ronin",
+      "childrenIds": [
+        "6029b171-0173-4be9-9bab-44497d6a5c7d",
+        "839fd545-3d31-461f-abd3-f73a7d6411e3",
+        "81a0e0b0-cb4f-4818-adb8-a612eb2f86de",
+        "11c4e66a-55fe-434f-824d-4fc80cfde59c",
+        "e5a00f8b-384c-48a9-bff0-4bc8047c51f8",
+        "9fb86caa-c858-4bf8-ad57-f4ad6acfcf5b",
+        "c10a1269-c66a-47cc-9848-fc2d4261aa1c",
+        "139ccfa8-355d-4b2b-8f3a-c7c503a93878",
+        "387ad4db-6e91-4760-813e-c3a300bdae64",
+        "2cb1916d-e699-49d5-a3f8-7c015cd83693",
+        "88a961ad-ed03-4744-aaea-15252d91d4f5"
+      ],
+      "parentId": "e7a99590-8775-4cf9-b2b0-02e4cc607790",
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Corridor of the Fallen Ronin",
+                "textFormat": "h1"
+              }
+            ]
+          }
+        ],
+        "showTitle": true
+      },
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none",
+          "paddingTop": "4px"
+        },
+        "collapsible": false,
+        "isCollapsed": false,
+        "alternatingCollapsedBackground": "white"
+      },
+      "id": "00b3eb99-12d1-42f7-b852-bd3cbe863f64",
+      "content_type": "encounter"
+    },
+    "6029b171-0173-4be9-9bab-44497d6a5c7d": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Echoes of Betrayal",
+              "textFormat": "h4"
+            }
+          ]
+        }
+      ],
+      "parentId": "00b3eb99-12d1-42f7-b852-bd3cbe863f64",
+      "id": "6029b171-0173-4be9-9bab-44497d6a5c7d"
+    },
+    "839fd545-3d31-461f-abd3-f73a7d6411e3": {
+      "type": "line",
+      "parentId": "00b3eb99-12d1-42f7-b852-bd3cbe863f64",
+      "styles": {
+        "background": "linear-gradient(to right, #9D2A1F, transparent)",
+        "border": "none",
+        "height": "4px",
+        "width": "100%"
+      },
+      "id": "839fd545-3d31-461f-abd3-f73a7d6411e3",
+      "customStyles": {
+        "default": {
+          "background": "linear-gradient(to right, #9D2A1F, transparent)",
+          "border": "none",
+          "height": "4px",
+          "width": "100%"
+        }
+      }
+    },
+    "81a0e0b0-cb4f-4818-adb8-a612eb2f86de": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Set the Scene",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "00b3eb99-12d1-42f7-b852-bd3cbe863f64",
+      "id": "81a0e0b0-cb4f-4818-adb8-a612eb2f86de"
+    },
+    "11c4e66a-55fe-434f-824d-4fc80cfde59c": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Paper lanterns cast flickering shadows along a narrow corridor. Scattered katanas and fallen banners hint at a fierce last stand. Silent figures lurk just beyond the light.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "00b3eb99-12d1-42f7-b852-bd3cbe863f64",
+      "id": "11c4e66a-55fe-434f-824d-4fc80cfde59c"
+    },
+    "e5a00f8b-384c-48a9-bff0-4bc8047c51f8": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Objective",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "00b3eb99-12d1-42f7-b852-bd3cbe863f64",
+      "id": "e5a00f8b-384c-48a9-bff0-4bc8047c51f8"
+    },
+    "9fb86caa-c858-4bf8-ad57-f4ad6acfcf5b": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Overcome the ronin ambush and press onward.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "00b3eb99-12d1-42f7-b852-bd3cbe863f64",
+      "id": "9fb86caa-c858-4bf8-ad57-f4ad6acfcf5b"
+    },
+    "c10a1269-c66a-47cc-9848-fc2d4261aa1c": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Key Features",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "00b3eb99-12d1-42f7-b852-bd3cbe863f64",
+      "id": "c10a1269-c66a-47cc-9848-fc2d4261aa1c"
+    },
+    "139ccfa8-355d-4b2b-8f3a-c7c503a93878": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Narrow Wooden Hall: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Two-square wide corridor. Difficult terrain during combat rules apply.",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Dim Lantern Light: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Darkness beyond lantern radius of 20 ft.",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Broken Banners: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Display the crest of a dishonored samurai clan.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "00b3eb99-12d1-42f7-b852-bd3cbe863f64",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "139ccfa8-355d-4b2b-8f3a-c7c503a93878"
+    },
+    "387ad4db-6e91-4760-813e-c3a300bdae64": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Monsters",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "00b3eb99-12d1-42f7-b852-bd3cbe863f64",
+      "styles": {
+        "paddingTop": "8px"
+      },
+      "id": "387ad4db-6e91-4760-813e-c3a300bdae64"
+    },
+    "2cb1916d-e699-49d5-a3f8-7c015cd83693": {
+      "type": "section",
+      "name": "Dishonored Bandit Captain",
+      "childrenIds": [
+        "bd1d3709-fc07-4900-aabd-81040847be96"
+      ],
+      "parentId": "00b3eb99-12d1-42f7-b852-bd3cbe863f64",
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Dishonored Bandit Captain",
+                "textFormat": "h2"
+              }
+            ]
+          }
+        ],
+        "showTitle": true,
+        "styles": {
+          "header": {
+            "borderBottom": "1px solid #882619"
+          }
+        }
+      },
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none",
+          "paddingTop": "4px"
+        },
+        "collapsible": false,
+        "isCollapsed": true,
+        "alternatingCollapsedBackground": "white",
+        "nestedCollapsible": true,
+        "wrapInnerWithContentDisplay": true,
+        "maxHp": 65,
+        "currentHp": 65,
+        "armorClass": 15
+      },
+      "id": "2cb1916d-e699-49d5-a3f8-7c015cd83693"
+    },
+    "bd1d3709-fc07-4900-aabd-81040847be96": {
+      "type": "section",
+      "name": "Dishonored Bandit Captain",
+      "childrenIds": [
+        "e19449c9-e63e-4fa2-bcda-8dcc3809b755",
+        "a0390e24-45e9-4fe6-b09d-98151ed7fefd",
+        "680bc8ae-edff-4bf7-8aae-3687527de82c",
+        "e6f97959-6f80-45fa-bc33-6618e6d97ca4",
+        "154ec19c-a378-4f22-9bbd-d565588d9d73",
+        "e19826d1-8ced-4c97-ac96-e5c231cec812",
+        "2a705989-f71a-4802-befb-43571ae60620",
+        "9edcab90-b0ad-49cd-b83b-2c994659b632",
+        "9cb7c108-bbc8-4a4f-aa72-0ca6b7c20b91",
+        "10177171-a136-4dd9-bf3b-bf65246d7a7c",
+        "06b61434-32dc-4e22-bd3c-e6a8ae1d2123",
+        "2e2994a0-d1ad-49e1-b97b-1a6914ea4960",
+        "39c711f5-34b3-49ff-9ffa-5f916e0d6d14",
+        "380747e5-1f13-43d5-880a-44a97b1ae59f",
+        "2a9546f7-5fb6-4ea1-b8ed-ea10467f3f36",
+        "89e30611-7bae-4e44-8648-cb09406f3e74"
+      ],
+      "parentId": "2cb1916d-e699-49d5-a3f8-7c015cd83693",
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Dishonored Bandit Captain",
+                "textFormat": "h1"
+              }
+            ]
+          }
+        ],
+        "showTitle": true
+      },
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none",
+          "paddingTop": "4px"
+        },
+        "collapsible": false,
+        "isCollapsed": false,
+        "alternatingCollapsedBackground": "white"
+      },
+      "id": "bd1d3709-fc07-4900-aabd-81040847be96",
+      "content_type": "monster"
+    },
+    "e19449c9-e63e-4fa2-bcda-8dcc3809b755": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Medium Humanoid (Human), Chaotic neutral • Blade of Fallen Honor",
+              "textFormat": "h4"
+            }
+          ]
+        }
+      ],
+      "parentId": "bd1d3709-fc07-4900-aabd-81040847be96",
+      "styles": {
+        "paddingBottom": "4px"
+      },
+      "id": "e19449c9-e63e-4fa2-bcda-8dcc3809b755"
+    },
+    "a0390e24-45e9-4fe6-b09d-98151ed7fefd": {
+      "type": "line",
+      "parentId": "bd1d3709-fc07-4900-aabd-81040847be96",
+      "styles": {
+        "background": "linear-gradient(to right, #9D2A1F, transparent)",
+        "border": "none",
+        "height": "4px",
+        "width": "100%"
+      },
+      "id": "a0390e24-45e9-4fe6-b09d-98151ed7fefd",
+      "customStyles": {
+        "default": {
+          "background": "linear-gradient(to right, #9D2A1F, transparent)",
+          "border": "none",
+          "height": "4px",
+          "width": "100%"
+        }
+      }
+    },
+    "680bc8ae-edff-4bf7-8aae-3687527de82c": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Description",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "bd1d3709-fc07-4900-aabd-81040847be96",
+      "id": "680bc8ae-edff-4bf7-8aae-3687527de82c"
+    },
+    "e6f97959-6f80-45fa-bc33-6618e6d97ca4": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Scars mar his face; wears mismatched armor and a jagged nodachi.",
+              "textFormat": "description"
+            }
+          ]
+        }
+      ],
+      "parentId": "bd1d3709-fc07-4900-aabd-81040847be96",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "e6f97959-6f80-45fa-bc33-6618e6d97ca4"
+    },
+    "154ec19c-a378-4f22-9bbd-d565588d9d73": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Lore",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "bd1d3709-fc07-4900-aabd-81040847be96",
+      "id": "154ec19c-a378-4f22-9bbd-d565588d9d73"
+    },
+    "e19826d1-8ced-4c97-ac96-e5c231cec812": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Once a samurai, now a ruthless bandit leader seeking refuge and loot.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "bd1d3709-fc07-4900-aabd-81040847be96",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "e19826d1-8ced-4c97-ac96-e5c231cec812"
+    },
+    "2a705989-f71a-4802-befb-43571ae60620": {
+      "type": "line",
+      "parentId": "bd1d3709-fc07-4900-aabd-81040847be96",
+      "styles": {
+        "background": "linear-gradient(to right, #9D2A1F, transparent)",
+        "border": "none",
+        "height": "4px",
+        "width": "100%"
+      },
+      "id": "2a705989-f71a-4802-befb-43571ae60620",
+      "customStyles": {
+        "default": {
+          "background": "linear-gradient(to right, #9D2A1F, transparent)",
+          "border": "none",
+          "height": "4px",
+          "width": "100%"
+        }
+      }
+    },
+    "9edcab90-b0ad-49cd-b83b-2c994659b632": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Hit Points: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "65 (10d8 + 10)",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Armor Class: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "15 (chain)",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Speed: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "30 ft.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "bd1d3709-fc07-4900-aabd-81040847be96",
+      "id": "9edcab90-b0ad-49cd-b83b-2c994659b632"
+    },
+    "9cb7c108-bbc8-4a4f-aa72-0ca6b7c20b91": {
+      "type": "StatLine",
+      "content": {
+        "stats": [
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "STR"
+                  }
+                ]
+              }
+            ],
+            "value": 16,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Strength"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "DEX"
+                  }
+                ]
+              }
+            ],
+            "value": 14,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Dexterity"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "CON"
+                  }
+                ]
+              }
+            ],
+            "value": 12,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Constitution"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "INT"
+                  }
+                ]
+              }
+            ],
+            "value": 10,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Intelligence"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "WIS"
+                  }
+                ]
+              }
+            ],
+            "value": 11,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Wisdom"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "CHA"
+                  }
+                ]
+              }
+            ],
+            "value": 13,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Charisma"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "parentId": "bd1d3709-fc07-4900-aabd-81040847be96",
+      "displayMode": "values",
+      "id": "9cb7c108-bbc8-4a4f-aa72-0ca6b7c20b91",
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none"
+        },
+        "statLine": {
+          "width": "100%",
+          "display": "flex",
+          "alignItems": "center",
+          "backgroundColor": "transparent"
+        },
+        "name": {
+          "minWidth": "64px",
+          "fontWeight": "bold",
+          "backgroundColor": "transparent",
+          "color": "#58180D",
+          "flex": "1"
+        },
+        "value": {
+          "width": "32px",
+          "backgroundColor": "transparent",
+          "textAlign": "center",
+          "color": "#000000",
+          "fontFamily": "Noto Serif, Georgia, serif"
+        },
+        "description": {
+          "fontFamily": "Noto Serif, Georgia, serif",
+          "fontSize": "13px",
+          "fontWeight": "normal",
+          "backgroundColor": "transparent",
+          "color": "#000",
+          "lineHeight": "1.25",
+          "margin": "4px 0 0 0",
+          "textAlign": "left",
+          "whiteSpace": "normal",
+          "overflow": "visible",
+          "textOverflow": "clip",
+          "minWidth": "100px",
+          "flex": "1"
+        },
+        "topLine": {
+          "width": "100%",
+          "height": "4px",
+          "marginTop": "4px",
+          "marginBottom": "4px",
+          "background": "linear-gradient(to right, #9D2A1F, transparent)"
+        },
+        "bottomLine": {
+          "width": "100%",
+          "height": "4px",
+          "marginTop": "4px",
+          "marginBottom": "4px",
+          "background": "linear-gradient(to right, #9D2A1F, transparent)"
+        },
+        "showTopLine": true,
+        "showBottomLine": true
+      }
+    },
+    "10177171-a136-4dd9-bf3b-bf65246d7a7c": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Skills: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Athletics (+5), Intimidation (+4)",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Languages: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Common",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Senses: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Passive Perception 10",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Challenge Rating: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "2",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Experience Points: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "450",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "bd1d3709-fc07-4900-aabd-81040847be96",
+      "id": "10177171-a136-4dd9-bf3b-bf65246d7a7c"
+    },
+    "06b61434-32dc-4e22-bd3c-e6a8ae1d2123": {
+      "type": "line",
+      "parentId": "bd1d3709-fc07-4900-aabd-81040847be96",
+      "styles": {
+        "background": "linear-gradient(to right, #9D2A1F, transparent)",
+        "border": "none",
+        "height": "4px",
+        "width": "100%"
+      },
+      "id": "06b61434-32dc-4e22-bd3c-e6a8ae1d2123",
+      "customStyles": {
+        "default": {
+          "background": "linear-gradient(to right, #9D2A1F, transparent)",
+          "border": "none",
+          "height": "4px",
+          "width": "100%"
+        }
+      }
+    },
+    "2e2994a0-d1ad-49e1-b97b-1a6914ea4960": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Actions",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "bd1d3709-fc07-4900-aabd-81040847be96",
+      "id": "2e2994a0-d1ad-49e1-b97b-1a6914ea4960"
+    },
+    "39c711f5-34b3-49ff-9ffa-5f916e0d6d14": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Two attacks",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "bd1d3709-fc07-4900-aabd-81040847be96",
+      "id": "39c711f5-34b3-49ff-9ffa-5f916e0d6d14"
+    },
+    "380747e5-1f13-43d5-880a-44a97b1ae59f": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Multiattack: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "The captain makes two melee attacks.",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Nodachi Slash: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Melee Weapon Attack: +6 to hit, reach 10 ft., one target. Hit: 1d12+4 slashing damage.",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Parrying Riposte: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "When a creature misses him with a melee attack, he uses his reaction to make one nodachi attack.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "bd1d3709-fc07-4900-aabd-81040847be96",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "380747e5-1f13-43d5-880a-44a97b1ae59f"
+    },
+    "2a9546f7-5fb6-4ea1-b8ed-ea10467f3f36": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Reactions",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "bd1d3709-fc07-4900-aabd-81040847be96",
+      "id": "2a9546f7-5fb6-4ea1-b8ed-ea10467f3f36"
+    },
+    "89e30611-7bae-4e44-8648-cb09406f3e74": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Parrying Riposte: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "See above.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "bd1d3709-fc07-4900-aabd-81040847be96",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "89e30611-7bae-4e44-8648-cb09406f3e74"
+    },
+    "88a961ad-ed03-4744-aaea-15252d91d4f5": {
+      "type": "section",
+      "name": "Dishonored Bandit",
+      "childrenIds": [
+        "8209979a-bd69-450e-b125-baeee1cba643"
+      ],
+      "parentId": "00b3eb99-12d1-42f7-b852-bd3cbe863f64",
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Dishonored Bandit",
+                "textFormat": "h2"
+              }
+            ]
+          }
+        ],
+        "showTitle": true,
+        "styles": {
+          "header": {
+            "borderBottom": "1px solid #882619"
+          }
+        }
+      },
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none",
+          "paddingTop": "4px"
+        },
+        "collapsible": false,
+        "isCollapsed": true,
+        "alternatingCollapsedBackground": "white",
+        "nestedCollapsible": true,
+        "wrapInnerWithContentDisplay": true,
+        "maxHp": 11,
+        "currentHp": 11,
+        "armorClass": 12
+      },
+      "id": "88a961ad-ed03-4744-aaea-15252d91d4f5"
+    },
+    "8209979a-bd69-450e-b125-baeee1cba643": {
+      "type": "section",
+      "name": "Dishonored Bandit",
+      "childrenIds": [
+        "3ece1b65-21c2-4a58-be97-fb513abda310",
+        "717cdbf6-afba-4522-8aaa-f1329db43ff3",
+        "5c1198b6-99d9-4121-bf6c-daa70c795b32",
+        "3db5e6c2-b8df-4154-8349-0780b7f6e564",
+        "30629523-c541-4a5d-b188-376daf0292e3",
+        "28b32d58-e560-4d35-b569-3c17cbd43ac4",
+        "4639a8eb-3515-44e2-96ce-a72535ef450e",
+        "5c778485-ac58-4784-9290-4a17a1ddbf15",
+        "34f7f26c-78c2-4c4c-a6a4-6bbc7f97b460",
+        "5a9c9404-1536-4ce9-93f5-36b79cceac9d",
+        "22704e05-86fc-467c-8193-ae9ad70e9ed8",
+        "96bf159d-cecb-475f-95e5-7e2031049e90",
+        "fd3e3840-3666-4302-80fa-caa656861a57",
+        "8b3e5065-faf7-4257-94eb-8799dd5ba167"
+      ],
+      "parentId": "88a961ad-ed03-4744-aaea-15252d91d4f5",
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Dishonored Bandit",
+                "textFormat": "h1"
+              }
+            ]
+          }
+        ],
+        "showTitle": true
+      },
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none",
+          "paddingTop": "4px"
+        },
+        "collapsible": false,
+        "isCollapsed": false,
+        "alternatingCollapsedBackground": "white"
+      },
+      "id": "8209979a-bd69-450e-b125-baeee1cba643",
+      "content_type": "monster"
+    },
+    "3ece1b65-21c2-4a58-be97-fb513abda310": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Medium Humanoid (Human), Chaotic neutral • Rogue Warrior",
+              "textFormat": "h4"
+            }
+          ]
+        }
+      ],
+      "parentId": "8209979a-bd69-450e-b125-baeee1cba643",
+      "styles": {
+        "paddingBottom": "4px"
+      },
+      "id": "3ece1b65-21c2-4a58-be97-fb513abda310"
+    },
+    "717cdbf6-afba-4522-8aaa-f1329db43ff3": {
+      "type": "line",
+      "parentId": "8209979a-bd69-450e-b125-baeee1cba643",
+      "styles": {
+        "background": "linear-gradient(to right, #9D2A1F, transparent)",
+        "border": "none",
+        "height": "4px",
+        "width": "100%"
+      },
+      "id": "717cdbf6-afba-4522-8aaa-f1329db43ff3",
+      "customStyles": {
+        "default": {
+          "background": "linear-gradient(to right, #9D2A1F, transparent)",
+          "border": "none",
+          "height": "4px",
+          "width": "100%"
+        }
+      }
+    },
+    "5c1198b6-99d9-4121-bf6c-daa70c795b32": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Description",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "8209979a-bd69-450e-b125-baeee1cba643",
+      "id": "5c1198b6-99d9-4121-bf6c-daa70c795b32"
+    },
+    "3db5e6c2-b8df-4154-8349-0780b7f6e564": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Leather armor, mismatched weapons, eyes darting.",
+              "textFormat": "description"
+            }
+          ]
+        }
+      ],
+      "parentId": "8209979a-bd69-450e-b125-baeee1cba643",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "3db5e6c2-b8df-4154-8349-0780b7f6e564"
+    },
+    "30629523-c541-4a5d-b188-376daf0292e3": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Lore",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "8209979a-bd69-450e-b125-baeee1cba643",
+      "id": "30629523-c541-4a5d-b188-376daf0292e3"
+    },
+    "28b32d58-e560-4d35-b569-3c17cbd43ac4": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Followers of the Bandit Captain, scavenging in the mountains.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "8209979a-bd69-450e-b125-baeee1cba643",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "28b32d58-e560-4d35-b569-3c17cbd43ac4"
+    },
+    "4639a8eb-3515-44e2-96ce-a72535ef450e": {
+      "type": "line",
+      "parentId": "8209979a-bd69-450e-b125-baeee1cba643",
+      "styles": {
+        "background": "linear-gradient(to right, #9D2A1F, transparent)",
+        "border": "none",
+        "height": "4px",
+        "width": "100%"
+      },
+      "id": "4639a8eb-3515-44e2-96ce-a72535ef450e",
+      "customStyles": {
+        "default": {
+          "background": "linear-gradient(to right, #9D2A1F, transparent)",
+          "border": "none",
+          "height": "4px",
+          "width": "100%"
+        }
+      }
+    },
+    "5c778485-ac58-4784-9290-4a17a1ddbf15": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Hit Points: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "11 (2d8 + 2)",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Armor Class: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "12 (leather)",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Speed: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "30 ft.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "8209979a-bd69-450e-b125-baeee1cba643",
+      "id": "5c778485-ac58-4784-9290-4a17a1ddbf15"
+    },
+    "34f7f26c-78c2-4c4c-a6a4-6bbc7f97b460": {
+      "type": "StatLine",
+      "content": {
+        "stats": [
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "STR"
+                  }
+                ]
+              }
+            ],
+            "value": 11,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Strength"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "DEX"
+                  }
+                ]
+              }
+            ],
+            "value": 12,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Dexterity"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "CON"
+                  }
+                ]
+              }
+            ],
+            "value": 12,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Constitution"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "INT"
+                  }
+                ]
+              }
+            ],
+            "value": 10,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Intelligence"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "WIS"
+                  }
+                ]
+              }
+            ],
+            "value": 10,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Wisdom"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "CHA"
+                  }
+                ]
+              }
+            ],
+            "value": 10,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Charisma"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "parentId": "8209979a-bd69-450e-b125-baeee1cba643",
+      "displayMode": "values",
+      "id": "34f7f26c-78c2-4c4c-a6a4-6bbc7f97b460",
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none"
+        },
+        "statLine": {
+          "width": "100%",
+          "display": "flex",
+          "alignItems": "center",
+          "backgroundColor": "transparent"
+        },
+        "name": {
+          "minWidth": "64px",
+          "fontWeight": "bold",
+          "backgroundColor": "transparent",
+          "color": "#58180D",
+          "flex": "1"
+        },
+        "value": {
+          "width": "32px",
+          "backgroundColor": "transparent",
+          "textAlign": "center",
+          "color": "#000000",
+          "fontFamily": "Noto Serif, Georgia, serif"
+        },
+        "description": {
+          "fontFamily": "Noto Serif, Georgia, serif",
+          "fontSize": "13px",
+          "fontWeight": "normal",
+          "backgroundColor": "transparent",
+          "color": "#000",
+          "lineHeight": "1.25",
+          "margin": "4px 0 0 0",
+          "textAlign": "left",
+          "whiteSpace": "normal",
+          "overflow": "visible",
+          "textOverflow": "clip",
+          "minWidth": "100px",
+          "flex": "1"
+        },
+        "topLine": {
+          "width": "100%",
+          "height": "4px",
+          "marginTop": "4px",
+          "marginBottom": "4px",
+          "background": "linear-gradient(to right, #9D2A1F, transparent)"
+        },
+        "bottomLine": {
+          "width": "100%",
+          "height": "4px",
+          "marginTop": "4px",
+          "marginBottom": "4px",
+          "background": "linear-gradient(to right, #9D2A1F, transparent)"
+        },
+        "showTopLine": true,
+        "showBottomLine": true
+      }
+    },
+    "5a9c9404-1536-4ce9-93f5-36b79cceac9d": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Skills: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Stealth (+2)",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Languages: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Common",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Senses: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Passive Perception 10",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Challenge Rating: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "1/8",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Experience Points: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "25",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "8209979a-bd69-450e-b125-baeee1cba643",
+      "id": "5a9c9404-1536-4ce9-93f5-36b79cceac9d"
+    },
+    "22704e05-86fc-467c-8193-ae9ad70e9ed8": {
+      "type": "line",
+      "parentId": "8209979a-bd69-450e-b125-baeee1cba643",
+      "styles": {
+        "background": "linear-gradient(to right, #9D2A1F, transparent)",
+        "border": "none",
+        "height": "4px",
+        "width": "100%"
+      },
+      "id": "22704e05-86fc-467c-8193-ae9ad70e9ed8",
+      "customStyles": {
+        "default": {
+          "background": "linear-gradient(to right, #9D2A1F, transparent)",
+          "border": "none",
+          "height": "4px",
+          "width": "100%"
+        }
+      }
+    },
+    "96bf159d-cecb-475f-95e5-7e2031049e90": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Actions",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "8209979a-bd69-450e-b125-baeee1cba643",
+      "id": "96bf159d-cecb-475f-95e5-7e2031049e90"
+    },
+    "fd3e3840-3666-4302-80fa-caa656861a57": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "One attack",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "8209979a-bd69-450e-b125-baeee1cba643",
+      "id": "fd3e3840-3666-4302-80fa-caa656861a57"
+    },
+    "8b3e5065-faf7-4257-94eb-8799dd5ba167": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Scimitar: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 1d6+2 slashing damage.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "8209979a-bd69-450e-b125-baeee1cba643",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "8b3e5065-faf7-4257-94eb-8799dd5ba167"
+    },
+    "64c50376-f927-4ae4-ba98-66c946216044": {
+      "type": "section",
+      "name": "Inner Sanctum",
+      "childrenIds": [
+        "7d7eb3af-a4f3-4712-9d5b-83779806ae96"
+      ],
+      "parentId": "7af483ef-a1f6-447e-b187-be79276f54c4",
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Inner Sanctum",
+                "textFormat": "h2"
+              }
+            ]
+          }
+        ],
+        "showTitle": true,
+        "styles": {
+          "header": {
+            "borderBottom": "1px solid #882619"
+          }
+        }
+      },
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none",
+          "paddingTop": "4px"
+        },
+        "collapsible": false,
+        "isCollapsed": true,
+        "alternatingCollapsedBackground": "white",
+        "nestedCollapsible": true,
+        "wrapInnerWithContentDisplay": true
+      },
+      "id": "64c50376-f927-4ae4-ba98-66c946216044"
+    },
+    "7d7eb3af-a4f3-4712-9d5b-83779806ae96": {
+      "type": "section",
+      "name": "Inner Sanctum",
+      "childrenIds": [
+        "75dce650-1c20-41a4-9bf2-c5108b850eb0",
+        "a5d27e7d-caa3-44b7-97e4-bf3e7631b5b4",
+        "9836e483-3020-4457-823a-47b599780142",
+        "07b5cf63-90fb-4feb-a9c1-befc761f89e1",
+        "c9339154-771f-46d9-8d1f-314eede68fa0",
+        "6f651597-c788-4b5f-a0ec-afc181bc611a",
+        "20ea5ba1-aa72-453b-957a-342cc882002d",
+        "1d14ac11-cb2b-4f9b-82f2-0504d7c676ae",
+        "4d5eb3e8-d557-4d93-aa6c-a53b1f5588b1",
+        "4826aa11-f049-4c9c-885e-d0deba083e61",
+        "cb3d61b9-7290-41dd-a36b-462216d600ea",
+        "ede00252-aca0-456e-b971-38d79a2387a5"
+      ],
+      "parentId": "64c50376-f927-4ae4-ba98-66c946216044",
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Inner Sanctum",
+                "textFormat": "h1"
+              }
+            ]
+          }
+        ],
+        "showTitle": true
+      },
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none",
+          "paddingTop": "4px"
+        },
+        "collapsible": false,
+        "isCollapsed": false,
+        "alternatingCollapsedBackground": "white"
+      },
+      "id": "7d7eb3af-a4f3-4712-9d5b-83779806ae96",
+      "content_type": "encounter"
+    },
+    "75dce650-1c20-41a4-9bf2-c5108b850eb0": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Heart of Corruption",
+              "textFormat": "h4"
+            }
+          ]
+        }
+      ],
+      "parentId": "7d7eb3af-a4f3-4712-9d5b-83779806ae96",
+      "id": "75dce650-1c20-41a4-9bf2-c5108b850eb0"
+    },
+    "a5d27e7d-caa3-44b7-97e4-bf3e7631b5b4": {
+      "type": "line",
+      "parentId": "7d7eb3af-a4f3-4712-9d5b-83779806ae96",
+      "styles": {
+        "background": "linear-gradient(to right, #9D2A1F, transparent)",
+        "border": "none",
+        "height": "4px",
+        "width": "100%"
+      },
+      "id": "a5d27e7d-caa3-44b7-97e4-bf3e7631b5b4",
+      "customStyles": {
+        "default": {
+          "background": "linear-gradient(to right, #9D2A1F, transparent)",
+          "border": "none",
+          "height": "4px",
+          "width": "100%"
+        }
+      }
+    },
+    "9836e483-3020-4457-823a-47b599780142": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Set the Scene",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "7d7eb3af-a4f3-4712-9d5b-83779806ae96",
+      "id": "9836e483-3020-4457-823a-47b599780142"
+    },
+    "07b5cf63-90fb-4feb-a9c1-befc761f89e1": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "A domed chamber with a cracked altar at its center. Fragments of a broken mirror scatter the floor. A swirling purple haze coalesces into a horned Oni Spirit. The atmosphere hums with dark energy.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "7d7eb3af-a4f3-4712-9d5b-83779806ae96",
+      "id": "07b5cf63-90fb-4feb-a9c1-befc761f89e1"
+    },
+    "c9339154-771f-46d9-8d1f-314eede68fa0": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Objective",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "7d7eb3af-a4f3-4712-9d5b-83779806ae96",
+      "id": "c9339154-771f-46d9-8d1f-314eede68fa0"
+    },
+    "6f651597-c788-4b5f-a0ec-afc181bc611a": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Defeat the Oni Spirit, restore the Spirit Mirror, and free Monk Akio.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "7d7eb3af-a4f3-4712-9d5b-83779806ae96",
+      "id": "6f651597-c788-4b5f-a0ec-afc181bc611a"
+    },
+    "20ea5ba1-aa72-453b-957a-342cc882002d": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Key Features",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "7d7eb3af-a4f3-4712-9d5b-83779806ae96",
+      "id": "20ea5ba1-aa72-453b-957a-342cc882002d"
+    },
+    "1d14ac11-cb2b-4f9b-82f2-0504d7c676ae": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Cracked Altar: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Grooves suggest where mirror fragments fit.",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Shattered Spirit Mirror: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Five shards scattered around the room.",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Spiritual Nexus: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Purple haze crackles, dealing 1d6 necrotic damage to anyone starting their turn within 5 ft.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "7d7eb3af-a4f3-4712-9d5b-83779806ae96",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "1d14ac11-cb2b-4f9b-82f2-0504d7c676ae"
+    },
+    "4d5eb3e8-d557-4d93-aa6c-a53b1f5588b1": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Monsters",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "7d7eb3af-a4f3-4712-9d5b-83779806ae96",
+      "styles": {
+        "paddingTop": "8px"
+      },
+      "id": "4d5eb3e8-d557-4d93-aa6c-a53b1f5588b1"
+    },
+    "4826aa11-f049-4c9c-885e-d0deba083e61": {
+      "type": "section",
+      "name": "Korashima Oni Spirit",
+      "childrenIds": [
+        "d19b9467-6315-4271-8e0c-f4e2f53bb73f"
+      ],
+      "parentId": "7d7eb3af-a4f3-4712-9d5b-83779806ae96",
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Korashima Oni Spirit",
+                "textFormat": "h2"
+              }
+            ]
+          }
+        ],
+        "showTitle": true,
+        "styles": {
+          "header": {
+            "borderBottom": "1px solid #882619"
+          }
+        }
+      },
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none",
+          "paddingTop": "4px"
+        },
+        "collapsible": false,
+        "isCollapsed": true,
+        "alternatingCollapsedBackground": "white",
+        "nestedCollapsible": true,
+        "wrapInnerWithContentDisplay": true,
+        "maxHp": 110,
+        "currentHp": 110,
+        "armorClass": 16
+      },
+      "id": "4826aa11-f049-4c9c-885e-d0deba083e61"
+    },
+    "d19b9467-6315-4271-8e0c-f4e2f53bb73f": {
+      "type": "section",
+      "name": "Korashima Oni Spirit",
+      "childrenIds": [
+        "a9397ec9-1f0d-40d2-a082-86f07c5e1b1b",
+        "fc3407e7-3586-4533-94bb-6e19edf48f74",
+        "8c494814-6b89-4934-bed7-4115b0b90d80",
+        "27944b32-f65b-4c02-8906-a09beee31b9c",
+        "b85286fd-6400-4969-8cde-d72181b433f5",
+        "01928770-7265-4664-abf1-9bab88b91aec",
+        "b751fd66-d376-4c67-9fa4-769375e52bfa",
+        "caa34088-8b5b-4e2e-be12-d210300a9b7d",
+        "b41be94c-e462-4ffb-bede-6d3b2a3ce0ce",
+        "69fe7e3f-56dc-4c31-841d-e0ebdbec1ae8",
+        "a1c9ddab-3873-4cea-9a16-62ed08c6d79d",
+        "6f2ecdf6-93e1-4fc8-be15-23a8bab7a8f9",
+        "61efafa9-6d2d-4a80-b1ae-2812579efa8a",
+        "e9217e4e-7ac6-4af6-a912-9de78a79b62e",
+        "5a6dbb4d-f2c9-4c26-8e04-9ed5efd7adda",
+        "b3cbcae6-1104-4c14-b672-636f93e77c37",
+        "e86de846-45f5-4d92-bdb3-42265d2e5113",
+        "58010eb9-3883-414e-942a-a6a9b587d4c9"
+      ],
+      "parentId": "4826aa11-f049-4c9c-885e-d0deba083e61",
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Korashima Oni Spirit",
+                "textFormat": "h1"
+              }
+            ]
+          }
+        ],
+        "showTitle": true
+      },
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none",
+          "paddingTop": "4px"
+        },
+        "collapsible": false,
+        "isCollapsed": false,
+        "alternatingCollapsedBackground": "white"
+      },
+      "id": "d19b9467-6315-4271-8e0c-f4e2f53bb73f",
+      "content_type": "monster"
+    },
+    "a9397ec9-1f0d-40d2-a082-86f07c5e1b1b": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Large Fiend (Spiritual), Chaotic evil • Tormentor of Souls",
+              "textFormat": "h4"
+            }
+          ]
+        }
+      ],
+      "parentId": "d19b9467-6315-4271-8e0c-f4e2f53bb73f",
+      "styles": {
+        "paddingBottom": "4px"
+      },
+      "id": "a9397ec9-1f0d-40d2-a082-86f07c5e1b1b"
+    },
+    "fc3407e7-3586-4533-94bb-6e19edf48f74": {
+      "type": "line",
+      "parentId": "d19b9467-6315-4271-8e0c-f4e2f53bb73f",
+      "styles": {
+        "background": "linear-gradient(to right, #9D2A1F, transparent)",
+        "border": "none",
+        "height": "4px",
+        "width": "100%"
+      },
+      "id": "fc3407e7-3586-4533-94bb-6e19edf48f74",
+      "customStyles": {
+        "default": {
+          "background": "linear-gradient(to right, #9D2A1F, transparent)",
+          "border": "none",
+          "height": "4px",
+          "width": "100%"
+        }
+      }
+    },
+    "8c494814-6b89-4934-bed7-4115b0b90d80": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Description",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "d19b9467-6315-4271-8e0c-f4e2f53bb73f",
+      "id": "8c494814-6b89-4934-bed7-4115b0b90d80"
+    },
+    "27944b32-f65b-4c02-8906-a09beee31b9c": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Translucent horned fiend, glowing eyes, robed in spectral tatters.",
+              "textFormat": "description"
+            }
+          ]
+        }
+      ],
+      "parentId": "d19b9467-6315-4271-8e0c-f4e2f53bb73f",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "27944b32-f65b-4c02-8906-a09beee31b9c"
+    },
+    "b85286fd-6400-4969-8cde-d72181b433f5": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Lore",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "d19b9467-6315-4271-8e0c-f4e2f53bb73f",
+      "id": "b85286fd-6400-4969-8cde-d72181b433f5"
+    },
+    "01928770-7265-4664-abf1-9bab88b91aec": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "A vengeful Oni fused with corrupted shrine energy, seeking to trap mortal souls for eternity.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "d19b9467-6315-4271-8e0c-f4e2f53bb73f",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "01928770-7265-4664-abf1-9bab88b91aec"
+    },
+    "b751fd66-d376-4c67-9fa4-769375e52bfa": {
+      "type": "line",
+      "parentId": "d19b9467-6315-4271-8e0c-f4e2f53bb73f",
+      "styles": {
+        "background": "linear-gradient(to right, #9D2A1F, transparent)",
+        "border": "none",
+        "height": "4px",
+        "width": "100%"
+      },
+      "id": "b751fd66-d376-4c67-9fa4-769375e52bfa",
+      "customStyles": {
+        "default": {
+          "background": "linear-gradient(to right, #9D2A1F, transparent)",
+          "border": "none",
+          "height": "4px",
+          "width": "100%"
+        }
+      }
+    },
+    "caa34088-8b5b-4e2e-be12-d210300a9b7d": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Hit Points: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "110 (13d8 + 39)",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Armor Class: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "16 (natural)",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Speed: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "40 ft.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "d19b9467-6315-4271-8e0c-f4e2f53bb73f",
+      "id": "caa34088-8b5b-4e2e-be12-d210300a9b7d"
+    },
+    "b41be94c-e462-4ffb-bede-6d3b2a3ce0ce": {
+      "type": "StatLine",
+      "content": {
+        "stats": [
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "STR"
+                  }
+                ]
+              }
+            ],
+            "value": 18,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Strength"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "DEX"
+                  }
+                ]
+              }
+            ],
+            "value": 14,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Dexterity"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "CON"
+                  }
+                ]
+              }
+            ],
+            "value": 16,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Constitution"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "INT"
+                  }
+                ]
+              }
+            ],
+            "value": 12,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Intelligence"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "WIS"
+                  }
+                ]
+              }
+            ],
+            "value": 14,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Wisdom"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "CHA"
+                  }
+                ]
+              }
+            ],
+            "value": 18,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Charisma"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "parentId": "d19b9467-6315-4271-8e0c-f4e2f53bb73f",
+      "displayMode": "values",
+      "id": "b41be94c-e462-4ffb-bede-6d3b2a3ce0ce",
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none"
+        },
+        "statLine": {
+          "width": "100%",
+          "display": "flex",
+          "alignItems": "center",
+          "backgroundColor": "transparent"
+        },
+        "name": {
+          "minWidth": "64px",
+          "fontWeight": "bold",
+          "backgroundColor": "transparent",
+          "color": "#58180D",
+          "flex": "1"
+        },
+        "value": {
+          "width": "32px",
+          "backgroundColor": "transparent",
+          "textAlign": "center",
+          "color": "#000000",
+          "fontFamily": "Noto Serif, Georgia, serif"
+        },
+        "description": {
+          "fontFamily": "Noto Serif, Georgia, serif",
+          "fontSize": "13px",
+          "fontWeight": "normal",
+          "backgroundColor": "transparent",
+          "color": "#000",
+          "lineHeight": "1.25",
+          "margin": "4px 0 0 0",
+          "textAlign": "left",
+          "whiteSpace": "normal",
+          "overflow": "visible",
+          "textOverflow": "clip",
+          "minWidth": "100px",
+          "flex": "1"
+        },
+        "topLine": {
+          "width": "100%",
+          "height": "4px",
+          "marginTop": "4px",
+          "marginBottom": "4px",
+          "background": "linear-gradient(to right, #9D2A1F, transparent)"
+        },
+        "bottomLine": {
+          "width": "100%",
+          "height": "4px",
+          "marginTop": "4px",
+          "marginBottom": "4px",
+          "background": "linear-gradient(to right, #9D2A1F, transparent)"
+        },
+        "showTopLine": true,
+        "showBottomLine": true
+      }
+    },
+    "69fe7e3f-56dc-4c31-841d-e0ebdbec1ae8": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Skills: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Perception (+5), Intimidation (+8)",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Languages: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Understands Common and Abyssal but cannot speak.",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Damage Resistances: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Cold, Necrotic",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Damage Immunities: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Poison, Psychic",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Senses: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Darkvision 60 ft., Passive Perception 15",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Challenge Rating: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "6",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Experience Points: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "2300",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "d19b9467-6315-4271-8e0c-f4e2f53bb73f",
+      "id": "69fe7e3f-56dc-4c31-841d-e0ebdbec1ae8"
+    },
+    "a1c9ddab-3873-4cea-9a16-62ed08c6d79d": {
+      "type": "line",
+      "parentId": "d19b9467-6315-4271-8e0c-f4e2f53bb73f",
+      "styles": {
+        "background": "linear-gradient(to right, #9D2A1F, transparent)",
+        "border": "none",
+        "height": "4px",
+        "width": "100%"
+      },
+      "id": "a1c9ddab-3873-4cea-9a16-62ed08c6d79d",
+      "customStyles": {
+        "default": {
+          "background": "linear-gradient(to right, #9D2A1F, transparent)",
+          "border": "none",
+          "height": "4px",
+          "width": "100%"
+        }
+      }
+    },
+    "6f2ecdf6-93e1-4fc8-be15-23a8bab7a8f9": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Features",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "d19b9467-6315-4271-8e0c-f4e2f53bb73f",
+      "id": "6f2ecdf6-93e1-4fc8-be15-23a8bab7a8f9"
+    },
+    "61efafa9-6d2d-4a80-b1ae-2812579efa8a": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Aura of Despair: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Any creature that starts its turn within 10 ft. of the Oni Spirit must succeed on DC 15 Wisdom save or be frightened until end of its next turn.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "d19b9467-6315-4271-8e0c-f4e2f53bb73f",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "61efafa9-6d2d-4a80-b1ae-2812579efa8a"
+    },
+    "e9217e4e-7ac6-4af6-a912-9de78a79b62e": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Actions",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "d19b9467-6315-4271-8e0c-f4e2f53bb73f",
+      "id": "e9217e4e-7ac6-4af6-a912-9de78a79b62e"
+    },
+    "5a6dbb4d-f2c9-4c26-8e04-9ed5efd7adda": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Put text here",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "d19b9467-6315-4271-8e0c-f4e2f53bb73f",
+      "id": "5a6dbb4d-f2c9-4c26-8e04-9ed5efd7adda"
+    },
+    "b3cbcae6-1104-4c14-b672-636f93e77c37": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Multiattack: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "The Oni Spirit makes two attacks: one with its Claw and one with its Ethereal Flame.",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Claw: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Melee Weapon Attack: +8 to hit, reach 10 ft., one target. Hit: 2d6+4 slashing damage.",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Ethereal Flame: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Ranged Spell Attack: +8 to hit, range 30 ft., one target. Hit: 3d6 necrotic damage.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "d19b9467-6315-4271-8e0c-f4e2f53bb73f",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "b3cbcae6-1104-4c14-b672-636f93e77c37"
+    },
+    "e86de846-45f5-4d92-bdb3-42265d2e5113": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Legendary Actions (Total: 2)",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "d19b9467-6315-4271-8e0c-f4e2f53bb73f",
+      "id": "e86de846-45f5-4d92-bdb3-42265d2e5113"
+    },
+    "58010eb9-3883-414e-942a-a6a9b587d4c9": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Haunting Wail (Cost: 1): ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "The Oni Spirit emits a mournful wail. Each creature within 20 ft. must succeed on DC 15 Constitution save or take 2d6 psychic damage and be stunned until end of its next turn.",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Forceful Grasp (Cost: 2): ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "The Oni Spirit attempts to pull one Medium or smaller creature within 30 ft. into its aura. Target must succeed on DC 15 Strength save or be pulled 20 ft. and restrained until end of its next turn.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "d19b9467-6315-4271-8e0c-f4e2f53bb73f",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "58010eb9-3883-414e-942a-a6a9b587d4c9"
+    },
+    "cb3d61b9-7290-41dd-a36b-462216d600ea": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Loot",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "7d7eb3af-a4f3-4712-9d5b-83779806ae96",
+      "styles": {
+        "paddingTop": "8px"
+      },
+      "id": "cb3d61b9-7290-41dd-a36b-462216d600ea"
+    },
+    "ede00252-aca0-456e-b971-38d79a2387a5": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Restored Spirit Mirror: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "A +1 wondrous item. Grants advantage on Wisdom (Insight) checks while attuned.",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": " (x2)Potion of Healing: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Standard healing potion (2d4+2 HP).",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "100 Koku: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Traditional coinage of Rokugan.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "7d7eb3af-a4f3-4712-9d5b-83779806ae96",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "ede00252-aca0-456e-b971-38d79a2387a5"
+    }
+  }
+}

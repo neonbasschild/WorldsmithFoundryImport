@@ -20,7 +20,7 @@ import {
 } from "./srd-lookup.mjs";
 import {
   createActorFromWorldsmith, createFeatFromWorldsmith, createFromWorldsmith, createItemFromWorldsmith,
-  createJournalFromWorldsmith, createEncounterFromWorldsmith, createShopFromWorldsmith, createSpellFromWorldsmith,
+  createJournalFromWorldsmith, createEncounterFromWorldsmith, createDungeonFromWorldsmith, createShopFromWorldsmith, createSpellFromWorldsmith,
   createTreasureFromWorldsmith, importFromText
 } from "./importer.mjs";
 import WorldsmithImportApp from "./import-app.mjs";
@@ -57,6 +57,7 @@ const api = {
   createTreasureFromWorldsmith,
   createJournalFromWorldsmith,
   createEncounterFromWorldsmith,
+  createDungeonFromWorldsmith,
   createSpellFromWorldsmith,
   createFeatFromWorldsmith,
   createFromWorldsmith,

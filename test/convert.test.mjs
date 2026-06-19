@@ -613,6 +613,31 @@ function activitiesOf(item) {
 }
 
 {
+  console.log("Structured dungeon (Kozanji no Miko)");
+  const raw = loadStructured("Kozanji_no_Miko_9e04.json");
+  const normalized = normalizeWorldsmithData(raw);
+  assert(detectWorldsmithType(normalized) === "dungeon", "dungeon type detected");
+  assert(normalized.documentKind === "dungeon", "dungeon document kind");
+  assert(normalized.name === "Kozanji no Miko", "dungeon name");
+  assert(normalized.lore.includes("ancient mountain shrine"), "dungeon lore parsed");
+  assert(normalized.layout.includes("five chambers"), "dungeon layout parsed");
+  assert(normalized.objectives.length === 5, "dungeon objectives parsed");
+  assert(normalized.rooms.length === 5, "dungeon extracts five rooms");
+  assert(normalized.rooms.some(r => r.name === "Overgrown Gatehouse"), "dungeon room name");
+  assert(normalized.rooms.some(r => r.content.includes("moss-slick torii")), "dungeon room content");
+  assert(normalized.encounters.length === 5, "dungeon extracts five encounters");
+  assert(normalized.encounters.every(e => e.documentKind === "encounter"), "dungeon encounter kind");
+  assert(normalized.encounters.some(e => e.members.length > 0), "dungeon encounter has members");
+  const { journalData } = convertWorldsmithQuest(normalized);
+  assert(journalData.flags["worldsmith-foundry-import"].kind === "dungeon", "dungeon journal kind");
+  assert(journalData.pages.some(p => p.name === "Lore"), "dungeon lore page");
+  assert(journalData.pages.some(p => p.name === "Layout"), "dungeon layout page");
+  assert(journalData.pages.some(p => p.name === "Overgrown Gatehouse"), "dungeon room page");
+  const { encounterData } = convertWorldsmithEncounter(normalized.encounters[0]);
+  assert(encounterData.type === "encounter", "nested encounter converts to group actor");
+}
+
+{
   console.log("SRD name normalization");
   assert(normalizeSrdName("Spell: Fireball") === "fireball", "strip spell prefix");
   assert(normalizeSrdName("  False Life  ") === "false life", "trim and lowercase");

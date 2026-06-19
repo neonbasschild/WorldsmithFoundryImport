@@ -83,6 +83,7 @@ function parseStructuredExport(data) {
   if (contentType === "magicitem") return normalizeItem(root, walk);
   if (contentType === "deity") return normalizeDeity(root, walk, data.items);
   if (contentType === "encounter") return normalizeEncounter(root, walk, data.items);
+  if (contentType === "dungeon") return normalizeDungeon(root, walk, data.items);
   if (contentType === "quest") return normalizeQuest(root, walk, data.items);
   if (contentType === "story") return normalizeStory(root, walk, data.items);
   if (contentType === "session") return normalizeSession(root, walk, data.items);
@@ -1038,6 +1039,113 @@ function normalizeEncounter(root, walk, items) {
   encounter.spells = embedded.spells;
   encounter.feats = embedded.feats;
   return encounter;
+}
+
+/**
+ * Build readable content for a dungeon room wrapper section.
+ * @param {object} roomWrapper
+ * @param {Record<string, object>} items
+ * @param {string} name
+ * @returns {string}
+ */
+function buildRoomContent(roomWrapper, items, name) {
+  const parts = [];
+  const seen = new Set();
+
+  for (const section of collectAllSections(roomWrapper, items)) {
+    const type = String(section.content_type ?? "").toLowerCase();
+    if (!ENCOUNTER_CONTENT_TYPES.has(type)) continue;
+    if (seen.has(section.id)) continue;
+    seen.add(section.id);
+
+    const sectionName = section.name?.trim() || name;
+    const walk = walkSection(section, items, sectionName);
+    const text = buildEncounterContent(walk, sectionName);
+    if (text) parts.push(text);
+  }
+
+  if (!parts.length) {
+    const inner = resolveContentSection(roomWrapper, items) ?? roomWrapper;
+    const walk = walkSection(inner, items, name);
+    const text = buildEncounterContent(walk, name);
+    if (text) parts.push(text);
+  }
+
+  return parts.join("\n\n");
+}
+
+/**
+ * Collect top-level room sections listed after the Rooms header.
+ * @param {object} root
+ * @param {Record<string, object>} items
+ * @returns {Array<{name: string, content: string}>}
+ */
+function collectDungeonRooms(root, items) {
+  const rooms = [];
+  let afterRooms = false;
+
+  for (const childId of root.childrenIds ?? []) {
+    const child = items[childId];
+    if (!child) continue;
+
+    if (child.type === "simple") {
+      const header = getHeaderText(child);
+      if (header?.toLowerCase() === "rooms") {
+        afterRooms = true;
+        continue;
+      }
+    }
+
+    if (!afterRooms || child.type !== "section") continue;
+    const name = child.name?.trim();
+    if (!name) continue;
+    const content = buildRoomContent(child, items, name);
+    if (content) rooms.push({ name, content });
+  }
+
+  return rooms;
+}
+
+/**
+ * Collect encounter documents embedded in a dungeon for group-actor import.
+ * @param {object} root
+ * @param {Record<string, object>} items
+ * @returns {object[]}
+ */
+function collectDungeonEncounters(root, items) {
+  const encounters = [];
+  const seen = new Set();
+
+  for (const section of collectAllSections(root, items)) {
+    if (String(section.content_type ?? "").toLowerCase() !== "encounter") continue;
+    if (seen.has(section.id)) continue;
+    seen.add(section.id);
+
+    const walk = walkSection(section, items, section.name);
+    encounters.push(normalizeEncounter(section, walk, items));
+  }
+
+  return encounters;
+}
+
+/**
+ * @param {object} root
+ * @param {object} walk
+ * @param {Record<string, object>} items
+ * @returns {object}
+ */
+function normalizeDungeon(root, walk, items) {
+  const dungeon = {
+    name: root.name,
+    subtitle: walk.subtitle ?? "",
+    documentKind: "dungeon",
+    lore: joinBlocks(walk.sections.Lore, root.name),
+    layout: joinBlocks(walk.sections.Layout, root.name),
+    objectives: parseObjectiveList(walk.sections.Objectives, root.name),
+    rooms: collectDungeonRooms(root, items),
+    encounters: collectDungeonEncounters(root, items)
+  };
+  return dungeon;
 }
 
 /**

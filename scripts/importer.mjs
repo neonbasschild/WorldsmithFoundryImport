@@ -299,6 +299,33 @@ export async function createEncounterFromWorldsmith(data, { folderId = null, ren
 }
 
 /**
+ * Create a dungeon journal entry, room encounter groups, and embedded items.
+ * @param {object} data
+ * @param {object} [options]
+ * @param {string|null} [options.folderId]
+ * @param {boolean} [options.renderSheet]
+ * @returns {Promise<{actors: Actor[], items: Item[], journals: JournalEntry[]}>}
+ */
+export async function createDungeonFromWorldsmith(data, { folderId = null, renderSheet = false } = {}) {
+  const { journalData, warnings } = convertWorldsmithQuest(data);
+  const folder = resolveFolder(folderId, "JournalEntry");
+  if (folder) journalData.folder = folder;
+
+  const journal = await JournalEntry.create(journalData, { renderSheet });
+  for (const warning of warnings) console.warn(`${MODULE_ID} | ${journalData.name}: ${warning}`);
+
+  const actors = [];
+  const items = [];
+  for (const encounterSource of data.encounters ?? []) {
+    const result = await createEncounterFromWorldsmith(encounterSource, { folderId, renderSheet: false });
+    actors.push(...(result.actors ?? []));
+    items.push(...(result.items ?? []));
+  }
+
+  return { actors, items, journals: journal ? [journal] : [] };
+}
+
+/**
  * Create the appropriate document(s) from a Worldsmith export.
  * @param {object} data
  * @param {object} [options]
@@ -311,6 +338,7 @@ export async function createFromWorldsmith(data, options = {}) {
   if (type === "session") return createJournalFromWorldsmith(data, options);
   if (type === "deity") return createJournalFromWorldsmith(data, options);
   if (type === "encounter") return createEncounterFromWorldsmith(data, options);
+  if (type === "dungeon") return createDungeonFromWorldsmith(data, options);
   if (type === "quest") return createJournalFromWorldsmith(data, options);
   if (type === "spell") {
     const spell = await createSpellFromWorldsmith(data, options);
