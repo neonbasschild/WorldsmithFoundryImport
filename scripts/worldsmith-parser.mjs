@@ -86,6 +86,7 @@ function parseStructuredExport(data) {
   if (contentType === "group") return normalizeGroup(root, walk, data.items);
   if (contentType === "dungeon") return normalizeDungeon(root, walk, data.items);
   if (contentType === "puzzle") return normalizePuzzle(root, walk, data.items);
+  if (contentType === "rolltable") return normalizeRollTable(root, walk, data.items);
   if (contentType === "quest") return normalizeQuest(root, walk, data.items);
   if (contentType === "story") return normalizeStory(root, walk, data.items);
   if (contentType === "session") return normalizeSession(root, walk, data.items);
@@ -971,6 +972,94 @@ function normalizePuzzle(root, walk, items) {
   }
 
   return attachEmbeddedContent(puzzle, root, items);
+}
+
+/**
+ * @param {string} text
+ * @returns {{min: number, max: number}|null}
+ */
+function parseRollRange(text) {
+  const normalized = String(text ?? "").trim();
+  if (!normalized || /^d\d+$/i.test(normalized)) return null;
+
+  const rangeMatch = normalized.match(/^(\d+)\s*[-–—]\s*(\d+)$/);
+  if (rangeMatch) {
+    return { min: Number(rangeMatch[1]), max: Number(rangeMatch[2]) };
+  }
+
+  const single = normalized.match(/^(\d+)$/);
+  if (single) {
+    const value = Number(single[1]);
+    return { min: value, max: value };
+  }
+
+  return null;
+}
+
+/**
+ * @param {string} subtitle
+ * @returns {string}
+ */
+function parseRollFormula(subtitle) {
+  const text = String(subtitle ?? "");
+  const match = text.match(/\(\s*d(\d+)\s*\)/i) ?? text.match(/\bd(\d+)\b/i);
+  return match ? `1d${match[1]}` : "";
+}
+
+/**
+ * @param {object} tableNode
+ * @param {string} name
+ * @returns {Array<{range: [number, number], text: string}>}
+ */
+function parseRollTableNode(tableNode, name) {
+  const results = [];
+  for (const row of tableNode.content?.cells ?? []) {
+    const texts = row.map(cell => extractText(cell.content, name).trim());
+    if (!texts.some(Boolean)) continue;
+
+    const range = parseRollRange(texts[0]);
+    if (!range) continue;
+
+    const text = texts.slice(1).filter(Boolean).join(" — ");
+    if (!text) continue;
+
+    results.push({ range: [range.min, range.max], text });
+  }
+  return results;
+}
+
+/**
+ * @param {object} walk
+ * @param {string} name
+ * @returns {Array<{range: [number, number], text: string}>}
+ */
+function collectRollTableResults(walk, name) {
+  const results = [];
+  for (const blocks of Object.values(walk.sections)) {
+    for (const block of blocks ?? []) {
+      if (block.kind !== "table") continue;
+      results.push(...parseRollTableNode(block.node, name));
+    }
+  }
+  return results;
+}
+
+/**
+ * @param {object} root
+ * @param {object} walk
+ * @param {Record<string, object>} items
+ * @returns {object}
+ */
+function normalizeRollTable(root, walk, items) {
+  const rollTable = {
+    name: root.name,
+    subtitle: walk.subtitle ?? "",
+    documentKind: "rollTable",
+    description: joinBlocks(walk.sections.Description, root.name),
+    formula: parseRollFormula(walk.subtitle),
+    results: collectRollTableResults(walk, root.name)
+  };
+  return attachEmbeddedContent(rollTable, root, items);
 }
 
 const ENCOUNTER_SECTIONS = ["Set the Scene", "Objective", "Key Features"];

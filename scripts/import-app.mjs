@@ -56,6 +56,7 @@ export default class WorldsmithImportApp extends ApplicationV2 {
       .concat(folderGroup("Actor", t("WORLDSMITH.ActorFolders")))
       .concat(folderGroup("Item", t("WORLDSMITH.ItemFolders")))
       .concat(folderGroup("JournalEntry", t("WORLDSMITH.JournalFolders")))
+      .concat(folderGroup("RollTable", t("WORLDSMITH.TableFolders")))
       .join("");
 
     const wrapper = document.createElement("div");
@@ -159,17 +160,19 @@ export default class WorldsmithImportApp extends ApplicationV2 {
     let actorCount = 0;
     let itemCount = 0;
     let journalCount = 0;
+    let tableCount = 0;
     let totalFailed = 0;
 
     try {
       for (const source of sources) {
         try {
-          const { actors, items, journals } = await importFromText(source.text, {
+          const { actors, items, journals, tables } = await importFromText(source.text, {
             folderId, renderSheet, label: source.label
           });
           actorCount += actors.length;
           itemCount += items.length;
           journalCount += journals.length;
+          tableCount += tables.length;
         } catch (err) {
           totalFailed += 1;
           console.error(`${MODULE_ID} |`, err);
@@ -180,12 +183,13 @@ export default class WorldsmithImportApp extends ApplicationV2 {
       this.#importing = false;
     }
 
-    const totalCreated = actorCount + itemCount + journalCount;
+    const totalCreated = actorCount + itemCount + journalCount + tableCount;
     if (totalCreated) {
       ui.notifications.info(game.i18n.format("WORLDSMITH.ImportSuccess", {
         actors: actorCount,
         items: itemCount,
-        journals: journalCount
+        journals: journalCount,
+        tables: tableCount
       }));
     }
     if (totalCreated && !totalFailed) this.close();

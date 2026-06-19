@@ -11,6 +11,7 @@ import { convertWorldsmithShop, convertWorldsmithTreasure } from "./shop-convert
 import { convertWorldsmithQuest } from "./journal-converter.mjs";
 import { convertWorldsmithEncounter } from "./encounter-converter.mjs";
 import { convertWorldsmithGroup } from "./group-converter.mjs";
+import { convertWorldsmithRollTable } from "./table-converter.mjs";
 import { convertWorldsmithSpell } from "./spell-converter.mjs";
 import { convertWorldsmithFeat } from "./feat-converter.mjs";
 import { detectWorldsmithType } from "./detect.mjs";
@@ -22,7 +23,7 @@ import {
 /**
  * Resolve a folder id to apply, only when it matches the document type.
  * @param {string|null} folderId
- * @param {"Actor"|"Item"} documentType
+ * @param {"Actor"|"Item"|"JournalEntry"|"RollTable"} documentType
  * @returns {string|null}
  */
 function resolveFolder(folderId, documentType) {
@@ -396,6 +397,55 @@ export async function createDungeonFromWorldsmith(data, { folderId = null, rende
 }
 
 /**
+ * Create a RollTable from a Worldsmith roll table export.
+ * @param {object} data
+ * @param {object} [options]
+ * @param {string|null} [options.folderId]
+ * @param {boolean} [options.renderSheet]
+ * @returns {Promise<{actors: Actor[], items: Item[], journals: JournalEntry[], tables: RollTable[]}>}
+ */
+export async function createRollTableFromWorldsmith(data, { folderId = null, renderSheet = false } = {}) {
+  const { tableData, warnings } = convertWorldsmithRollTable(data);
+  const folder = resolveFolder(folderId, "RollTable");
+  if (folder) tableData.folder = folder;
+
+  const table = await RollTable.create(tableData, { renderSheet });
+  for (const warning of warnings) console.warn(`${MODULE_ID} | ${tableData.name}: ${warning}`);
+
+  const actors = [];
+  const actorFolder = resolveFolder(folderId, "Actor");
+  for (const actorSource of data.actors ?? []) {
+    const { actorData, warnings: actorWarnings } = convertWorldsmith(actorSource);
+    if (actorFolder) actorData.folder = actorFolder;
+    const actor = await Actor.create(actorData);
+    if (actor) actors.push(actor);
+    for (const warning of actorWarnings) console.warn(`${MODULE_ID} | ${actorData.name}: ${warning}`);
+  }
+
+  const items = [];
+  const itemFolder = resolveFolder(folderId, "Item");
+  for (const itemSource of data.items ?? []) {
+    const { itemData, warnings: itemWarnings } = convertWorldsmithItem(itemSource);
+    if (itemFolder) itemData.folder = itemFolder;
+    const item = await Item.create(itemData);
+    if (item) items.push(item);
+    for (const warning of itemWarnings) console.warn(`${MODULE_ID} | ${itemData.name}: ${warning}`);
+  }
+
+  for (const spellSource of data.spells ?? []) {
+    const spell = await createSpellFromWorldsmith(spellSource, { folderId: itemFolder, renderSheet });
+    if (spell) items.push(spell);
+  }
+
+  for (const featSource of data.feats ?? []) {
+    const feat = await createFeatFromWorldsmith(featSource, { folderId: itemFolder, renderSheet });
+    if (feat) items.push(feat);
+  }
+
+  return { actors, items, journals: [], tables: table ? [table] : [] };
+}
+
+/**
  * Create the appropriate document(s) from a Worldsmith export.
  * @param {object} data
  * @param {object} [options]
@@ -411,6 +461,7 @@ export async function createFromWorldsmith(data, options = {}) {
   if (type === "group") return createGroupFromWorldsmith(data, options);
   if (type === "dungeon") return createDungeonFromWorldsmith(data, options);
   if (type === "puzzle") return createJournalFromWorldsmith(data, options);
+  if (type === "rollTable") return createRollTableFromWorldsmith(data, options);
   if (type === "quest") return createJournalFromWorldsmith(data, options);
   if (type === "spell") {
     const spell = await createSpellFromWorldsmith(data, options);
@@ -437,7 +488,7 @@ export async function createFromWorldsmith(data, options = {}) {
  * @param {string|null} [options.folderId]
  * @param {boolean} [options.renderSheet]
  * @param {string} [options.label]
- * @returns {Promise<{actors: Actor[], items: Item[], journals: JournalEntry[]}>}
+ * @returns {Promise<{actors: Actor[], items: Item[], journals: JournalEntry[], tables: RollTable[]}>}
  */
 export async function importFromText(text, options = {}) {
   let parsed;
@@ -452,15 +503,17 @@ export async function importFromText(text, options = {}) {
   const actors = [];
   const items = [];
   const journals = [];
+  const tables = [];
   try {
     for (const entry of entries) {
       const result = await createFromWorldsmith(normalizeWorldsmithData(entry), options);
       actors.push(...(result.actors ?? []));
       items.push(...(result.items ?? []));
       journals.push(...(result.journals ?? []));
+      tables.push(...(result.tables ?? []));
     }
   } finally {
     clearSrdLookupCache();
   }
-  return { actors, items, journals };
+  return { actors, items, journals, tables };
 }

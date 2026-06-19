@@ -16,6 +16,7 @@ import { convertWorldsmithShop, convertWorldsmithTreasure } from "../scripts/sho
 import { convertWorldsmithQuest } from "../scripts/journal-converter.mjs";
 import { convertWorldsmithEncounter } from "../scripts/encounter-converter.mjs";
 import { convertWorldsmithGroup } from "../scripts/group-converter.mjs";
+import { convertWorldsmithRollTable } from "../scripts/table-converter.mjs";
 import { convertWorldsmithSpell } from "../scripts/spell-converter.mjs";
 import { convertWorldsmithFeat } from "../scripts/feat-converter.mjs";
 import { detectWorldsmithType } from "../scripts/detect.mjs";
@@ -682,6 +683,33 @@ function activitiesOf(item) {
   assert(journalData.pages.some(p => p.name === "Hints"), "puzzle hints page");
   assert(journalData.pages.some(p => p.name === "Solution"), "puzzle solution page");
   assert(journalData.pages.some(p => p.name === "Failure Consequence"), "puzzle failure page");
+}
+
+{
+  console.log("Structured roll table (Rumors of Otosan Uchi)");
+  const raw = loadStructured("Rumors_of_Otosan_Uchi-table_f941.json");
+  const normalized = normalizeWorldsmithData(raw);
+  assert(detectWorldsmithType(normalized) === "rollTable", "roll table type detected");
+  assert(normalized.documentKind === "rollTable", "roll table document kind");
+  assert(normalized.name === "Rumors of Otosan Uchi", "roll table name");
+  assert(normalized.subtitle.includes("d100"), "roll table subtitle parsed");
+  assert(normalized.formula === "1d100", "roll table formula parsed");
+  assert(normalized.description.includes("Imperial City of Otosan Uchi"), "roll table description parsed");
+  assert(normalized.results.length === 20, "roll table extracts twenty results");
+  assert(normalized.results[0].range[0] === 1 && normalized.results[0].range[1] === 5, "first result range");
+  assert(normalized.results[0].text.includes("netsuke carving"), "first result text");
+  assert(normalized.results.at(-1).range[0] === 96 && normalized.results.at(-1).range[1] === 100, "last result range");
+  assert(normalized.results.at(-1).text.includes("cursed mirror"), "last result text");
+  const { tableData } = convertWorldsmithRollTable(normalized);
+  assert(tableData.name === "Rumors of Otosan Uchi", "roll table converter name");
+  assert(tableData.formula === "1d100", "roll table converter formula");
+  assert(tableData.replacement === true, "roll table replacement enabled");
+  assert(tableData.displayRoll === true, "roll table display roll enabled");
+  assert(tableData.results.length === 20, "roll table converter result count");
+  assert(tableData.results[0].type === "text", "roll table result type");
+  assert(tableData.results[0].range[0] === 1 && tableData.results[0].range[1] === 5, "roll table result range");
+  assert(tableData.results[0].text.includes("netsuke carving"), "roll table result text");
+  assert(tableData.flags["worldsmith-foundry-import"].kind === "rollTable", "roll table import flag kind");
 }
 
 {

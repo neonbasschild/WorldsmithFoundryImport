@@ -1,0 +1,800 @@
+{
+  "rootId": "8c3a7881-2596-4cd6-8851-c004b4f606c5",
+  "items": {
+    "8c3a7881-2596-4cd6-8851-c004b4f606c5": {
+      "model_type": "structured",
+      "content_type": "rollTable",
+      "type": "section",
+      "name": "Rumors of Otosan Uchi",
+      "childrenIds": [
+        "902df8be-da7f-496b-b528-f69fcb73b0ff",
+        "0c265117-1d3d-4367-9a71-371f13104cdd",
+        "4869d733-31a2-49ad-859c-ce50dfbd4b6b",
+        "fc781e90-c777-4759-95e3-9685226a46b3",
+        "4196e0fb-55e3-4add-b1c1-0ff65de5ccd0"
+      ],
+      "parentId": null,
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Rumors of Otosan Uchi",
+                "textFormat": "h1"
+              }
+            ]
+          }
+        ],
+        "showTitle": true,
+        "styles": {
+          "borderBottom": "1px solid #882619"
+        }
+      },
+      "id": "8c3a7881-2596-4cd6-8851-c004b4f606c5",
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none"
+        },
+        "collapsible": false,
+        "isCollapsed": false,
+        "alternatingCollapsedBackground": "white"
+      }
+    },
+    "902df8be-da7f-496b-b528-f69fcb73b0ff": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Urban Rumor Table (d100)",
+              "textFormat": "h4"
+            }
+          ]
+        }
+      ],
+      "parentId": "8c3a7881-2596-4cd6-8851-c004b4f606c5",
+      "id": "902df8be-da7f-496b-b528-f69fcb73b0ff"
+    },
+    "0c265117-1d3d-4367-9a71-371f13104cdd": {
+      "type": "line",
+      "parentId": "8c3a7881-2596-4cd6-8851-c004b4f606c5",
+      "styles": {
+        "background": "linear-gradient(to right, #9D2A1F, transparent)",
+        "border": "none",
+        "height": "4px",
+        "width": "100%"
+      },
+      "id": "0c265117-1d3d-4367-9a71-371f13104cdd",
+      "customStyles": {
+        "default": {
+          "background": "linear-gradient(to right, #9D2A1F, transparent)",
+          "border": "none",
+          "height": "4px",
+          "width": "100%"
+        }
+      }
+    },
+    "4869d733-31a2-49ad-859c-ce50dfbd4b6b": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Description",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "8c3a7881-2596-4cd6-8851-c004b4f606c5",
+      "id": "4869d733-31a2-49ad-859c-ce50dfbd4b6b"
+    },
+    "fc781e90-c777-4759-95e3-9685226a46b3": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Use this table when characters gather rumors in the Imperial City of Otosan Uchi. Each result is a whisper circulating among residents, courtiers, and shadowy figures. To discern whether a rumor is true, call for a Wisdom (Insight) check using the DC noted.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "8c3a7881-2596-4cd6-8851-c004b4f606c5",
+      "id": "fc781e90-c777-4759-95e3-9685226a46b3"
+    },
+    "4196e0fb-55e3-4add-b1c1-0ff65de5ccd0": {
+      "type": "table",
+      "content": {
+        "cells": [
+          [
+            {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "d100",
+                      "textFormat": "red",
+                      "bold": true
+                    }
+                  ]
+                }
+              ],
+              "isHeader": false
+            },
+            {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "Rumor",
+                      "textFormat": "red",
+                      "bold": true
+                    }
+                  ]
+                }
+              ],
+              "isHeader": false
+            }
+          ],
+          [
+            {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "1-5",
+                      "textFormat": "red"
+                    }
+                  ]
+                }
+              ],
+              "isHeader": false
+            },
+            {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "The netsuke carving on the main gate hides a secret message from a hidden ninja clan. (Wis (Insight) DC 13)",
+                      "textFormat": "red"
+                    }
+                  ]
+                }
+              ],
+              "isHeader": false
+            }
+          ],
+          [
+            {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "6-10",
+                      "textFormat": "red"
+                    }
+                  ]
+                }
+              ],
+              "isHeader": false
+            },
+            {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "A phantom footman bearing the imperial crest distributes scrolls foretelling the Emperor’s demise. (Wis (Insight) DC 14)",
+                      "textFormat": "red"
+                    }
+                  ]
+                }
+              ],
+              "isHeader": false
+            }
+          ],
+          [
+            {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "11-15",
+                      "textFormat": "red"
+                    }
+                  ]
+                }
+              ],
+              "isHeader": false
+            },
+            {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "A hidden shrine beneath the Imperial Palace is said to house a trapped kami yearning for freedom. (Wis (Insight) DC 13)",
+                      "textFormat": "red"
+                    }
+                  ]
+                }
+              ],
+              "isHeader": false
+            }
+          ],
+          [
+            {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "16-20",
+                      "textFormat": "red"
+                    }
+                  ]
+                }
+              ],
+              "isHeader": false
+            },
+            {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "The inner tea house of Clan Phoenix convenes a clandestine meeting to overturn the shogun’s advisors. (Wis (Insight) DC 12)",
+                      "textFormat": "red"
+                    }
+                  ]
+                }
+              ],
+              "isHeader": false
+            }
+          ],
+          [
+            {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "21-25",
+                      "textFormat": "red"
+                    }
+                  ]
+                }
+              ],
+              "isHeader": false
+            },
+            {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "The Dragon Clan has recruited a rakshasa posing as a simple street performer. (Wis (Insight) DC 15)",
+                      "textFormat": "red"
+                    }
+                  ]
+                }
+              ],
+              "isHeader": false
+            }
+          ],
+          [
+            {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "26-30",
+                      "textFormat": "red"
+                    }
+                  ]
+                }
+              ],
+              "isHeader": false
+            },
+            {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "The city’s Imperial Guards are bribed nightly with rare sake smuggled from the Crab lands. (Wis (Insight) DC 13)",
+                      "textFormat": "red"
+                    }
+                  ]
+                }
+              ],
+              "isHeader": false
+            }
+          ],
+          [
+            {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "31-35",
+                      "textFormat": "red"
+                    }
+                  ]
+                }
+              ],
+              "isHeader": false
+            },
+            {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "A scroll mapping the Shadowlands’ rifts stands for sale to the highest bidder in the Underbelly. (Wis (Insight) DC 14)",
+                      "textFormat": "red"
+                    }
+                  ]
+                }
+              ],
+              "isHeader": false
+            }
+          ],
+          [
+            {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "36-40",
+                      "textFormat": "red"
+                    }
+                  ]
+                }
+              ],
+              "isHeader": false
+            },
+            {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "The Emperor’s heir withdraws to the Onnotangu Temple to master forbidden spells. (Wis (Insight) DC 13)",
+                      "textFormat": "red"
+                    }
+                  ]
+                }
+              ],
+              "isHeader": false
+            }
+          ],
+          [
+            {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "41-45",
+                      "textFormat": "red"
+                    }
+                  ]
+                }
+              ],
+              "isHeader": false
+            },
+            {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "The koi ponds of the Southeast Garden glow emerald at dusk—an omen of war. (Wis (Insight) DC 12)",
+                      "textFormat": "red"
+                    }
+                  ]
+                }
+              ],
+              "isHeader": false
+            }
+          ],
+          [
+            {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "46-50",
+                      "textFormat": "red"
+                    }
+                  ]
+                }
+              ],
+              "isHeader": false
+            },
+            {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "A group of fishermen claim oni attack the riverboats upstream under cover of mist. (Wis (Insight) DC 13)",
+                      "textFormat": "red"
+                    }
+                  ]
+                }
+              ],
+              "isHeader": false
+            }
+          ],
+          [
+            {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "51-55",
+                      "textFormat": "red"
+                    }
+                  ]
+                }
+              ],
+              "isHeader": false
+            },
+            {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "The Master of Whispers overheard plans for an assassination at tonight’s Moon Festival. (Wis (Insight) DC 14)",
+                      "textFormat": "red"
+                    }
+                  ]
+                }
+              ],
+              "isHeader": false
+            }
+          ],
+          [
+            {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "56-60",
+                      "textFormat": "red"
+                    }
+                  ]
+                }
+              ],
+              "isHeader": false
+            },
+            {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "A silent courtesan of Clan Lion tests each visitor for signs of Shadowlands corruption. (Wis (Insight) DC 13)",
+                      "textFormat": "red"
+                    }
+                  ]
+                }
+              ],
+              "isHeader": false
+            }
+          ],
+          [
+            {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "61-65",
+                      "textFormat": "red"
+                    }
+                  ]
+                }
+              ],
+              "isHeader": false
+            },
+            {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "A rogue samurai begs for protection after stealing an heirloom blade from the Crane daimyo. (Wis (Insight) DC 12)",
+                      "textFormat": "red"
+                    }
+                  ]
+                }
+              ],
+              "isHeader": false
+            }
+          ],
+          [
+            {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "66-70",
+                      "textFormat": "red"
+                    }
+                  ]
+                }
+              ],
+              "isHeader": false
+            },
+            {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "The hidden library of the Imperial Scholar contains texts that can bend time itself. (Wis (Insight) DC 15)",
+                      "textFormat": "red"
+                    }
+                  ]
+                }
+              ],
+              "isHeader": false
+            }
+          ],
+          [
+            {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "71-75",
+                      "textFormat": "red"
+                    }
+                  ]
+                }
+              ],
+              "isHeader": false
+            },
+            {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "A priestess selling charms in the marketplace is actually a Hantei loyalist in disguise. (Wis (Insight) DC 13)",
+                      "textFormat": "red"
+                    }
+                  ]
+                }
+              ],
+              "isHeader": false
+            }
+          ],
+          [
+            {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "76-80",
+                      "textFormat": "red"
+                    }
+                  ]
+                }
+              ],
+              "isHeader": false
+            },
+            {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "Strange lights circle the top of Mount Kurayami every full moon; locals whisper of a gateway. (Wis (Insight) DC 14)",
+                      "textFormat": "red"
+                    }
+                  ]
+                }
+              ],
+              "isHeader": false
+            }
+          ],
+          [
+            {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "81-85",
+                      "textFormat": "red"
+                    }
+                  ]
+                }
+              ],
+              "isHeader": false
+            },
+            {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "A secret alliance between the Unicorn and Scorpion clans plots to control foreign trade. (Wis (Insight) DC 13)",
+                      "textFormat": "red"
+                    }
+                  ]
+                }
+              ],
+              "isHeader": false
+            }
+          ],
+          [
+            {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "86-90",
+                      "textFormat": "red"
+                    }
+                  ]
+                }
+              ],
+              "isHeader": false
+            },
+            {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "The Imperial armor in the eastern armory whispers warnings to those who draw it. (Wis (Insight) DC 12)",
+                      "textFormat": "red"
+                    }
+                  ]
+                }
+              ],
+              "isHeader": false
+            }
+          ],
+          [
+            {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "91-95",
+                      "textFormat": "red"
+                    }
+                  ]
+                }
+              ],
+              "isHeader": false
+            },
+            {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "A masked envoy from a rival empire has been granted an audience under a false imperial seal. (Wis (Insight) DC 14)",
+                      "textFormat": "red"
+                    }
+                  ]
+                }
+              ],
+              "isHeader": false
+            }
+          ],
+          [
+            {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "96-100",
+                      "textFormat": "red"
+                    }
+                  ]
+                }
+              ],
+              "isHeader": false
+            },
+            {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "A cursed mirror in the shogun’s private chambers reveals dark reflections of those who gaze too long. (Wis (Insight) DC 15)",
+                      "textFormat": "red"
+                    }
+                  ]
+                }
+              ],
+              "isHeader": false
+            }
+          ]
+        ]
+      },
+      "tableConfig": {
+        "columnFlex": {
+          "col1": 1,
+          "col2": 6
+        },
+        "headerRow": "none"
+      },
+      "parentId": "8c3a7881-2596-4cd6-8851-c004b4f606c5",
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none"
+        },
+        "tableContainer": {
+          "width": "100%",
+          "overflow": "auto",
+          "position": "relative",
+          "marginBottom": "30px",
+          "marginTop": "12px"
+        },
+        "table": {
+          "width": "100%",
+          "borderCollapse": "collapse",
+          "border": "none",
+          "tableLayout": "fixed"
+        },
+        "tableHeader": {
+          "fontWeight": 400,
+          "textAlign": "center",
+          "border": "none",
+          "borderBottom": "1px solid #9D2A1F",
+          "verticalAlign": "left"
+        },
+        "tableCell": {
+          "paddingTop": "2px",
+          "paddingRight": "2px",
+          "paddingBottom": "2px",
+          "paddingLeft": "2px",
+          "border": "none",
+          "padding": "12px",
+          "fontFamily": "Noto Serif, Georgia, serif",
+          "color": "rgb(88,24,13)"
+        },
+        "showTableHeader": true,
+        "alternatingRowBackground": "white",
+        "showCellBorders": false
+      },
+      "id": "4196e0fb-55e3-4add-b1c1-0ff65de5ccd0"
+    }
+  }
+}
