@@ -1,0 +1,436 @@
+{
+  "rootId": "1e2530e8-fa9d-4a10-a92c-044ac2d34211",
+  "items": {
+    "1e2530e8-fa9d-4a10-a92c-044ac2d34211": {
+      "model_type": "structured",
+      "content_type": "spell",
+      "type": "section",
+      "name": "Void Shackle",
+      "childrenIds": [
+        "29cf7834-8901-4850-ab46-e2a99147a68f",
+        "4fa7e678-2a90-43d1-8c2f-9f23aba13c37",
+        "8b9dd873-b5fd-4047-a4e6-601f5cb86c50",
+        "d41ffe8e-9091-4d6e-a127-34795478b5d1",
+        "130b927a-c63e-4a38-8649-30d1882d87a7",
+        "f75326da-79c7-4663-8034-32565457ef95",
+        "446f7946-ac57-43e3-a587-d8904f79540c",
+        "0c44a1db-b9fd-4240-932c-8dfce96d5df7",
+        "cdd7c422-2318-4395-8c24-07392d95e73f",
+        "fdc46b26-b2a0-4570-b760-5a532e2f021a"
+      ],
+      "parentId": null,
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Void Shackle",
+                "textFormat": "h1"
+              }
+            ]
+          }
+        ],
+        "showTitle": true,
+        "styles": {
+          "borderBottom": "1px solid #882619"
+        }
+      },
+      "id": "1e2530e8-fa9d-4a10-a92c-044ac2d34211",
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none"
+        },
+        "collapsible": false,
+        "isCollapsed": false,
+        "alternatingCollapsedBackground": "white"
+      }
+    },
+    "29cf7834-8901-4850-ab46-e2a99147a68f": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "4th-level Enchantment (Void)",
+              "textFormat": "h4"
+            }
+          ]
+        }
+      ],
+      "parentId": "1e2530e8-fa9d-4a10-a92c-044ac2d34211",
+      "styles": {
+        "paddingBottom": "4px"
+      },
+      "id": "29cf7834-8901-4850-ab46-e2a99147a68f"
+    },
+    "4fa7e678-2a90-43d1-8c2f-9f23aba13c37": {
+      "type": "StatLine",
+      "content": {
+        "stats": [
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Level"
+                  }
+                ]
+              }
+            ],
+            "value": 0,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "4"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "School"
+                  }
+                ]
+              }
+            ],
+            "value": 0,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Enchantment"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Casting Time"
+                  }
+                ]
+              }
+            ],
+            "value": 0,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "1 Action"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Concentration"
+                  }
+                ]
+              }
+            ],
+            "value": 0,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Yes"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Duration"
+                  }
+                ]
+              }
+            ],
+            "value": 0,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Concentration, up to 1 minute"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Components"
+                  }
+                ]
+              }
+            ],
+            "value": 0,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "V, S, M A strip of black silk and an onyx bead (10 gp, not consumed)"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "parentId": "1e2530e8-fa9d-4a10-a92c-044ac2d34211",
+      "displayMode": "descriptions",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "4fa7e678-2a90-43d1-8c2f-9f23aba13c37",
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none"
+        },
+        "statLine": {
+          "width": "100%",
+          "display": "flex",
+          "alignItems": "center",
+          "backgroundColor": "transparent"
+        },
+        "name": {
+          "minWidth": "64px",
+          "fontWeight": "bold",
+          "backgroundColor": "transparent",
+          "color": "#58180D",
+          "flex": "1"
+        },
+        "value": {
+          "width": "32px",
+          "backgroundColor": "transparent",
+          "textAlign": "center",
+          "color": "#000000",
+          "fontFamily": "Noto Serif, Georgia, serif"
+        },
+        "description": {
+          "fontFamily": "Noto Serif, Georgia, serif",
+          "fontSize": "13px",
+          "fontWeight": "normal",
+          "backgroundColor": "transparent",
+          "color": "#000",
+          "lineHeight": "1.25",
+          "margin": "4px 0 0 0",
+          "textAlign": "left",
+          "whiteSpace": "normal",
+          "overflow": "visible",
+          "textOverflow": "clip",
+          "minWidth": "100px",
+          "flex": "1"
+        },
+        "topLine": {
+          "width": "100%",
+          "height": "4px",
+          "marginTop": "4px",
+          "marginBottom": "4px",
+          "background": "linear-gradient(to right, #9D2A1F, transparent)"
+        },
+        "bottomLine": {
+          "width": "100%",
+          "height": "4px",
+          "marginTop": "4px",
+          "marginBottom": "4px",
+          "background": "linear-gradient(to right, #9D2A1F, transparent)"
+        },
+        "showTopLine": true,
+        "showBottomLine": true
+      }
+    },
+    "8b9dd873-b5fd-4047-a4e6-601f5cb86c50": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Description",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "1e2530e8-fa9d-4a10-a92c-044ac2d34211",
+      "id": "8b9dd873-b5fd-4047-a4e6-601f5cb86c50"
+    },
+    "d41ffe8e-9091-4d6e-a127-34795478b5d1": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "You invoke the power of the Void, summoning swirling bands of inky energy to bind your foes. Choose up to three creatures you can see within 60 feet that are each within 20 feet of another chosen target. Each target must succeed on a Wisdom saving throw or be magically restrained by void energies and take 3d6 psychic damage. On a successful save, a target takes half damage and isn’t restrained, and it can’t be affected again by this casting of ",
+              "textFormat": "paragraph"
+            },
+            {
+              "text": "{{Void_Shackle}}",
+              "variable": true,
+              "textFormat": "paragraph"
+            },
+            {
+              "text": ".\n\nA restrained target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. The void bands are insubstantial: any creature that moves out of the spell’s area or breaks free of restraints is no longer restrained but still suffers no further damage from this casting.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "1e2530e8-fa9d-4a10-a92c-044ac2d34211",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "d41ffe8e-9091-4d6e-a127-34795478b5d1"
+    },
+    "130b927a-c63e-4a38-8649-30d1882d87a7": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Lore",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "1e2530e8-fa9d-4a10-a92c-044ac2d34211",
+      "id": "130b927a-c63e-4a38-8649-30d1882d87a7"
+    },
+    "f75326da-79c7-4663-8034-32565457ef95": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Practitioners of the Mantis Clan’s void schools originated ",
+              "textFormat": "paragraph"
+            },
+            {
+              "text": "{{Void_Shackle}}",
+              "variable": true,
+              "textFormat": "paragraph"
+            },
+            {
+              "text": ", believing the nothingness between the worlds could be shaped into imprisonment. Many imperial Shugenja argue its use risks summoning actual void spirits, yet the spell endures among those who see the Void as the source of true freedom—freedom from flesh, thought, and life itself.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "1e2530e8-fa9d-4a10-a92c-044ac2d34211",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "f75326da-79c7-4663-8034-32565457ef95"
+    },
+    "446f7946-ac57-43e3-a587-d8904f79540c": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Species",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "1e2530e8-fa9d-4a10-a92c-044ac2d34211",
+      "id": "446f7946-ac57-43e3-a587-d8904f79540c"
+    },
+    "0c44a1db-b9fd-4240-932c-8dfce96d5df7": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Human, Elf, Spiritfolk",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "1e2530e8-fa9d-4a10-a92c-044ac2d34211",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "0c44a1db-b9fd-4240-932c-8dfce96d5df7"
+    },
+    "cdd7c422-2318-4395-8c24-07392d95e73f": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Classes",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "1e2530e8-fa9d-4a10-a92c-044ac2d34211",
+      "id": "cdd7c422-2318-4395-8c24-07392d95e73f"
+    },
+    "fdc46b26-b2a0-4570-b760-5a532e2f021a": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Wizard, Sorcerer, Warlock",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "1e2530e8-fa9d-4a10-a92c-044ac2d34211",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "fdc46b26-b2a0-4570-b760-5a532e2f021a"
+    }
+  }
+}

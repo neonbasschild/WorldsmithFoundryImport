@@ -13,6 +13,7 @@ import { convertWorldsmithQuest } from "./journal-converter.mjs";
 import { convertWorldsmithSpell } from "./spell-converter.mjs";
 import { convertWorldsmithFeat } from "./feat-converter.mjs";
 import { detectWorldsmithType } from "./detect.mjs";
+import { isStructuredWorldsmith, normalizeWorldsmithData } from "./worldsmith-parser.mjs";
 import {
   createActorFromWorldsmith, createFeatFromWorldsmith, createFromWorldsmith, createItemFromWorldsmith,
   createJournalFromWorldsmith, createShopFromWorldsmith, createSpellFromWorldsmith,
@@ -36,6 +37,8 @@ function openImporter() {
 const api = {
   open: openImporter,
   detectWorldsmithType,
+  isStructuredWorldsmith,
+  normalizeWorldsmithData,
   convertWorldsmith,
   convertWorldsmithItem,
   convertWorldsmithShop,

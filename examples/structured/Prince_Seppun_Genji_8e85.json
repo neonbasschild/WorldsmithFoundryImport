@@ -1,0 +1,610 @@
+{
+  "rootId": "b3568d69-0232-4201-8153-b67daf4ae56f",
+  "items": {
+    "b3568d69-0232-4201-8153-b67daf4ae56f": {
+      "model_type": "structured",
+      "content_type": "npc",
+      "type": "section",
+      "name": "Prince Seppun Genji",
+      "childrenIds": [
+        "a64b699f-79d1-4166-8ab3-2700fd1b200a",
+        "705d7b92-7e23-4aef-98d2-99e9055a8de7",
+        "8a178eee-4501-44ee-affb-bb3ee658136d",
+        "7653f4cd-cc22-4ce3-b242-95278b888032",
+        "642d6675-416c-4185-961d-7e907c7b96c1",
+        "7d7d6452-c48d-48c3-9cd5-66b1a758e685",
+        "b9ce5491-6310-4ceb-8655-c5d970b2bec9",
+        "ddff5dd9-c8aa-4e91-bba9-8652d09e4fa5",
+        "f233a28d-f08c-44f7-b584-ba1c94a1c8e0",
+        "c8e51916-9b14-42d6-959e-264a06d4f93c",
+        "ade773bd-c8d0-4835-aa89-f3826cf6b463",
+        "52499b17-fbf9-4ef3-8fa3-6814f08cf182",
+        "c79e7470-7bea-47af-955d-db8c77bc13c3",
+        "a277e73e-44e0-4ed9-bc24-0c0f97c44eee"
+      ],
+      "parentId": null,
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Prince Seppun Genji",
+                "textFormat": "h1"
+              }
+            ]
+          }
+        ],
+        "showTitle": true,
+        "styles": {
+          "borderBottom": "1px solid #882619"
+        }
+      },
+      "id": "b3568d69-0232-4201-8153-b67daf4ae56f",
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none"
+        },
+        "collapsible": false,
+        "isCollapsed": false,
+        "alternatingCollapsedBackground": "white"
+      }
+    },
+    "a64b699f-79d1-4166-8ab3-2700fd1b200a": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Medium Humanoid (human), Neutral good • Prince of the Imperial Royal Family",
+              "textFormat": "h4"
+            }
+          ]
+        }
+      ],
+      "parentId": "b3568d69-0232-4201-8153-b67daf4ae56f",
+      "styles": {
+        "paddingBottom": "4px"
+      },
+      "id": "a64b699f-79d1-4166-8ab3-2700fd1b200a"
+    },
+    "705d7b92-7e23-4aef-98d2-99e9055a8de7": {
+      "type": "line",
+      "parentId": "b3568d69-0232-4201-8153-b67daf4ae56f",
+      "styles": {
+        "background": "linear-gradient(to right, #9D2A1F, transparent)",
+        "border": "none",
+        "height": "4px",
+        "width": "100%"
+      },
+      "id": "705d7b92-7e23-4aef-98d2-99e9055a8de7",
+      "customStyles": {
+        "default": {
+          "background": "linear-gradient(to right, #9D2A1F, transparent)",
+          "border": "none",
+          "height": "4px",
+          "width": "100%"
+        }
+      }
+    },
+    "8a178eee-4501-44ee-affb-bb3ee658136d": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Description",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "b3568d69-0232-4201-8153-b67daf4ae56f",
+      "id": "8a178eee-4501-44ee-affb-bb3ee658136d"
+    },
+    "7653f4cd-cc22-4ce3-b242-95278b888032": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Tall and handsome, with long black hair bound in the traditional Seppun topknot, Genji dresses in brightly colored silks that set him apart from more austere courtiers. His easy smile and mischievous glint draw attention wherever he goes.",
+              "textFormat": "description"
+            }
+          ]
+        }
+      ],
+      "parentId": "b3568d69-0232-4201-8153-b67daf4ae56f",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "7653f4cd-cc22-4ce3-b242-95278b888032"
+    },
+    "642d6675-416c-4185-961d-7e907c7b96c1": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Lore",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "b3568d69-0232-4201-8153-b67daf4ae56f",
+      "id": "642d6675-416c-4185-961d-7e907c7b96c1"
+    },
+    "7d7d6452-c48d-48c3-9cd5-66b1a758e685": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Born into the sprawling Seppun line of Rokugan’s imperial household, Seppun Genji is so far down the succession that he will never inherit the throne. Rather than sulk, he throws himself into courtly intrigues, amorous escapades, and harmless pranks. Though his family scolds him for risking scandal, his quick wit and genuine warmth endear him to many—and mask the loneliness of a royal destined to remain in the shadows.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "b3568d69-0232-4201-8153-b67daf4ae56f",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "7d7d6452-c48d-48c3-9cd5-66b1a758e685"
+    },
+    "b9ce5491-6310-4ceb-8655-c5d970b2bec9": {
+      "type": "line",
+      "parentId": "b3568d69-0232-4201-8153-b67daf4ae56f",
+      "styles": {
+        "background": "linear-gradient(to right, #9D2A1F, transparent)",
+        "border": "none",
+        "height": "4px",
+        "width": "100%"
+      },
+      "id": "b9ce5491-6310-4ceb-8655-c5d970b2bec9",
+      "customStyles": {
+        "default": {
+          "background": "linear-gradient(to right, #9D2A1F, transparent)",
+          "border": "none",
+          "height": "4px",
+          "width": "100%"
+        }
+      }
+    },
+    "ddff5dd9-c8aa-4e91-bba9-8652d09e4fa5": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Hit Points: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "27 (5d8 + 5)",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Armor Class: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "15 (studded leather)",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Speed: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "30 ft.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "b3568d69-0232-4201-8153-b67daf4ae56f",
+      "id": "ddff5dd9-c8aa-4e91-bba9-8652d09e4fa5"
+    },
+    "f233a28d-f08c-44f7-b584-ba1c94a1c8e0": {
+      "type": "StatLine",
+      "content": {
+        "stats": [
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "STR"
+                  }
+                ]
+              }
+            ],
+            "value": 10,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Strength"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "DEX"
+                  }
+                ]
+              }
+            ],
+            "value": 16,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Dexterity"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "CON"
+                  }
+                ]
+              }
+            ],
+            "value": 12,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Constitution"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "INT"
+                  }
+                ]
+              }
+            ],
+            "value": 14,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Intelligence"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "WIS"
+                  }
+                ]
+              }
+            ],
+            "value": 13,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Wisdom"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "CHA"
+                  }
+                ]
+              }
+            ],
+            "value": 16,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Charisma"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "parentId": "b3568d69-0232-4201-8153-b67daf4ae56f",
+      "displayMode": "values",
+      "id": "f233a28d-f08c-44f7-b584-ba1c94a1c8e0",
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none"
+        },
+        "statLine": {
+          "width": "100%",
+          "display": "flex",
+          "alignItems": "center",
+          "backgroundColor": "transparent"
+        },
+        "name": {
+          "minWidth": "64px",
+          "fontWeight": "bold",
+          "backgroundColor": "transparent",
+          "color": "#58180D",
+          "flex": "1"
+        },
+        "value": {
+          "width": "32px",
+          "backgroundColor": "transparent",
+          "textAlign": "center",
+          "color": "#000000",
+          "fontFamily": "Noto Serif, Georgia, serif"
+        },
+        "description": {
+          "fontFamily": "Noto Serif, Georgia, serif",
+          "fontSize": "13px",
+          "fontWeight": "normal",
+          "backgroundColor": "transparent",
+          "color": "#000",
+          "lineHeight": "1.25",
+          "margin": "4px 0 0 0",
+          "textAlign": "left",
+          "whiteSpace": "normal",
+          "overflow": "visible",
+          "textOverflow": "clip",
+          "minWidth": "100px",
+          "flex": "1"
+        },
+        "topLine": {
+          "width": "100%",
+          "height": "4px",
+          "marginTop": "4px",
+          "marginBottom": "4px",
+          "background": "linear-gradient(to right, #9D2A1F, transparent)"
+        },
+        "bottomLine": {
+          "width": "100%",
+          "height": "4px",
+          "marginTop": "4px",
+          "marginBottom": "4px",
+          "background": "linear-gradient(to right, #9D2A1F, transparent)"
+        },
+        "showTopLine": true,
+        "showBottomLine": true
+      }
+    },
+    "c8e51916-9b14-42d6-959e-264a06d4f93c": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Skills: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "deception (proficient), performance (proficient), persuasion (proficient)",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Languages: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": [
+                "Common",
+                "Daikinese"
+              ],
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Senses: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Passive Perception 11",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Challenge Rating: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "2",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "b3568d69-0232-4201-8153-b67daf4ae56f",
+      "id": "c8e51916-9b14-42d6-959e-264a06d4f93c"
+    },
+    "ade773bd-c8d0-4835-aa89-f3826cf6b463": {
+      "type": "line",
+      "parentId": "b3568d69-0232-4201-8153-b67daf4ae56f",
+      "styles": {
+        "background": "linear-gradient(to right, #9D2A1F, transparent)",
+        "border": "none",
+        "height": "4px",
+        "width": "100%"
+      },
+      "id": "ade773bd-c8d0-4835-aa89-f3826cf6b463",
+      "customStyles": {
+        "default": {
+          "background": "linear-gradient(to right, #9D2A1F, transparent)",
+          "border": "none",
+          "height": "4px",
+          "width": "100%"
+        }
+      }
+    },
+    "52499b17-fbf9-4ef3-8fa3-6814f08cf182": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Actions",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "b3568d69-0232-4201-8153-b67daf4ae56f",
+      "id": "52499b17-fbf9-4ef3-8fa3-6814f08cf182"
+    },
+    "c79e7470-7bea-47af-955d-db8c77bc13c3": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "{{Prince_Seppun_Genji}}",
+              "variable": true,
+              "textFormat": "paragraph"
+            },
+            {
+              "text": " can make two attacks on his turn: one with his rapier and one with his dagger.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "b3568d69-0232-4201-8153-b67daf4ae56f",
+      "id": "c79e7470-7bea-47af-955d-db8c77bc13c3"
+    },
+    "a277e73e-44e0-4ed9-bc24-0c0f97c44eee": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Rapier: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 1d8+3 piercing damage.",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Dagger: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Melee or Ranged Weapon Attack: +5 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 1d4+3 piercing damage.",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Charming Jest (Recharge 5–6): ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Genji offers a disarming bow or a playful flourish at one creature he can see within 30 ft. The target must succeed on a DC 13 Wisdom saving throw or be charmed by him until the end of his next turn. While charmed this way, the creature regards him as a friendly acquaintance.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "b3568d69-0232-4201-8153-b67daf4ae56f",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "a277e73e-44e0-4ed9-bc24-0c0f97c44eee"
+    }
+  }
+}

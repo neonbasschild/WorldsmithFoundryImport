@@ -116,6 +116,12 @@ export function convertWorldsmithQuest(data) {
 
   if (quest.resolution) addPage("Resolution", textToHTML(quest.resolution));
 
+  if (Array.isArray(quest.sections)) {
+    for (const section of quest.sections) {
+      if (section?.name && section?.content) addPage(section.name, textToHTML(section.content));
+    }
+  }
+
   // Always guarantee at least one page so the entry is usable.
   if (!pages.length) {
     addPage(quest.name || "Quest", textToHTML(quest.description ?? ""));
