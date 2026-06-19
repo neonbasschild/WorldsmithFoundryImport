@@ -70,7 +70,10 @@ Converts Worldsmith item exports into the matching dnd5e item type:
 
 ### Spells
 
-Worldsmith spell exports become dnd5e **spell** items:
+Worldsmith spell exports become dnd5e **spell** items. When a spell name matches
+an entry in the dnd5e SRD compendiums (`Spells (SRD)` / `Spells`), the module
+imports that compendium document instead of generating a custom item. Custom or
+homebrew spells still convert normally when no SRD match is found.
 
 - Level and school (mapped to the dnd5e school key).
 - Components → properties: verbal → `vocal`, somatic, material, ritual,
@@ -85,7 +88,10 @@ Worldsmith spell exports become dnd5e **spell** items:
 
 ### Feats
 
-Worldsmith feat exports become dnd5e **feat** items:
+Worldsmith feat exports become dnd5e **feat** items. When a feat name matches an
+entry in the dnd5e SRD compendiums (primarily `Feats`, plus legacy feat packs),
+the module imports that compendium document instead of generating a custom item.
+Custom feats still convert normally when no SRD match is found.
 
 - The mechanics, flavor (lore), category (subtitle), and prerequisites are
   combined into the description.

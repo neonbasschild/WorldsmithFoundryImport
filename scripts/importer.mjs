@@ -13,6 +13,9 @@ import { convertWorldsmithSpell } from "./spell-converter.mjs";
 import { convertWorldsmithFeat } from "./feat-converter.mjs";
 import { detectWorldsmithType } from "./detect.mjs";
 import { normalizeWorldsmithData } from "./worldsmith-parser.mjs";
+import {
+  clearSrdLookupCache, findSrdFeat, findSrdSpell, importSrdCompendiumItem
+} from "./srd-lookup.mjs";
 
 /**
  * Resolve a folder id to apply, only when it matches the document type.
@@ -118,6 +121,15 @@ export async function createTreasureFromWorldsmith(data, { folderId = null, rend
  * @returns {Promise<Item|null>}
  */
 export async function createSpellFromWorldsmith(data, { folderId = null, renderSheet = false } = {}) {
+  const srdMatch = await findSrdSpell(data.name);
+  if (srdMatch) {
+    const item = await importSrdCompendiumItem(srdMatch, { folderId, renderSheet });
+    if (item) {
+      console.log(`${MODULE_ID} | ${data.name}: imported from SRD compendium (${srdMatch.packId})`);
+      return item;
+    }
+  }
+
   const { itemData, warnings } = convertWorldsmithSpell(data);
   const folder = resolveFolder(folderId, "Item");
   if (folder) itemData.folder = folder;
@@ -137,6 +149,15 @@ export async function createSpellFromWorldsmith(data, { folderId = null, renderS
  * @returns {Promise<Item|null>}
  */
 export async function createFeatFromWorldsmith(data, { folderId = null, renderSheet = false } = {}) {
+  const srdMatch = await findSrdFeat(data.name);
+  if (srdMatch) {
+    const item = await importSrdCompendiumItem(srdMatch, { folderId, renderSheet });
+    if (item) {
+      console.log(`${MODULE_ID} | ${data.name}: imported from SRD compendium (${srdMatch.packId})`);
+      return item;
+    }
+  }
+
   const { itemData, warnings } = convertWorldsmithFeat(data);
   const folder = resolveFolder(folderId, "Item");
   if (folder) itemData.folder = folder;
@@ -192,19 +213,13 @@ export async function createJournalFromWorldsmith(data, { folderId = null, rende
   }
 
   for (const spellSource of data.spells ?? []) {
-    const { itemData, warnings: spellWarnings } = convertWorldsmithSpell(spellSource);
-    if (itemFolder) itemData.folder = itemFolder;
-    const spell = await Item.create(itemData);
+    const spell = await createSpellFromWorldsmith(spellSource, { folderId: itemFolder, renderSheet });
     if (spell) items.push(spell);
-    for (const warning of spellWarnings) console.warn(`${MODULE_ID} | ${itemData.name}: ${warning}`);
   }
 
   for (const featSource of data.feats ?? []) {
-    const { itemData, warnings: featWarnings } = convertWorldsmithFeat(featSource);
-    if (itemFolder) itemData.folder = itemFolder;
-    const feat = await Item.create(itemData);
+    const feat = await createFeatFromWorldsmith(featSource, { folderId: itemFolder, renderSheet });
     if (feat) items.push(feat);
-    for (const warning of featWarnings) console.warn(`${MODULE_ID} | ${itemData.name}: ${warning}`);
   }
 
   return { actors, items, journals: journal ? [journal] : [] };
@@ -258,15 +273,20 @@ export async function importFromText(text, options = {}) {
     throw new Error(`${options.label ? `${options.label}: ` : ""}Invalid JSON \u2013 ${err.message}`);
   }
 
+  clearSrdLookupCache();
   const entries = Array.isArray(parsed) ? parsed : [parsed];
   const actors = [];
   const items = [];
   const journals = [];
-  for (const entry of entries) {
-    const result = await createFromWorldsmith(normalizeWorldsmithData(entry), options);
-    actors.push(...(result.actors ?? []));
-    items.push(...(result.items ?? []));
-    journals.push(...(result.journals ?? []));
+  try {
+    for (const entry of entries) {
+      const result = await createFromWorldsmith(normalizeWorldsmithData(entry), options);
+      actors.push(...(result.actors ?? []));
+      items.push(...(result.items ?? []));
+      journals.push(...(result.journals ?? []));
+    }
+  } finally {
+    clearSrdLookupCache();
   }
   return { actors, items, journals };
 }

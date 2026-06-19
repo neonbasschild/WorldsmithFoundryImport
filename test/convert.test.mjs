@@ -18,6 +18,9 @@ import { convertWorldsmithSpell } from "../scripts/spell-converter.mjs";
 import { convertWorldsmithFeat } from "../scripts/feat-converter.mjs";
 import { detectWorldsmithType } from "../scripts/detect.mjs";
 import { isStructuredWorldsmith, normalizeWorldsmithData } from "../scripts/worldsmith-parser.mjs";
+import {
+  FEAT_COMPENDIUM_PACKS, SPELL_COMPENDIUM_PACKS, normalizeSrdName
+} from "../scripts/srd-lookup.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const examplesDir = join(__dirname, "..", "examples");
@@ -583,6 +586,15 @@ function activitiesOf(item) {
     const { itemData } = convertWorldsmithFeat(featSource);
     assert(itemData.name === featSource.name, `feat ${itemData.name} converts`);
   }
+}
+
+{
+  console.log("SRD name normalization");
+  assert(normalizeSrdName("Spell: Fireball") === "fireball", "strip spell prefix");
+  assert(normalizeSrdName("  False Life  ") === "false life", "trim and lowercase");
+  assert(normalizeSrdName("Feat: Alert") === "alert", "strip feat prefix");
+  assert(SPELL_COMPENDIUM_PACKS.includes("dnd5e.spells24"), "modern spell pack listed");
+  assert(FEAT_COMPENDIUM_PACKS.includes("dnd5e.feats24"), "modern feat pack listed");
 }
 
 console.log(`\n${passed} passed, ${failed} failed`);

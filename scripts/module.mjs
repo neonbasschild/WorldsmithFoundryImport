@@ -15,6 +15,9 @@ import { convertWorldsmithFeat } from "./feat-converter.mjs";
 import { detectWorldsmithType } from "./detect.mjs";
 import { isStructuredWorldsmith, normalizeWorldsmithData } from "./worldsmith-parser.mjs";
 import {
+  FEAT_COMPENDIUM_PACKS, SPELL_COMPENDIUM_PACKS, findSrdFeat, findSrdSpell, normalizeSrdName
+} from "./srd-lookup.mjs";
+import {
   createActorFromWorldsmith, createFeatFromWorldsmith, createFromWorldsmith, createItemFromWorldsmith,
   createJournalFromWorldsmith, createShopFromWorldsmith, createSpellFromWorldsmith,
   createTreasureFromWorldsmith, importFromText
@@ -54,7 +57,12 @@ const api = {
   createSpellFromWorldsmith,
   createFeatFromWorldsmith,
   createFromWorldsmith,
-  importFromText
+  importFromText,
+  findSrdSpell,
+  findSrdFeat,
+  normalizeSrdName,
+  SPELL_COMPENDIUM_PACKS,
+  FEAT_COMPENDIUM_PACKS
 };
 
 Hooks.once("init", () => {
