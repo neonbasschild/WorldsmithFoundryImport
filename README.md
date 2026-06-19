@@ -74,13 +74,20 @@ Converts Worldsmith item exports into the matching dnd5e item type:
   at dawn").
 - Flavor text, mechanical usage text, and lore are combined into the item
   description, and the original JSON is stored under the item's module flags.
+- When an item name matches the dnd5e equipment compendiums (`Equipment`,
+  `Equipment (SRD)`, or legacy item packs), the module imports that compendium
+  document instead — including embedded loot in treasure piles, shop inventory,
+  and narrative documents. Names like `Spell Scroll (Guidance)` also try the
+  underlying spell compendiums when no scroll item exists.
 
 ### Spells
 
 Worldsmith spell exports become dnd5e **spell** items. When a spell name matches
 an entry in the dnd5e SRD compendiums (`Spells (SRD)` / `Spells`), the module
-imports that compendium document instead of generating a custom item. Custom or
-homebrew spells still convert normally when no SRD match is found.
+imports that compendium document instead of generating a custom item. The same
+SRD preference applies to embedded spells inside quests, sessions, deities,
+encounters, groups, dungeons, and other narrative documents. Custom or homebrew
+spells still convert normally when no SRD match is found.
 
 - Level and school (mapped to the dnd5e school key).
 - Components → properties: verbal → `vocal`, somatic, material, ritual,
@@ -98,7 +105,8 @@ homebrew spells still convert normally when no SRD match is found.
 Worldsmith feat exports become dnd5e **feat** items. When a feat name matches an
 entry in the dnd5e SRD compendiums (primarily `Feats`, plus legacy feat packs),
 the module imports that compendium document instead of generating a custom item.
-Custom feats still convert normally when no SRD match is found.
+Embedded feats in deities, quests, and other documents use the same compendium
+lookup. Custom feats still convert normally when no SRD match is found.
 
 - The mechanics, flavor (lore), category (subtitle), and prerequisites are
   combined into the description.

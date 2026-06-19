@@ -7,7 +7,10 @@
 import { MODULE_ID } from "./constants.mjs";
 import { convertWorldsmith } from "./converter.mjs";
 import { convertWorldsmithItem } from "./item-converter.mjs";
-import { convertWorldsmithShop, convertWorldsmithTreasure } from "./shop-converter.mjs";
+import {
+  convertMundaneShopItem, convertServiceItem, convertWorldsmithShop, convertWorldsmithTreasure,
+  withPileItemFlag
+} from "./shop-converter.mjs";
 import { convertWorldsmithQuest } from "./journal-converter.mjs";
 import { convertWorldsmithEncounter } from "./encounter-converter.mjs";
 import { convertWorldsmithGroup } from "./group-converter.mjs";
@@ -17,8 +20,153 @@ import { convertWorldsmithFeat } from "./feat-converter.mjs";
 import { detectWorldsmithType } from "./detect.mjs";
 import { normalizeWorldsmithData } from "./worldsmith-parser.mjs";
 import {
-  clearSrdLookupCache, findSrdFeat, findSrdSpell, importSrdCompendiumItem
+  clearSrdLookupCache, findSrdMatch, getSrdItemCreateData, importSrdCompendiumItem,
+  readWorldsmithItemName
 } from "./srd-lookup.mjs";
+
+/**
+ * @param {string} name
+ * @param {string} packId
+ */
+function logSrdImport(name, packId) {
+  console.log(`${MODULE_ID} | ${name}: imported from SRD compendium (${packId})`);
+}
+
+/**
+ * Import embedded spells, feats, and items from a narrative or combat document.
+ * @param {object} data
+ * @param {object} [options]
+ * @param {string|null} [options.folderId]
+ * @returns {Promise<Item[]>}
+ */
+async function importEmbeddedContentItems(data, { folderId = null } = {}) {
+  const items = [];
+  const itemFolder = resolveFolder(folderId, "Item");
+
+  for (const itemSource of data.items ?? []) {
+    const item = await createItemFromWorldsmith(itemSource, { folderId: itemFolder, renderSheet: false });
+    if (item) items.push(item);
+  }
+
+  for (const spellSource of data.spells ?? []) {
+    const spell = await createSpellFromWorldsmith(spellSource, { folderId: itemFolder, renderSheet: false });
+    if (spell) items.push(spell);
+  }
+
+  for (const featSource of data.feats ?? []) {
+    const feat = await createFeatFromWorldsmith(featSource, { folderId: itemFolder, renderSheet: false });
+    if (feat) items.push(feat);
+  }
+
+  return items;
+}
+
+/**
+ * Build shop inventory items, preferring SRD compendium matches when available.
+ * @param {object} data
+ * @returns {Promise<{items: object[], warnings: string[]}>}
+ */
+async function buildShopEmbeddedItems(data) {
+  const items = [];
+  const warnings = [];
+
+  for (const entry of data.standard_items ?? []) {
+    try {
+      const match = await findSrdMatch(entry);
+      if (match) {
+        const itemData = await getSrdItemCreateData(match);
+        if (itemData) {
+          logSrdImport(entry.item ?? entry.name, match.packId);
+          items.push(withPileItemFlag(itemData));
+          continue;
+        }
+      }
+      items.push(withPileItemFlag(convertMundaneShopItem(entry)));
+    } catch (err) {
+      warnings.push(`Skipped a standard item: ${err.message}`);
+    }
+  }
+
+  for (const wrapper of data.magic_items ?? []) {
+    const itemSource = wrapper?.data ?? wrapper;
+    try {
+      const match = await findSrdMatch(itemSource);
+      if (match) {
+        const itemData = await getSrdItemCreateData(match);
+        if (itemData) {
+          logSrdImport(readWorldsmithItemName(itemSource), match.packId);
+          items.push(withPileItemFlag(itemData));
+          continue;
+        }
+      }
+      const { itemData, warnings: itemWarnings } = convertWorldsmithItem(itemSource);
+      warnings.push(...itemWarnings);
+      items.push(withPileItemFlag(itemData));
+    } catch (err) {
+      warnings.push(`Skipped a magic item: ${err.message}`);
+    }
+  }
+
+  for (const entry of data.services ?? []) {
+    items.push(convertServiceItem(entry));
+  }
+
+  return { items, warnings };
+}
+
+/**
+ * Build treasure pile inventory items, preferring SRD compendium matches when available.
+ * @param {object} data
+ * @returns {Promise<{items: object[], warnings: string[]}>}
+ */
+async function buildTreasureEmbeddedItems(data) {
+  const items = [];
+  const warnings = [];
+
+  for (const entry of data.basic_items ?? []) {
+    try {
+      const match = await findSrdMatch(entry);
+      if (match) {
+        const itemData = await getSrdItemCreateData(match);
+        if (itemData) {
+          logSrdImport(entry.item ?? entry.name, match.packId);
+          items.push(withPileItemFlag(itemData));
+          continue;
+        }
+      }
+      items.push(withPileItemFlag(convertMundaneShopItem(entry)));
+    } catch (err) {
+      warnings.push(`Skipped a basic item: ${err.message}`);
+    }
+  }
+
+  for (const wrapper of data.notable_items ?? []) {
+    const itemSource = wrapper?.data ?? wrapper;
+    try {
+      const match = await findSrdMatch(itemSource);
+      if (match) {
+        const itemData = await getSrdItemCreateData(match);
+        if (itemData) {
+          logSrdImport(readWorldsmithItemName(itemSource), match.packId);
+          if (wrapper?.quantity !== undefined) {
+            itemData.system ??= {};
+            itemData.system.quantity = wrapper.quantity;
+          }
+          items.push(withPileItemFlag(itemData));
+          continue;
+        }
+      }
+      const { itemData, warnings: itemWarnings } = convertWorldsmithItem(itemSource);
+      warnings.push(...itemWarnings);
+      if (wrapper?.quantity !== undefined) itemData.system.quantity = wrapper.quantity;
+      items.push(withPileItemFlag(itemData));
+    } catch (err) {
+      warnings.push(`Skipped a notable item: ${err.message}`);
+    }
+  }
+
+  return { items, warnings };
+}
 
 /**
  * Resolve a folder id to apply, only when it matches the document type.
@@ -60,6 +208,15 @@ export async function createActorFromWorldsmith(data, { folderId = null, renderS
  * @returns {Promise<Item|null>}
  */
 export async function createItemFromWorldsmith(data, { folderId = null, renderSheet = false } = {}) {
+  const srdMatch = await findSrdMatch(data);
+  if (srdMatch) {
+    const item = await importSrdCompendiumItem(srdMatch, { folderId, renderSheet });
+    if (item) {
+      logSrdImport(readWorldsmithItemName(data), srdMatch.packId);
+      return item;
+    }
+  }
+
   const { itemData, warnings } = convertWorldsmithItem(data);
   const folder = resolveFolder(folderId, "Item");
   if (folder) itemData.folder = folder;
@@ -80,6 +237,9 @@ export async function createItemFromWorldsmith(data, { folderId = null, renderSh
  */
 export async function createShopFromWorldsmith(data, { folderId = null, renderSheet = false } = {}) {
   const { merchant, owners, warnings } = convertWorldsmithShop(data);
+  const embedded = await buildShopEmbeddedItems(data);
+  merchant.items = embedded.items;
+  warnings.push(...embedded.warnings);
   const folder = resolveFolder(folderId, "Actor");
   if (folder) {
     merchant.folder = folder;
@@ -107,6 +267,9 @@ export async function createShopFromWorldsmith(data, { folderId = null, renderSh
  */
 export async function createTreasureFromWorldsmith(data, { folderId = null, renderSheet = false } = {}) {
   const { pile, warnings } = convertWorldsmithTreasure(data);
+  const embedded = await buildTreasureEmbeddedItems(data);
+  pile.items = embedded.items;
+  warnings.push(...embedded.warnings);
   const folder = resolveFolder(folderId, "Actor");
   if (folder) pile.folder = folder;
 
@@ -124,11 +287,11 @@ export async function createTreasureFromWorldsmith(data, { folderId = null, rend
  * @returns {Promise<Item|null>}
  */
 export async function createSpellFromWorldsmith(data, { folderId = null, renderSheet = false } = {}) {
-  const srdMatch = await findSrdSpell(data.name);
+  const srdMatch = await findSrdMatch(data);
   if (srdMatch) {
     const item = await importSrdCompendiumItem(srdMatch, { folderId, renderSheet });
     if (item) {
-      console.log(`${MODULE_ID} | ${data.name}: imported from SRD compendium (${srdMatch.packId})`);
+      logSrdImport(readWorldsmithItemName(data), srdMatch.packId);
       return item;
     }
   }
@@ -152,11 +315,11 @@ export async function createSpellFromWorldsmith(data, { folderId = null, renderS
  * @returns {Promise<Item|null>}
  */
 export async function createFeatFromWorldsmith(data, { folderId = null, renderSheet = false } = {}) {
-  const srdMatch = await findSrdFeat(data.name);
+  const srdMatch = await findSrdMatch(data);
   if (srdMatch) {
     const item = await importSrdCompendiumItem(srdMatch, { folderId, renderSheet });
     if (item) {
-      console.log(`${MODULE_ID} | ${data.name}: imported from SRD compendium (${srdMatch.packId})`);
+      logSrdImport(readWorldsmithItemName(data), srdMatch.packId);
       return item;
     }
   }
@@ -198,32 +361,11 @@ export async function createJournalFromWorldsmith(data, { folderId = null, rende
   }
 
   for (const treasureSource of data.treasures ?? []) {
-    const { pile, warnings: pileWarnings } = convertWorldsmithTreasure(treasureSource);
-    if (actorFolder) pile.folder = actorFolder;
-    const pileActor = await Actor.create(pile);
-    if (pileActor) actors.push(pileActor);
-    for (const warning of pileWarnings) console.warn(`${MODULE_ID} | ${pile.name}: ${warning}`);
+    const result = await createTreasureFromWorldsmith(treasureSource, { folderId: actorFolder, renderSheet: false });
+    actors.push(...(result.actors ?? []));
   }
 
-  const items = [];
-  const itemFolder = resolveFolder(folderId, "Item");
-  for (const itemSource of data.items ?? []) {
-    const { itemData, warnings: itemWarnings } = convertWorldsmithItem(itemSource);
-    if (itemFolder) itemData.folder = itemFolder;
-    const item = await Item.create(itemData);
-    if (item) items.push(item);
-    for (const warning of itemWarnings) console.warn(`${MODULE_ID} | ${itemData.name}: ${warning}`);
-  }
-
-  for (const spellSource of data.spells ?? []) {
-    const spell = await createSpellFromWorldsmith(spellSource, { folderId: itemFolder, renderSheet });
-    if (spell) items.push(spell);
-  }
-
-  for (const featSource of data.feats ?? []) {
-    const feat = await createFeatFromWorldsmith(featSource, { folderId: itemFolder, renderSheet });
-    if (feat) items.push(feat);
-  }
+  const items = await importEmbeddedContentItems(data, { folderId });
 
   return { actors, items, journals: journal ? [journal] : [] };
 }
@@ -270,32 +412,11 @@ export async function createEncounterFromWorldsmith(data, { folderId = null, ren
   actors.push(...memberActors);
 
   for (const treasureSource of treasures ?? []) {
-    const { pile, warnings: pileWarnings } = convertWorldsmithTreasure(treasureSource);
-    if (actorFolder) pile.folder = actorFolder;
-    const pileActor = await Actor.create(pile);
-    if (pileActor) actors.push(pileActor);
-    for (const warning of pileWarnings) console.warn(`${MODULE_ID} | ${pile.name}: ${warning}`);
+    const result = await createTreasureFromWorldsmith(treasureSource, { folderId: actorFolder, renderSheet: false });
+    actors.push(...(result.actors ?? []));
   }
 
-  const items = [];
-  const itemFolder = resolveFolder(folderId, "Item");
-  for (const itemSource of itemSources ?? []) {
-    const { itemData, warnings: itemWarnings } = convertWorldsmithItem(itemSource);
-    if (itemFolder) itemData.folder = itemFolder;
-    const item = await Item.create(itemData);
-    if (item) items.push(item);
-    for (const warning of itemWarnings) console.warn(`${MODULE_ID} | ${itemData.name}: ${warning}`);
-  }
-
-  for (const spellSource of spells ?? []) {
-    const spell = await createSpellFromWorldsmith(spellSource, { folderId: itemFolder, renderSheet });
-    if (spell) items.push(spell);
-  }
-
-  for (const featSource of feats ?? []) {
-    const feat = await createFeatFromWorldsmith(featSource, { folderId: itemFolder, renderSheet });
-    if (feat) items.push(feat);
-  }
+  const items = await importEmbeddedContentItems({ items: itemSources, spells, feats }, { folderId });
 
   return { actors, items, journals: [] };
 }
@@ -339,32 +460,11 @@ export async function createGroupFromWorldsmith(data, { folderId = null, renderS
   actors.push(...memberActors);
 
   for (const treasureSource of treasures ?? []) {
-    const { pile, warnings: pileWarnings } = convertWorldsmithTreasure(treasureSource);
-    if (actorFolder) pile.folder = actorFolder;
-    const pileActor = await Actor.create(pile);
-    if (pileActor) actors.push(pileActor);
-    for (const warning of pileWarnings) console.warn(`${MODULE_ID} | ${pile.name}: ${warning}`);
+    const result = await createTreasureFromWorldsmith(treasureSource, { folderId: actorFolder, renderSheet: false });
+    actors.push(...(result.actors ?? []));
   }
 
-  const items = [];
-  const itemFolder = resolveFolder(folderId, "Item");
-  for (const itemSource of itemSources ?? []) {
-    const { itemData, warnings: itemWarnings } = convertWorldsmithItem(itemSource);
-    if (itemFolder) itemData.folder = itemFolder;
-    const item = await Item.create(itemData);
-    if (item) items.push(item);
-    for (const warning of itemWarnings) console.warn(`${MODULE_ID} | ${itemData.name}: ${warning}`);
-  }
-
-  for (const spellSource of spells ?? []) {
-    const spell = await createSpellFromWorldsmith(spellSource, { folderId: itemFolder, renderSheet });
-    if (spell) items.push(spell);
-  }
-
-  for (const featSource of feats ?? []) {
-    const feat = await createFeatFromWorldsmith(featSource, { folderId: itemFolder, renderSheet });
-    if (feat) items.push(feat);
-  }
+  const items = await importEmbeddedContentItems({ items: itemSources, spells, feats }, { folderId });
 
   return { actors, items, journals: [] };
 }
@@ -422,25 +522,7 @@ export async function createRollTableFromWorldsmith(data, { folderId = null, ren
     for (const warning of actorWarnings) console.warn(`${MODULE_ID} | ${actorData.name}: ${warning}`);
   }
 
-  const items = [];
-  const itemFolder = resolveFolder(folderId, "Item");
-  for (const itemSource of data.items ?? []) {
-    const { itemData, warnings: itemWarnings } = convertWorldsmithItem(itemSource);
-    if (itemFolder) itemData.folder = itemFolder;
-    const item = await Item.create(itemData);
-    if (item) items.push(item);
-    for (const warning of itemWarnings) console.warn(`${MODULE_ID} | ${itemData.name}: ${warning}`);
-  }
-
-  for (const spellSource of data.spells ?? []) {
-    const spell = await createSpellFromWorldsmith(spellSource, { folderId: itemFolder, renderSheet });
-    if (spell) items.push(spell);
-  }
-
-  for (const featSource of data.feats ?? []) {
-    const feat = await createFeatFromWorldsmith(featSource, { folderId: itemFolder, renderSheet });
-    if (feat) items.push(feat);
-  }
+  const items = await importEmbeddedContentItems(data, { folderId });
 
   return { actors, items, journals: [], tables: table ? [table] : [] };
 }
