@@ -17,6 +17,7 @@ A [Foundry VTT](https://foundryvtt.com/) module that converts and imports
 - **Puzzles** → journal entries (overview, intro text, hints, solution, and failure consequence pages).
 - **Traps** → journal entries (overview, description, skill checks, and consequence pages).
 - **Roll tables** → Foundry rollable tables with ranged text results.
+- **Worlds** → journal entries (overview, hallmarks, cultures, highlights, and timeline pages).
 
 The type of each export is detected automatically.
 
@@ -235,6 +236,14 @@ Worldsmith roll table exports become a Foundry **RollTable**:
 - Each table row becomes a **text result** with a dice **range** (for example `1-5`, `96-100`)
 - Roll formula is parsed from the subtitle when present (for example `(d100)` → `1d100`)
 - Results use replacement drawing and display the roll in chat
+
+### Worlds
+
+Worldsmith world exports become a **journal entry**:
+
+- **Overview** (subtitle and world description)
+- **Hallmarks**, **Cultures**, **Highlights**, and nested sections such as **Timeline**
+- Embedded actors, items, spells, and feats are imported alongside the journal
 
 ## Installation
 

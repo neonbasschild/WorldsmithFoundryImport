@@ -93,6 +93,7 @@ function parseStructuredExport(data) {
   if (contentType === "session") return normalizeSession(root, walk, data.items);
   if (contentType === "shop") return normalizeShop(root, walk, data.items);
   if (contentType === "treasure") return normalizeTreasure(root, walk, data.items);
+  if (contentType === "world") return normalizeWorld(root, walk, data.items);
   if (CREATURE_CONTENT_TYPES.has(contentType)) return normalizeCreature(root, walk);
   if (contentType === "item") return normalizeItem(root, walk);
 
@@ -1524,6 +1525,61 @@ function normalizeTreasure(root, walk, items) {
   }
 
   return treasure;
+}
+
+const WORLD_SECTIONS = ["Hallmarks", "Cultures", "Highlights"];
+
+/**
+ * @param {object} section
+ * @param {Record<string, object>} items
+ * @param {string} name
+ * @returns {string}
+ */
+function collectNestedSectionContent(section, items, name) {
+  const nestedWalk = walkSection(section, items, section.name ?? name);
+  const parts = [];
+
+  for (const block of nestedWalk.looseBlocks ?? []) {
+    const text = block.text ?? nodePlainText(block.node, name);
+    if (text) parts.push(text);
+  }
+
+  for (const [header, blocks] of Object.entries(nestedWalk.sections)) {
+    const text = joinBlocks(blocks, name);
+    if (text) parts.push(`${header}\n\n${text}`);
+  }
+
+  return parts.join("\n\n").trim();
+}
+
+/**
+ * @param {object} root
+ * @param {object} walk
+ * @param {Record<string, object>} items
+ * @returns {object}
+ */
+function normalizeWorld(root, walk, items) {
+  const world = {
+    name: root.name,
+    subtitle: walk.subtitle ?? "",
+    documentKind: "world",
+    gm_overview: joinBlocks(walk.sections.Description, root.name),
+    sections: []
+  };
+
+  for (const header of WORLD_SECTIONS) {
+    const content = joinBlocks(walk.sections[header], root.name);
+    if (content) world.sections.push({ name: header, content });
+  }
+
+  for (const nested of walk.nestedSections) {
+    const sectionName = nested.name?.trim();
+    if (!sectionName || world.sections.some(s => s.name === sectionName)) continue;
+    const content = collectNestedSectionContent(nested, items, root.name);
+    if (content) world.sections.push({ name: sectionName, content });
+  }
+
+  return attachEmbeddedContent(world, root, items);
 }
 
 /**

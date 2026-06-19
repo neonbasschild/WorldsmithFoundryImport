@@ -455,6 +455,7 @@ export async function createFromWorldsmith(data, options = {}) {
   const type = detectWorldsmithType(data);
   if (type === "shop") return createShopFromWorldsmith(data, options);
   if (type === "treasure") return createTreasureFromWorldsmith(data, options);
+  if (type === "world") return createJournalFromWorldsmith(data, options);
   if (type === "session") return createJournalFromWorldsmith(data, options);
   if (type === "deity") return createJournalFromWorldsmith(data, options);
   if (type === "encounter") return createEncounterFromWorldsmith(data, options);

@@ -769,6 +769,34 @@ function activitiesOf(item) {
 }
 
 {
+  console.log("Structured world (Vaelor)");
+  const raw = loadStructured("Vaelor-world_17c0.json");
+  const normalized = normalizeWorldsmithData(raw);
+  assert(detectWorldsmithType(normalized) === "world", "world type detected");
+  assert(normalized.documentKind === "world", "world document kind");
+  assert(normalized.name === "Vaelor", "world name");
+  assert(normalized.subtitle.includes("Land of Looming Shadows"), "world subtitle parsed");
+  assert(normalized.gm_overview.includes("Solarys"), "world description parsed");
+  assert(normalized.gm_overview.includes("Vaelor is a medium"), "world variable resolved in description");
+  assert(normalized.sections.some(s => s.name === "Hallmarks"), "world hallmarks section");
+  assert(normalized.sections.some(s => s.name === "Cultures"), "world cultures section");
+  assert(normalized.sections.some(s => s.name === "Highlights"), "world highlights section");
+  assert(normalized.sections.some(s => s.name === "Timeline"), "world timeline section");
+  assert(normalized.sections.find(s => s.name === "Hallmarks")?.content.includes("Border Tensions"), "world hallmarks content");
+  assert(normalized.sections.find(s => s.name === "Cultures")?.content.includes("Iron Crown Dominion"), "world cultures content");
+  assert(normalized.sections.find(s => s.name === "Highlights")?.content.includes("Frostpeak Dragonshards"), "world highlights content");
+  assert(normalized.sections.find(s => s.name === "Timeline")?.content.includes("Great Sundering"), "world timeline content");
+  assert(/Vaelor.s supercontinent/.test(normalized.sections.find(s => s.name === "Timeline")?.content ?? ""), "world timeline variable resolved");
+  const { journalData } = convertWorldsmithQuest(normalized);
+  assert(journalData.flags["worldsmith-foundry-import"].kind === "world", "world journal kind");
+  assert(journalData.pages.some(p => p.name === "Overview"), "world overview page");
+  assert(journalData.pages.some(p => p.name === "Hallmarks"), "world hallmarks page");
+  assert(journalData.pages.some(p => p.name === "Cultures"), "world cultures page");
+  assert(journalData.pages.some(p => p.name === "Highlights"), "world highlights page");
+  assert(journalData.pages.some(p => p.name === "Timeline"), "world timeline page");
+}
+
+{
   console.log("SRD name normalization");
   assert(normalizeSrdName("Spell: Fireball") === "fireball", "strip spell prefix");
   assert(normalizeSrdName("  False Life  ") === "false life", "trim and lowercase");
