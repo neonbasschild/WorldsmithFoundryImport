@@ -11,6 +11,7 @@ import { convertWorldsmithItem } from "./item-converter.mjs";
 import { convertWorldsmithShop, convertWorldsmithTreasure } from "./shop-converter.mjs";
 import { convertWorldsmithQuest } from "./journal-converter.mjs";
 import { convertWorldsmithEncounter } from "./encounter-converter.mjs";
+import { convertWorldsmithGroup } from "./group-converter.mjs";
 import { convertWorldsmithSpell } from "./spell-converter.mjs";
 import { convertWorldsmithFeat } from "./feat-converter.mjs";
 import { detectWorldsmithType } from "./detect.mjs";
@@ -20,7 +21,7 @@ import {
 } from "./srd-lookup.mjs";
 import {
   createActorFromWorldsmith, createFeatFromWorldsmith, createFromWorldsmith, createItemFromWorldsmith,
-  createJournalFromWorldsmith, createEncounterFromWorldsmith, createDungeonFromWorldsmith, createShopFromWorldsmith, createSpellFromWorldsmith,
+  createJournalFromWorldsmith, createEncounterFromWorldsmith, createGroupFromWorldsmith, createDungeonFromWorldsmith, createShopFromWorldsmith, createSpellFromWorldsmith,
   createTreasureFromWorldsmith, importFromText
 } from "./importer.mjs";
 import WorldsmithImportApp from "./import-app.mjs";
@@ -49,6 +50,7 @@ const api = {
   convertWorldsmithTreasure,
   convertWorldsmithQuest,
   convertWorldsmithEncounter,
+  convertWorldsmithGroup,
   convertWorldsmithSpell,
   convertWorldsmithFeat,
   createActorFromWorldsmith,
@@ -57,6 +59,7 @@ const api = {
   createTreasureFromWorldsmith,
   createJournalFromWorldsmith,
   createEncounterFromWorldsmith,
+  createGroupFromWorldsmith,
   createDungeonFromWorldsmith,
   createSpellFromWorldsmith,
   createFeatFromWorldsmith,

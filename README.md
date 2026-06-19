@@ -12,6 +12,7 @@ A [Foundry VTT](https://foundryvtt.com/) module that converts and imports
 - **Treasure / loot** → Item Piles loot pile actors (with currency).
 - **Quests** → journal entries (one page per quest section).
 - **Encounters** → dnd5e encounter group actors with member NPCs.
+- **Groups** → dnd5e faction/party group actors with member NPCs.
 - **Dungeons** → journal entries with room pages, plus encounter groups per room.
 
 The type of each export is detected automatically.
@@ -182,6 +183,18 @@ type used for combat groups in dnd5e v3+):
 Member NPCs match the same dnd5e structure as standalone creature imports (see
 `examples/foundry-encounter-member-npc.json` for a Foundry export of one such
 member).
+
+### Groups
+
+Worldsmith group exports (factions, organizations, parties) become a dnd5e
+**group** actor:
+
+- Organization sections (**Overview**, **Basic Information**, **Goals**,
+  **Resources**, **Membership Requirements**, **Organization Structure**) are
+  written to the group actor's description
+- Embedded NPC stat blocks are imported as separate actors and linked as group
+  members (no quantities — unlike encounter groups)
+- The group token is actor-linked for quick access to the group sheet
 
 ### Dungeons
 

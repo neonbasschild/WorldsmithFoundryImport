@@ -83,6 +83,7 @@ function parseStructuredExport(data) {
   if (contentType === "magicitem") return normalizeItem(root, walk);
   if (contentType === "deity") return normalizeDeity(root, walk, data.items);
   if (contentType === "encounter") return normalizeEncounter(root, walk, data.items);
+  if (contentType === "group") return normalizeGroup(root, walk, data.items);
   if (contentType === "dungeon") return normalizeDungeon(root, walk, data.items);
   if (contentType === "quest") return normalizeQuest(root, walk, data.items);
   if (contentType === "story") return normalizeStory(root, walk, data.items);
@@ -1126,6 +1127,68 @@ function collectDungeonEncounters(root, items) {
   }
 
   return encounters;
+}
+
+/**
+ * Collect NPC stat blocks embedded in a group document.
+ * @param {object} root
+ * @param {Record<string, object>} items
+ * @returns {object[]}
+ */
+function collectGroupMembers(root, items) {
+  const allSections = collectAllSections(root, items);
+  const byId = new Map();
+
+  for (const section of allSections) {
+    const creatureSection = findCreatureSection(section, items);
+    if (creatureSection) byId.set(creatureSection.id, creatureSection);
+  }
+
+  const unique = [...byId.values()].filter(outer =>
+    ![...byId.values()].some(inner =>
+      inner.id !== outer.id && isDescendantOf(outer.id, inner, items)
+    )
+  );
+
+  const members = [];
+  const seenNames = new Set();
+  for (const section of unique) {
+    const creature = normalizeCreature(section, walkSection(section, items, section.name));
+    const name = creature.identity?.name ?? stripEmbeddedNamePrefix(section.name?.trim());
+    if (!name || seenNames.has(name.toLowerCase())) continue;
+    seenNames.add(name.toLowerCase());
+    members.push(creature);
+  }
+  return members;
+}
+
+/**
+ * @param {object} root
+ * @param {object} walk
+ * @param {Record<string, object>} items
+ * @returns {object}
+ */
+function normalizeGroup(root, walk, items) {
+  const group = {
+    name: root.name,
+    subtitle: walk.subtitle ?? "",
+    documentKind: "group",
+    overview: joinBlocks(walk.sections.Overview, root.name),
+    basic_information: joinBlocks(walk.sections["Basic Information"], root.name),
+    goals: joinBlocks(walk.sections.Goals, root.name),
+    resources: joinBlocks(walk.sections.Resources, root.name),
+    membership_requirements: joinBlocks(walk.sections["Membership Requirements"], root.name),
+    organization_structure: joinBlocks(walk.sections["Organization Structure"], root.name),
+    prominent_figures: joinBlocks(walk.sections["Prominent Figures"], root.name),
+    members: collectGroupMembers(root, items)
+  };
+
+  const embedded = collectNestedContent(root, items);
+  group.items = embedded.items;
+  group.treasures = embedded.treasures;
+  group.spells = embedded.spells;
+  group.feats = embedded.feats;
+  return group;
 }
 
 /**

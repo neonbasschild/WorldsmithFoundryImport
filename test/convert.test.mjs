@@ -15,6 +15,7 @@ import { convertWorldsmithItem } from "../scripts/item-converter.mjs";
 import { convertWorldsmithShop, convertWorldsmithTreasure } from "../scripts/shop-converter.mjs";
 import { convertWorldsmithQuest } from "../scripts/journal-converter.mjs";
 import { convertWorldsmithEncounter } from "../scripts/encounter-converter.mjs";
+import { convertWorldsmithGroup } from "../scripts/group-converter.mjs";
 import { convertWorldsmithSpell } from "../scripts/spell-converter.mjs";
 import { convertWorldsmithFeat } from "../scripts/feat-converter.mjs";
 import { detectWorldsmithType } from "../scripts/detect.mjs";
@@ -635,6 +636,28 @@ function activitiesOf(item) {
   assert(journalData.pages.some(p => p.name === "Overgrown Gatehouse"), "dungeon room page");
   const { encounterData } = convertWorldsmithEncounter(normalized.encounters[0]);
   assert(encounterData.type === "encounter", "nested encounter converts to group actor");
+}
+
+{
+  console.log("Structured group (Order of the Umbral Lotus)");
+  const raw = loadStructured("Order_of_the_Umbral_Lotus_da1e.json");
+  const normalized = normalizeWorldsmithData(raw);
+  assert(detectWorldsmithType(normalized) === "group", "group type detected");
+  assert(normalized.documentKind === "group", "group document kind");
+  assert(normalized.name === "Order of the Umbral Lotus", "group name");
+  assert(normalized.overview.includes("clandestine brotherhood"), "group overview parsed");
+  assert(normalized.basic_information.includes("Secret Society"), "group basic information parsed");
+  assert(normalized.goals.includes("Preserve and expand"), "group goals parsed");
+  assert(normalized.organization_structure.includes("High Matron"), "group organization structure parsed");
+  assert(normalized.members.length === 1, "group extracts one embedded NPC");
+  assert(normalized.members[0].identity?.name === "Matron Akura, the Jade Veil", "group member name");
+  const { groupData, memberSources } = convertWorldsmithGroup(normalized);
+  assert(groupData.type === "group", "group actor type");
+  assert(groupData.system.description.full.includes("Overview"), "group description includes overview");
+  assert(groupData.prototypeToken.actorLink === true, "group token is linked");
+  assert(memberSources.length === 1, "group converter passes member sources");
+  const { actorData } = convertWorldsmith(memberSources[0]);
+  assert(actorData.type === "npc", "group member converts to npc");
 }
 
 {
