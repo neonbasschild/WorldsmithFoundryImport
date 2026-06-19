@@ -82,6 +82,7 @@ function parseStructuredExport(data) {
   if (contentType === "spell") return normalizeSpell(root, walk);
   if (contentType === "magicitem") return normalizeItem(root, walk);
   if (contentType === "deity") return normalizeDeity(root, walk, data.items);
+  if (contentType === "encounter") return normalizeEncounter(root, walk, data.items);
   if (contentType === "quest") return normalizeQuest(root, walk, data.items);
   if (contentType === "story") return normalizeStory(root, walk, data.items);
   if (contentType === "session") return normalizeSession(root, walk, data.items);
@@ -941,6 +942,102 @@ function normalizeDeity(root, walk, items) {
   }
 
   return deity;
+}
+
+const ENCOUNTER_SECTIONS = ["Set the Scene", "Objective", "Key Features"];
+
+/**
+ * @param {string} name
+ * @returns {number|null}
+ */
+function parseQuantityFromName(name) {
+  const text = String(name ?? "");
+  const match = text.match(/\(\s*x\s*(\d+)\s*\)/i)
+    || text.match(/\b(\d+)\s*x\b/i)
+    || text.match(/\bx\s*(\d+)\b/i);
+  return match ? Number(match[1]) : null;
+}
+
+/**
+ * @param {object} section
+ * @param {Record<string, object>} items
+ * @returns {number}
+ */
+function parseEncounterQuantity(section, items) {
+  const sources = [section];
+  let current = section;
+  while (current?.parentId) {
+    const parent = items[current.parentId];
+    if (!parent) break;
+    if (parent.type === "section") sources.push(parent);
+    current = parent;
+  }
+  for (const source of sources) {
+    const fromName = parseQuantityFromName(source.name);
+    if (fromName) return fromName;
+  }
+  return 1;
+}
+
+/**
+ * Collect monster stat blocks for an encounter group, preserving quantities.
+ * @param {object} root
+ * @param {Record<string, object>} items
+ * @returns {object[]}
+ */
+function collectEncounterMembers(root, items) {
+  const allSections = collectAllSections(root, items);
+  const byId = new Map();
+
+  for (const section of allSections) {
+    const creatureSection = findCreatureSection(section, items);
+    if (creatureSection) byId.set(creatureSection.id, creatureSection);
+  }
+
+  const unique = [...byId.values()].filter(outer =>
+    ![...byId.values()].some(inner =>
+      inner.id !== outer.id && isDescendantOf(outer.id, inner, items)
+    )
+  );
+
+  const grouped = new Map();
+  for (const section of unique) {
+    const creature = normalizeCreature(section, walkSection(section, items, section.name));
+    const creatureName = creature.identity?.name ?? stripEmbeddedNamePrefix(section.name?.trim());
+    const quantity = parseEncounterQuantity(section, items);
+    const key = creatureName.toLowerCase();
+    if (grouped.has(key)) {
+      grouped.get(key).quantity += quantity;
+    } else {
+      grouped.set(key, { ...creature, quantity });
+    }
+  }
+  return [...grouped.values()];
+}
+
+/**
+ * @param {object} root
+ * @param {object} walk
+ * @param {Record<string, object>} items
+ * @returns {object}
+ */
+function normalizeEncounter(root, walk, items) {
+  const encounter = {
+    name: root.name,
+    subtitle: walk.subtitle ?? "",
+    documentKind: "encounter",
+    set_the_scene: joinBlocks(walk.sections["Set the Scene"], root.name),
+    objective: joinBlocks(walk.sections.Objective, root.name),
+    key_features: joinBlocks(walk.sections["Key Features"], root.name),
+    members: collectEncounterMembers(root, items)
+  };
+
+  const embedded = collectNestedContent(root, items);
+  encounter.items = embedded.items;
+  encounter.treasures = embedded.treasures;
+  encounter.spells = embedded.spells;
+  encounter.feats = embedded.feats;
+  return encounter;
 }
 
 /**

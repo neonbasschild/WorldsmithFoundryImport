@@ -9,6 +9,7 @@ import { convertWorldsmith } from "./converter.mjs";
 import { convertWorldsmithItem } from "./item-converter.mjs";
 import { convertWorldsmithShop, convertWorldsmithTreasure } from "./shop-converter.mjs";
 import { convertWorldsmithQuest } from "./journal-converter.mjs";
+import { convertWorldsmithEncounter } from "./encounter-converter.mjs";
 import { convertWorldsmithSpell } from "./spell-converter.mjs";
 import { convertWorldsmithFeat } from "./feat-converter.mjs";
 import { detectWorldsmithType } from "./detect.mjs";
@@ -226,6 +227,78 @@ export async function createJournalFromWorldsmith(data, { folderId = null, rende
 }
 
 /**
+ * Create a dnd5e encounter group actor plus its member NPCs from a Worldsmith export.
+ * @param {object} data
+ * @param {object} [options]
+ * @param {string|null} [options.folderId]
+ * @param {boolean} [options.renderSheet]
+ * @returns {Promise<{actors: Actor[], items: Item[], journals: JournalEntry[]}>}
+ */
+export async function createEncounterFromWorldsmith(data, { folderId = null, renderSheet = false } = {}) {
+  const {
+    encounterData, memberSources, items: itemSources, treasures, spells, feats, warnings
+  } = convertWorldsmithEncounter(data);
+
+  const actorFolder = resolveFolder(folderId, "Actor");
+  const memberActors = [];
+  const members = [];
+
+  for (const source of memberSources) {
+    const { actorData, warnings: actorWarnings } = convertWorldsmith(source);
+    if (actorFolder) actorData.folder = actorFolder;
+    const actor = await Actor.create(actorData);
+    if (actor) {
+      memberActors.push(actor);
+      members.push({
+        uuid: actor.uuid,
+        quantity: { value: source.quantity ?? 1, formula: "" }
+      });
+    }
+    for (const warning of actorWarnings) console.warn(`${MODULE_ID} | ${actorData.name}: ${warning}`);
+  }
+
+  encounterData.system.members = members;
+  if (actorFolder) encounterData.folder = actorFolder;
+
+  const encounter = await Actor.create(encounterData, { renderSheet });
+  for (const warning of warnings) console.warn(`${MODULE_ID} | ${encounterData.name}: ${warning}`);
+
+  const actors = [];
+  if (encounter) actors.push(encounter);
+  actors.push(...memberActors);
+
+  for (const treasureSource of treasures ?? []) {
+    const { pile, warnings: pileWarnings } = convertWorldsmithTreasure(treasureSource);
+    if (actorFolder) pile.folder = actorFolder;
+    const pileActor = await Actor.create(pile);
+    if (pileActor) actors.push(pileActor);
+    for (const warning of pileWarnings) console.warn(`${MODULE_ID} | ${pile.name}: ${warning}`);
+  }
+
+  const items = [];
+  const itemFolder = resolveFolder(folderId, "Item");
+  for (const itemSource of itemSources ?? []) {
+    const { itemData, warnings: itemWarnings } = convertWorldsmithItem(itemSource);
+    if (itemFolder) itemData.folder = itemFolder;
+    const item = await Item.create(itemData);
+    if (item) items.push(item);
+    for (const warning of itemWarnings) console.warn(`${MODULE_ID} | ${itemData.name}: ${warning}`);
+  }
+
+  for (const spellSource of spells ?? []) {
+    const spell = await createSpellFromWorldsmith(spellSource, { folderId: itemFolder, renderSheet });
+    if (spell) items.push(spell);
+  }
+
+  for (const featSource of feats ?? []) {
+    const feat = await createFeatFromWorldsmith(featSource, { folderId: itemFolder, renderSheet });
+    if (feat) items.push(feat);
+  }
+
+  return { actors, items, journals: [] };
+}
+
+/**
  * Create the appropriate document(s) from a Worldsmith export.
  * @param {object} data
  * @param {object} [options]
@@ -237,6 +310,7 @@ export async function createFromWorldsmith(data, options = {}) {
   if (type === "treasure") return createTreasureFromWorldsmith(data, options);
   if (type === "session") return createJournalFromWorldsmith(data, options);
   if (type === "deity") return createJournalFromWorldsmith(data, options);
+  if (type === "encounter") return createEncounterFromWorldsmith(data, options);
   if (type === "quest") return createJournalFromWorldsmith(data, options);
   if (type === "spell") {
     const spell = await createSpellFromWorldsmith(data, options);

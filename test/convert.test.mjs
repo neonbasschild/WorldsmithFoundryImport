@@ -14,6 +14,7 @@ import { convertWorldsmith } from "../scripts/converter.mjs";
 import { convertWorldsmithItem } from "../scripts/item-converter.mjs";
 import { convertWorldsmithShop, convertWorldsmithTreasure } from "../scripts/shop-converter.mjs";
 import { convertWorldsmithQuest } from "../scripts/journal-converter.mjs";
+import { convertWorldsmithEncounter } from "../scripts/encounter-converter.mjs";
 import { convertWorldsmithSpell } from "../scripts/spell-converter.mjs";
 import { convertWorldsmithFeat } from "../scripts/feat-converter.mjs";
 import { detectWorldsmithType } from "../scripts/detect.mjs";
@@ -586,6 +587,29 @@ function activitiesOf(item) {
     const { itemData } = convertWorldsmithFeat(featSource);
     assert(itemData.name === featSource.name, `feat ${itemData.name} converts`);
   }
+}
+
+{
+  console.log("Structured encounter (Ambush of the Silvan Kodama)");
+  const raw = loadStructured("Ambush_of_the_Silvan_Kodama_6b79.json");
+  const normalized = normalizeWorldsmithData(raw);
+  assert(detectWorldsmithType(normalized) === "encounter", "encounter type detected");
+  assert(normalized.documentKind === "encounter", "encounter document kind");
+  assert(normalized.name === "Ambush of the Silvan Kodama", "encounter name");
+  assert(normalized.set_the_scene.includes("narrow forest path"), "encounter set the scene parsed");
+  assert(normalized.objective.includes("Survive the Kodama"), "encounter objective parsed");
+  assert(normalized.key_features.includes("Ancient Torii Ruins"), "encounter key features parsed");
+  assert(normalized.members.length === 1, "encounter extracts one member type");
+  assert(normalized.members[0].identity?.name === "Silvan Kodama", "encounter member name");
+  assert(normalized.members[0].quantity === 1, "encounter member quantity defaults to 1");
+  const { encounterData, memberSources } = convertWorldsmithEncounter(normalized);
+  assert(encounterData.type === "encounter", "encounter actor type");
+  assert(encounterData.system.description.full.includes("Set the Scene"), "encounter description includes scene");
+  assert(encounterData.prototypeToken.actorLink === true, "encounter token is linked");
+  assert(memberSources.length === 1, "encounter converter passes member sources");
+  const { actorData } = convertWorldsmith(memberSources[0]);
+  assert(actorData.type === "npc", "encounter member converts to npc");
+  assert(actorData.name === "Silvan Kodama", "encounter member npc name");
 }
 
 {

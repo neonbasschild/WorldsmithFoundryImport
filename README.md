@@ -11,6 +11,7 @@ A [Foundry VTT](https://foundryvtt.com/) module that converts and imports
   merchant actors, with their owners imported as separate NPCs.
 - **Treasure / loot** → Item Piles loot pile actors (with currency).
 - **Quests** → journal entries (one page per quest section).
+- **Encounters** → dnd5e encounter group actors with member NPCs.
 
 The type of each export is detected automatically.
 
@@ -162,6 +163,24 @@ section that is present:
 The original JSON is stored under the journal entry's module flags. (Quests that
 are embedded inside a creature or shop owner are also folded into that actor's
 biography; this handles the standalone quest exports.)
+
+### Encounters
+
+Worldsmith encounter exports become a dnd5e **encounter** group actor (the actor
+type used for combat groups in dnd5e v3+):
+
+- Narrative sections (**Set the Scene**, **Objective**, **Key Features**) are
+  written to the encounter actor's description.
+- Each embedded monster stat block is imported as a separate **NPC actor** and
+  linked as a group member with a quantity (parsed from names like `Goblin (x4)`
+  when present, otherwise `1`).
+- The encounter token is actor-linked so the group sheet opens when clicked.
+- Embedded loot, spells, and feats are also imported as separate items when
+  present.
+
+Member NPCs match the same dnd5e structure as standalone creature imports (see
+`examples/foundry-encounter-member-npc.json` for a Foundry export of one such
+member).
 
 ## Installation
 
