@@ -553,5 +553,37 @@ function activitiesOf(item) {
   assert(journalData.pages.some(p => p.name === "Scene 1: The Magistrate's Call"), "session scene page");
 }
 
+{
+  console.log("Structured deity (Kurozani, the Twelfth Decay)");
+  const raw = loadStructured("Kurozani__the_Twelfth_Decay_650b.json");
+  const normalized = normalizeWorldsmithData(raw);
+  assert(detectWorldsmithType(normalized) === "deity", "deity type detected");
+  assert(normalized.documentKind === "deity", "deity document kind");
+  assert(normalized.name === "Kurozani, the Twelfth Decay", "deity name");
+  assert(normalized.gm_overview.includes("hulking silhouette"), "deity description parsed");
+  assert(normalized.sections.some(s => s.name === "Lore"), "deity lore section");
+  assert(normalized.sections.some(s => s.name === "Followers"), "deity followers section");
+  assert(normalized.sections.some(s => s.name === "Worship"), "deity worship section");
+  assert(normalized.sections.some(s => s.name === "Follower Benefits"), "deity follower benefits section");
+  assert(normalized.spells.length === 3, "deity extracts three spells");
+  assert(normalized.spells.some(s => s.name === "Rotting Touch"), "deity spell name stripped");
+  assert(normalized.feats.length === 2, "deity extracts two feats");
+  assert(normalized.feats.some(f => f.name === "Blessing of Kurozani"), "deity feat name stripped");
+  assert(normalized.items.length === 2, "deity extracts two magic items");
+  assert(normalized.items.some(i => i.name === "Staff of Fungal Decay"), "deity item name stripped");
+  const { journalData } = convertWorldsmithQuest(normalized);
+  assert(journalData.flags["worldsmith-foundry-import"].kind === "deity", "deity journal kind");
+  assert(journalData.pages.some(p => p.name === "Overview"), "deity overview page");
+  assert(journalData.pages.some(p => p.name === "Worship"), "deity worship page");
+  for (const spellSource of normalized.spells) {
+    const { itemData } = convertWorldsmithSpell(spellSource);
+    assert(itemData.name === spellSource.name, `spell ${itemData.name} converts`);
+  }
+  for (const featSource of normalized.feats) {
+    const { itemData } = convertWorldsmithFeat(featSource);
+    assert(itemData.name === featSource.name, `feat ${itemData.name} converts`);
+  }
+}
+
 console.log(`\n${passed} passed, ${failed} failed`);
 process.exit(failed ? 1 : 0);

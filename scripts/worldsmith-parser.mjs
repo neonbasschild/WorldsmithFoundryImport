@@ -81,6 +81,7 @@ function parseStructuredExport(data) {
   if (contentType === "feat") return normalizeFeat(root, walk);
   if (contentType === "spell") return normalizeSpell(root, walk);
   if (contentType === "magicitem") return normalizeItem(root, walk);
+  if (contentType === "deity") return normalizeDeity(root, walk, data.items);
   if (contentType === "quest") return normalizeQuest(root, walk, data.items);
   if (contentType === "story") return normalizeStory(root, walk, data.items);
   if (contentType === "session") return normalizeSession(root, walk, data.items);
@@ -875,20 +876,71 @@ function attachEmbeddedContent(target, root, items) {
   target.actors = embedded.actors;
   target.items = embedded.items;
   target.treasures = embedded.treasures;
+  target.spells = embedded.spells;
+  target.feats = embedded.feats;
   return target;
 }
 
 /**
  * @param {object} root
  * @param {Record<string, object>} items
- * @returns {{actors: object[], items: object[], treasures: object[]}}
+ * @returns {{actors: object[], items: object[], treasures: object[], spells: object[], feats: object[]}}
  */
 function collectNestedContent(root, items) {
   return {
     actors: collectNestedCreatures(root, items),
     items: collectNestedItems(root, items),
-    treasures: collectNestedTreasures(root, items)
+    treasures: collectNestedTreasures(root, items),
+    spells: collectNestedSpells(root, items),
+    feats: collectNestedFeats(root, items)
   };
+}
+
+const DEITY_SECTIONS = ["Lore", "Followers", "Worship", "Follower Benefits"];
+
+/**
+ * @param {object} data
+ * @returns {string}
+ */
+function buildFollowerBenefitsSummary(data) {
+  const lines = [];
+  for (const spell of data.spells ?? []) lines.push(`• ${spell.name} (spell)`);
+  for (const item of data.items ?? []) lines.push(`• ${item.name} (magic item)`);
+  for (const feat of data.feats ?? []) lines.push(`• ${feat.name} (feat)`);
+  return lines.join("\n");
+}
+
+/**
+ * @param {object} root
+ * @param {object} walk
+ * @param {Record<string, object>} items
+ * @returns {object}
+ */
+function normalizeDeity(root, walk, items) {
+  const deity = {
+    name: root.name,
+    subtitle: walk.subtitle ?? "",
+    documentKind: "deity",
+    gm_overview: joinBlocks(walk.sections.Description, root.name),
+    sections: []
+  };
+
+  for (const header of DEITY_SECTIONS) {
+    if (header === "Follower Benefits") continue;
+    const content = joinBlocks(walk.sections[header], root.name);
+    if (content) deity.sections.push({ name: header, content });
+  }
+
+  attachEmbeddedContent(deity, root, items);
+
+  if ("Follower Benefits" in walk.sections) {
+    const prose = joinBlocks(walk.sections["Follower Benefits"], root.name);
+    const summary = buildFollowerBenefitsSummary(deity);
+    const content = [prose, summary].filter(Boolean).join("\n\n");
+    if (content) deity.sections.push({ name: "Follower Benefits", content });
+  }
+
+  return deity;
 }
 
 /**
@@ -1198,6 +1250,54 @@ function collectNestedCreatures(root, items) {
  * @param {Record<string, object>} items
  * @returns {object|null}
  */
+/**
+ * @param {string} name
+ * @returns {string}
+ */
+function stripEmbeddedNamePrefix(name) {
+  return String(name ?? "").replace(/^(?:Spell|Feat|Magic Item):\s*/i, "").trim();
+}
+
+/**
+ * @param {object} section
+ * @param {Record<string, object>} items
+ * @returns {object|null}
+ */
+function findSpellSection(section, items) {
+  if (String(section.content_type ?? "").toLowerCase() === "spell") {
+    const typed = resolveContentSection(section, items);
+    return typed ?? section;
+  }
+
+  for (const childId of section.childrenIds ?? []) {
+    const child = items[childId];
+    if (child?.type !== "section") continue;
+    const found = findSpellSection(child, items);
+    if (found) return found;
+  }
+  return null;
+}
+
+/**
+ * @param {object} section
+ * @param {Record<string, object>} items
+ * @returns {object|null}
+ */
+function findFeatSection(section, items) {
+  if (String(section.content_type ?? "").toLowerCase() === "feat") {
+    const typed = resolveContentSection(section, items);
+    return typed ?? section;
+  }
+
+  for (const childId of section.childrenIds ?? []) {
+    const child = items[childId];
+    if (child?.type !== "section") continue;
+    const found = findFeatSection(child, items);
+    if (found) return found;
+  }
+  return null;
+}
+
 function findItemSection(section, items) {
   const type = String(section.content_type ?? "").toLowerCase();
   if (ITEM_CONTENT_TYPES.has(type)) {
@@ -1291,10 +1391,12 @@ function collectNestedItems(root, items) {
 
   const collected = [];
   for (const section of unique) {
-    const name = section.name?.trim();
+    const name = stripEmbeddedNamePrefix(section.name?.trim());
     if (!name || seenNames.has(name)) continue;
     seenNames.add(name);
-    collected.push(normalizeItem(section, walkSection(section, items, section.name)));
+    const item = normalizeItem(section, walkSection(section, items, section.name));
+    item.name = name;
+    collected.push(item);
   }
 
   for (const section of allSections) {
@@ -1348,6 +1450,74 @@ function collectNestedTreasures(root, items) {
     treasures.push(normalizeTreasure(section, walkSection(section, items, section.name), items));
   }
   return treasures;
+}
+
+/**
+ * Collect spell sections embedded in narrative documents.
+ * @param {object} root
+ * @param {Record<string, object>} items
+ * @returns {object[]}
+ */
+function collectNestedSpells(root, items) {
+  const allSections = collectAllSections(root, items);
+  const byId = new Map();
+
+  for (const section of allSections) {
+    const spellSection = findSpellSection(section, items);
+    if (spellSection) byId.set(spellSection.id, spellSection);
+  }
+
+  const unique = [...byId.values()].filter(outer =>
+    ![...byId.values()].some(inner =>
+      inner.id !== outer.id && isDescendantOf(outer.id, inner, items)
+    )
+  );
+
+  const seenNames = new Set();
+  const spells = [];
+  for (const section of unique) {
+    const name = stripEmbeddedNamePrefix(section.name?.trim());
+    if (!name || seenNames.has(name)) continue;
+    seenNames.add(name);
+    const spell = normalizeSpell(section, walkSection(section, items, section.name));
+    spell.name = name;
+    spells.push(spell);
+  }
+  return spells;
+}
+
+/**
+ * Collect feat sections embedded in narrative documents.
+ * @param {object} root
+ * @param {Record<string, object>} items
+ * @returns {object[]}
+ */
+function collectNestedFeats(root, items) {
+  const allSections = collectAllSections(root, items);
+  const byId = new Map();
+
+  for (const section of allSections) {
+    const featSection = findFeatSection(section, items);
+    if (featSection) byId.set(featSection.id, featSection);
+  }
+
+  const unique = [...byId.values()].filter(outer =>
+    ![...byId.values()].some(inner =>
+      inner.id !== outer.id && isDescendantOf(outer.id, inner, items)
+    )
+  );
+
+  const seenNames = new Set();
+  const feats = [];
+  for (const section of unique) {
+    const name = stripEmbeddedNamePrefix(section.name?.trim());
+    if (!name || seenNames.has(name)) continue;
+    seenNames.add(name);
+    const feat = normalizeFeat(section, walkSection(section, items, section.name));
+    feat.name = name;
+    feats.push(feat);
+  }
+  return feats;
 }
 
 /**
