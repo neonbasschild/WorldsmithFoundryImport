@@ -20,6 +20,7 @@ export function detectWorldsmithType(data) {
   if (data.documentKind === "puzzle") return "puzzle";
   if (data.documentKind === "trap") return "trap";
   if (data.documentKind === "rollTable") return "rollTable";
+  if (data.documentKind === "treasure") return "treasure";
 
   // Shops carry inventory/services/owners collections.
   if (

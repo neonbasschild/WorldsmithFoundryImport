@@ -526,9 +526,43 @@ function activitiesOf(item) {
 {
   console.log("Structured treasure (Whispers of the Crane Shrine)");
   const raw = loadStructured("Whispers_of_the_Crane_Shrine_3d2d.json");
-  const { pile } = convertWorldsmithTreasure(normalizeWorldsmithData(raw));
+  const normalized = normalizeWorldsmithData(raw);
+  assert(detectWorldsmithType(normalized) === "treasure", "treasure type detected");
+  assert(normalized.documentKind === "treasure", "treasure document kind");
+  const { pile } = convertWorldsmithTreasure(normalized);
   assert(pile.name === "Whispers of the Crane Shrine", "treasure pile name");
   assert((pile.items?.length ?? 0) > 0, "treasure pile has items");
+  assert(pile.flags["item-piles"]?.data?.type === "pile", "treasure item piles pile flag");
+}
+
+{
+  console.log("Structured treasure (Ember Vault of the Five Rings)");
+  const raw = loadStructured("Ember_Vault_of_the_Five_Rings_Treasure_456a.json");
+  const normalized = normalizeWorldsmithData(raw);
+  assert(detectWorldsmithType(normalized) === "treasure", "ember vault treasure type");
+  assert(normalized.documentKind === "treasure", "ember vault document kind");
+  assert(normalized.name === "Ember Vault of the Five Rings", "ember vault name");
+  assert(normalized.subtitle.includes("Legendary Booty"), "ember vault subtitle");
+  assert(normalized.description.includes("Siege of Kharis"), "ember vault description");
+  assert(normalized.currency.cp === 120, "ember vault copper");
+  assert(normalized.currency.gp === 5220, "ember vault gold");
+  assert(normalized.currency.pp === 150, "ember vault platinum");
+  assert(normalized.basic_items.length === 7, "ember vault basic items");
+  assert(normalized.basic_items.some(i => i.item === "Polished Jade Seal"), "ember vault basic item name");
+  assert(normalized.basic_items.every(i => i.item !== "Item"), "ember vault skips table header row");
+  assert(normalized.notable_items.length === 3, "ember vault notable items");
+  assert(normalized.notable_items.some(i => i.name === "Breath of Mount Ryoshima"), "ember vault naginata");
+  assert(normalized.notable_items.some(i => i.name === "Crane-Dancer's War Fan"), "ember vault war fan");
+  assert(normalized.notable_items.some(i => i.name === "Mask of the Oni's Bellow"), "ember vault mask");
+  assert(normalized.notable_items.find(i => i.name === "Breath of Mount Ryoshima")?.rarity === "Rare", "ember vault naginata rarity");
+  const { pile, warnings } = convertWorldsmithTreasure(normalized);
+  assert(pile.name === "Ember Vault of the Five Rings", "ember vault pile name");
+  assert(pile.items.length === 10, "ember vault pile item count");
+  assert(pile.system.currency.gp === 5220, "ember vault pile currency");
+  assert(pile.flags["worldsmith-foundry-import"].kind === "treasure", "ember vault import flag");
+  assert(pile.flags["item-piles"]?.data?.enabled === true, "ember vault item piles enabled");
+  assert(pile.items.some(i => i.name === "Breath of Mount Ryoshima"), "ember vault pile notable item");
+  assert(warnings.length === 0, "ember vault no conversion warnings");
 }
 
 {

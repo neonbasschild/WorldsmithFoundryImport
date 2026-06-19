@@ -1507,19 +1507,12 @@ function normalizeTreasure(root, walk, items) {
   const treasure = {
     name: root.name,
     subtitle: walk.subtitle ?? "",
+    documentKind: "treasure",
     description: joinBlocks(walk.sections.Description, root.name),
     currency: parseCurrencyFields(walk.sections.Currency, walk.labeledFields),
     basic_items: parseInventoryTables(walk.sections["Basic Items"], root.name),
-    notable_items: []
+    notable_items: collectTreasureNotableItems(root, items)
   };
-
-  for (const nested of walk.nestedSections) {
-    const resolved = resolveContentSection(nested, items);
-    if (!resolved) continue;
-    if (String(resolved.content_type ?? "").toLowerCase() === "magicitem" || hasItemStatLine(resolved, items)) {
-      treasure.notable_items.push(normalizeItem(resolved, walkSection(resolved, items, resolved.name)));
-    }
-  }
 
   if (!treasure.notable_items.length) {
     treasure.notable_items = parseInventoryTables(walk.sections["Notable Items"], root.name).map(entry => ({
@@ -1531,6 +1524,42 @@ function normalizeTreasure(root, walk, items) {
   }
 
   return treasure;
+}
+
+/**
+ * Collect embedded magic item stat blocks from a treasure document.
+ * @param {object} root
+ * @param {Record<string, object>} items
+ * @returns {object[]}
+ */
+function collectTreasureNotableItems(root, items) {
+  const allSections = collectAllSections(root, items);
+  const byId = new Map();
+  const seenNames = new Set();
+  const collected = [];
+
+  for (const section of allSections) {
+    const itemSection = findItemSection(section, items);
+    if (!itemSection || itemSection.id === root.id) continue;
+    byId.set(itemSection.id, itemSection);
+  }
+
+  const unique = [...byId.values()].filter(outer =>
+    ![...byId.values()].some(inner =>
+      inner.id !== outer.id && isDescendantOf(outer.id, inner, items)
+    )
+  );
+
+  for (const section of unique) {
+    const name = stripEmbeddedNamePrefix(section.name?.trim());
+    if (!name || seenNames.has(name)) continue;
+    seenNames.add(name);
+    const item = normalizeItem(section, walkSection(section, items, section.name));
+    item.name = name;
+    collected.push(item);
+  }
+
+  return collected;
 }
 
 /**
@@ -1558,6 +1587,9 @@ function parseInventoryTables(blocks, name) {
     if (block.kind !== "table") continue;
     for (const row of block.node.content?.cells ?? []) {
       const texts = row.map(cell => extractText(cell.content, name).trim());
+      const isHeaderRow = row.some(cell => cell.isHeader)
+        || /^item$/i.test(texts[0] ?? "");
+      if (isHeaderRow) continue;
       if (!texts[0]) continue;
       entries.push({
         item: texts[0],
