@@ -85,6 +85,7 @@ function parseStructuredExport(data) {
   if (contentType === "encounter") return normalizeEncounter(root, walk, data.items);
   if (contentType === "group") return normalizeGroup(root, walk, data.items);
   if (contentType === "dungeon") return normalizeDungeon(root, walk, data.items);
+  if (contentType === "puzzle") return normalizePuzzle(root, walk, data.items);
   if (contentType === "quest") return normalizeQuest(root, walk, data.items);
   if (contentType === "story") return normalizeStory(root, walk, data.items);
   if (contentType === "session") return normalizeSession(root, walk, data.items);
@@ -944,6 +945,32 @@ function normalizeDeity(root, walk, items) {
   }
 
   return deity;
+}
+
+const PUZZLE_SECTIONS = ["Hints", "Solution", "Failure Consequence"];
+
+/**
+ * @param {object} root
+ * @param {object} walk
+ * @param {Record<string, object>} items
+ * @returns {object}
+ */
+function normalizePuzzle(root, walk, items) {
+  const puzzle = {
+    name: root.name,
+    subtitle: walk.subtitle ?? "",
+    documentKind: "puzzle",
+    gm_overview: joinBlocks(walk.sections.Description, root.name),
+    hook: joinBlocks(walk.sections["Intro Text"], root.name),
+    sections: []
+  };
+
+  for (const header of PUZZLE_SECTIONS) {
+    const content = joinBlocks(walk.sections[header], root.name);
+    if (content) puzzle.sections.push({ name: header, content });
+  }
+
+  return attachEmbeddedContent(puzzle, root, items);
 }
 
 const ENCOUNTER_SECTIONS = ["Set the Scene", "Objective", "Key Features"];

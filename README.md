@@ -14,6 +14,7 @@ A [Foundry VTT](https://foundryvtt.com/) module that converts and imports
 - **Encounters** → dnd5e encounter group actors with member NPCs.
 - **Groups** → dnd5e faction/party group actors with member NPCs.
 - **Dungeons** → journal entries with room pages, plus encounter groups per room.
+- **Puzzles** → journal entries (overview, intro text, hints, solution, and failure consequence pages).
 
 The type of each export is detected automatically.
 
@@ -205,6 +206,15 @@ actor** per room encounter:
 - One journal page per **room**, combining that room's encounters, traps, and puzzles
 - Each embedded encounter section becomes its own encounter group actor (with member
   NPCs and loot), using the same rules as standalone encounter imports
+
+### Puzzles
+
+Worldsmith puzzle exports become a **journal entry**:
+
+- **Overview** (subtitle and DM description)
+- **Intro Text** (player-facing setup)
+- **Hints**, **Solution**, and **Failure Consequence** pages when present
+- Embedded actors, items, spells, and feats are imported alongside the journal
 
 ## Installation
 

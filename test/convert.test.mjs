@@ -661,6 +661,30 @@ function activitiesOf(item) {
 }
 
 {
+  console.log("Structured puzzle (Shrine of the Celestial Kami's Fivefold Test)");
+  const raw = loadStructured("Shrine_of_the_Celestial_Kami_s_Fivefold_Test_puzzle_d7de.json");
+  const normalized = normalizeWorldsmithData(raw);
+  assert(detectWorldsmithType(normalized) === "puzzle", "puzzle type detected");
+  assert(normalized.documentKind === "puzzle", "puzzle document kind");
+  assert(normalized.name === "Shrine of the Celestial Kami’s Fivefold Test", "puzzle name");
+  assert(normalized.subtitle.includes("Aligning the Essence of the Kami"), "puzzle subtitle parsed");
+  assert(normalized.hook.includes("vaulted circular chamber"), "puzzle intro text parsed");
+  assert(normalized.gm_overview.includes("Five Celestial Kami"), "puzzle description parsed");
+  assert(normalized.sections.some(s => s.name === "Hints"), "puzzle hints section");
+  assert(normalized.sections.some(s => s.name === "Solution"), "puzzle solution section");
+  assert(normalized.sections.some(s => s.name === "Failure Consequence"), "puzzle failure section");
+  assert(normalized.sections.find(s => s.name === "Hints")?.content.includes("DC 16 Intelligence"), "puzzle hints content");
+  assert(normalized.sections.find(s => s.name === "Solution")?.content.includes("Earth (brown)"), "puzzle solution content");
+  const { journalData } = convertWorldsmithQuest(normalized);
+  assert(journalData.flags["worldsmith-foundry-import"].kind === "puzzle", "puzzle journal kind");
+  assert(journalData.pages.some(p => p.name === "Overview"), "puzzle overview page");
+  assert(journalData.pages.some(p => p.name === "Intro Text"), "puzzle intro text page");
+  assert(journalData.pages.some(p => p.name === "Hints"), "puzzle hints page");
+  assert(journalData.pages.some(p => p.name === "Solution"), "puzzle solution page");
+  assert(journalData.pages.some(p => p.name === "Failure Consequence"), "puzzle failure page");
+}
+
+{
   console.log("SRD name normalization");
   assert(normalizeSrdName("Spell: Fireball") === "fireball", "strip spell prefix");
   assert(normalizeSrdName("  False Life  ") === "false life", "trim and lowercase");

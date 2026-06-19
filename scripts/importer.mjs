@@ -410,6 +410,7 @@ export async function createFromWorldsmith(data, options = {}) {
   if (type === "encounter") return createEncounterFromWorldsmith(data, options);
   if (type === "group") return createGroupFromWorldsmith(data, options);
   if (type === "dungeon") return createDungeonFromWorldsmith(data, options);
+  if (type === "puzzle") return createJournalFromWorldsmith(data, options);
   if (type === "quest") return createJournalFromWorldsmith(data, options);
   if (type === "spell") {
     const spell = await createSpellFromWorldsmith(data, options);

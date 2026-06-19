@@ -1,0 +1,336 @@
+{
+  "rootId": "e6609856-d147-49f6-ae2a-d1b57738574f",
+  "items": {
+    "e6609856-d147-49f6-ae2a-d1b57738574f": {
+      "model_type": "structured",
+      "content_type": "puzzle",
+      "type": "section",
+      "name": "Shrine of the Celestial Kami’s Fivefold Test",
+      "childrenIds": [
+        "12c4768c-2a4f-4560-9877-78e8aaa88588",
+        "e408737a-2005-4792-9b5c-2d2b800d2f07",
+        "4e98b889-0687-48fa-b0f8-d03d71248297",
+        "dc65d748-9bbc-477b-a178-89547b2d6511",
+        "3f58b2db-bead-4fcb-82fe-a37b4feac3be",
+        "b6cdef46-52f8-4441-a508-444e7cdc23fa",
+        "85ac359d-a3d2-4014-9e65-7b63d478efd4",
+        "abfe2a85-28a9-4454-9417-ac695cd12478",
+        "f96428cb-0ac9-4163-bc27-fa472fa68e33",
+        "3c8d5e91-8e21-4325-a0f6-31dd03965272",
+        "a143ee97-f9bb-48f6-8dc8-944d67c84438",
+        "93204cab-974b-46d9-8367-8539dbe79e15"
+      ],
+      "parentId": null,
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Shrine of the Celestial Kami’s Fivefold Test",
+                "textFormat": "h1"
+              }
+            ]
+          }
+        ],
+        "showTitle": true,
+        "styles": {
+          "borderBottom": "1px solid #882619"
+        }
+      },
+      "id": "e6609856-d147-49f6-ae2a-d1b57738574f",
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none"
+        },
+        "collapsible": false,
+        "isCollapsed": false,
+        "alternatingCollapsedBackground": "white"
+      }
+    },
+    "12c4768c-2a4f-4560-9877-78e8aaa88588": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Aligning the Essence of the Kami",
+              "textFormat": "h4"
+            }
+          ]
+        }
+      ],
+      "parentId": "e6609856-d147-49f6-ae2a-d1b57738574f",
+      "id": "12c4768c-2a4f-4560-9877-78e8aaa88588"
+    },
+    "e408737a-2005-4792-9b5c-2d2b800d2f07": {
+      "type": "line",
+      "parentId": "e6609856-d147-49f6-ae2a-d1b57738574f",
+      "styles": {
+        "background": "linear-gradient(to right, #9D2A1F, transparent)",
+        "border": "none",
+        "height": "4px",
+        "width": "100%"
+      },
+      "id": "e408737a-2005-4792-9b5c-2d2b800d2f07",
+      "customStyles": {
+        "default": {
+          "background": "linear-gradient(to right, #9D2A1F, transparent)",
+          "border": "none",
+          "height": "4px",
+          "width": "100%"
+        }
+      }
+    },
+    "4e98b889-0687-48fa-b0f8-d03d71248297": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Intro Text",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "e6609856-d147-49f6-ae2a-d1b57738574f",
+      "id": "4e98b889-0687-48fa-b0f8-d03d71248297"
+    },
+    "dc65d748-9bbc-477b-a178-89547b2d6511": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "You step into a vaulted circular chamber. In its center stand five stone pedestals, each bearing a crystalline brazier glowing faintly in brown, blue, red, white, or purple. Above you, the ceiling is carved with five interlocking rings and swirling patterns; around you, ancient Rokugani inscriptions whisper of harmony. The air hums with latent power. What will you do?",
+              "textFormat": "description"
+            }
+          ]
+        }
+      ],
+      "parentId": "e6609856-d147-49f6-ae2a-d1b57738574f",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "dc65d748-9bbc-477b-a178-89547b2d6511"
+    },
+    "3f58b2db-bead-4fcb-82fe-a37b4feac3be": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Description",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "e6609856-d147-49f6-ae2a-d1b57738574f",
+      "id": "3f58b2db-bead-4fcb-82fe-a37b4feac3be"
+    },
+    "b6cdef46-52f8-4441-a508-444e7cdc23fa": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "(DM-only) Deep in the foothills of Mount Yatsu-no-Kami lies an ancient shrine dedicated to the Five Celestial Kami. The circular inner sanctum houses five crystalline braziers set atop matching pedestals, each tinted to represent one of the Five Elements: Earth (brown), Water (blue), Fire (red), Wind (white), and Void (purple). Around the chamber’s rim are bas-relief carvings illustrating a swirling cosmic pattern, and interspersed kanji inscriptions in classical Rokugani speak of balance and transition. When properly aligned, the braziers will flare in sequence and unlock a hidden alcove revealing a +1 katana carved with the Kami’s symbols and granting its wielder the Blessing of Harmonious Spirit: advantage on saves against being frightened for 24 hours. Failure risks a spiritual backlash that lashes out with forceful energy.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "e6609856-d147-49f6-ae2a-d1b57738574f",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "b6cdef46-52f8-4441-a508-444e7cdc23fa"
+    },
+    "85ac359d-a3d2-4014-9e65-7b63d478efd4": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Hints",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "e6609856-d147-49f6-ae2a-d1b57738574f",
+      "id": "85ac359d-a3d2-4014-9e65-7b63d478efd4"
+    },
+    "abfe2a85-28a9-4454-9417-ac695cd12478": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "numbered-list",
+          "children": [
+            {
+              "type": "list-item",
+              "children": [
+                {
+                  "text": "(DC 16 Intelligence [History]) The inscriptions reference the classical Five Elements in the order of natural cycles: “From stone to stream, flame to breeze, and beyond.”",
+                  "textFormat": "paragraph"
+                }
+              ]
+            },
+            {
+              "type": "list-item",
+              "children": [
+                {
+                  "text": "(DC 15 Wisdom [Perception]) Subtle heat and cold pulses emanate from the braziers in a repeating rhythm—you might follow that rhythm.",
+                  "textFormat": "paragraph"
+                }
+              ]
+            },
+            {
+              "type": "list-item",
+              "children": [
+                {
+                  "text": "(DC 17 Intelligence [Investigation]) The swirling pattern above seems to trace an imaginary line grazing each brazier in a distinct order.",
+                  "textFormat": "paragraph"
+                }
+              ]
+            },
+            {
+              "type": "list-item",
+              "children": [
+                {
+                  "text": "(DC 18 Charisma [Persuasion] with Lore: Shrines) A soft voice echoes: “Complete the cycle, end with the void, and harmony is revealed.”",
+                  "textFormat": "paragraph"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "parentId": "e6609856-d147-49f6-ae2a-d1b57738574f",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "abfe2a85-28a9-4454-9417-ac695cd12478"
+    },
+    "f96428cb-0ac9-4163-bc27-fa472fa68e33": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Solution",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "e6609856-d147-49f6-ae2a-d1b57738574f",
+      "id": "f96428cb-0ac9-4163-bc27-fa472fa68e33"
+    },
+    "3c8d5e91-8e21-4325-a0f6-31dd03965272": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "numbered-list",
+          "children": [
+            {
+              "type": "list-item",
+              "children": [
+                {
+                  "text": "Examine the inscriptions (DC 18 Intelligence [History] or Wisdom [Insight]) to identify that the order of transition follows the Five Elements: Earth → Water → Fire → Wind → Void.",
+                  "textFormat": "paragraph"
+                }
+              ]
+            },
+            {
+              "type": "list-item",
+              "children": [
+                {
+                  "text": "Observe the braziers’ flicker patterns (DC 16 Wisdom [Perception]); note a brief pulse radiating outward from the center toward each brazier in the correct elemental sequence.",
+                  "textFormat": "paragraph"
+                }
+              ]
+            },
+            {
+              "type": "list-item",
+              "children": [
+                {
+                  "text": "Approach the pedestals and press the braziers in the discovered order: first Earth (brown), then Water (blue), Fire (red), Wind (white), and finally Void (purple).",
+                  "textFormat": "paragraph"
+                }
+              ]
+            },
+            {
+              "type": "list-item",
+              "children": [
+                {
+                  "text": "Upon pressing the Void brazier last, recite aloud the final phrase inscribed above the doorway: “In emptiness, all truths converge.”",
+                  "textFormat": "paragraph"
+                }
+              ]
+            },
+            {
+              "type": "list-item",
+              "children": [
+                {
+                  "text": "The braziers blaze in turn, the floor rumbles, and a hidden compartment slides open to reveal the enchanted katana and bestow the Blessing of Harmonious Spirit.",
+                  "textFormat": "paragraph"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "parentId": "e6609856-d147-49f6-ae2a-d1b57738574f",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "3c8d5e91-8e21-4325-a0f6-31dd03965272"
+    },
+    "a143ee97-f9bb-48f6-8dc8-944d67c84438": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Failure Consequence",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "e6609856-d147-49f6-ae2a-d1b57738574f",
+      "id": "a143ee97-f9bb-48f6-8dc8-944d67c84438"
+    },
+    "93204cab-974b-46d9-8367-8539dbe79e15": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "If the party triggers the mechanism incorrectly three times, a spiritual backlash erupts. Each creature in the chamber must make a DC 18 Constitution saving throw. On a failure, a wave of force slams into them for 8d6 force damage and knocks them prone; on a success, they take half damage and remain standing, though shaken. The backlash also summons a vengeful echo of the shrine’s guarding kami: treat it as a Wraith (Monster Manual, page 302) that will attack until destroyed or banished.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "e6609856-d147-49f6-ae2a-d1b57738574f",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "93204cab-974b-46d9-8367-8539dbe79e15"
+    }
+  }
+}

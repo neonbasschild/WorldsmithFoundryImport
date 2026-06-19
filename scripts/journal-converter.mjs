@@ -134,7 +134,11 @@ export function convertWorldsmithQuest(data) {
   addPage("Overview", overviewParts.join(""));
 
   if (quest.hook) {
-    const hookTitle = quest.documentKind === "session" ? "Key Details" : "Adventure Hook";
+    const hookTitle = quest.documentKind === "session"
+      ? "Key Details"
+      : quest.documentKind === "puzzle"
+        ? "Intro Text"
+        : "Adventure Hook";
     addPage(hookTitle, textToHTML(quest.hook));
   }
 
