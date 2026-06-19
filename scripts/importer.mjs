@@ -162,7 +162,18 @@ export async function createJournalFromWorldsmith(data, { folderId = null, rende
 
   const journal = await JournalEntry.create(journalData, { renderSheet });
   for (const warning of warnings) console.warn(`${MODULE_ID} | ${journalData.name}: ${warning}`);
-  return { actors: [], items: [], journals: journal ? [journal] : [] };
+
+  const actors = [];
+  const actorFolder = resolveFolder(folderId, "Actor");
+  for (const actorSource of data.actors ?? []) {
+    const { actorData, warnings: actorWarnings } = convertWorldsmith(actorSource);
+    if (actorFolder) actorData.folder = actorFolder;
+    const actor = await Actor.create(actorData);
+    if (actor) actors.push(actor);
+    for (const warning of actorWarnings) console.warn(`${MODULE_ID} | ${actorData.name}: ${warning}`);
+  }
+
+  return { actors, items: [], journals: journal ? [journal] : [] };
 }
 
 /**

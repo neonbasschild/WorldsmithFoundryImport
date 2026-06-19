@@ -501,7 +501,16 @@ function activitiesOf(item) {
 {
   console.log("Structured quest (Whispers of the Kitsune)");
   const raw = loadStructured("Whispers_of_the_Kitsune_acff.json");
-  const { journalData } = convertWorldsmithQuest(normalizeWorldsmithData(raw));
+  const normalized = normalizeWorldsmithData(raw);
+  assert(Array.isArray(normalized.actors), "quest has actors array");
+  assert(normalized.actors.length === 2, "quest extracts ally and enemy actors");
+  assert(normalized.actors.some(a => a.identity?.name === "Shinobu, Shrine Courier"), "quest ally actor extracted");
+  assert(normalized.actors.some(a => a.identity?.name === "Lion Clan Constable"), "quest enemy actor extracted");
+  for (const actorSource of normalized.actors) {
+    const { actorData } = convertWorldsmith(actorSource);
+    assert(actorData.system.attributes.hp.max > 0, `actor ${actorData.name} has HP`);
+  }
+  const { journalData } = convertWorldsmithQuest(normalized);
   assert(journalData.name === "Whispers of the Kitsune", "quest name");
   assert(journalData.pages.some(p => p.name === "Objectives"), "quest objectives page");
   assert(journalData.pages.some(p => p.name === "Rewards"), "quest rewards page");

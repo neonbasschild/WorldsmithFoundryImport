@@ -77,8 +77,8 @@ function parseStructuredExport(data) {
   if (contentType === "feat") return normalizeFeat(root, walk);
   if (contentType === "spell") return normalizeSpell(root, walk);
   if (contentType === "magicitem") return normalizeItem(root, walk);
-  if (contentType === "quest") return normalizeQuest(root, walk);
-  if (contentType === "story") return normalizeStory(root, walk);
+  if (contentType === "quest") return normalizeQuest(root, walk, data.items);
+  if (contentType === "story") return normalizeStory(root, walk, data.items);
   if (contentType === "shop") return normalizeShop(root, walk, data.items);
   if (contentType === "treasure") return normalizeTreasure(root, walk, data.items);
   if (CREATURE_CONTENT_TYPES.has(contentType)) return normalizeCreature(root, walk);
@@ -784,9 +784,10 @@ function mapItemCategory(typeText) {
 /**
  * @param {object} root
  * @param {object} walk
+ * @param {Record<string, object>} items
  * @returns {object}
  */
-function normalizeQuest(root, walk) {
+function normalizeQuest(root, walk, items) {
   const quest = {
     name: root.name,
     subtitle: walk.subtitle ?? "",
@@ -794,7 +795,8 @@ function normalizeQuest(root, walk) {
     hook: joinBlocks(walk.sections.Hook, root.name),
     objectives: parseObjectiveList(walk.sections.Objectives, root.name),
     rewards: parseRewardTables(walk.sections.Rewards, root.name),
-    resolution: joinBlocks(walk.sections.Resolution, root.name)
+    resolution: joinBlocks(walk.sections.Resolution, root.name),
+    actors: collectNestedCreatures(root, items)
   };
   return quest;
 }
@@ -802,10 +804,11 @@ function normalizeQuest(root, walk) {
 /**
  * @param {object} root
  * @param {object} walk
+ * @param {Record<string, object>} items
  * @returns {object}
  */
-function normalizeStory(root, walk) {
-  const quest = normalizeQuest(root, walk);
+function normalizeStory(root, walk, items) {
+  const quest = normalizeQuest(root, walk, items);
   quest.subtitle = walk.subtitle ?? quest.subtitle;
 
   const overviewParts = [];
@@ -1008,6 +1011,105 @@ function parseInventoryTables(blocks, name) {
     }
   }
   return entries;
+}
+
+/**
+ * @param {object} walk
+ * @param {object} section
+ * @returns {boolean}
+ */
+function isCreatureWalk(walk, section) {
+  const type = String(section.content_type ?? "").toLowerCase();
+  if (CREATURE_CONTENT_TYPES.has(type)) return true;
+  return Boolean(
+    walk.statLine
+    || walk.labeledFields["hit points"]
+    || walk.labeledFields["armor class"]
+  );
+}
+
+/**
+ * @param {object} section
+ * @param {Record<string, object>} items
+ * @returns {object|null}
+ */
+function findCreatureSection(section, items) {
+  const typed = resolveContentSection(section, items);
+  if (typed && typed.id !== section.id) return typed;
+
+  for (const childId of section.childrenIds ?? []) {
+    const child = items[childId];
+    if (child?.type !== "section") continue;
+    const found = findCreatureSection(child, items);
+    if (found) return found;
+  }
+
+  const walk = walkSection(section, items, section.name);
+  if (isCreatureWalk(walk, section)) return section;
+  return null;
+}
+
+/**
+ * @param {string} ancestorId
+ * @param {object} section
+ * @param {Record<string, object>} items
+ * @returns {boolean}
+ */
+function isDescendantOf(ancestorId, section, items) {
+  let current = section;
+  while (current?.parentId) {
+    if (current.parentId === ancestorId) return true;
+    current = items[current.parentId];
+  }
+  return false;
+}
+
+/**
+ * Collect NPC/monster stat blocks embedded anywhere in a quest or story.
+ * @param {object} root
+ * @param {Record<string, object>} items
+ * @returns {object[]}
+ */
+function collectNestedCreatures(root, items) {
+  const allSections = collectAllSections(root, items);
+  const byId = new Map();
+
+  for (const section of allSections) {
+    const creatureSection = findCreatureSection(section, items);
+    if (creatureSection) byId.set(creatureSection.id, creatureSection);
+  }
+
+  const unique = [...byId.values()].filter(outer =>
+    ![...byId.values()].some(inner =>
+      inner.id !== outer.id && isDescendantOf(outer.id, inner, items)
+    )
+  );
+
+  const seenNames = new Set();
+  const creatures = [];
+  for (const section of unique) {
+    const name = section.name?.trim();
+    if (!name || seenNames.has(name)) continue;
+    seenNames.add(name);
+    creatures.push(normalizeCreature(section, walkSection(section, items, section.name)));
+  }
+  return creatures;
+}
+
+/**
+ * @param {object} section
+ * @param {Record<string, object>} items
+ * @param {object[]} [list]
+ * @returns {object[]}
+ */
+function collectAllSections(section, items, list = []) {
+  for (const childId of section.childrenIds ?? []) {
+    const child = items[childId];
+    if (child?.type !== "section") continue;
+    list.push(child);
+    collectAllSections(child, items, list);
+  }
+  return list;
 }
 
 /**
