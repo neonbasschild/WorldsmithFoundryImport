@@ -31,6 +31,10 @@ const STORY_OVERVIEW_SECTIONS = new Set([
   "pitch", "premise", "synopsis", "overview", "gm overview", "summary"
 ]);
 
+const ITEM_CONTENT_TYPES = new Set(["magicitem", "item"]);
+
+const ENCOUNTER_CONTENT_TYPES = new Set(["encounter", "trap", "puzzle"]);
+
 /**
  * @param {object} data
  * @returns {boolean}
@@ -79,6 +83,7 @@ function parseStructuredExport(data) {
   if (contentType === "magicitem") return normalizeItem(root, walk);
   if (contentType === "quest") return normalizeQuest(root, walk, data.items);
   if (contentType === "story") return normalizeStory(root, walk, data.items);
+  if (contentType === "session") return normalizeSession(root, walk, data.items);
   if (contentType === "shop") return normalizeShop(root, walk, data.items);
   if (contentType === "treasure") return normalizeTreasure(root, walk, data.items);
   if (CREATURE_CONTENT_TYPES.has(contentType)) return normalizeCreature(root, walk);
@@ -791,14 +796,14 @@ function normalizeQuest(root, walk, items) {
   const quest = {
     name: root.name,
     subtitle: walk.subtitle ?? "",
+    documentKind: "quest",
     gm_overview: joinBlocks(walk.sections["GM Overview"], root.name),
     hook: joinBlocks(walk.sections.Hook, root.name),
     objectives: parseObjectiveList(walk.sections.Objectives, root.name),
     rewards: parseRewardTables(walk.sections.Rewards, root.name),
-    resolution: joinBlocks(walk.sections.Resolution, root.name),
-    actors: collectNestedCreatures(root, items)
+    resolution: joinBlocks(walk.sections.Resolution, root.name)
   };
-  return quest;
+  return attachEmbeddedContent(quest, root, items);
 }
 
 /**
@@ -808,8 +813,17 @@ function normalizeQuest(root, walk, items) {
  * @returns {object}
  */
 function normalizeStory(root, walk, items) {
-  const quest = normalizeQuest(root, walk, items);
-  quest.subtitle = walk.subtitle ?? quest.subtitle;
+  const quest = {
+    name: root.name,
+    subtitle: walk.subtitle ?? "",
+    documentKind: "story",
+    gm_overview: joinBlocks(walk.sections["GM Overview"], root.name),
+    hook: joinBlocks(walk.sections.Hook, root.name),
+    objectives: parseObjectiveList(walk.sections.Objectives, root.name),
+    rewards: parseRewardTables(walk.sections.Rewards, root.name),
+    resolution: joinBlocks(walk.sections.Resolution, root.name),
+    sections: []
+  };
 
   const overviewParts = [];
   for (const [header, blocks] of Object.entries(walk.sections)) {
@@ -820,7 +834,6 @@ function normalizeStory(root, walk, items) {
   }
   if (overviewParts.length) quest.gm_overview = overviewParts.join("\n\n");
 
-  quest.sections = [];
   for (const [header, blocks] of Object.entries(walk.sections)) {
     const lower = header.toLowerCase();
     if (QUEST_SECTION_ALIASES[lower]) continue;
@@ -829,7 +842,53 @@ function normalizeStory(root, walk, items) {
     if (content) quest.sections.push({ name: header, content });
   }
 
-  return quest;
+  return attachEmbeddedContent(quest, root, items);
+}
+
+/**
+ * @param {object} root
+ * @param {object} walk
+ * @param {Record<string, object>} items
+ * @returns {object}
+ */
+function normalizeSession(root, walk, items) {
+  const session = {
+    name: root.name,
+    subtitle: walk.subtitle ?? "",
+    documentKind: "session",
+    gm_overview: joinBlocks(walk.sections.Description, root.name),
+    hook: joinBlocks(walk.sections["Key Details"], root.name),
+    objectives: parseObjectiveList(walk.sections.Objectives, root.name),
+    sections: collectEncounterSections(root, items)
+  };
+  return attachEmbeddedContent(session, root, items);
+}
+
+/**
+ * @param {object} target
+ * @param {object} root
+ * @param {Record<string, object>} items
+ * @returns {object}
+ */
+function attachEmbeddedContent(target, root, items) {
+  const embedded = collectNestedContent(root, items);
+  target.actors = embedded.actors;
+  target.items = embedded.items;
+  target.treasures = embedded.treasures;
+  return target;
+}
+
+/**
+ * @param {object} root
+ * @param {Record<string, object>} items
+ * @returns {{actors: object[], items: object[], treasures: object[]}}
+ */
+function collectNestedContent(root, items) {
+  return {
+    actors: collectNestedCreatures(root, items),
+    items: collectNestedItems(root, items),
+    treasures: collectNestedTreasures(root, items)
+  };
 }
 
 /**
@@ -840,21 +899,55 @@ function normalizeStory(root, walk, items) {
 function parseObjectiveList(blocks, name) {
   const objectives = [];
   for (const block of blocks ?? []) {
-    const labeled = block.labeled ?? parseLabeledBlock(block.node, name);
-    if (labeled._list) {
-      for (const task of labeled._list) objectives.push({ task });
-      continue;
-    }
+    let parsedFromList = false;
     for (const para of block.node?.content ?? []) {
       if (para.type === "numbered-list" || para.type === "bulleted-list") {
+        parsedFromList = true;
         for (const item of para.children ?? []) {
-          const task = extractText(item, name).trim();
-          if (task) objectives.push({ task });
+          const parsed = parseObjectiveListItem(item, name);
+          if (parsed) objectives.push(parsed);
         }
       }
     }
+    if (parsedFromList) continue;
+
+    const labeled = block.labeled ?? parseLabeledBlock(block.node, name);
+    if (labeled._list) {
+      for (const task of labeled._list) objectives.push({ task });
+    }
   }
   return objectives;
+}
+
+/**
+ * @param {object} listItem
+ * @param {string} name
+ * @returns {{task: string, quote?: string}|null}
+ */
+function parseObjectiveListItem(listItem, name) {
+  const children = listItem.children ?? [];
+  if (!children.length) return null;
+
+  let task = "";
+  let quote = "";
+  for (const child of children) {
+    if (child.type === "paragraph") {
+      for (const span of child.children ?? []) {
+        const text = extractText(span, name).trim();
+        if (!text) continue;
+        const isQuote = span.textFormat === "description" || /^[“"']/.test(text);
+        if (isQuote) quote = text.replace(/^[“"']|[”"']$/g, "");
+        else if (!task) task = text;
+      }
+      continue;
+    }
+    const text = extractText(child, name).trim();
+    if (text && !task) task = text;
+  }
+
+  if (!task) task = extractText(listItem, name).trim();
+  if (!task) return null;
+  return quote ? { task, quote } : { task };
 }
 
 /**
@@ -1020,6 +1113,7 @@ function parseInventoryTables(blocks, name) {
  */
 function isCreatureWalk(walk, section) {
   const type = String(section.content_type ?? "").toLowerCase();
+  if (ENCOUNTER_CONTENT_TYPES.has(type)) return false;
   if (CREATURE_CONTENT_TYPES.has(type)) return true;
   return Boolean(
     walk.statLine
@@ -1035,7 +1129,10 @@ function isCreatureWalk(walk, section) {
  */
 function findCreatureSection(section, items) {
   const typed = resolveContentSection(section, items);
-  if (typed && typed.id !== section.id) return typed;
+  if (typed && typed.id !== section.id) {
+    const typedWalk = walkSection(typed, items, typed.name);
+    if (isCreatureWalk(typedWalk, typed)) return typed;
+  }
 
   for (const childId of section.childrenIds ?? []) {
     const child = items[childId];
@@ -1065,7 +1162,7 @@ function isDescendantOf(ancestorId, section, items) {
 }
 
 /**
- * Collect NPC/monster stat blocks embedded anywhere in a quest or story.
+ * Collect NPC/monster stat blocks embedded anywhere in a narrative document.
  * @param {object} root
  * @param {Record<string, object>} items
  * @returns {object[]}
@@ -1094,6 +1191,204 @@ function collectNestedCreatures(root, items) {
     creatures.push(normalizeCreature(section, walkSection(section, items, section.name)));
   }
   return creatures;
+}
+
+/**
+ * @param {object} section
+ * @param {Record<string, object>} items
+ * @returns {object|null}
+ */
+function findItemSection(section, items) {
+  const type = String(section.content_type ?? "").toLowerCase();
+  if (ITEM_CONTENT_TYPES.has(type)) {
+    const typed = resolveContentSection(section, items);
+    return typed ?? section;
+  }
+
+  for (const childId of section.childrenIds ?? []) {
+    const child = items[childId];
+    if (child?.type !== "section") continue;
+    const found = findItemSection(child, items);
+    if (found) return found;
+  }
+
+  if (hasItemStatLine(section, items)) return section;
+  return null;
+}
+
+/**
+ * @param {object} section
+ * @param {Record<string, object>} items
+ * @returns {object|null}
+ */
+function findTreasureSection(section, items) {
+  if (String(section.content_type ?? "").toLowerCase() === "treasure") {
+    const typed = resolveContentSection(section, items);
+    return typed ?? section;
+  }
+
+  for (const childId of section.childrenIds ?? []) {
+    const child = items[childId];
+    if (child?.type !== "section") continue;
+    const found = findTreasureSection(child, items);
+    if (found) return found;
+  }
+  return null;
+}
+
+/**
+ * @param {object} section
+ * @param {Record<string, object>} items
+ * @returns {boolean}
+ */
+function isInsideCreatureSection(section, items) {
+  let current = section;
+  while (current?.parentId) {
+    const parent = items[current.parentId];
+    if (!parent) break;
+    if (parent.type === "section") {
+      const type = String(parent.content_type ?? "").toLowerCase();
+      if (CREATURE_CONTENT_TYPES.has(type)) return true;
+      const walk = walkSection(parent, items, parent.name);
+      if (isCreatureWalk(walk, parent)) return true;
+    }
+    current = parent;
+  }
+  return false;
+}
+
+/**
+ * @param {string} description
+ * @returns {string|number}
+ */
+function parseLootValue(description) {
+  const match = String(description ?? "").match(/([\d,]+)\s*(pp|gp|ep|sp|cp)\b/i);
+  if (!match) return "";
+  return `${match[1]} ${match[2].toLowerCase()}`;
+}
+
+/**
+ * Collect magic items and standalone loot entries from narrative documents.
+ * @param {object} root
+ * @param {Record<string, object>} items
+ * @returns {object[]}
+ */
+function collectNestedItems(root, items) {
+  const allSections = collectAllSections(root, items);
+  const byId = new Map();
+  const seenNames = new Set();
+
+  for (const section of allSections) {
+    const itemSection = findItemSection(section, items);
+    if (itemSection) byId.set(itemSection.id, itemSection);
+  }
+
+  const unique = [...byId.values()].filter(outer =>
+    ![...byId.values()].some(inner =>
+      inner.id !== outer.id && isDescendantOf(outer.id, inner, items)
+    )
+  );
+
+  const collected = [];
+  for (const section of unique) {
+    const name = section.name?.trim();
+    if (!name || seenNames.has(name)) continue;
+    seenNames.add(name);
+    collected.push(normalizeItem(section, walkSection(section, items, section.name)));
+  }
+
+  for (const section of allSections) {
+    if (isInsideCreatureSection(section, items)) continue;
+    const walk = walkSection(section, items, section.name);
+    for (const block of walk.sections.Loot ?? []) {
+      for (const entry of parseNamedEntries([block], section.name)) {
+        const name = entry.name?.trim();
+        if (!name || seenNames.has(name)) continue;
+        seenNames.add(name);
+        collected.push({
+          name,
+          category: "Wondrous Item",
+          description: entry.description,
+          value: parseLootValue(entry.description)
+        });
+      }
+    }
+  }
+
+  return collected;
+}
+
+/**
+ * Collect treasure pile sections embedded in narrative documents.
+ * @param {object} root
+ * @param {Record<string, object>} items
+ * @returns {object[]}
+ */
+function collectNestedTreasures(root, items) {
+  const allSections = collectAllSections(root, items);
+  const byId = new Map();
+
+  for (const section of allSections) {
+    const treasureSection = findTreasureSection(section, items);
+    if (treasureSection) byId.set(treasureSection.id, treasureSection);
+  }
+
+  const unique = [...byId.values()].filter(outer =>
+    ![...byId.values()].some(inner =>
+      inner.id !== outer.id && isDescendantOf(outer.id, inner, items)
+    )
+  );
+
+  const seenNames = new Set();
+  const treasures = [];
+  for (const section of unique) {
+    const name = section.name?.trim();
+    if (!name || seenNames.has(name)) continue;
+    seenNames.add(name);
+    treasures.push(normalizeTreasure(section, walkSection(section, items, section.name), items));
+  }
+  return treasures;
+}
+
+/**
+ * Build journal section summaries for encounters, traps, and puzzles.
+ * @param {object} root
+ * @param {Record<string, object>} items
+ * @returns {Array<{name: string, content: string}>}
+ */
+function collectEncounterSections(root, items) {
+  const sections = [];
+  const seen = new Set();
+
+  for (const section of collectAllSections(root, items)) {
+    const type = String(section.content_type ?? "").toLowerCase();
+    if (!ENCOUNTER_CONTENT_TYPES.has(type)) continue;
+
+    const name = section.name?.trim();
+    if (!name || seen.has(name)) continue;
+    seen.add(name);
+
+    const walk = walkSection(section, items, name);
+    const content = buildEncounterContent(walk, name);
+    if (content) sections.push({ name, content });
+  }
+  return sections;
+}
+
+/**
+ * @param {object} walk
+ * @param {string} name
+ * @returns {string}
+ */
+function buildEncounterContent(walk, name) {
+  const parts = [];
+  if (walk.subtitle) parts.push(walk.subtitle);
+  for (const [header, blocks] of Object.entries(walk.sections)) {
+    if (header === "Loot") continue;
+    const text = joinBlocks(blocks, name);
+    if (text) parts.push(`${header}\n\n${text}`);
+  }
+  return parts.join("\n\n");
 }
 
 /**

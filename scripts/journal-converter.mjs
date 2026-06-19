@@ -104,7 +104,10 @@ export function convertWorldsmithQuest(data) {
   if (quest.gm_overview) overviewParts.push(textToHTML(quest.gm_overview));
   addPage("Overview", overviewParts.join(""));
 
-  if (quest.hook) addPage("Adventure Hook", textToHTML(quest.hook));
+  if (quest.hook) {
+    const hookTitle = quest.documentKind === "session" ? "Key Details" : "Adventure Hook";
+    addPage(hookTitle, textToHTML(quest.hook));
+  }
 
   if (Array.isArray(quest.objectives) && quest.objectives.length) {
     addPage("Objectives", renderObjectives(quest.objectives));
@@ -133,7 +136,7 @@ export function convertWorldsmithQuest(data) {
     flags: {
       [MODULE_ID]: {
         imported: true,
-        kind: "quest",
+        kind: quest.documentKind ?? "quest",
         version: MODULE_VERSION,
         source: data
       }

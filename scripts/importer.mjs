@@ -173,7 +173,25 @@ export async function createJournalFromWorldsmith(data, { folderId = null, rende
     for (const warning of actorWarnings) console.warn(`${MODULE_ID} | ${actorData.name}: ${warning}`);
   }
 
-  return { actors, items: [], journals: journal ? [journal] : [] };
+  for (const treasureSource of data.treasures ?? []) {
+    const { pile, warnings: pileWarnings } = convertWorldsmithTreasure(treasureSource);
+    if (actorFolder) pile.folder = actorFolder;
+    const pileActor = await Actor.create(pile);
+    if (pileActor) actors.push(pileActor);
+    for (const warning of pileWarnings) console.warn(`${MODULE_ID} | ${pile.name}: ${warning}`);
+  }
+
+  const items = [];
+  const itemFolder = resolveFolder(folderId, "Item");
+  for (const itemSource of data.items ?? []) {
+    const { itemData, warnings: itemWarnings } = convertWorldsmithItem(itemSource);
+    if (itemFolder) itemData.folder = itemFolder;
+    const item = await Item.create(itemData);
+    if (item) items.push(item);
+    for (const warning of itemWarnings) console.warn(`${MODULE_ID} | ${itemData.name}: ${warning}`);
+  }
+
+  return { actors, items, journals: journal ? [journal] : [] };
 }
 
 /**
@@ -186,6 +204,7 @@ export async function createFromWorldsmith(data, options = {}) {
   const type = detectWorldsmithType(data);
   if (type === "shop") return createShopFromWorldsmith(data, options);
   if (type === "treasure") return createTreasureFromWorldsmith(data, options);
+  if (type === "session") return createJournalFromWorldsmith(data, options);
   if (type === "quest") return createJournalFromWorldsmith(data, options);
   if (type === "spell") {
     const spell = await createSpellFromWorldsmith(data, options);

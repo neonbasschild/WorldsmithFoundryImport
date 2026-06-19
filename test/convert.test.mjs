@@ -506,6 +506,7 @@ function activitiesOf(item) {
   assert(normalized.actors.length === 2, "quest extracts ally and enemy actors");
   assert(normalized.actors.some(a => a.identity?.name === "Shinobu, Shrine Courier"), "quest ally actor extracted");
   assert(normalized.actors.some(a => a.identity?.name === "Lion Clan Constable"), "quest enemy actor extracted");
+  assert(normalized.items.some(i => i.name === "Shrine Token"), "quest inline loot item extracted");
   for (const actorSource of normalized.actors) {
     const { actorData } = convertWorldsmith(actorSource);
     assert(actorData.system.attributes.hp.max > 0, `actor ${actorData.name} has HP`);
@@ -531,6 +532,25 @@ function activitiesOf(item) {
   assert(actorData.name === "Prince Seppun Genji", "npc name");
   assert(actorData.system.abilities.dex.value === 16, "npc DEX parsed");
   assert(findItem(actorData.items, "Rapier"), "npc rapier action imported");
+}
+
+{
+  console.log("Structured session (Shadows over Tsuma)");
+  const raw = loadStructured("Shadows_over_Tsuma-session_f275.json");
+  const normalized = normalizeWorldsmithData(raw);
+  assert(detectWorldsmithType(normalized) === "session", "session type detected");
+  assert(normalized.documentKind === "session", "session document kind");
+  assert(normalized.actors.length === 4, "session extracts four creature actors");
+  assert(normalized.actors.some(a => a.identity?.name === "Shizuko Nariko"), "session NPC extracted");
+  assert(normalized.actors.some(a => a.identity?.name === "Masked Oni Sorcerer"), "session monster extracted");
+  assert(normalized.items.length === 3, "session extracts three loot items");
+  assert(normalized.items.some(i => i.name === "Jade Amulet of Insight"), "session loot item extracted");
+  assert(normalized.sections.length >= 5, "session encounter pages collected");
+  assert(normalized.objectives.some(o => o.quote), "session objective quotes parsed");
+  const { journalData } = convertWorldsmithQuest(normalized);
+  assert(journalData.flags["worldsmith-foundry-import"].kind === "session", "session journal kind");
+  assert(journalData.pages.some(p => p.name === "Key Details"), "session key details page");
+  assert(journalData.pages.some(p => p.name === "Scene 1: The Magistrate's Call"), "session scene page");
 }
 
 console.log(`\n${passed} passed, ${failed} failed`);

@@ -7,10 +7,12 @@
  * Determine whether a parsed Worldsmith export describes a shop, treasure,
  * quest, spell, feat, creature, or item.
  * @param {object} data
- * @returns {"shop"|"treasure"|"quest"|"spell"|"feat"|"creature"|"item"}
+ * @returns {"shop"|"treasure"|"quest"|"session"|"spell"|"feat"|"creature"|"item"}
  */
 export function detectWorldsmithType(data) {
   if (!data || typeof data !== "object") return "creature";
+
+  if (data.documentKind === "session") return "session";
 
   // Shops carry inventory/services/owners collections.
   if (
