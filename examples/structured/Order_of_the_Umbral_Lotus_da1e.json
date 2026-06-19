@@ -1,0 +1,1691 @@
+{
+  "rootId": "091fe407-27f9-4f2d-82cc-cfc3b5c7a2a4",
+  "items": {
+    "091fe407-27f9-4f2d-82cc-cfc3b5c7a2a4": {
+      "model_type": "structured",
+      "content_type": "group",
+      "type": "section",
+      "name": "Order of the Umbral Lotus",
+      "childrenIds": [
+        "cf91b3c7-833c-40d2-807d-0085a8fe3753",
+        "7c5989b0-f334-432c-999d-f1dfda69c7bb",
+        "7f9ecb5d-7b69-4039-8331-e1a8e6738444",
+        "3dc88749-f8c3-44c4-ba35-1422c56a3258",
+        "dcb7aa88-47f2-4580-b892-887238b9185f",
+        "39b2aa8e-4313-4d08-abf3-25f2160c2faa",
+        "247475d5-f838-4d24-a88d-3501a6c6962b",
+        "c5b8a1ee-118f-46eb-92fa-7664445b6a4e",
+        "017985e6-21ff-4521-a9d9-431954fd1ec9",
+        "5e255616-a270-4d8b-8417-1af9c66b3d03",
+        "e170bb87-4ac2-4aa1-9008-51c0167d8ed9",
+        "71f3cc26-43ec-4588-8b67-e0bf91dd5ea1",
+        "adf2b060-551b-4913-9298-be40857ea055",
+        "09a0bab1-2f43-4772-98af-ba602c30c958",
+        "c4aec9e2-9e10-4a4b-a306-53d7bf401452",
+        "55b89b6c-529a-4885-b8bb-b390082e9d81",
+        "fdaf34e5-7454-418b-b019-4149f374d10f",
+        "c6b9a4c6-6443-4ff0-a7e7-8af5f2214b30",
+        "f0041373-c24f-48af-a043-18f14b594869",
+        "2f6752cb-d2a7-493c-b190-cc798ee7ee43",
+        "97fe2141-a33b-40bb-86ff-958f0d809507",
+        "0e10febf-9c74-49d9-88e7-ffc3b88bb11f",
+        "d16f56b0-795b-49c8-9f8a-6d43c29bd0a3",
+        "104efb71-a3bb-4343-ab49-74de6d94147f",
+        "18eacb42-3cfa-45b6-a5b7-5a3354d26237",
+        "4aa83bfd-9f8f-4e6b-affa-d3968f3ab388",
+        "a0ba7f64-eca0-41f9-ba5b-f1d925c94d2c",
+        "a8c71108-937a-4f61-aeea-6d650f51841b"
+      ],
+      "parentId": null,
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Order of the Umbral Lotus",
+                "textFormat": "h1"
+              }
+            ]
+          }
+        ],
+        "showTitle": true,
+        "styles": {
+          "borderBottom": "1px solid #882619"
+        }
+      },
+      "id": "091fe407-27f9-4f2d-82cc-cfc3b5c7a2a4",
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none"
+        },
+        "collapsible": false,
+        "isCollapsed": false,
+        "alternatingCollapsedBackground": "white"
+      }
+    },
+    "cf91b3c7-833c-40d2-807d-0085a8fe3753": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Keepers of the Hidden Bloom",
+              "textFormat": "h4"
+            }
+          ]
+        }
+      ],
+      "parentId": "091fe407-27f9-4f2d-82cc-cfc3b5c7a2a4",
+      "id": "cf91b3c7-833c-40d2-807d-0085a8fe3753"
+    },
+    "7c5989b0-f334-432c-999d-f1dfda69c7bb": {
+      "type": "line",
+      "parentId": "091fe407-27f9-4f2d-82cc-cfc3b5c7a2a4",
+      "styles": {
+        "background": "linear-gradient(to right, #9D2A1F, transparent)",
+        "border": "none",
+        "height": "4px",
+        "width": "100%"
+      },
+      "id": "7c5989b0-f334-432c-999d-f1dfda69c7bb",
+      "customStyles": {
+        "default": {
+          "background": "linear-gradient(to right, #9D2A1F, transparent)",
+          "border": "none",
+          "height": "4px",
+          "width": "100%"
+        }
+      }
+    },
+    "7f9ecb5d-7b69-4039-8331-e1a8e6738444": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Overview",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "091fe407-27f9-4f2d-82cc-cfc3b5c7a2a4",
+      "id": "7f9ecb5d-7b69-4039-8331-e1a8e6738444"
+    },
+    "3dc88749-f8c3-44c4-ba35-1422c56a3258": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "An ancient, clandestine brotherhood said to predate the earliest empires, the ",
+              "textFormat": "description"
+            },
+            {
+              "text": "{{Order_of_the_Umbral_Lotus}}",
+              "variable": true,
+              "textFormat": "description"
+            },
+            {
+              "text": " safeguards forbidden knowledge and ancient rituals. Rumored to wield the power of shadow and petals, they manipulate court politics and whispers from the darkness, ensuring the balance of power remains hidden beneath layers of secrecy.",
+              "textFormat": "description"
+            }
+          ]
+        }
+      ],
+      "parentId": "091fe407-27f9-4f2d-82cc-cfc3b5c7a2a4",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "3dc88749-f8c3-44c4-ba35-1422c56a3258"
+    },
+    "dcb7aa88-47f2-4580-b892-887238b9185f": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Basic Information",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "091fe407-27f9-4f2d-82cc-cfc3b5c7a2a4",
+      "id": "dcb7aa88-47f2-4580-b892-887238b9185f"
+    },
+    "39b2aa8e-4313-4d08-abf3-25f2160c2faa": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Type: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Secret Society",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Alignment: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Lawful Neutral",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Influence: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "National. The Order’s agents sit in every major court and bureaucracy, steering policy through whispers, forged documents, and hidden threats. Even nobles unaware of its existence find their decisions shaped by invisible hands.",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Headquarters: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "The Jade Sanctum, a concealed labyrinth beneath the Imperial City’s Merchant Quarter shrine, accessible only through a hidden passage guarded by living ink seals.",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Methods: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Operating through a network of spies and assassins, the Order uses coded correspondence, subterfuge, and ritual magic to bend events to their will. They employ blackmail, subtle enchantment, and the occasional discreet elimination of threats.",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Allies: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Silver Scribes League, House Kage (clandestine cell)",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Rivals: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Crimson Sun Assembly, Imperial Vanguard",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Weaknesses: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Rigid adherence to ancient codes slows rapid response, Overreliance on secrecy makes them vulnerable to exposure, Fractures among council members over interpretation of the Old Rituals",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "091fe407-27f9-4f2d-82cc-cfc3b5c7a2a4",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "39b2aa8e-4313-4d08-abf3-25f2160c2faa"
+    },
+    "247475d5-f838-4d24-a88d-3501a6c6962b": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Goals",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "091fe407-27f9-4f2d-82cc-cfc3b5c7a2a4",
+      "id": "247475d5-f838-4d24-a88d-3501a6c6962b"
+    },
+    "c5b8a1ee-118f-46eb-92fa-7664445b6a4e": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "numbered-list",
+          "children": [
+            {
+              "type": "list-item",
+              "children": [
+                {
+                  "text": "Preserve and expand the Order’s archive of esoteric lore",
+                  "textFormat": "paragraph"
+                }
+              ]
+            },
+            {
+              "type": "list-item",
+              "children": [
+                {
+                  "text": "Maintain the balance of power by influencing imperial policy from the shadows",
+                  "textFormat": "paragraph"
+                }
+              ]
+            },
+            {
+              "type": "list-item",
+              "children": [
+                {
+                  "text": "Prevent outsiders from uncovering world-altering secrets",
+                  "textFormat": "paragraph"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "parentId": "091fe407-27f9-4f2d-82cc-cfc3b5c7a2a4",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "c5b8a1ee-118f-46eb-92fa-7664445b6a4e"
+    },
+    "017985e6-21ff-4521-a9d9-431954fd1ec9": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Resources",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "091fe407-27f9-4f2d-82cc-cfc3b5c7a2a4",
+      "id": "017985e6-21ff-4521-a9d9-431954fd1ec9"
+    },
+    "5e255616-a270-4d8b-8417-1af9c66b3d03": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "bulleted-list",
+          "children": [
+            {
+              "type": "list-item",
+              "children": [
+                {
+                  "text": "Hidden archives of forbidden lore",
+                  "textFormat": "paragraph"
+                }
+              ]
+            },
+            {
+              "type": "list-item",
+              "children": [
+                {
+                  "text": "Network of shadow agents and informants",
+                  "textFormat": "paragraph"
+                }
+              ]
+            },
+            {
+              "type": "list-item",
+              "children": [
+                {
+                  "text": "Encrypted jade tablets detailing arcane rituals",
+                  "textFormat": "paragraph"
+                }
+              ]
+            },
+            {
+              "type": "list-item",
+              "children": [
+                {
+                  "text": "Safehouses beneath major cities",
+                  "textFormat": "paragraph"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "parentId": "091fe407-27f9-4f2d-82cc-cfc3b5c7a2a4",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "5e255616-a270-4d8b-8417-1af9c66b3d03"
+    },
+    "e170bb87-4ac2-4aa1-9008-51c0167d8ed9": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Membership Requirements",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "091fe407-27f9-4f2d-82cc-cfc3b5c7a2a4",
+      "id": "e170bb87-4ac2-4aa1-9008-51c0167d8ed9"
+    },
+    "71f3cc26-43ec-4588-8b67-e0bf91dd5ea1": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "bulleted-list",
+          "children": [
+            {
+              "type": "list-item",
+              "children": [
+                {
+                  "text": "Possess an unquenchable thirst for forbidden knowledge",
+                  "textFormat": "paragraph"
+                }
+              ]
+            },
+            {
+              "type": "list-item",
+              "children": [
+                {
+                  "text": "Survive the Trial of Petals—spend a night alone in the Shadow Grove",
+                  "textFormat": "paragraph"
+                }
+              ]
+            },
+            {
+              "type": "list-item",
+              "children": [
+                {
+                  "text": "Swear an unbreakable oath of silence and eternal secrecy",
+                  "textFormat": "paragraph"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "parentId": "091fe407-27f9-4f2d-82cc-cfc3b5c7a2a4",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "71f3cc26-43ec-4588-8b67-e0bf91dd5ea1"
+    },
+    "adf2b060-551b-4913-9298-be40857ea055": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Organization Structure",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "091fe407-27f9-4f2d-82cc-cfc3b5c7a2a4",
+      "id": "adf2b060-551b-4913-9298-be40857ea055"
+    },
+    "09a0bab1-2f43-4772-98af-ba602c30c958": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Tier 1",
+              "textFormat": "underline-h3"
+            }
+          ]
+        }
+      ],
+      "parentId": "091fe407-27f9-4f2d-82cc-cfc3b5c7a2a4",
+      "id": "09a0bab1-2f43-4772-98af-ba602c30c958"
+    },
+    "c4aec9e2-9e10-4a4b-a306-53d7bf401452": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "High Matron",
+              "textFormat": "h3"
+            }
+          ]
+        }
+      ],
+      "parentId": "091fe407-27f9-4f2d-82cc-cfc3b5c7a2a4",
+      "id": "c4aec9e2-9e10-4a4b-a306-53d7bf401452"
+    },
+    "55b89b6c-529a-4885-b8bb-b390082e9d81": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Function: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Supreme leader of the Order and head of the Grand Council",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "NPC: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Matron Akura, the Jade Veil",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "091fe407-27f9-4f2d-82cc-cfc3b5c7a2a4",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "55b89b6c-529a-4885-b8bb-b390082e9d81"
+    },
+    "fdaf34e5-7454-418b-b019-4149f374d10f": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Grand Scribe",
+              "textFormat": "h3"
+            }
+          ]
+        }
+      ],
+      "parentId": "091fe407-27f9-4f2d-82cc-cfc3b5c7a2a4",
+      "id": "fdaf34e5-7454-418b-b019-4149f374d10f"
+    },
+    "c6b9a4c6-6443-4ff0-a7e7-8af5f2214b30": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Function: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Guardian of the secret archive and master of cipher magic",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "NPC: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Scribe Jitsuko",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "091fe407-27f9-4f2d-82cc-cfc3b5c7a2a4",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "c6b9a4c6-6443-4ff0-a7e7-8af5f2214b30"
+    },
+    "f0041373-c24f-48af-a043-18f14b594869": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Tier 2",
+              "textFormat": "underline-h3"
+            }
+          ]
+        }
+      ],
+      "parentId": "091fe407-27f9-4f2d-82cc-cfc3b5c7a2a4",
+      "id": "f0041373-c24f-48af-a043-18f14b594869"
+    },
+    "2f6752cb-d2a7-493c-b190-cc798ee7ee43": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Shadowmaster",
+              "textFormat": "h3"
+            }
+          ]
+        }
+      ],
+      "parentId": "091fe407-27f9-4f2d-82cc-cfc3b5c7a2a4",
+      "id": "2f6752cb-d2a7-493c-b190-cc798ee7ee43"
+    },
+    "97fe2141-a33b-40bb-86ff-958f0d809507": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Function: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Oversees field operations, espionage, and recruitment",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "NPC: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Kaito the Whisper",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "091fe407-27f9-4f2d-82cc-cfc3b5c7a2a4",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "97fe2141-a33b-40bb-86ff-958f0d809507"
+    },
+    "0e10febf-9c74-49d9-88e7-ffc3b88bb11f": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Moonblade",
+              "textFormat": "h3"
+            }
+          ]
+        }
+      ],
+      "parentId": "091fe407-27f9-4f2d-82cc-cfc3b5c7a2a4",
+      "id": "0e10febf-9c74-49d9-88e7-ffc3b88bb11f"
+    },
+    "d16f56b0-795b-49c8-9f8a-6d43c29bd0a3": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Function: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Elite assassin tasked with high-value eliminations",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "NPC: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Sei the Silent Lotus",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "091fe407-27f9-4f2d-82cc-cfc3b5c7a2a4",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "d16f56b0-795b-49c8-9f8a-6d43c29bd0a3"
+    },
+    "104efb71-a3bb-4343-ab49-74de6d94147f": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Tier 3",
+              "textFormat": "underline-h3"
+            }
+          ]
+        }
+      ],
+      "parentId": "091fe407-27f9-4f2d-82cc-cfc3b5c7a2a4",
+      "id": "104efb71-a3bb-4343-ab49-74de6d94147f"
+    },
+    "18eacb42-3cfa-45b6-a5b7-5a3354d26237": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Acorn",
+              "textFormat": "h3"
+            }
+          ]
+        }
+      ],
+      "parentId": "091fe407-27f9-4f2d-82cc-cfc3b5c7a2a4",
+      "id": "18eacb42-3cfa-45b6-a5b7-5a3354d26237"
+    },
+    "4aa83bfd-9f8f-4e6b-affa-d3968f3ab388": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Function: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Initiates undergoing trials to prove their loyalty",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "091fe407-27f9-4f2d-82cc-cfc3b5c7a2a4",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "4aa83bfd-9f8f-4e6b-affa-d3968f3ab388"
+    },
+    "a0ba7f64-eca0-41f9-ba5b-f1d925c94d2c": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Prominent Figures",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "091fe407-27f9-4f2d-82cc-cfc3b5c7a2a4",
+      "id": "a0ba7f64-eca0-41f9-ba5b-f1d925c94d2c"
+    },
+    "a8c71108-937a-4f61-aeea-6d650f51841b": {
+      "type": "section",
+      "name": "Matron Akura, the Jade Veil",
+      "childrenIds": [
+        "383c367f-455d-4153-a966-6bafb1d2ee8d"
+      ],
+      "parentId": "091fe407-27f9-4f2d-82cc-cfc3b5c7a2a4",
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Matron Akura, the Jade Veil",
+                "textFormat": "h2"
+              }
+            ]
+          }
+        ],
+        "showTitle": true,
+        "styles": {
+          "header": {
+            "borderBottom": "1px solid #882619"
+          }
+        }
+      },
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none",
+          "paddingTop": "4px"
+        },
+        "collapsible": false,
+        "isCollapsed": true,
+        "alternatingCollapsedBackground": "white",
+        "nestedCollapsible": true,
+        "wrapInnerWithContentDisplay": true
+      },
+      "id": "a8c71108-937a-4f61-aeea-6d650f51841b"
+    },
+    "383c367f-455d-4153-a966-6bafb1d2ee8d": {
+      "type": "section",
+      "name": "Matron Akura, the Jade Veil",
+      "childrenIds": [
+        "9ca1597f-77aa-4dcc-9dba-ebb8d7e33bf7",
+        "25c3d408-7907-47da-ac59-a5577f32e2d5",
+        "576b8f21-f555-4bbf-99f0-49aaf0a2d2d4",
+        "9aa0e8a1-de05-47d0-ae44-c0bb45d632ac",
+        "1a2cf8aa-cfa3-417a-9960-9d4c163f47ac",
+        "9d7d71bb-45ad-4a56-8256-4cea525d63c6",
+        "6b7e6a0c-ebae-41cf-9cf5-9efc2c61c798",
+        "340d326c-20a8-4d39-a9ff-987e6f35e0ce",
+        "394bb57b-e1d9-4202-b8af-fd06637bdb42",
+        "6cf39634-30e1-4b2e-ba5d-7c4e45429301",
+        "85094699-655d-46c0-8e61-7755d9e1690d",
+        "7c8d3776-a0a7-4801-b3fa-e135451137c1",
+        "1687a0a5-5717-4f45-b5cb-ccc6293b409d",
+        "2daa3b96-d639-4fcc-9fbf-c9e3b21ddae5",
+        "d3b37ce5-56e3-4b44-9a1f-3a2d75a0d68c",
+        "f498dd45-1acd-4fee-b5e2-41242443e664",
+        "9f7d544e-044c-45cd-babb-ddb6b4cc8817",
+        "07c6bc33-77eb-4338-8121-09f26bd2e7da",
+        "d59b6372-b8c8-488b-a9bc-3dac376da55b",
+        "b913f93a-a3b8-4751-8504-ebd9ac06a193"
+      ],
+      "parentId": "a8c71108-937a-4f61-aeea-6d650f51841b",
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Matron Akura, the Jade Veil",
+                "textFormat": "h1"
+              }
+            ]
+          }
+        ],
+        "showTitle": true
+      },
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none",
+          "paddingTop": "4px"
+        },
+        "collapsible": false,
+        "isCollapsed": false,
+        "alternatingCollapsedBackground": "white"
+      },
+      "id": "383c367f-455d-4153-a966-6bafb1d2ee8d",
+      "content_type": "npc"
+    },
+    "9ca1597f-77aa-4dcc-9dba-ebb8d7e33bf7": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Medium Humanoid (human), Lawful neutral • High Matron of the Umbral Lotus",
+              "textFormat": "h4"
+            }
+          ]
+        }
+      ],
+      "parentId": "383c367f-455d-4153-a966-6bafb1d2ee8d",
+      "styles": {
+        "paddingBottom": "4px"
+      },
+      "id": "9ca1597f-77aa-4dcc-9dba-ebb8d7e33bf7"
+    },
+    "25c3d408-7907-47da-ac59-a5577f32e2d5": {
+      "type": "line",
+      "parentId": "383c367f-455d-4153-a966-6bafb1d2ee8d",
+      "styles": {
+        "background": "linear-gradient(to right, #9D2A1F, transparent)",
+        "border": "none",
+        "height": "4px",
+        "width": "100%"
+      },
+      "id": "25c3d408-7907-47da-ac59-a5577f32e2d5",
+      "customStyles": {
+        "default": {
+          "background": "linear-gradient(to right, #9D2A1F, transparent)",
+          "border": "none",
+          "height": "4px",
+          "width": "100%"
+        }
+      }
+    },
+    "576b8f21-f555-4bbf-99f0-49aaf0a2d2d4": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Description",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "383c367f-455d-4153-a966-6bafb1d2ee8d",
+      "id": "576b8f21-f555-4bbf-99f0-49aaf0a2d2d4"
+    },
+    "9aa0e8a1-de05-47d0-ae44-c0bb45d632ac": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "A tall, slender woman draped in black silks embroidered with jade lotus petals. Her alabaster skin is etched with glowing, jade-tinged sigils, and her eyes gleam like obsidian beads.",
+              "textFormat": "description"
+            }
+          ]
+        }
+      ],
+      "parentId": "383c367f-455d-4153-a966-6bafb1d2ee8d",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "9aa0e8a1-de05-47d0-ae44-c0bb45d632ac"
+    },
+    "1a2cf8aa-cfa3-417a-9960-9d4c163f47ac": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Lore",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "383c367f-455d-4153-a966-6bafb1d2ee8d",
+      "id": "1a2cf8aa-cfa3-417a-9960-9d4c163f47ac"
+    },
+    "9d7d71bb-45ad-4a56-8256-4cea525d63c6": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Once a court scholar who ventured too deeply into forbidden tomes, Akura vanished for a century before reemerging as the Order’s imperious leader. She is said to be centuries old, sustained by a pact with a shadowed spirit.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "383c367f-455d-4153-a966-6bafb1d2ee8d",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "9d7d71bb-45ad-4a56-8256-4cea525d63c6"
+    },
+    "6b7e6a0c-ebae-41cf-9cf5-9efc2c61c798": {
+      "type": "line",
+      "parentId": "383c367f-455d-4153-a966-6bafb1d2ee8d",
+      "styles": {
+        "background": "linear-gradient(to right, #9D2A1F, transparent)",
+        "border": "none",
+        "height": "4px",
+        "width": "100%"
+      },
+      "id": "6b7e6a0c-ebae-41cf-9cf5-9efc2c61c798",
+      "customStyles": {
+        "default": {
+          "background": "linear-gradient(to right, #9D2A1F, transparent)",
+          "border": "none",
+          "height": "4px",
+          "width": "100%"
+        }
+      }
+    },
+    "340d326c-20a8-4d39-a9ff-987e6f35e0ce": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Hit Points: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "84 (8d8 + 24)",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Armor Class: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "17 (Studded Leather Armor)",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Speed: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "30 ft.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "383c367f-455d-4153-a966-6bafb1d2ee8d",
+      "id": "340d326c-20a8-4d39-a9ff-987e6f35e0ce"
+    },
+    "394bb57b-e1d9-4202-b8af-fd06637bdb42": {
+      "type": "StatLine",
+      "content": {
+        "stats": [
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "STR"
+                  }
+                ]
+              }
+            ],
+            "value": 10,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Strength"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "DEX"
+                  }
+                ]
+              }
+            ],
+            "value": 16,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Dexterity"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "CON"
+                  }
+                ]
+              }
+            ],
+            "value": 14,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Constitution"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "INT"
+                  }
+                ]
+              }
+            ],
+            "value": 18,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Intelligence"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "WIS"
+                  }
+                ]
+              }
+            ],
+            "value": 15,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Wisdom"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "CHA"
+                  }
+                ]
+              }
+            ],
+            "value": 16,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Charisma"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "parentId": "383c367f-455d-4153-a966-6bafb1d2ee8d",
+      "displayMode": "values",
+      "id": "394bb57b-e1d9-4202-b8af-fd06637bdb42",
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none"
+        },
+        "statLine": {
+          "width": "100%",
+          "display": "flex",
+          "alignItems": "center",
+          "backgroundColor": "transparent"
+        },
+        "name": {
+          "minWidth": "64px",
+          "fontWeight": "bold",
+          "backgroundColor": "transparent",
+          "color": "#58180D",
+          "flex": "1"
+        },
+        "value": {
+          "width": "32px",
+          "backgroundColor": "transparent",
+          "textAlign": "center",
+          "color": "#000000",
+          "fontFamily": "Noto Serif, Georgia, serif"
+        },
+        "description": {
+          "fontFamily": "Noto Serif, Georgia, serif",
+          "fontSize": "13px",
+          "fontWeight": "normal",
+          "backgroundColor": "transparent",
+          "color": "#000",
+          "lineHeight": "1.25",
+          "margin": "4px 0 0 0",
+          "textAlign": "left",
+          "whiteSpace": "normal",
+          "overflow": "visible",
+          "textOverflow": "clip",
+          "minWidth": "100px",
+          "flex": "1"
+        },
+        "topLine": {
+          "width": "100%",
+          "height": "4px",
+          "marginTop": "4px",
+          "marginBottom": "4px",
+          "background": "linear-gradient(to right, #9D2A1F, transparent)"
+        },
+        "bottomLine": {
+          "width": "100%",
+          "height": "4px",
+          "marginTop": "4px",
+          "marginBottom": "4px",
+          "background": "linear-gradient(to right, #9D2A1F, transparent)"
+        },
+        "showTopLine": true,
+        "showBottomLine": true
+      }
+    },
+    "6cf39634-30e1-4b2e-ba5d-7c4e45429301": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Skills: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Arcana (+7), History (+7), Insight (+5), Stealth (+6)",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Languages: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Common, Abyssal",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Damage Resistances: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Psychic",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Damage Immunities: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Charmed, Frightened",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Senses: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Passive Perception 12",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Challenge Rating: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "8",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Experience Points: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "3900",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "383c367f-455d-4153-a966-6bafb1d2ee8d",
+      "id": "6cf39634-30e1-4b2e-ba5d-7c4e45429301"
+    },
+    "85094699-655d-46c0-8e61-7755d9e1690d": {
+      "type": "line",
+      "parentId": "383c367f-455d-4153-a966-6bafb1d2ee8d",
+      "styles": {
+        "background": "linear-gradient(to right, #9D2A1F, transparent)",
+        "border": "none",
+        "height": "4px",
+        "width": "100%"
+      },
+      "id": "85094699-655d-46c0-8e61-7755d9e1690d",
+      "customStyles": {
+        "default": {
+          "background": "linear-gradient(to right, #9D2A1F, transparent)",
+          "border": "none",
+          "height": "4px",
+          "width": "100%"
+        }
+      }
+    },
+    "7c8d3776-a0a7-4801-b3fa-e135451137c1": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Features",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "383c367f-455d-4153-a966-6bafb1d2ee8d",
+      "id": "7c8d3776-a0a7-4801-b3fa-e135451137c1"
+    },
+    "1687a0a5-5717-4f45-b5cb-ccc6293b409d": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Jade Veil: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Once per long rest, Akura casts invisibility on herself (no components required).",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Shadow Affinity: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Advantage on Stealth checks in dim light or darkness.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "383c367f-455d-4153-a966-6bafb1d2ee8d",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "1687a0a5-5717-4f45-b5cb-ccc6293b409d"
+    },
+    "2daa3b96-d639-4fcc-9fbf-c9e3b21ddae5": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Actions",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "383c367f-455d-4153-a966-6bafb1d2ee8d",
+      "id": "2daa3b96-d639-4fcc-9fbf-c9e3b21ddae5"
+    },
+    "d3b37ce5-56e3-4b44-9a1f-3a2d75a0d68c": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Two",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "383c367f-455d-4153-a966-6bafb1d2ee8d",
+      "id": "d3b37ce5-56e3-4b44-9a1f-3a2d75a0d68c"
+    },
+    "f498dd45-1acd-4fee-b5e2-41242443e664": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Multiattack: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Akura makes two Shadow Blade attacks.",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Shadow Blade: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit: 1d8+5 psychic damage.",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Veil Strike: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Ranged Spell Attack: +7 to hit, range 60 ft., one target. Hit: 2d8 necrotic damage.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "383c367f-455d-4153-a966-6bafb1d2ee8d",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "f498dd45-1acd-4fee-b5e2-41242443e664"
+    },
+    "9f7d544e-044c-45cd-babb-ddb6b4cc8817": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Loot",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "383c367f-455d-4153-a966-6bafb1d2ee8d",
+      "id": "9f7d544e-044c-45cd-babb-ddb6b4cc8817"
+    },
+    "07c6bc33-77eb-4338-8121-09f26bd2e7da": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Shadow Lotus Amulet: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Grants +1 to Stealth checks while worn.",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Codex of Umbral Secrets: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "A tome of hidden rituals and counterspells.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "383c367f-455d-4153-a966-6bafb1d2ee8d",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "07c6bc33-77eb-4338-8121-09f26bd2e7da"
+    },
+    "d59b6372-b8c8-488b-a9bc-3dac376da55b": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Additional Details",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "383c367f-455d-4153-a966-6bafb1d2ee8d",
+      "id": "d59b6372-b8c8-488b-a9bc-3dac376da55b"
+    },
+    "b913f93a-a3b8-4751-8504-ebd9ac06a193": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "History: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Founded over two millennia ago by an exile scholar of a forgotten empire.",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Affiliations: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Unofficial ties to the Silver Scribes League.",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Fear: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Absolute exposure before the Emperor’s court.",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Secret: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Akura’s life is bound to a living shadow imprisoned in the Sanctum.",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Quest Hook: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Retrieve the Third Petal scroll before a rival faction deciphers its ritual.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "383c367f-455d-4153-a966-6bafb1d2ee8d",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "b913f93a-a3b8-4751-8504-ebd9ac06a193"
+    }
+  }
+}

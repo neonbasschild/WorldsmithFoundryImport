@@ -1,0 +1,232 @@
+{
+  "name": "test",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "",
+  "results": [
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "_id": "TBzbC9d8OK7Q4REZ",
+      "name": "",
+      "img": "systems/dnd5e/icons/svg/dice/d20.svg",
+      "description": "",
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.364",
+        "systemId": "dnd5e",
+        "systemVersion": "5.3.3",
+        "createdTime": 1781905082198,
+        "modifiedTime": 1781905082748,
+        "lastModifiedBy": "gXGsZ4Z01ab9NUaN",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "_id": "MwqpnZi4FJiU7xbc",
+      "name": "",
+      "img": "systems/dnd5e/icons/svg/dice/d20.svg",
+      "description": "",
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.364",
+        "systemId": "dnd5e",
+        "systemVersion": "5.3.3",
+        "createdTime": 1781905082813,
+        "modifiedTime": 1781905083215,
+        "lastModifiedBy": "gXGsZ4Z01ab9NUaN",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "_id": "qnh7fBMHZE5tnFYA",
+      "name": "",
+      "img": "systems/dnd5e/icons/svg/dice/d20.svg",
+      "description": "",
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.364",
+        "systemId": "dnd5e",
+        "systemVersion": "5.3.3",
+        "createdTime": 1781905083280,
+        "modifiedTime": 1781905083669,
+        "lastModifiedBy": "gXGsZ4Z01ab9NUaN",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "_id": "lzt3JbfR6Q4ND2cy",
+      "name": "",
+      "img": "systems/dnd5e/icons/svg/dice/d20.svg",
+      "description": "",
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.364",
+        "systemId": "dnd5e",
+        "systemVersion": "5.3.3",
+        "createdTime": 1781905083733,
+        "modifiedTime": 1781905084185,
+        "lastModifiedBy": "gXGsZ4Z01ab9NUaN",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "_id": "0yFtgN3PEcIsdFz9",
+      "name": "",
+      "img": "systems/dnd5e/icons/svg/dice/d20.svg",
+      "description": "",
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.364",
+        "systemId": "dnd5e",
+        "systemVersion": "5.3.3",
+        "createdTime": 1781905084246,
+        "modifiedTime": 1781905084478,
+        "lastModifiedBy": "gXGsZ4Z01ab9NUaN",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "_id": "ypnjq6xJDDJzJCh9",
+      "name": "",
+      "img": "systems/dnd5e/icons/svg/dice/d20.svg",
+      "description": "",
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.364",
+        "systemId": "dnd5e",
+        "systemVersion": "5.3.3",
+        "createdTime": 1781905084541,
+        "modifiedTime": 1781905084759,
+        "lastModifiedBy": "gXGsZ4Z01ab9NUaN",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "_id": "wD7MYoZDsW80QKgV",
+      "name": "",
+      "img": "systems/dnd5e/icons/svg/dice/d20.svg",
+      "description": "",
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.364",
+        "systemId": "dnd5e",
+        "systemVersion": "5.3.3",
+        "createdTime": 1781905084822,
+        "modifiedTime": 1781905085078,
+        "lastModifiedBy": "gXGsZ4Z01ab9NUaN",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "_id": "QvPPM7i4qMuy6KDO",
+      "name": "",
+      "img": null,
+      "description": "",
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.364",
+        "systemId": "dnd5e",
+        "systemVersion": "5.3.3",
+        "createdTime": 1781905085142,
+        "modifiedTime": 1781905085142,
+        "lastModifiedBy": "gXGsZ4Z01ab9NUaN",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    }
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "folder": null,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.364",
+    "systemId": "dnd5e",
+    "systemVersion": "5.3.3",
+    "createdTime": 1781905076967,
+    "modifiedTime": 1781905085077,
+    "lastModifiedBy": "gXGsZ4Z01ab9NUaN",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": {
+      "worldId": "air",
+      "uuid": "RollTable.RuhqlUVyGuuAnNcP",
+      "coreVersion": "14.364",
+      "systemId": "dnd5e",
+      "systemVersion": "5.3.3"
+    }
+  },
+  "formula": "",
+  "ownership": {
+    "default": 0
+  }
+}

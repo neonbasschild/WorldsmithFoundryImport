@@ -12,9 +12,10 @@
   "WORLDSMITH.ActorFolders": "Actor Folders",
   "WORLDSMITH.ItemFolders": "Item Folders",
   "WORLDSMITH.JournalFolders": "Journal Folders",
+  "WORLDSMITH.TableFolders": "Roll Table Folders",
   "WORLDSMITH.OpenSheet": "Open sheet after import",
   "WORLDSMITH.Import": "Import",
   "WORLDSMITH.Clear": "Clear",
   "WORLDSMITH.NoInput": "Select at least one file or paste some JSON before importing.",
-  "WORLDSMITH.ImportSuccess": "Imported {actors} actor(s), {items} item(s), and {journals} journal(s) from Worldsmith."
+  "WORLDSMITH.ImportSuccess": "Imported {actors} actor(s), {items} item(s), {journals} journal(s), and {tables} roll table(s) from Worldsmith."
 }

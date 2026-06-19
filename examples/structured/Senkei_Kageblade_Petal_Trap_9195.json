@@ -1,0 +1,259 @@
+{
+  "rootId": "886f571f-1566-4838-9aa3-d077f2c51784",
+  "items": {
+    "886f571f-1566-4838-9aa3-d077f2c51784": {
+      "model_type": "structured",
+      "content_type": "trap",
+      "type": "section",
+      "name": "Senkei Kageblade Petal Trap",
+      "childrenIds": [
+        "7b1184a6-edd3-4e7b-a24c-8f8b1de77784",
+        "68615451-be1f-4cbd-aa3b-5018a658210c",
+        "6b11c436-24cb-4364-8bf1-15e2daccc4bf",
+        "3231384f-d01f-4917-ab9f-1c9b9caf22ec",
+        "49337ba2-45a2-4f2e-b6a2-d86b54fda313",
+        "b2d91363-6979-46d5-8023-396eddb08125",
+        "5f0954b0-2cfd-41dc-bd30-da13384285fe",
+        "97b042c4-8090-44bc-9fdf-30cb61a42d7f",
+        "63cff638-e236-470c-9bf5-ce094f3ea7a1",
+        "36bf01ab-6674-41b7-b0df-17dec667c922"
+      ],
+      "parentId": null,
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Senkei Kageblade Petal Trap",
+                "textFormat": "h1"
+              }
+            ]
+          }
+        ],
+        "showTitle": true,
+        "styles": {
+          "borderBottom": "1px solid #882619"
+        }
+      },
+      "id": "886f571f-1566-4838-9aa3-d077f2c51784",
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none"
+        },
+        "collapsible": false,
+        "isCollapsed": false,
+        "alternatingCollapsedBackground": "white"
+      }
+    },
+    "7b1184a6-edd3-4e7b-a24c-8f8b1de77784": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Mechanical - Deadly",
+              "textFormat": "h4"
+            }
+          ]
+        }
+      ],
+      "parentId": "886f571f-1566-4838-9aa3-d077f2c51784",
+      "id": "7b1184a6-edd3-4e7b-a24c-8f8b1de77784"
+    },
+    "68615451-be1f-4cbd-aa3b-5018a658210c": {
+      "type": "line",
+      "parentId": "886f571f-1566-4838-9aa3-d077f2c51784",
+      "styles": {
+        "background": "linear-gradient(to right, #9D2A1F, transparent)",
+        "border": "none",
+        "height": "4px",
+        "width": "100%"
+      },
+      "id": "68615451-be1f-4cbd-aa3b-5018a658210c",
+      "customStyles": {
+        "default": {
+          "background": "linear-gradient(to right, #9D2A1F, transparent)",
+          "border": "none",
+          "height": "4px",
+          "width": "100%"
+        }
+      }
+    },
+    "6b11c436-24cb-4364-8bf1-15e2daccc4bf": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Details",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "886f571f-1566-4838-9aa3-d077f2c51784",
+      "id": "6b11c436-24cb-4364-8bf1-15e2daccc4bf"
+    },
+    "3231384f-d01f-4917-ab9f-1c9b9caf22ec": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "This trap is built into the corridor of an old Shinto shrine. Concealed beneath wooden floor panels carved with sakura motifs, a pressure plate triggers a spring-loaded array of razor-sharp metal petals stored in the corridor’s ceiling. The petals fire outward in a 15-foot cone, then rain down over a 5-foot square on the floor. The mechanism can be disarmed by carefully freeing the panel and jamming the spring (requires thieves’ tools and a successful DC 14 Intelligence (Investigation) check). It resets only by manually recoiling the spring and replacing the floor panel (30 minutes).",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "886f571f-1566-4838-9aa3-d077f2c51784",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "3231384f-d01f-4917-ab9f-1c9b9caf22ec"
+    },
+    "49337ba2-45a2-4f2e-b6a2-d86b54fda313": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Description",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "886f571f-1566-4838-9aa3-d077f2c51784",
+      "id": "49337ba2-45a2-4f2e-b6a2-d86b54fda313"
+    },
+    "b2d91363-6979-46d5-8023-396eddb08125": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "You step into a dimly lit corridor lined with weathered torii gates. The floorboards are polished smooth, each panel bearing a faint sakura blossom carving. A soft wind chime echoes in the distance, though no breeze stirs.",
+              "textFormat": "description"
+            }
+          ]
+        }
+      ],
+      "parentId": "886f571f-1566-4838-9aa3-d077f2c51784",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "b2d91363-6979-46d5-8023-396eddb08125"
+    },
+    "5f0954b0-2cfd-41dc-bd30-da13384285fe": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Skill Checks",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "886f571f-1566-4838-9aa3-d077f2c51784",
+      "id": "5f0954b0-2cfd-41dc-bd30-da13384285fe"
+    },
+    "97b042c4-8090-44bc-9fdf-30cb61a42d7f": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "DC 13 Wisdom (Perception):: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "You notice faint scratch marks around one particular panel and slight discoloration along the seam, hinting at a concealed mechanism.",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "DC 14 Intelligence (Investigation):: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Careful inspection reveals a thin spring coil tucked beneath the carved panel, which you identify as part of a trap’s firing mechanism.",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "DC 14 Dexterity (Thieves’ Tools):: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "You delicately pry up the floor panel and jam the coil, preventing the petals from launching.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "886f571f-1566-4838-9aa3-d077f2c51784",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "97b042c4-8090-44bc-9fdf-30cb61a42d7f"
+    },
+    "63cff638-e236-470c-9bf5-ce094f3ea7a1": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Consequence",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "886f571f-1566-4838-9aa3-d077f2c51784",
+      "id": "63cff638-e236-470c-9bf5-ce094f3ea7a1"
+    },
+    "36bf01ab-6674-41b7-b0df-17dec667c922": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "When a creature steps on the hidden panel without first disabling the mechanism, razor petals fire in a 15-foot cone. Each creature in that area must make a DC 15 Dexterity saving throw, taking 6d6 slashing damage on a failed save, or half as much on a success. Immediately afterward, the petals rain down and cover the 5-foot square beneath the trap. That square becomes difficult terrain, and any creature that starts its turn there takes 2d6 slashing damage from the embedded blades.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "886f571f-1566-4838-9aa3-d077f2c51784",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "36bf01ab-6674-41b7-b0df-17dec667c922"
+    }
+  }
+}

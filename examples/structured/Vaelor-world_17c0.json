@@ -1,0 +1,623 @@
+{
+  "rootId": "2638df92-01f3-4251-8719-f03c228ab1dc",
+  "items": {
+    "2638df92-01f3-4251-8719-f03c228ab1dc": {
+      "model_type": "structured",
+      "content_type": "world",
+      "type": "section",
+      "name": "Vaelor",
+      "childrenIds": [
+        "db9a24a2-faa5-4d0d-bf1c-571924842fbd",
+        "3f83bcfa-7618-40b1-8628-4e3ca2623816",
+        "81c27d30-9522-40a3-adc8-30b23aca77d1",
+        "6c30b93e-ead3-40e2-8b43-43d80086240e",
+        "95325914-d47b-4278-b87d-21d43c48e546",
+        "9b816db3-8f40-4fa7-bdf2-0dd403cd5fdc",
+        "6375a668-27a9-4326-af46-40c286838312",
+        "c681645b-5afb-47d8-8994-f8d0ca539e0f",
+        "443b3e3d-0314-4814-acca-c15e209f0f9e",
+        "ebad5dee-f47d-4a4b-98c5-dda9f5981f6c",
+        "77d4c973-930e-4437-8ed0-fb431ab2b754"
+      ],
+      "parentId": null,
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Vaelor",
+                "textFormat": "h1"
+              }
+            ]
+          }
+        ],
+        "showTitle": true,
+        "styles": {
+          "borderBottom": "1px solid #882619"
+        }
+      },
+      "id": "2638df92-01f3-4251-8719-f03c228ab1dc",
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none"
+        },
+        "collapsible": false,
+        "isCollapsed": false,
+        "alternatingCollapsedBackground": "white"
+      }
+    },
+    "db9a24a2-faa5-4d0d-bf1c-571924842fbd": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "A Land of Looming Shadows",
+              "textFormat": "h4"
+            }
+          ]
+        }
+      ],
+      "parentId": "2638df92-01f3-4251-8719-f03c228ab1dc",
+      "id": "db9a24a2-faa5-4d0d-bf1c-571924842fbd"
+    },
+    "3f83bcfa-7618-40b1-8628-4e3ca2623816": {
+      "type": "line",
+      "parentId": "2638df92-01f3-4251-8719-f03c228ab1dc",
+      "styles": {
+        "background": "linear-gradient(to right, #9D2A1F, transparent)",
+        "border": "none",
+        "height": "4px",
+        "width": "100%"
+      },
+      "id": "3f83bcfa-7618-40b1-8628-4e3ca2623816",
+      "customStyles": {
+        "default": {
+          "background": "linear-gradient(to right, #9D2A1F, transparent)",
+          "border": "none",
+          "height": "4px",
+          "width": "100%"
+        }
+      }
+    },
+    "81c27d30-9522-40a3-adc8-30b23aca77d1": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Description",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "2638df92-01f3-4251-8719-f03c228ab1dc",
+      "id": "81c27d30-9522-40a3-adc8-30b23aca77d1"
+    },
+    "6c30b93e-ead3-40e2-8b43-43d80086240e": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "{{Vaelor}}",
+              "variable": true,
+              "textFormat": "paragraph"
+            },
+            {
+              "text": " is a medium‐sized world of two continents—Solarys in the north and Ardoran in the south—locked in an uneasy standstill. Its medieval kingdoms rival each other across forests, mountains, deserts, and marshes. Magic is scarce and feared, carried only in whispers of ancient wards and enchanted relics. Human kingdoms dominate the geopolitical landscape, their armies clad in steel and braced by granite castles. A tense atmosphere pervades every market and border fort: a spark could ignite war.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "2638df92-01f3-4251-8719-f03c228ab1dc",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "6c30b93e-ead3-40e2-8b43-43d80086240e"
+    },
+    "95325914-d47b-4278-b87d-21d43c48e546": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Hallmarks",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "2638df92-01f3-4251-8719-f03c228ab1dc",
+      "id": "95325914-d47b-4278-b87d-21d43c48e546"
+    },
+    "9b816db3-8f40-4fa7-bdf2-0dd403cd5fdc": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Border Tensions: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Every year, Solarys’s Iron Crown Dominion and Ardoran’s Verdant Accord joust over fertile valleys and ancient passes. Skirmishes along the Riftwall are nearly daily occurrences, fueling rumors of a larger war to come.",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Hidden Wards: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Scattered throughout ",
+              "textFormat": "paragraph"
+            },
+            {
+              "text": "{{Vaelor}}",
+              "variable": true,
+              "textFormat": "paragraph"
+            },
+            {
+              "text": " are silent granite obelisks, remnants of a bygone magical age. They emit faint glyphic auras that repel certain monsters. Scholars and treasure hunters seek them, but the wards are poorly understood and potentially unstable.",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Scarce Wonders: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Magic items are exceptionally rare. When they do appear—like Frostpeak Dragonshards or Emberclay clusters—they’re hoarded by nobles or the church, traded at great peril, and often remain locked in vaults for decades.",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Rising Omens: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Prophets in both continents claim that celestial alignments portend an upheaval. Crop failures, strange beasts roaming the woods, and phantom lights in the night sky feed growing superstitions and religious fervor.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "2638df92-01f3-4251-8719-f03c228ab1dc",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "9b816db3-8f40-4fa7-bdf2-0dd403cd5fdc"
+    },
+    "6375a668-27a9-4326-af46-40c286838312": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Cultures",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "2638df92-01f3-4251-8719-f03c228ab1dc",
+      "id": "6375a668-27a9-4326-af46-40c286838312"
+    },
+    "c681645b-5afb-47d8-8994-f8d0ca539e0f": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "The Iron Crown Dominion: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "A martial monarchy on Solarys forged from conquest and steel. The Iron Crown army fields heavy cavalry and disciplined infantry. Nobles prize honor and military valor; knights often swear fealty to local lords, not the distant monarch.",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "The Verdant Accord: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "A loose confederation of Ardoran city‐states bound by trade pacts and druidic oaths. Their armies favor light infantry supported by rangers and druids. They cultivate vast orchards and are renowned for healing salves and potent wines.",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "The Shifting Sands Tribes: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Nomadic clans roaming Ardoran’s southern deserts. Masters of survival, their camel cavalry and desert scouts strike swiftly. They worship ancestral spirits and trade salt, rare spices, and tales of ghost cities.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "2638df92-01f3-4251-8719-f03c228ab1dc",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "c681645b-5afb-47d8-8994-f8d0ca539e0f"
+    },
+    "443b3e3d-0314-4814-acca-c15e209f0f9e": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Highlights",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "2638df92-01f3-4251-8719-f03c228ab1dc",
+      "id": "443b3e3d-0314-4814-acca-c15e209f0f9e"
+    },
+    "ebad5dee-f47d-4a4b-98c5-dda9f5981f6c": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Frostpeak Dragonshards: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "These pale blue crystals are found high in the Frostpeak Mountains. Mechanically, each shard can serve as an arcane focus and lets its wielder cast Prestidigitation once per long rest. They crack if used more often.",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Emberclay Deposits: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Volcanic clay pockets near Mount Ardor can be shaped into pellets that ignite into harmless flames for 1 minute (casting produce flame as a druid cantrip) once before the pellet turns to ash.",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Wardstone Lines: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Ancient runestones form secret safety nets around key strongholds. In game terms, any creature of CR 5 or lower cannot willingly enter a warded area without a DC 15 Arcana check or trigger a harmless but alarming magical pulse.",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Elder Ruins of Myrathis: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Hidden in Ardoran’s jungles lie Myrathis’s crumbling towers. Explorers face traps (DC 13 Dexterity saves), animated armors (AC 17, HP 45, CR 2), and a dormant arcane sentinel (awakens if thieves’ tools succeed on a DC 15 check).",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "2638df92-01f3-4251-8719-f03c228ab1dc",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "ebad5dee-f47d-4a4b-98c5-dda9f5981f6c"
+    },
+    "77d4c973-930e-4437-8ed0-fb431ab2b754": {
+      "type": "section",
+      "name": "Timeline",
+      "childrenIds": [
+        "856975be-a6e1-4779-ac12-bc95376857c2",
+        "ffb966a1-33a5-4b02-b160-6f861921cad1",
+        "b7601195-0bbf-4fa6-907e-7e699b0f30be",
+        "603f6667-117f-4815-9384-82e2a2ae19e6"
+      ],
+      "parentId": "2638df92-01f3-4251-8719-f03c228ab1dc",
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Timeline",
+                "textFormat": "h2"
+              }
+            ]
+          }
+        ],
+        "showTitle": true,
+        "styles": {
+          "header": {
+            "borderBottom": "1px solid #882619"
+          }
+        }
+      },
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none"
+        },
+        "collapsible": false,
+        "isCollapsed": false,
+        "alternatingCollapsedBackground": "white",
+        "isTabSection": true,
+        "activeTabIndex": 0
+      },
+      "id": "77d4c973-930e-4437-8ed0-fb431ab2b754"
+    },
+    "856975be-a6e1-4779-ac12-bc95376857c2": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "—300 DR — Founding of the Iron Crown",
+              "textFormat": "paragraph",
+              "bold": true
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "The warrior‐king Aric the Unifier subjugated rival duchies in Solarys, forging the Iron Crown Dominion.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "77d4c973-930e-4437-8ed0-fb431ab2b754",
+      "tabTitle": "Founding of the Iron Crown",
+      "customStyles": {
+        "default": {
+          "backgroundColor": "rgba(255, 255, 255, 0.65)",
+          "borderBottomColor": "rgb(0, 0, 0)",
+          "borderBottomStyle": "solid",
+          "borderBottomWidth": "1px",
+          "borderImageOutset": "9px 0px",
+          "borderImageRepeat": "stretch",
+          "borderImageSlice": "12",
+          "borderImageSource": "url(/_next/static/media/noteBorderTopBotArrows.640fe86f.png)",
+          "borderImageWidth": "11px",
+          "borderLeftColor": "rgb(0, 0, 0)",
+          "borderLeftStyle": "solid",
+          "borderLeftWidth": "1px",
+          "borderRightColor": "rgb(0, 0, 0)",
+          "borderRightStyle": "solid",
+          "borderRightWidth": "1px",
+          "borderTopColor": "rgb(0, 0, 0)",
+          "borderTopStyle": "solid",
+          "borderTopWidth": "1px",
+          "padding": "4px",
+          "margin": "20px"
+        }
+      },
+      "id": "856975be-a6e1-4779-ac12-bc95376857c2"
+    },
+    "ffb966a1-33a5-4b02-b160-6f861921cad1": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "—125 DR — The Great Sundering",
+              "textFormat": "paragraph",
+              "bold": true
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "A colossal earthquake split ",
+              "textFormat": "paragraph"
+            },
+            {
+              "text": "{{Vaelor}}",
+              "variable": true,
+              "textFormat": "paragraph"
+            },
+            {
+              "text": "’s supercontinent, creating the Riftwall that now divides Solarys and Ardoran.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "77d4c973-930e-4437-8ed0-fb431ab2b754",
+      "tabTitle": "The Great Sundering",
+      "customStyles": {
+        "default": {
+          "backgroundColor": "rgba(255, 255, 255, 0.65)",
+          "borderBottomColor": "rgb(0, 0, 0)",
+          "borderBottomStyle": "solid",
+          "borderBottomWidth": "1px",
+          "borderImageOutset": "9px 0px",
+          "borderImageRepeat": "stretch",
+          "borderImageSlice": "12",
+          "borderImageSource": "url(/_next/static/media/noteBorderTopBotArrows.640fe86f.png)",
+          "borderImageWidth": "11px",
+          "borderLeftColor": "rgb(0, 0, 0)",
+          "borderLeftStyle": "solid",
+          "borderLeftWidth": "1px",
+          "borderRightColor": "rgb(0, 0, 0)",
+          "borderRightStyle": "solid",
+          "borderRightWidth": "1px",
+          "borderTopColor": "rgb(0, 0, 0)",
+          "borderTopStyle": "solid",
+          "borderTopWidth": "1px",
+          "padding": "4px",
+          "margin": "20px"
+        }
+      },
+      "id": "ffb966a1-33a5-4b02-b160-6f861921cad1"
+    },
+    "b7601195-0bbf-4fa6-907e-7e699b0f30be": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "—80 DR — Rise of the Verdant Accord",
+              "textFormat": "paragraph",
+              "bold": true
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Ardor’s city‐states formed an alliance under Archdruid Elenaris to repel Sand Tribes and stabilize trade.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "77d4c973-930e-4437-8ed0-fb431ab2b754",
+      "tabTitle": "Rise of the Verdant Accord",
+      "customStyles": {
+        "default": {
+          "backgroundColor": "rgba(255, 255, 255, 0.65)",
+          "borderBottomColor": "rgb(0, 0, 0)",
+          "borderBottomStyle": "solid",
+          "borderBottomWidth": "1px",
+          "borderImageOutset": "9px 0px",
+          "borderImageRepeat": "stretch",
+          "borderImageSlice": "12",
+          "borderImageSource": "url(/_next/static/media/noteBorderTopBotArrows.640fe86f.png)",
+          "borderImageWidth": "11px",
+          "borderLeftColor": "rgb(0, 0, 0)",
+          "borderLeftStyle": "solid",
+          "borderLeftWidth": "1px",
+          "borderRightColor": "rgb(0, 0, 0)",
+          "borderRightStyle": "solid",
+          "borderRightWidth": "1px",
+          "borderTopColor": "rgb(0, 0, 0)",
+          "borderTopStyle": "solid",
+          "borderTopWidth": "1px",
+          "padding": "4px",
+          "margin": "20px"
+        }
+      },
+      "id": "b7601195-0bbf-4fa6-907e-7e699b0f30be"
+    },
+    "603f6667-117f-4815-9384-82e2a2ae19e6": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "—5 DR — Border War Ignites",
+              "textFormat": "paragraph",
+              "bold": true
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "A dispute over the Silverfen Marsh’s peat beds led to open conflict. Skirmishes now flare along the Riftwall daily, and both sides mobilize for a major campaign.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "77d4c973-930e-4437-8ed0-fb431ab2b754",
+      "tabTitle": "Border War Ignites",
+      "customStyles": {
+        "default": {
+          "backgroundColor": "rgba(255, 255, 255, 0.65)",
+          "borderBottomColor": "rgb(0, 0, 0)",
+          "borderBottomStyle": "solid",
+          "borderBottomWidth": "1px",
+          "borderImageOutset": "9px 0px",
+          "borderImageRepeat": "stretch",
+          "borderImageSlice": "12",
+          "borderImageSource": "url(/_next/static/media/noteBorderTopBotArrows.640fe86f.png)",
+          "borderImageWidth": "11px",
+          "borderLeftColor": "rgb(0, 0, 0)",
+          "borderLeftStyle": "solid",
+          "borderLeftWidth": "1px",
+          "borderRightColor": "rgb(0, 0, 0)",
+          "borderRightStyle": "solid",
+          "borderRightWidth": "1px",
+          "borderTopColor": "rgb(0, 0, 0)",
+          "borderTopStyle": "solid",
+          "borderTopWidth": "1px",
+          "padding": "4px",
+          "margin": "20px"
+        }
+      },
+      "id": "603f6667-117f-4815-9384-82e2a2ae19e6"
+    }
+  }
+}

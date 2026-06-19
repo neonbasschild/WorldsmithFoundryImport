@@ -1,0 +1,1079 @@
+{
+  "rootId": "e9b77a19-8455-4d84-b93e-56aff5235314",
+  "items": {
+    "e9b77a19-8455-4d84-b93e-56aff5235314": {
+      "model_type": "structured",
+      "content_type": "encounter",
+      "type": "section",
+      "name": "Ambush of the Silvan Kodama",
+      "childrenIds": [
+        "24805d43-554f-45c7-9ee1-83423fb31266",
+        "3390f53f-14dc-45ef-a98f-5e6fd4d07551",
+        "4ad59fab-d7f4-4e6a-af7d-1708ea117eea",
+        "e64af761-0db2-4d21-9c5e-574ebcaa0433",
+        "9dd9064e-2703-4d3b-8a1c-6e6af72d89f9",
+        "52c15bcd-4c09-4a9f-bd5a-99bd7e7ddeab",
+        "d920a10f-2ffc-43d1-9e9a-d8380377050e",
+        "555c24cb-3bec-44ae-b319-ace5e3b883f9",
+        "0aa41889-4976-4ed1-aa3f-7949cf383ea0",
+        "2041f16f-873c-4915-a424-342807cec23f"
+      ],
+      "parentId": null,
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Ambush of the Silvan Kodama",
+                "textFormat": "h1"
+              }
+            ]
+          }
+        ],
+        "showTitle": true,
+        "styles": {
+          "borderBottom": "1px solid #882619"
+        }
+      },
+      "id": "e9b77a19-8455-4d84-b93e-56aff5235314",
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none"
+        },
+        "collapsible": false,
+        "isCollapsed": false,
+        "alternatingCollapsedBackground": "white"
+      }
+    },
+    "24805d43-554f-45c7-9ee1-83423fb31266": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Guardian of Tranquil Grove",
+              "textFormat": "h4"
+            }
+          ]
+        }
+      ],
+      "parentId": "e9b77a19-8455-4d84-b93e-56aff5235314",
+      "id": "24805d43-554f-45c7-9ee1-83423fb31266"
+    },
+    "3390f53f-14dc-45ef-a98f-5e6fd4d07551": {
+      "type": "line",
+      "parentId": "e9b77a19-8455-4d84-b93e-56aff5235314",
+      "styles": {
+        "background": "linear-gradient(to right, #9D2A1F, transparent)",
+        "border": "none",
+        "height": "4px",
+        "width": "100%"
+      },
+      "id": "3390f53f-14dc-45ef-a98f-5e6fd4d07551",
+      "customStyles": {
+        "default": {
+          "background": "linear-gradient(to right, #9D2A1F, transparent)",
+          "border": "none",
+          "height": "4px",
+          "width": "100%"
+        }
+      }
+    },
+    "4ad59fab-d7f4-4e6a-af7d-1708ea117eea": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Set the Scene",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "e9b77a19-8455-4d84-b93e-56aff5235314",
+      "id": "4ad59fab-d7f4-4e6a-af7d-1708ea117eea"
+    },
+    "e64af761-0db2-4d21-9c5e-574ebcaa0433": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "A narrow forest path winds beneath towering cedars whose crimson leaves flutter like prayer flags in a light breeze. Scattered along the way are half-buried torii gates and faded paper charms, their inked prayers to the mountain kami worn by time. Mist coils around knotted roots that snake across the trail, and distant birdsong is punctuated by an eerie whisper that seems to come from the very trees.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "e9b77a19-8455-4d84-b93e-56aff5235314",
+      "id": "e64af761-0db2-4d21-9c5e-574ebcaa0433"
+    },
+    "9dd9064e-2703-4d3b-8a1c-6e6af72d89f9": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Objective",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "e9b77a19-8455-4d84-b93e-56aff5235314",
+      "id": "9dd9064e-2703-4d3b-8a1c-6e6af72d89f9"
+    },
+    "52c15bcd-4c09-4a9f-bd5a-99bd7e7ddeab": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Survive the Kodama’s assault and restore peace to the grove.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "e9b77a19-8455-4d84-b93e-56aff5235314",
+      "id": "52c15bcd-4c09-4a9f-bd5a-99bd7e7ddeab"
+    },
+    "d920a10f-2ffc-43d1-9e9a-d8380377050e": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Key Features",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "e9b77a19-8455-4d84-b93e-56aff5235314",
+      "id": "d920a10f-2ffc-43d1-9e9a-d8380377050e"
+    },
+    "555c24cb-3bec-44ae-b319-ace5e3b883f9": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Ancient Torii Ruins: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Half-buried gates mark a forgotten shrine. Each gate confers advantage on DC 13 Wisdom (Religion) checks to recall local forest lore.",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Whispering Canopy: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "A constant, unintelligible murmur. Characters passing a DC 12 Wisdom saving throw ignore the first surprise round.",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Uneven Ground: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Thick bramble and exposed roots cover the path. Movement through the area costs 1 extra foot for every 1 foot moved.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "e9b77a19-8455-4d84-b93e-56aff5235314",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "555c24cb-3bec-44ae-b319-ace5e3b883f9"
+    },
+    "0aa41889-4976-4ed1-aa3f-7949cf383ea0": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Monsters",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "e9b77a19-8455-4d84-b93e-56aff5235314",
+      "styles": {
+        "paddingTop": "8px"
+      },
+      "id": "0aa41889-4976-4ed1-aa3f-7949cf383ea0"
+    },
+    "2041f16f-873c-4915-a424-342807cec23f": {
+      "type": "section",
+      "name": "Silvan Kodama",
+      "childrenIds": [
+        "23f75725-a23f-4a66-89fe-5d8d03cb31eb"
+      ],
+      "parentId": "e9b77a19-8455-4d84-b93e-56aff5235314",
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Silvan Kodama",
+                "textFormat": "h2"
+              }
+            ]
+          }
+        ],
+        "showTitle": true,
+        "styles": {
+          "header": {
+            "borderBottom": "1px solid #882619"
+          }
+        }
+      },
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none",
+          "paddingTop": "4px"
+        },
+        "collapsible": false,
+        "isCollapsed": true,
+        "alternatingCollapsedBackground": "white",
+        "nestedCollapsible": true,
+        "wrapInnerWithContentDisplay": true,
+        "maxHp": 27,
+        "currentHp": 27,
+        "armorClass": 14
+      },
+      "id": "2041f16f-873c-4915-a424-342807cec23f"
+    },
+    "23f75725-a23f-4a66-89fe-5d8d03cb31eb": {
+      "type": "section",
+      "name": "Silvan Kodama",
+      "childrenIds": [
+        "3bf04870-5358-460d-b8a6-5f7986c0e939",
+        "c2cf2b52-32ca-46ea-a32c-3ca671ac1a84",
+        "2e38d613-e5d5-4689-9a37-5a7db34dbac4",
+        "ed538f0c-bccc-4bbd-ab53-92618c4a27ef",
+        "4129f6b1-9a48-40fd-b781-c0481c95927c",
+        "d6477277-851b-4eee-95de-71457ff0bfcc",
+        "7d5f45e8-d012-4a1b-9bd1-5394b37249f3",
+        "e933484d-b0a6-46a1-ba40-661b26764246",
+        "95ab6ff5-e02e-4ac5-b9e6-f2fa6c87bbc3",
+        "67fffdce-2281-4d98-82f6-1dfd95dee7ef",
+        "0d9da227-a3b8-4c54-8deb-f7638dc6c60f",
+        "aa147716-22cd-4a1b-9fcc-1e9f7b29d9bc",
+        "001be440-4b57-4fce-98cd-3e07acf620c0",
+        "ae067dbc-9a3d-408c-8322-f4e9eb563339",
+        "a3aeb713-eb96-49cb-ae1d-6271a4d7bf4c",
+        "2008bbd3-ef16-4988-ae25-4a33e2976440",
+        "ac5e5699-784a-46cf-ac20-f0576b3df16f",
+        "d2c17179-ffaf-48e1-b069-297503b6f0c1",
+        "8940b91f-5d81-4f68-ac88-fb078caaff27",
+        "52e93ba9-ad06-487b-9a27-333217ed8acc"
+      ],
+      "parentId": "2041f16f-873c-4915-a424-342807cec23f",
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Silvan Kodama",
+                "textFormat": "h1"
+              }
+            ]
+          }
+        ],
+        "showTitle": true
+      },
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none",
+          "paddingTop": "4px"
+        },
+        "collapsible": false,
+        "isCollapsed": false,
+        "alternatingCollapsedBackground": "white"
+      },
+      "id": "23f75725-a23f-4a66-89fe-5d8d03cb31eb",
+      "content_type": "monster"
+    },
+    "3bf04870-5358-460d-b8a6-5f7986c0e939": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Medium Fey (Spirit), Neutral • Guardian of Tranquil Grove",
+              "textFormat": "h4"
+            }
+          ]
+        }
+      ],
+      "parentId": "23f75725-a23f-4a66-89fe-5d8d03cb31eb",
+      "styles": {
+        "paddingBottom": "4px"
+      },
+      "id": "3bf04870-5358-460d-b8a6-5f7986c0e939"
+    },
+    "c2cf2b52-32ca-46ea-a32c-3ca671ac1a84": {
+      "type": "line",
+      "parentId": "23f75725-a23f-4a66-89fe-5d8d03cb31eb",
+      "styles": {
+        "background": "linear-gradient(to right, #9D2A1F, transparent)",
+        "border": "none",
+        "height": "4px",
+        "width": "100%"
+      },
+      "id": "c2cf2b52-32ca-46ea-a32c-3ca671ac1a84",
+      "customStyles": {
+        "default": {
+          "background": "linear-gradient(to right, #9D2A1F, transparent)",
+          "border": "none",
+          "height": "4px",
+          "width": "100%"
+        }
+      }
+    },
+    "2e38d613-e5d5-4689-9a37-5a7db34dbac4": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Description",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "23f75725-a23f-4a66-89fe-5d8d03cb31eb",
+      "id": "2e38d613-e5d5-4689-9a37-5a7db34dbac4"
+    },
+    "ed538f0c-bccc-4bbd-ab53-92618c4a27ef": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "A slender humanoid of living bark and leaves, the Kodama’s eyes glow emerald. Its limbs twist like vines, and bark plates shift over its form.",
+              "textFormat": "description"
+            }
+          ]
+        }
+      ],
+      "parentId": "23f75725-a23f-4a66-89fe-5d8d03cb31eb",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "ed538f0c-bccc-4bbd-ab53-92618c4a27ef"
+    },
+    "4129f6b1-9a48-40fd-b781-c0481c95927c": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Lore",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "23f75725-a23f-4a66-89fe-5d8d03cb31eb",
+      "id": "4129f6b1-9a48-40fd-b781-c0481c95927c"
+    },
+    "d6477277-851b-4eee-95de-71457ff0bfcc": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "The ",
+              "textFormat": "paragraph"
+            },
+            {
+              "text": "{{Silvan_Kodama}}",
+              "variable": true,
+              "textFormat": "paragraph"
+            },
+            {
+              "text": " is a shy but fierce fey spirit that protects ancient forests in Rokugan. Offended by the desecration of sacred groves, it emerges to drive away intruders with nature’s wrath.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "23f75725-a23f-4a66-89fe-5d8d03cb31eb",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "d6477277-851b-4eee-95de-71457ff0bfcc"
+    },
+    "7d5f45e8-d012-4a1b-9bd1-5394b37249f3": {
+      "type": "line",
+      "parentId": "23f75725-a23f-4a66-89fe-5d8d03cb31eb",
+      "styles": {
+        "background": "linear-gradient(to right, #9D2A1F, transparent)",
+        "border": "none",
+        "height": "4px",
+        "width": "100%"
+      },
+      "id": "7d5f45e8-d012-4a1b-9bd1-5394b37249f3",
+      "customStyles": {
+        "default": {
+          "background": "linear-gradient(to right, #9D2A1F, transparent)",
+          "border": "none",
+          "height": "4px",
+          "width": "100%"
+        }
+      }
+    },
+    "e933484d-b0a6-46a1-ba40-661b26764246": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Hit Points: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "27 (5d8 + 5)",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Armor Class: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "14 (natural armor)",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Speed: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "30 ft.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "23f75725-a23f-4a66-89fe-5d8d03cb31eb",
+      "id": "e933484d-b0a6-46a1-ba40-661b26764246"
+    },
+    "95ab6ff5-e02e-4ac5-b9e6-f2fa6c87bbc3": {
+      "type": "StatLine",
+      "content": {
+        "stats": [
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "STR"
+                  }
+                ]
+              }
+            ],
+            "value": 10,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Strength"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "DEX"
+                  }
+                ]
+              }
+            ],
+            "value": 14,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Dexterity"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "CON"
+                  }
+                ]
+              }
+            ],
+            "value": 12,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Constitution"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "INT"
+                  }
+                ]
+              }
+            ],
+            "value": 12,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Intelligence"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "WIS"
+                  }
+                ]
+              }
+            ],
+            "value": 16,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Wisdom"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "CHA"
+                  }
+                ]
+              }
+            ],
+            "value": 14,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Charisma"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "parentId": "23f75725-a23f-4a66-89fe-5d8d03cb31eb",
+      "displayMode": "values",
+      "id": "95ab6ff5-e02e-4ac5-b9e6-f2fa6c87bbc3",
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none"
+        },
+        "statLine": {
+          "width": "100%",
+          "display": "flex",
+          "alignItems": "center",
+          "backgroundColor": "transparent"
+        },
+        "name": {
+          "minWidth": "64px",
+          "fontWeight": "bold",
+          "backgroundColor": "transparent",
+          "color": "#58180D",
+          "flex": "1"
+        },
+        "value": {
+          "width": "32px",
+          "backgroundColor": "transparent",
+          "textAlign": "center",
+          "color": "#000000",
+          "fontFamily": "Noto Serif, Georgia, serif"
+        },
+        "description": {
+          "fontFamily": "Noto Serif, Georgia, serif",
+          "fontSize": "13px",
+          "fontWeight": "normal",
+          "backgroundColor": "transparent",
+          "color": "#000",
+          "lineHeight": "1.25",
+          "margin": "4px 0 0 0",
+          "textAlign": "left",
+          "whiteSpace": "normal",
+          "overflow": "visible",
+          "textOverflow": "clip",
+          "minWidth": "100px",
+          "flex": "1"
+        },
+        "topLine": {
+          "width": "100%",
+          "height": "4px",
+          "marginTop": "4px",
+          "marginBottom": "4px",
+          "background": "linear-gradient(to right, #9D2A1F, transparent)"
+        },
+        "bottomLine": {
+          "width": "100%",
+          "height": "4px",
+          "marginTop": "4px",
+          "marginBottom": "4px",
+          "background": "linear-gradient(to right, #9D2A1F, transparent)"
+        },
+        "showTopLine": true,
+        "showBottomLine": true
+      }
+    },
+    "67fffdce-2281-4d98-82f6-1dfd95dee7ef": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Skills: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Perception (+5), Stealth (+4)",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Languages: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Sylvan, Common",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Damage Resistances: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "poison",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Damage Immunities: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "charmed",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Senses: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Passive Perception 15",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Challenge Rating: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "2",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Experience Points: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "450",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "23f75725-a23f-4a66-89fe-5d8d03cb31eb",
+      "id": "67fffdce-2281-4d98-82f6-1dfd95dee7ef"
+    },
+    "0d9da227-a3b8-4c54-8deb-f7638dc6c60f": {
+      "type": "line",
+      "parentId": "23f75725-a23f-4a66-89fe-5d8d03cb31eb",
+      "styles": {
+        "background": "linear-gradient(to right, #9D2A1F, transparent)",
+        "border": "none",
+        "height": "4px",
+        "width": "100%"
+      },
+      "id": "0d9da227-a3b8-4c54-8deb-f7638dc6c60f",
+      "customStyles": {
+        "default": {
+          "background": "linear-gradient(to right, #9D2A1F, transparent)",
+          "border": "none",
+          "height": "4px",
+          "width": "100%"
+        }
+      }
+    },
+    "aa147716-22cd-4a1b-9fcc-1e9f7b29d9bc": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Features",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "23f75725-a23f-4a66-89fe-5d8d03cb31eb",
+      "id": "aa147716-22cd-4a1b-9fcc-1e9f7b29d9bc"
+    },
+    "001be440-4b57-4fce-98cd-3e07acf620c0": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Forest Stealth: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "The Kodama has advantage on Dexterity (Stealth) checks while in a forest.",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Spirit Form: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "The Kodama can move through a space as narrow as 1 inch wide without squeezing.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "23f75725-a23f-4a66-89fe-5d8d03cb31eb",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "001be440-4b57-4fce-98cd-3e07acf620c0"
+    },
+    "ae067dbc-9a3d-408c-8322-f4e9eb563339": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Actions",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "23f75725-a23f-4a66-89fe-5d8d03cb31eb",
+      "id": "ae067dbc-9a3d-408c-8322-f4e9eb563339"
+    },
+    "a3aeb713-eb96-49cb-ae1d-6271a4d7bf4c": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "2 attacks (Multiattack)",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "23f75725-a23f-4a66-89fe-5d8d03cb31eb",
+      "id": "a3aeb713-eb96-49cb-ae1d-6271a4d7bf4c"
+    },
+    "2008bbd3-ef16-4988-ae25-4a33e2976440": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Multiattack: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "The Kodama makes two attacks with its Bark Shard.",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Bark Shard: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 1d8+2 slashing damage.",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Forest’s Grasp (Recharge 5–6): ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Roots and vines erupt in a 10-foot radius centered on the Kodama. Each creature in the area must succeed on a DC 13 Strength saving throw or become restrained. A restrained creature can use its action to repeat the save, ending the effect on itself on a success.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "23f75725-a23f-4a66-89fe-5d8d03cb31eb",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "2008bbd3-ef16-4988-ae25-4a33e2976440"
+    },
+    "ac5e5699-784a-46cf-ac20-f0576b3df16f": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Reactions",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "23f75725-a23f-4a66-89fe-5d8d03cb31eb",
+      "id": "ac5e5699-784a-46cf-ac20-f0576b3df16f"
+    },
+    "d2c17179-ffaf-48e1-b069-297503b6f0c1": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Ethereal Shift: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "When the Kodama is hit by a melee attack, it can shift partially into the Ethereal Plane, causing the triggering attack to miss. It returns to the Material Plane at the end of its next turn.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "23f75725-a23f-4a66-89fe-5d8d03cb31eb",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "d2c17179-ffaf-48e1-b069-297503b6f0c1"
+    },
+    "8940b91f-5d81-4f68-ac88-fb078caaff27": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Loot",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "23f75725-a23f-4a66-89fe-5d8d03cb31eb",
+      "id": "8940b91f-5d81-4f68-ac88-fb078caaff27"
+    },
+    "52e93ba9-ad06-487b-9a27-333217ed8acc": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Kodama Bark: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "A flexible strip of bark infused with fey magic. Can be used as a spellcasting focus.",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": " (x3)Paper Leaf Charms: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Three leaf-shaped charms inscribed with purification prayers. Each grants +1 bonus on one saving throw against fear.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "23f75725-a23f-4a66-89fe-5d8d03cb31eb",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "52e93ba9-ad06-487b-9a27-333217ed8acc"
+    }
+  }
+}

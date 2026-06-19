@@ -1,0 +1,1289 @@
+{
+  "name": "Young Forest Oni",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "abilities": {
+      "str": {
+        "value": 16,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        },
+        "check": {
+          "roll": {
+            "min": null,
+            "max": null,
+            "mode": 0
+          }
+        },
+        "save": {
+          "roll": {
+            "min": null,
+            "max": null,
+            "mode": 0
+          }
+        }
+      },
+      "dex": {
+        "value": 12,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        },
+        "check": {
+          "roll": {
+            "min": null,
+            "max": null,
+            "mode": 0
+          }
+        },
+        "save": {
+          "roll": {
+            "min": null,
+            "max": null,
+            "mode": 0
+          }
+        }
+      },
+      "con": {
+        "value": 14,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        },
+        "check": {
+          "roll": {
+            "min": null,
+            "max": null,
+            "mode": 0
+          }
+        },
+        "save": {
+          "roll": {
+            "min": null,
+            "max": null,
+            "mode": 0
+          }
+        }
+      },
+      "int": {
+        "value": 9,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        },
+        "check": {
+          "roll": {
+            "min": null,
+            "max": null,
+            "mode": 0
+          }
+        },
+        "save": {
+          "roll": {
+            "min": null,
+            "max": null,
+            "mode": 0
+          }
+        }
+      },
+      "wis": {
+        "value": 10,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        },
+        "check": {
+          "roll": {
+            "min": null,
+            "max": null,
+            "mode": 0
+          }
+        },
+        "save": {
+          "roll": {
+            "min": null,
+            "max": null,
+            "mode": 0
+          }
+        }
+      },
+      "cha": {
+        "value": 8,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        },
+        "check": {
+          "roll": {
+            "min": null,
+            "max": null,
+            "mode": 0
+          }
+        },
+        "save": {
+          "roll": {
+            "min": null,
+            "max": null,
+            "mode": 0
+          }
+        }
+      }
+    },
+    "attributes": {
+      "ac": {
+        "flat": 12,
+        "calc": "natural"
+      },
+      "hp": {
+        "value": 45,
+        "max": 45,
+        "formula": "6d10 + 12",
+        "temp": 0,
+        "tempmax": 0
+      },
+      "movement": {
+        "units": "ft",
+        "walk": "30",
+        "climb": "30",
+        "hover": false,
+        "ignoredDifficultTerrain": []
+      },
+      "senses": {
+        "units": "ft",
+        "ranges": {
+          "darkvision": 60
+        },
+        "special": ""
+      },
+      "init": {
+        "ability": "",
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        },
+        "bonus": ""
+      },
+      "attunement": {
+        "max": 3
+      },
+      "spellcasting": "",
+      "exhaustion": 0,
+      "concentration": {
+        "ability": "",
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        },
+        "bonuses": {
+          "save": ""
+        },
+        "limit": 1
+      },
+      "loyalty": {},
+      "hd": {
+        "spent": 0
+      },
+      "death": {
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        },
+        "success": 0,
+        "failure": 0,
+        "bonuses": {
+          "save": ""
+        }
+      },
+      "price": {
+        "value": null,
+        "denomination": "gp"
+      },
+      "spell": {
+        "level": 0
+      }
+    },
+    "details": {
+      "type": {
+        "value": "giant",
+        "subtype": ""
+      },
+      "cr": 2,
+      "alignment": "Chaotic evil",
+      "biography": {
+        "value": "<p><em>Kanabo Wielder</em></p><p>Standing over nine feet tall, this hunch-backed giant has dusky red skin mottled with bark-like scars. Its wild black hair falls in tangles around two short horns. It wears rough leather strips and carries a massive spiked kanabo over its shoulder.</p><h3>Lore</h3><p>Born of a fleeting union between a restless mountain spirit and a wandering oni, the Young Forest Oni prowls the ancient woods of Rokugan, its eyes alight with primal hunger. Though not yet fully grown, it wields the spiked kanabo with deadly vigor, terrorizing woodcutters and lone travelers. Local legends speak of its laughter echoing through mist-shrouded groves just before a brutal ambush.</p>",
+        "public": ""
+      },
+      "ideal": "",
+      "bond": "",
+      "flaw": "",
+      "race": null,
+      "habitat": {
+        "value": [],
+        "custom": ""
+      },
+      "treasure": {
+        "value": []
+      }
+    },
+    "traits": {
+      "size": "lg",
+      "dv": {
+        "value": [],
+        "custom": "",
+        "bypasses": []
+      },
+      "dr": {
+        "value": [],
+        "custom": "",
+        "bypasses": []
+      },
+      "di": {
+        "value": [],
+        "custom": "",
+        "bypasses": []
+      },
+      "ci": {
+        "value": [],
+        "custom": ""
+      },
+      "languages": {
+        "value": [
+          "common",
+          "giant"
+        ],
+        "custom": "",
+        "communication": {}
+      },
+      "dm": {
+        "amount": {},
+        "bypasses": []
+      },
+      "important": false
+    },
+    "skills": {
+      "prc": {
+        "value": 1,
+        "ability": "dex",
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        },
+        "bonuses": {
+          "check": "",
+          "passive": ""
+        }
+      },
+      "ste": {
+        "value": 1,
+        "ability": "dex",
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        },
+        "bonuses": {
+          "check": "",
+          "passive": ""
+        }
+      }
+    },
+    "resources": {
+      "legact": {
+        "max": 0,
+        "spent": 0
+      },
+      "legres": {
+        "max": 0,
+        "spent": 0
+      },
+      "lair": {
+        "value": false,
+        "initiative": null,
+        "inside": false
+      }
+    },
+    "source": {
+      "custom": "Imported from Worldsmith",
+      "revision": 1,
+      "rules": "2024"
+    },
+    "currency": {
+      "gp": 0,
+      "sp": 0,
+      "cp": 0
+    },
+    "bonuses": {
+      "mwak": {
+        "attack": "",
+        "damage": ""
+      },
+      "rwak": {
+        "attack": "",
+        "damage": ""
+      },
+      "msak": {
+        "attack": "",
+        "damage": ""
+      },
+      "rsak": {
+        "attack": "",
+        "damage": ""
+      },
+      "abilities": {
+        "check": "",
+        "save": "",
+        "skill": ""
+      },
+      "spell": {
+        "dc": ""
+      }
+    },
+    "tools": {},
+    "spells": {
+      "spell1": {
+        "value": 0
+      },
+      "spell2": {
+        "value": 0
+      },
+      "spell3": {
+        "value": 0
+      },
+      "spell4": {
+        "value": 0
+      },
+      "spell5": {
+        "value": 0
+      },
+      "spell6": {
+        "value": 0
+      },
+      "spell7": {
+        "value": 0
+      },
+      "spell8": {
+        "value": 0
+      },
+      "spell9": {
+        "value": 0
+      },
+      "pact": {
+        "value": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "name": "Keen Smell",
+      "type": "feat",
+      "img": "icons/svg/book.svg",
+      "system": {
+        "description": {
+          "value": "<p>The young oni has advantage on Wisdom (Perception) checks that rely on smell.</p>",
+          "chat": ""
+        },
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "activities": {},
+        "properties": [
+          "trait"
+        ],
+        "uses": {
+          "spent": 0,
+          "recovery": []
+        },
+        "advancement": {},
+        "identifier": "",
+        "source": {
+          "revision": 1,
+          "rules": "2024"
+        },
+        "crewed": false,
+        "enchant": {},
+        "prerequisites": {
+          "items": [],
+          "repeatable": false
+        },
+        "requirements": ""
+      },
+      "_id": "GPzcgvvK7WvR6OJN",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.364",
+        "systemId": "dnd5e",
+        "systemVersion": "5.3.3",
+        "createdTime": 1781900585586,
+        "modifiedTime": 1781900585586,
+        "lastModifiedBy": "gXGsZ4Z01ab9NUaN",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "name": "Mountain Stalker",
+      "type": "feat",
+      "img": "icons/svg/book.svg",
+      "system": {
+        "description": {
+          "value": "<p>The young oni can move stealthily through rocky or forested terrain without disturbing its environment.</p>",
+          "chat": ""
+        },
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "activities": {},
+        "properties": [
+          "trait"
+        ],
+        "uses": {
+          "spent": 0,
+          "recovery": []
+        },
+        "advancement": {},
+        "identifier": "",
+        "source": {
+          "revision": 1,
+          "rules": "2024"
+        },
+        "crewed": false,
+        "enchant": {},
+        "prerequisites": {
+          "items": [],
+          "repeatable": false
+        },
+        "requirements": ""
+      },
+      "_id": "mORgU6J39ieaI6ga",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.364",
+        "systemId": "dnd5e",
+        "systemVersion": "5.3.3",
+        "createdTime": 1781900585586,
+        "modifiedTime": 1781900585586,
+        "lastModifiedBy": "gXGsZ4Z01ab9NUaN",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "name": "Feature",
+      "type": "feat",
+      "img": "icons/svg/aura.svg",
+      "system": {
+        "description": {
+          "value": "<p>Two—one Kanabo attack and one Javelin attack, or two Kanabo attacks if no javelin is thrown.</p>",
+          "chat": ""
+        },
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "activities": {},
+        "uses": {
+          "spent": 0,
+          "recovery": []
+        },
+        "advancement": {},
+        "identifier": "",
+        "source": {
+          "revision": 1,
+          "rules": "2024"
+        },
+        "crewed": false,
+        "enchant": {},
+        "prerequisites": {
+          "items": [],
+          "repeatable": false
+        },
+        "properties": [],
+        "requirements": ""
+      },
+      "_id": "a0HRkiyvmdNAgBP2",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.364",
+        "systemId": "dnd5e",
+        "systemVersion": "5.3.3",
+        "createdTime": 1781900585586,
+        "modifiedTime": 1781900585586,
+        "lastModifiedBy": "gXGsZ4Z01ab9NUaN",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "name": "Kanabo",
+      "type": "feat",
+      "img": "icons/svg/sword.svg",
+      "system": {
+        "description": {
+          "value": "<p>Melee Weapon Attack: +5 to hit, reach 10 ft., one target. Hit: 1d10+3 bludgeoning damage.</p>",
+          "chat": ""
+        },
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "activities": {
+          "EKmQfXb42QTVXP6C": {
+            "_id": "EKmQfXb42QTVXP6C",
+            "type": "attack",
+            "activation": {
+              "type": "action",
+              "value": null,
+              "override": true
+            },
+            "range": {
+              "override": true,
+              "units": "ft"
+            },
+            "attack": {
+              "ability": "",
+              "bonus": "5",
+              "flat": true,
+              "type": {
+                "value": "melee",
+                "classification": "weapon"
+              },
+              "critical": {}
+            },
+            "damage": {
+              "includeBase": false,
+              "parts": [
+                {
+                  "number": 1,
+                  "denomination": 10,
+                  "bonus": "3",
+                  "types": [
+                    "bludgeoning"
+                  ],
+                  "custom": {
+                    "enabled": false
+                  },
+                  "scaling": {
+                    "number": 1
+                  }
+                }
+              ],
+              "critical": {}
+            },
+            "img": null,
+            "sort": 0,
+            "consumption": {
+              "scaling": {
+                "allowed": false
+              },
+              "spellSlot": true,
+              "targets": []
+            },
+            "description": {},
+            "duration": {
+              "units": "inst",
+              "concentration": false,
+              "override": false
+            },
+            "effects": [],
+            "flags": {},
+            "target": {
+              "template": {
+                "contiguous": false,
+                "stationary": false,
+                "units": "ft"
+              },
+              "affects": {
+                "choice": false
+              },
+              "override": false,
+              "prompt": true
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": []
+            },
+            "visibility": {
+              "level": {},
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            }
+          }
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": []
+        },
+        "advancement": {},
+        "identifier": "",
+        "source": {
+          "revision": 1,
+          "rules": "2024"
+        },
+        "crewed": false,
+        "enchant": {},
+        "prerequisites": {
+          "items": [],
+          "repeatable": false
+        },
+        "properties": [],
+        "requirements": ""
+      },
+      "_id": "lETujY0jBJSUjnkt",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.364",
+        "systemId": "dnd5e",
+        "systemVersion": "5.3.3",
+        "createdTime": 1781900585586,
+        "modifiedTime": 1781900585586,
+        "lastModifiedBy": "gXGsZ4Z01ab9NUaN",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "name": "Javelin",
+      "type": "feat",
+      "img": "icons/svg/sword.svg",
+      "system": {
+        "description": {
+          "value": "<p>Melee or Ranged Weapon Attack: +5 to hit, reach 5 ft. or range 30/120 ft., one target. Hit: 1d6+3 piercing damage.</p>",
+          "chat": ""
+        },
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "activities": {
+          "OnSIz8iY7oQ6jSfC": {
+            "_id": "OnSIz8iY7oQ6jSfC",
+            "type": "attack",
+            "activation": {
+              "type": "action",
+              "value": null,
+              "override": true
+            },
+            "range": {
+              "override": true,
+              "value": "30",
+              "units": "ft"
+            },
+            "attack": {
+              "ability": "",
+              "bonus": "5",
+              "flat": true,
+              "type": {
+                "value": "melee",
+                "classification": "weapon"
+              },
+              "critical": {}
+            },
+            "damage": {
+              "includeBase": false,
+              "parts": [
+                {
+                  "number": 1,
+                  "denomination": 6,
+                  "bonus": "3",
+                  "types": [
+                    "piercing"
+                  ],
+                  "custom": {
+                    "enabled": false
+                  },
+                  "scaling": {
+                    "number": 1
+                  }
+                }
+              ],
+              "critical": {}
+            },
+            "img": null,
+            "sort": 0,
+            "consumption": {
+              "scaling": {
+                "allowed": false
+              },
+              "spellSlot": true,
+              "targets": []
+            },
+            "description": {},
+            "duration": {
+              "units": "inst",
+              "concentration": false,
+              "override": false
+            },
+            "effects": [],
+            "flags": {},
+            "target": {
+              "template": {
+                "contiguous": false,
+                "stationary": false,
+                "units": "ft"
+              },
+              "affects": {
+                "choice": false
+              },
+              "override": false,
+              "prompt": true
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": []
+            },
+            "visibility": {
+              "level": {},
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            }
+          }
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": []
+        },
+        "advancement": {},
+        "identifier": "",
+        "source": {
+          "revision": 1,
+          "rules": "2024"
+        },
+        "crewed": false,
+        "enchant": {},
+        "prerequisites": {
+          "items": [],
+          "repeatable": false
+        },
+        "properties": [],
+        "requirements": ""
+      },
+      "_id": "wrliPspEgQ7zoPxX",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.364",
+        "systemId": "dnd5e",
+        "systemVersion": "5.3.3",
+        "createdTime": 1781900585586,
+        "modifiedTime": 1781900585586,
+        "lastModifiedBy": "gXGsZ4Z01ab9NUaN",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "name": "Ghastly Roar (Recharge 5–6)",
+      "type": "feat",
+      "img": "icons/svg/aura.svg",
+      "system": {
+        "description": {
+          "value": "<p>The oni emits a terrifying roar. Each creature within 30 ft. that can hear it must succeed on a DC 12 Wisdom saving throw or be frightened until the end of its next turn.</p>",
+          "chat": ""
+        },
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "activities": {
+          "zi9wvlTcSury7PU5": {
+            "_id": "zi9wvlTcSury7PU5",
+            "type": "save",
+            "activation": {
+              "type": "action",
+              "value": null,
+              "override": true
+            },
+            "range": {
+              "override": true,
+              "value": "30",
+              "units": "ft"
+            },
+            "save": {
+              "ability": [
+                "wis"
+              ],
+              "dc": {
+                "calculation": "",
+                "formula": "12"
+              }
+            },
+            "damage": {
+              "onSave": "none",
+              "parts": []
+            },
+            "img": null,
+            "sort": 0,
+            "consumption": {
+              "scaling": {
+                "allowed": false
+              },
+              "spellSlot": true,
+              "targets": []
+            },
+            "description": {},
+            "duration": {
+              "units": "inst",
+              "concentration": false,
+              "override": false
+            },
+            "effects": [],
+            "flags": {},
+            "target": {
+              "template": {
+                "contiguous": false,
+                "stationary": false,
+                "units": "ft"
+              },
+              "affects": {
+                "choice": false
+              },
+              "override": false,
+              "prompt": true
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": []
+            },
+            "visibility": {
+              "level": {},
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            }
+          }
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": []
+        },
+        "advancement": {},
+        "identifier": "",
+        "source": {
+          "revision": 1,
+          "rules": "2024"
+        },
+        "crewed": false,
+        "enchant": {},
+        "prerequisites": {
+          "items": [],
+          "repeatable": false
+        },
+        "properties": [],
+        "requirements": ""
+      },
+      "_id": "xZIRZKsA8BPuUsVi",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.364",
+        "systemId": "dnd5e",
+        "systemVersion": "5.3.3",
+        "createdTime": 1781900585586,
+        "modifiedTime": 1781900585586,
+        "lastModifiedBy": "gXGsZ4Z01ab9NUaN",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "name": "Small Oni Mask Fragment",
+      "type": "loot",
+      "img": "icons/svg/chest.svg",
+      "system": {
+        "description": {
+          "value": "<p>A cracked fragment of the oni's demonic mask, worth 5 gp to collectors of the occult.</p>",
+          "chat": ""
+        },
+        "quantity": 1,
+        "price": {
+          "value": 0,
+          "denomination": "gp"
+        },
+        "identifier": "",
+        "source": {
+          "revision": 1,
+          "rules": "2024"
+        },
+        "identified": true,
+        "unidentified": {
+          "description": ""
+        },
+        "container": null,
+        "weight": {
+          "value": 0,
+          "units": "lb"
+        },
+        "rarity": "",
+        "properties": [],
+        "type": {
+          "value": "",
+          "subtype": ""
+        }
+      },
+      "_id": "Zj11OpoOoZiIiM9S",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.364",
+        "systemId": "dnd5e",
+        "systemVersion": "5.3.3",
+        "createdTime": 1781900585586,
+        "modifiedTime": 1781900585586,
+        "lastModifiedBy": "gXGsZ4Z01ab9NUaN",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "name": "(x2)Kanabo Spikes",
+      "type": "loot",
+      "img": "icons/svg/chest.svg",
+      "system": {
+        "description": {
+          "value": "<p>Two polished iron spikes from the oni's club, usable as caltrops or crafting components.</p>",
+          "chat": ""
+        },
+        "quantity": 1,
+        "price": {
+          "value": 0,
+          "denomination": "gp"
+        },
+        "identifier": "",
+        "source": {
+          "revision": 1,
+          "rules": "2024"
+        },
+        "identified": true,
+        "unidentified": {
+          "description": ""
+        },
+        "container": null,
+        "weight": {
+          "value": 0,
+          "units": "lb"
+        },
+        "rarity": "",
+        "properties": [],
+        "type": {
+          "value": "",
+          "subtype": ""
+        }
+      },
+      "_id": "Psg864GsGVnzHjMl",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.364",
+        "systemId": "dnd5e",
+        "systemVersion": "5.3.3",
+        "createdTime": 1781900585586,
+        "modifiedTime": 1781900585586,
+        "lastModifiedBy": "gXGsZ4Z01ab9NUaN",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "ownership": {
+        "default": 0
+      }
+    }
+  ],
+  "prototypeToken": {
+    "name": "Young Forest Oni",
+    "actorLink": false,
+    "sight": {
+      "enabled": true,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "disposition": 0,
+    "displayName": 0,
+    "width": 2,
+    "height": 2,
+    "depth": 1,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "alphaThreshold": 0.75
+    },
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "light": {
+      "negative": false,
+      "priority": 0,
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "color": null,
+      "coloration": 1,
+      "dim": 0,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "detectionModes": {},
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "turnMarker": {
+      "mode": 1,
+      "animation": null,
+      "src": null,
+      "disposition": false
+    },
+    "movementAction": null,
+    "flags": {},
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false
+  },
+  "flags": {
+    "worldsmith-foundry-import": {
+      "imported": true,
+      "version": "1.0.0",
+      "source": {
+        "identity": {
+          "title": "Kanabo Wielder",
+          "size": "large",
+          "alignment": "Chaotic evil",
+          "type": "Giant",
+          "name": "Young Forest Oni",
+          "description": "Standing over nine feet tall, this hunch-backed giant has dusky red skin mottled with bark-like scars. Its wild black hair falls in tangles around two short horns. It wears rough leather strips and carries a massive spiked kanabo over its shoulder.",
+          "lore": "Born of a fleeting union between a restless mountain spirit and a wandering oni, the Young Forest Oni prowls the ancient woods of Rokugan, its eyes alight with primal hunger. Though not yet fully grown, it wields the spiked kanabo with deadly vigor, terrorizing woodcutters and lone travelers. Local legends speak of its laughter echoing through mist-shrouded groves just before a brutal ambush."
+        },
+        "attributes": {
+          "proficiencies": {
+            "skills": [
+              "Perception",
+              "Stealth"
+            ],
+            "languages": "Common, Giant"
+          },
+          "senses": {
+            "darkvision": 60,
+            "passivePerception": 11
+          },
+          "cr": "2",
+          "xp": 450,
+          "ac": {
+            "value": 12,
+            "type": "Natural Armor"
+          },
+          "hp": {
+            "current": 45,
+            "max": 45
+          },
+          "hitDice": {
+            "totalDice": 6,
+            "dieSize": "d10",
+            "flatBonus": 12
+          },
+          "speed": {
+            "walk": 30,
+            "climb": 30
+          },
+          "abilities": {
+            "str": {
+              "value": 16,
+              "saveProficient": false
+            },
+            "dex": {
+              "value": 12,
+              "saveProficient": false
+            },
+            "con": {
+              "value": 14,
+              "saveProficient": false
+            },
+            "int": {
+              "value": 9,
+              "saveProficient": false
+            },
+            "wis": {
+              "value": 10,
+              "saveProficient": false
+            },
+            "cha": {
+              "value": 8,
+              "saveProficient": false
+            }
+          }
+        },
+        "features": [
+          {
+            "name": "Keen Smell",
+            "description": "The young oni has advantage on Wisdom (Perception) checks that rely on smell."
+          },
+          {
+            "name": "Mountain Stalker",
+            "description": "The young oni can move stealthily through rocky or forested terrain without disturbing its environment."
+          }
+        ],
+        "actions": [
+          {
+            "name": "Feature",
+            "description": "Two—one Kanabo attack and one Javelin attack, or two Kanabo attacks if no javelin is thrown."
+          },
+          {
+            "name": "Kanabo",
+            "description": "Melee Weapon Attack: +5 to hit, reach 10 ft., one target. Hit: 1d10+3 bludgeoning damage."
+          },
+          {
+            "name": "Javelin",
+            "description": "Melee or Ranged Weapon Attack: +5 to hit, reach 5 ft. or range 30/120 ft., one target. Hit: 1d6+3 piercing damage."
+          },
+          {
+            "name": "Ghastly Roar (Recharge 5–6)",
+            "description": "The oni emits a terrifying roar. Each creature within 30 ft. that can hear it must succeed on a DC 12 Wisdom saving throw or be frightened until the end of its next turn."
+          }
+        ],
+        "reactions": [],
+        "loot": [
+          {
+            "item": "Small Oni Mask Fragment",
+            "details": "A cracked fragment of the oni's demonic mask, worth 5 gp to collectors of the occult."
+          },
+          {
+            "item": "(x2)Kanabo Spikes",
+            "details": "Two polished iron spikes from the oni's club, usable as caltrops or crafting components."
+          }
+        ]
+      }
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "_stats": {
+    "coreVersion": "14.364",
+    "systemId": "dnd5e",
+    "systemVersion": "5.3.3",
+    "createdTime": 1781900585586,
+    "modifiedTime": 1781900585592,
+    "lastModifiedBy": "gXGsZ4Z01ab9NUaN",
+    "compendiumSource": null,
+    "duplicateSource": "Actor.L5JLJ4upBiILyjR4",
+    "exportSource": {
+      "worldId": "air",
+      "uuid": "Actor.L5JLJ4upBiILyjR4",
+      "coreVersion": "14.364",
+      "systemId": "dnd5e",
+      "systemVersion": "5.3.3"
+    }
+  },
+  "ownership": {
+    "default": 0
+  }
+}

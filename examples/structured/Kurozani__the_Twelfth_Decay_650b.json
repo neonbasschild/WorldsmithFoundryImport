@@ -1,0 +1,2805 @@
+{
+  "rootId": "d8935648-d1d2-4af7-b55a-ef2617def4b1",
+  "items": {
+    "d8935648-d1d2-4af7-b55a-ef2617def4b1": {
+      "model_type": "structured",
+      "content_type": "deity",
+      "type": "section",
+      "name": "Kurozani, the Twelfth Decay",
+      "childrenIds": [
+        "7f51bd76-879b-4779-afe8-607d7d06ea7f",
+        "7b6778eb-2937-4ea9-9006-135b3b7f5a4a",
+        "de87a3e9-469d-49d1-bfad-01fc7696188f",
+        "52db39b2-6e26-40cf-abc3-a88231ce87d0",
+        "58ed184b-d1cd-4288-a7cb-91a95d6c151c",
+        "5feb8d2c-e6ab-4420-96a6-fd44f6390e19",
+        "5955faeb-c6b1-43c2-9c7e-1877243d27f5",
+        "75c92e7a-0790-438d-ac9d-b720e6e60dcb",
+        "8e125a62-9534-4547-b9cd-4eec90c68b91",
+        "12d4f187-be6d-4116-b476-aa59ec557f1e",
+        "a01a67a4-2bc4-4797-af3b-045d3eba9505",
+        "7913f43c-30bc-401d-83f1-f471aa7fe767",
+        "580b28f0-1cac-4e11-947d-06c1aadb5244",
+        "16fdcab5-9996-40ec-940a-d23d015a8159",
+        "3868a75c-c1e5-43ef-b66a-7167b80cb521",
+        "245b3191-4490-4912-8135-622dc0b3d6aa",
+        "a8fe4f75-1027-4e41-9a97-5b6489567b11",
+        "a1ee8fb0-8899-4dc9-a941-619e940f206e"
+      ],
+      "parentId": null,
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Kurozani, the Twelfth Decay",
+                "textFormat": "h1"
+              }
+            ]
+          }
+        ],
+        "showTitle": true,
+        "styles": {
+          "borderBottom": "1px solid #882619"
+        }
+      },
+      "id": "d8935648-d1d2-4af7-b55a-ef2617def4b1",
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none"
+        },
+        "collapsible": false,
+        "isCollapsed": false,
+        "alternatingCollapsedBackground": "white"
+      }
+    },
+    "7f51bd76-879b-4779-afe8-607d7d06ea7f": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Ancient Power; Corruption & Decay; Chaotic Evil",
+              "textFormat": "h4"
+            }
+          ]
+        }
+      ],
+      "parentId": "d8935648-d1d2-4af7-b55a-ef2617def4b1",
+      "id": "7f51bd76-879b-4779-afe8-607d7d06ea7f"
+    },
+    "7b6778eb-2937-4ea9-9006-135b3b7f5a4a": {
+      "type": "line",
+      "parentId": "d8935648-d1d2-4af7-b55a-ef2617def4b1",
+      "styles": {
+        "background": "linear-gradient(to right, #9D2A1F, transparent)",
+        "border": "none",
+        "height": "4px",
+        "width": "100%"
+      },
+      "id": "7b6778eb-2937-4ea9-9006-135b3b7f5a4a",
+      "customStyles": {
+        "default": {
+          "background": "linear-gradient(to right, #9D2A1F, transparent)",
+          "border": "none",
+          "height": "4px",
+          "width": "100%"
+        }
+      }
+    },
+    "de87a3e9-469d-49d1-bfad-01fc7696188f": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Description",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "d8935648-d1d2-4af7-b55a-ef2617def4b1",
+      "id": "de87a3e9-469d-49d1-bfad-01fc7696188f"
+    },
+    "52db39b2-6e26-40cf-abc3-a88231ce87d0": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "A hulking silhouette wreathed in drifting spores and clotted tendrils of fungus. Its mottled flesh pulls and rots where you glimpse bone. Glowing pustules burn with malevolent light, and every step leaves behind a slick of venomous mold.",
+              "textFormat": "description"
+            }
+          ]
+        }
+      ],
+      "parentId": "d8935648-d1d2-4af7-b55a-ef2617def4b1",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "52db39b2-6e26-40cf-abc3-a88231ce87d0"
+    },
+    "58ed184b-d1cd-4288-a7cb-91a95d6c151c": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Lore",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "d8935648-d1d2-4af7-b55a-ef2617def4b1",
+      "id": "58ed184b-d1cd-4288-a7cb-91a95d6c151c"
+    },
+    "5feb8d2c-e6ab-4420-96a6-fd44f6390e19": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Born in the yawning chasm between life and death, Kurozani emerged as the renegade twelfth Kami cast out of the celestial court of the Five Rings. Shunned by its peers for harboring a hunger for ultimate dissolution, it bound the essence of decay to its form. Over incomprehensible eons, Kurozani seeped into mortal realms, birthing plagues, sowing pestilence, and reminding all living things that entropy is the true master of existence.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "d8935648-d1d2-4af7-b55a-ef2617def4b1",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "5feb8d2c-e6ab-4420-96a6-fd44f6390e19"
+    },
+    "5955faeb-c6b1-43c2-9c7e-1877243d27f5": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Followers",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "d8935648-d1d2-4af7-b55a-ef2617def4b1",
+      "id": "5955faeb-c6b1-43c2-9c7e-1877243d27f5"
+    },
+    "75c92e7a-0790-438d-ac9d-b720e6e60dcb": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Kurozani’s worshipers gather in hidden lairs far from civilized lands. They include plague-bringers, necromancers seeking fresh cadavers to harvest corruption, itinerant shamans in plague-scarred villages, and secretive sects among ratfolk or hobgoblin warbands. Each sees decay not as an end, but as the truest path to rebirth through ruin.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "d8935648-d1d2-4af7-b55a-ef2617def4b1",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "75c92e7a-0790-438d-ac9d-b720e6e60dcb"
+    },
+    "8e125a62-9534-4547-b9cd-4eec90c68b91": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Worship",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "d8935648-d1d2-4af7-b55a-ef2617def4b1",
+      "id": "8e125a62-9534-4547-b9cd-4eec90c68b91"
+    },
+    "12d4f187-be6d-4116-b476-aa59ec557f1e": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Core Beliefs: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Decay is the crucible of creation; all things must rot before being reborn into stronger form. Mortals who deny corruption deny the will of Kurozani.",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Common Phrases: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "\"May Kurozani’s rot renew your spirit.\" \"Embrace the blight; transcend the flesh.\"",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Sacred Creatures: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Putrid carrion crows, centipedes the size of hounds, and fungi-infested toads are venerated as emissaries of the Twelfth Decay.",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Festivals: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Night of a Thousand Spores: On the new moon of the sixth month, worshipers release glowing spores over a ruined field, believing the lights guide lost souls to rot and renewal.",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Attire: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Priests don patchwork robes of rotted silk and leather, stitched with fungal filaments that sprout small mushrooms when soaked in incense smoke.",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Rituals: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "The Entombment Rite: A volunteer offers their body in a shallow pit. Priests anoint the corpse in fungal broth and seal it beneath poisonous petals, believing the corpse’s putrefaction channels Kurozani’s power back into the world.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "d8935648-d1d2-4af7-b55a-ef2617def4b1",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "12d4f187-be6d-4116-b476-aa59ec557f1e"
+    },
+    "a01a67a4-2bc4-4797-af3b-045d3eba9505": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Follower Benefits",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "d8935648-d1d2-4af7-b55a-ef2617def4b1",
+      "id": "a01a67a4-2bc4-4797-af3b-045d3eba9505"
+    },
+    "7913f43c-30bc-401d-83f1-f471aa7fe767": {
+      "type": "section",
+      "name": "Spell: Rotting Touch",
+      "childrenIds": [
+        "df5bfa2d-6b0b-4a33-b836-73595f36523e"
+      ],
+      "parentId": "d8935648-d1d2-4af7-b55a-ef2617def4b1",
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Spell: Rotting Touch",
+                "textFormat": "h2"
+              }
+            ]
+          }
+        ],
+        "showTitle": true,
+        "styles": {
+          "header": {
+            "borderBottom": "1px solid #882619"
+          }
+        }
+      },
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none",
+          "paddingTop": "4px"
+        },
+        "collapsible": false,
+        "isCollapsed": true,
+        "alternatingCollapsedBackground": "white",
+        "nestedCollapsible": true,
+        "wrapInnerWithContentDisplay": true
+      },
+      "id": "7913f43c-30bc-401d-83f1-f471aa7fe767"
+    },
+    "df5bfa2d-6b0b-4a33-b836-73595f36523e": {
+      "type": "section",
+      "name": "Spell: Rotting Touch",
+      "childrenIds": [
+        "3bd95ca2-3916-4603-961f-5a29fa5b6b15",
+        "eb393067-49d3-482e-8359-0c3cd4556bf7",
+        "fa994b94-63f4-4d9b-9d3f-0444e54e9a2c",
+        "9c19eb76-1eb8-44e8-94c3-5ce0859a949b",
+        "31a73c37-f5ea-4fc6-a603-9f7ad16234f7",
+        "09398054-3013-4e4f-98f7-0212264b38a9",
+        "8169a2e8-0560-44f7-a87f-8701236fc249",
+        "b6f03ff6-9e7f-4d0c-a9a2-2db5870a0f01",
+        "03b2f33e-1cc9-4dba-99dc-7ff9fe5af2f7",
+        "50bef29f-2ea0-482a-b873-3c7a8c6cf46b"
+      ],
+      "parentId": "7913f43c-30bc-401d-83f1-f471aa7fe767",
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Spell: Rotting Touch",
+                "textFormat": "h1"
+              }
+            ]
+          }
+        ],
+        "showTitle": true
+      },
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none",
+          "paddingTop": "4px"
+        },
+        "collapsible": false,
+        "isCollapsed": false,
+        "alternatingCollapsedBackground": "white"
+      },
+      "id": "df5bfa2d-6b0b-4a33-b836-73595f36523e",
+      "content_type": "spell"
+    },
+    "3bd95ca2-3916-4603-961f-5a29fa5b6b15": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Cleric Cantrip",
+              "textFormat": "h4"
+            }
+          ]
+        }
+      ],
+      "parentId": "df5bfa2d-6b0b-4a33-b836-73595f36523e",
+      "styles": {
+        "paddingBottom": "4px"
+      },
+      "id": "3bd95ca2-3916-4603-961f-5a29fa5b6b15"
+    },
+    "eb393067-49d3-482e-8359-0c3cd4556bf7": {
+      "type": "StatLine",
+      "content": {
+        "stats": [
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Level"
+                  }
+                ]
+              }
+            ],
+            "value": 0,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "0"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "School"
+                  }
+                ]
+              }
+            ],
+            "value": 0,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Necromancy"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Casting Time"
+                  }
+                ]
+              }
+            ],
+            "value": 0,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Action"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Duration"
+                  }
+                ]
+              }
+            ],
+            "value": 0,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Instantaneous"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Components"
+                  }
+                ]
+              }
+            ],
+            "value": 0,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "V, S"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "parentId": "df5bfa2d-6b0b-4a33-b836-73595f36523e",
+      "displayMode": "descriptions",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "eb393067-49d3-482e-8359-0c3cd4556bf7",
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none"
+        },
+        "statLine": {
+          "width": "100%",
+          "display": "flex",
+          "alignItems": "center",
+          "backgroundColor": "transparent"
+        },
+        "name": {
+          "minWidth": "64px",
+          "fontWeight": "bold",
+          "backgroundColor": "transparent",
+          "color": "#58180D",
+          "flex": "1"
+        },
+        "value": {
+          "width": "32px",
+          "backgroundColor": "transparent",
+          "textAlign": "center",
+          "color": "#000000",
+          "fontFamily": "Noto Serif, Georgia, serif"
+        },
+        "description": {
+          "fontFamily": "Noto Serif, Georgia, serif",
+          "fontSize": "13px",
+          "fontWeight": "normal",
+          "backgroundColor": "transparent",
+          "color": "#000",
+          "lineHeight": "1.25",
+          "margin": "4px 0 0 0",
+          "textAlign": "left",
+          "whiteSpace": "normal",
+          "overflow": "visible",
+          "textOverflow": "clip",
+          "minWidth": "100px",
+          "flex": "1"
+        },
+        "topLine": {
+          "width": "100%",
+          "height": "4px",
+          "marginTop": "4px",
+          "marginBottom": "4px",
+          "background": "linear-gradient(to right, #9D2A1F, transparent)"
+        },
+        "bottomLine": {
+          "width": "100%",
+          "height": "4px",
+          "marginTop": "4px",
+          "marginBottom": "4px",
+          "background": "linear-gradient(to right, #9D2A1F, transparent)"
+        },
+        "showTopLine": true,
+        "showBottomLine": true
+      }
+    },
+    "fa994b94-63f4-4d9b-9d3f-0444e54e9a2c": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Description",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "df5bfa2d-6b0b-4a33-b836-73595f36523e",
+      "id": "fa994b94-63f4-4d9b-9d3f-0444e54e9a2c"
+    },
+    "9c19eb76-1eb8-44e8-94c3-5ce0859a949b": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Make a melee spell attack against one creature within 5 feet. On a hit, the target takes necrotic damage equal to 1d6 + your spellcasting ability modifier. At 5th level, the damage increases to 2d6; at 11th level, 3d6; and at 17th level, 4d6.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "df5bfa2d-6b0b-4a33-b836-73595f36523e",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "9c19eb76-1eb8-44e8-94c3-5ce0859a949b"
+    },
+    "31a73c37-f5ea-4fc6-a603-9f7ad16234f7": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Lore",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "df5bfa2d-6b0b-4a33-b836-73595f36523e",
+      "id": "31a73c37-f5ea-4fc6-a603-9f7ad16234f7"
+    },
+    "09398054-3013-4e4f-98f7-0212264b38a9": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Crafted by the first acolytes of Kurozani, this touch channels raw corruption into flesh.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "df5bfa2d-6b0b-4a33-b836-73595f36523e",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "09398054-3013-4e4f-98f7-0212264b38a9"
+    },
+    "8169a2e8-0560-44f7-a87f-8701236fc249": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Species",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "df5bfa2d-6b0b-4a33-b836-73595f36523e",
+      "id": "8169a2e8-0560-44f7-a87f-8701236fc249"
+    },
+    "b6f03ff6-9e7f-4d0c-a9a2-2db5870a0f01": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Undead",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "df5bfa2d-6b0b-4a33-b836-73595f36523e",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "b6f03ff6-9e7f-4d0c-a9a2-2db5870a0f01"
+    },
+    "03b2f33e-1cc9-4dba-99dc-7ff9fe5af2f7": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Classes",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "df5bfa2d-6b0b-4a33-b836-73595f36523e",
+      "id": "03b2f33e-1cc9-4dba-99dc-7ff9fe5af2f7"
+    },
+    "50bef29f-2ea0-482a-b873-3c7a8c6cf46b": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Cleric, Warlock",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "df5bfa2d-6b0b-4a33-b836-73595f36523e",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "50bef29f-2ea0-482a-b873-3c7a8c6cf46b"
+    },
+    "580b28f0-1cac-4e11-947d-06c1aadb5244": {
+      "type": "section",
+      "name": "Spell: Aura of Putrefaction",
+      "childrenIds": [
+        "4f685a19-2211-4372-bca6-69b124ca24d5"
+      ],
+      "parentId": "d8935648-d1d2-4af7-b55a-ef2617def4b1",
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Spell: Aura of Putrefaction",
+                "textFormat": "h2"
+              }
+            ]
+          }
+        ],
+        "showTitle": true,
+        "styles": {
+          "header": {
+            "borderBottom": "1px solid #882619"
+          }
+        }
+      },
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none",
+          "paddingTop": "4px"
+        },
+        "collapsible": false,
+        "isCollapsed": true,
+        "alternatingCollapsedBackground": "white",
+        "nestedCollapsible": true,
+        "wrapInnerWithContentDisplay": true
+      },
+      "id": "580b28f0-1cac-4e11-947d-06c1aadb5244"
+    },
+    "4f685a19-2211-4372-bca6-69b124ca24d5": {
+      "type": "section",
+      "name": "Spell: Aura of Putrefaction",
+      "childrenIds": [
+        "0a75a3fb-2ee3-45eb-93b4-d5b385984fea",
+        "5da0915e-28b1-4320-b6a8-89ce8af5ead6",
+        "0fb90bb2-654b-4336-be91-141cf30f8828",
+        "a90d9021-61ea-49b8-b088-3223103e8a25",
+        "189b83a5-7784-45c6-aa5c-6abd6c29002d",
+        "c89775cb-3300-42f6-a3a8-22b4ee4ca517",
+        "d829f113-02be-4c18-a7ad-0b44d7785f92",
+        "e8609f80-fc62-446a-8c86-684402f8b01a"
+      ],
+      "parentId": "580b28f0-1cac-4e11-947d-06c1aadb5244",
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Spell: Aura of Putrefaction",
+                "textFormat": "h1"
+              }
+            ]
+          }
+        ],
+        "showTitle": true
+      },
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none",
+          "paddingTop": "4px"
+        },
+        "collapsible": false,
+        "isCollapsed": false,
+        "alternatingCollapsedBackground": "white"
+      },
+      "id": "4f685a19-2211-4372-bca6-69b124ca24d5",
+      "content_type": "spell"
+    },
+    "0a75a3fb-2ee3-45eb-93b4-d5b385984fea": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "2nd-Level Necromancy",
+              "textFormat": "h4"
+            }
+          ]
+        }
+      ],
+      "parentId": "4f685a19-2211-4372-bca6-69b124ca24d5",
+      "styles": {
+        "paddingBottom": "4px"
+      },
+      "id": "0a75a3fb-2ee3-45eb-93b4-d5b385984fea"
+    },
+    "5da0915e-28b1-4320-b6a8-89ce8af5ead6": {
+      "type": "StatLine",
+      "content": {
+        "stats": [
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Level"
+                  }
+                ]
+              }
+            ],
+            "value": 0,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "2"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "School"
+                  }
+                ]
+              }
+            ],
+            "value": 0,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Necromancy"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Casting Time"
+                  }
+                ]
+              }
+            ],
+            "value": 0,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Action"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Concentration"
+                  }
+                ]
+              }
+            ],
+            "value": 0,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Yes"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Duration"
+                  }
+                ]
+              }
+            ],
+            "value": 0,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Concentration, up to 1 minute"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Components"
+                  }
+                ]
+              }
+            ],
+            "value": 0,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "V, S, M A drop of venomous slime"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "parentId": "4f685a19-2211-4372-bca6-69b124ca24d5",
+      "displayMode": "descriptions",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "5da0915e-28b1-4320-b6a8-89ce8af5ead6",
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none"
+        },
+        "statLine": {
+          "width": "100%",
+          "display": "flex",
+          "alignItems": "center",
+          "backgroundColor": "transparent"
+        },
+        "name": {
+          "minWidth": "64px",
+          "fontWeight": "bold",
+          "backgroundColor": "transparent",
+          "color": "#58180D",
+          "flex": "1"
+        },
+        "value": {
+          "width": "32px",
+          "backgroundColor": "transparent",
+          "textAlign": "center",
+          "color": "#000000",
+          "fontFamily": "Noto Serif, Georgia, serif"
+        },
+        "description": {
+          "fontFamily": "Noto Serif, Georgia, serif",
+          "fontSize": "13px",
+          "fontWeight": "normal",
+          "backgroundColor": "transparent",
+          "color": "#000",
+          "lineHeight": "1.25",
+          "margin": "4px 0 0 0",
+          "textAlign": "left",
+          "whiteSpace": "normal",
+          "overflow": "visible",
+          "textOverflow": "clip",
+          "minWidth": "100px",
+          "flex": "1"
+        },
+        "topLine": {
+          "width": "100%",
+          "height": "4px",
+          "marginTop": "4px",
+          "marginBottom": "4px",
+          "background": "linear-gradient(to right, #9D2A1F, transparent)"
+        },
+        "bottomLine": {
+          "width": "100%",
+          "height": "4px",
+          "marginTop": "4px",
+          "marginBottom": "4px",
+          "background": "linear-gradient(to right, #9D2A1F, transparent)"
+        },
+        "showTopLine": true,
+        "showBottomLine": true
+      }
+    },
+    "0fb90bb2-654b-4336-be91-141cf30f8828": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Description",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "4f685a19-2211-4372-bca6-69b124ca24d5",
+      "id": "0fb90bb2-654b-4336-be91-141cf30f8828"
+    },
+    "a90d9021-61ea-49b8-b088-3223103e8a25": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "A 10-foot radius of fetid energy radiates from you. Enemies that start their turn in the aura take 1d6 necrotic damage, and are poisoned until the aura ends. At Higher Levels: When you cast this spell using a spell slot of 3rd level or higher, the necrotic damage increases by 1d6 for each slot level above 2nd.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "4f685a19-2211-4372-bca6-69b124ca24d5",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "a90d9021-61ea-49b8-b088-3223103e8a25"
+    },
+    "189b83a5-7784-45c6-aa5c-6abd6c29002d": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Lore",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "4f685a19-2211-4372-bca6-69b124ca24d5",
+      "id": "189b83a5-7784-45c6-aa5c-6abd6c29002d"
+    },
+    "c89775cb-3300-42f6-a3a8-22b4ee4ca517": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Scholars say the aura mirrors the stench of Kurozani’s personal realm of decay.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "4f685a19-2211-4372-bca6-69b124ca24d5",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "c89775cb-3300-42f6-a3a8-22b4ee4ca517"
+    },
+    "d829f113-02be-4c18-a7ad-0b44d7785f92": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Classes",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "4f685a19-2211-4372-bca6-69b124ca24d5",
+      "id": "d829f113-02be-4c18-a7ad-0b44d7785f92"
+    },
+    "e8609f80-fc62-446a-8c86-684402f8b01a": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Cleric, Druid, Warlock",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "4f685a19-2211-4372-bca6-69b124ca24d5",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "e8609f80-fc62-446a-8c86-684402f8b01a"
+    },
+    "16fdcab5-9996-40ec-940a-d23d015a8159": {
+      "type": "section",
+      "name": "Spell: Plague Cloud",
+      "childrenIds": [
+        "7276f32a-7c8a-4836-995f-dc2ef20f544a"
+      ],
+      "parentId": "d8935648-d1d2-4af7-b55a-ef2617def4b1",
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Spell: Plague Cloud",
+                "textFormat": "h2"
+              }
+            ]
+          }
+        ],
+        "showTitle": true,
+        "styles": {
+          "header": {
+            "borderBottom": "1px solid #882619"
+          }
+        }
+      },
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none",
+          "paddingTop": "4px"
+        },
+        "collapsible": false,
+        "isCollapsed": true,
+        "alternatingCollapsedBackground": "white",
+        "nestedCollapsible": true,
+        "wrapInnerWithContentDisplay": true
+      },
+      "id": "16fdcab5-9996-40ec-940a-d23d015a8159"
+    },
+    "7276f32a-7c8a-4836-995f-dc2ef20f544a": {
+      "type": "section",
+      "name": "Spell: Plague Cloud",
+      "childrenIds": [
+        "1761512b-2c97-4e4b-baa0-9e7d4fce9472",
+        "63e04854-0a54-4b27-8021-1eb1a0b7f2ed",
+        "ed380bf7-aca8-42a9-93c3-26af94c1f4a4",
+        "75b4165c-32e0-4685-8315-82d9d872ad3f",
+        "eb86141d-60dd-4976-bd2b-790bc13942e8",
+        "57491167-c9c6-492f-887c-fa98d4af690e",
+        "cd06dca0-6467-4eac-b7cc-7c121d46f274",
+        "4ab0e309-b8d2-4ca7-a202-f4633c89ab56"
+      ],
+      "parentId": "16fdcab5-9996-40ec-940a-d23d015a8159",
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Spell: Plague Cloud",
+                "textFormat": "h1"
+              }
+            ]
+          }
+        ],
+        "showTitle": true
+      },
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none",
+          "paddingTop": "4px"
+        },
+        "collapsible": false,
+        "isCollapsed": false,
+        "alternatingCollapsedBackground": "white"
+      },
+      "id": "7276f32a-7c8a-4836-995f-dc2ef20f544a",
+      "content_type": "spell"
+    },
+    "1761512b-2c97-4e4b-baa0-9e7d4fce9472": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "4th-Level Conjuration",
+              "textFormat": "h4"
+            }
+          ]
+        }
+      ],
+      "parentId": "7276f32a-7c8a-4836-995f-dc2ef20f544a",
+      "styles": {
+        "paddingBottom": "4px"
+      },
+      "id": "1761512b-2c97-4e4b-baa0-9e7d4fce9472"
+    },
+    "63e04854-0a54-4b27-8021-1eb1a0b7f2ed": {
+      "type": "StatLine",
+      "content": {
+        "stats": [
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Level"
+                  }
+                ]
+              }
+            ],
+            "value": 0,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "4"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "School"
+                  }
+                ]
+              }
+            ],
+            "value": 0,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Conjuration"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Casting Time"
+                  }
+                ]
+              }
+            ],
+            "value": 0,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Action"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Concentration"
+                  }
+                ]
+              }
+            ],
+            "value": 0,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Yes"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Duration"
+                  }
+                ]
+              }
+            ],
+            "value": 0,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Concentration, up to 1 minute"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Components"
+                  }
+                ]
+              }
+            ],
+            "value": 0,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "V, S, M A pinch of dried rotwood bark"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "parentId": "7276f32a-7c8a-4836-995f-dc2ef20f544a",
+      "displayMode": "descriptions",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "63e04854-0a54-4b27-8021-1eb1a0b7f2ed",
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none"
+        },
+        "statLine": {
+          "width": "100%",
+          "display": "flex",
+          "alignItems": "center",
+          "backgroundColor": "transparent"
+        },
+        "name": {
+          "minWidth": "64px",
+          "fontWeight": "bold",
+          "backgroundColor": "transparent",
+          "color": "#58180D",
+          "flex": "1"
+        },
+        "value": {
+          "width": "32px",
+          "backgroundColor": "transparent",
+          "textAlign": "center",
+          "color": "#000000",
+          "fontFamily": "Noto Serif, Georgia, serif"
+        },
+        "description": {
+          "fontFamily": "Noto Serif, Georgia, serif",
+          "fontSize": "13px",
+          "fontWeight": "normal",
+          "backgroundColor": "transparent",
+          "color": "#000",
+          "lineHeight": "1.25",
+          "margin": "4px 0 0 0",
+          "textAlign": "left",
+          "whiteSpace": "normal",
+          "overflow": "visible",
+          "textOverflow": "clip",
+          "minWidth": "100px",
+          "flex": "1"
+        },
+        "topLine": {
+          "width": "100%",
+          "height": "4px",
+          "marginTop": "4px",
+          "marginBottom": "4px",
+          "background": "linear-gradient(to right, #9D2A1F, transparent)"
+        },
+        "bottomLine": {
+          "width": "100%",
+          "height": "4px",
+          "marginTop": "4px",
+          "marginBottom": "4px",
+          "background": "linear-gradient(to right, #9D2A1F, transparent)"
+        },
+        "showTopLine": true,
+        "showBottomLine": true
+      }
+    },
+    "ed380bf7-aca8-42a9-93c3-26af94c1f4a4": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Description",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "7276f32a-7c8a-4836-995f-dc2ef20f544a",
+      "id": "ed380bf7-aca8-42a9-93c3-26af94c1f4a4"
+    },
+    "75b4165c-32e0-4685-8315-82d9d872ad3f": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "You create a 20-foot radius sphere of sickly green mist that appears at a point you choose within 90 feet. Creatures that start their turn in the cloud must succeed on a DC equal to 8 + your proficiency bonus + your spellcasting ability modifier or take 4d6 poison damage and become infected. An infected creature takes 1d6 poison damage at the start of each of its turns. A creature can repeat the saving throw at the end of each of its turns, ending the infection on a success. The cloud moves 10 feet away from you on each of your turns, and it disperses early if you end your concentration.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "7276f32a-7c8a-4836-995f-dc2ef20f544a",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "75b4165c-32e0-4685-8315-82d9d872ad3f"
+    },
+    "eb86141d-60dd-4976-bd2b-790bc13942e8": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Lore",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "7276f32a-7c8a-4836-995f-dc2ef20f544a",
+      "id": "eb86141d-60dd-4976-bd2b-790bc13942e8"
+    },
+    "57491167-c9c6-492f-887c-fa98d4af690e": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "First unleashed during a war to lay siege to a fortress, it reduced entire battalions to bone.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "7276f32a-7c8a-4836-995f-dc2ef20f544a",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "57491167-c9c6-492f-887c-fa98d4af690e"
+    },
+    "cd06dca0-6467-4eac-b7cc-7c121d46f274": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Classes",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "7276f32a-7c8a-4836-995f-dc2ef20f544a",
+      "id": "cd06dca0-6467-4eac-b7cc-7c121d46f274"
+    },
+    "4ab0e309-b8d2-4ca7-a202-f4633c89ab56": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Cleric, Druid, Warlock",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "7276f32a-7c8a-4836-995f-dc2ef20f544a",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "4ab0e309-b8d2-4ca7-a202-f4633c89ab56"
+    },
+    "3868a75c-c1e5-43ef-b66a-7167b80cb521": {
+      "type": "section",
+      "name": "Magic Item: Staff of Fungal Decay",
+      "childrenIds": [
+        "7829f940-a050-40b5-9ee5-134f1bbd6aab"
+      ],
+      "parentId": "d8935648-d1d2-4af7-b55a-ef2617def4b1",
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Magic Item: Staff of Fungal Decay",
+                "textFormat": "h2"
+              }
+            ]
+          }
+        ],
+        "showTitle": true,
+        "styles": {
+          "header": {
+            "borderBottom": "1px solid #882619"
+          }
+        }
+      },
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none",
+          "paddingTop": "4px"
+        },
+        "collapsible": false,
+        "isCollapsed": true,
+        "alternatingCollapsedBackground": "white",
+        "nestedCollapsible": true,
+        "wrapInnerWithContentDisplay": true
+      },
+      "id": "3868a75c-c1e5-43ef-b66a-7167b80cb521"
+    },
+    "7829f940-a050-40b5-9ee5-134f1bbd6aab": {
+      "type": "section",
+      "name": "Magic Item: Staff of Fungal Decay",
+      "childrenIds": [
+        "5cf46e29-e0f9-497a-a559-793fc5259f15",
+        "ed97cfc8-c849-4182-bff3-e24d91c9c495",
+        "9ed14920-8734-49de-972a-02b019d0d36e",
+        "5bf0d028-2e32-47d2-95d7-6b6037ddaf9d",
+        "3ede1944-f263-4ad8-a47b-77df5c1f289f",
+        "71869620-1138-4401-904b-993d8bbbdba2",
+        "46f92863-cdfd-41b9-b7ba-75f8506cb6dd",
+        "9ee71d18-159e-476e-8a57-868b5e7b150b",
+        "d7c34fc3-d3cb-4211-9fb3-0140b3e98e14",
+        "b9692739-4933-43d2-9c4d-f21c5a590e42"
+      ],
+      "parentId": "3868a75c-c1e5-43ef-b66a-7167b80cb521",
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Magic Item: Staff of Fungal Decay",
+                "textFormat": "h1"
+              }
+            ]
+          }
+        ],
+        "showTitle": true
+      },
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none",
+          "paddingTop": "4px"
+        },
+        "collapsible": false,
+        "isCollapsed": false,
+        "alternatingCollapsedBackground": "white"
+      },
+      "id": "7829f940-a050-40b5-9ee5-134f1bbd6aab",
+      "content_type": "magicItem"
+    },
+    "5cf46e29-e0f9-497a-a559-793fc5259f15": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Uncommon Staff, requires attunement by a spellcaster",
+              "textFormat": "h4"
+            }
+          ]
+        }
+      ],
+      "parentId": "7829f940-a050-40b5-9ee5-134f1bbd6aab",
+      "id": "5cf46e29-e0f9-497a-a559-793fc5259f15"
+    },
+    "ed97cfc8-c849-4182-bff3-e24d91c9c495": {
+      "type": "StatLine",
+      "content": {
+        "stats": [
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Type"
+                  }
+                ]
+              }
+            ],
+            "value": 0,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Weapon"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Rarity"
+                  }
+                ]
+              }
+            ],
+            "value": 0,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Rare"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Price"
+                  }
+                ]
+              }
+            ],
+            "value": 0,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "5000"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Weight"
+                  }
+                ]
+              }
+            ],
+            "value": 0,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "4"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Weapon Type"
+                  }
+                ]
+              }
+            ],
+            "value": 0,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "quarterstaff"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Damage"
+                  }
+                ]
+              }
+            ],
+            "value": 0,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "1d6 bludgeoning"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Properties"
+                  }
+                ]
+              }
+            ],
+            "value": 0,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "versatile (1d8)"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "parentId": "7829f940-a050-40b5-9ee5-134f1bbd6aab",
+      "displayMode": "descriptions",
+      "id": "ed97cfc8-c849-4182-bff3-e24d91c9c495",
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none"
+        },
+        "statLine": {
+          "width": "100%",
+          "display": "flex",
+          "alignItems": "center",
+          "backgroundColor": "transparent"
+        },
+        "name": {
+          "minWidth": "64px",
+          "fontWeight": "bold",
+          "backgroundColor": "transparent",
+          "color": "#58180D",
+          "flex": "1"
+        },
+        "value": {
+          "width": "32px",
+          "backgroundColor": "transparent",
+          "textAlign": "center",
+          "color": "#000000",
+          "fontFamily": "Noto Serif, Georgia, serif"
+        },
+        "description": {
+          "fontFamily": "Noto Serif, Georgia, serif",
+          "fontSize": "13px",
+          "fontWeight": "normal",
+          "backgroundColor": "transparent",
+          "color": "#000",
+          "lineHeight": "1.25",
+          "margin": "4px 0 0 0",
+          "textAlign": "left",
+          "whiteSpace": "normal",
+          "overflow": "visible",
+          "textOverflow": "clip",
+          "minWidth": "100px",
+          "flex": "1"
+        },
+        "topLine": {
+          "width": "100%",
+          "height": "4px",
+          "marginTop": "4px",
+          "marginBottom": "4px",
+          "background": "linear-gradient(to right, #9D2A1F, transparent)"
+        },
+        "bottomLine": {
+          "width": "100%",
+          "height": "4px",
+          "marginTop": "4px",
+          "marginBottom": "4px",
+          "background": "linear-gradient(to right, #9D2A1F, transparent)"
+        },
+        "showTopLine": true,
+        "showBottomLine": true
+      }
+    },
+    "9ed14920-8734-49de-972a-02b019d0d36e": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Attunement",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "7829f940-a050-40b5-9ee5-134f1bbd6aab",
+      "styles": {
+        "paddingTop": "4px"
+      },
+      "id": "9ed14920-8734-49de-972a-02b019d0d36e"
+    },
+    "5bf0d028-2e32-47d2-95d7-6b6037ddaf9d": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Required: Spellcaster",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "7829f940-a050-40b5-9ee5-134f1bbd6aab",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "5bf0d028-2e32-47d2-95d7-6b6037ddaf9d"
+    },
+    "3ede1944-f263-4ad8-a47b-77df5c1f289f": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Description",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "7829f940-a050-40b5-9ee5-134f1bbd6aab",
+      "id": "3ede1944-f263-4ad8-a47b-77df5c1f289f"
+    },
+    "71869620-1138-4401-904b-993d8bbbdba2": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "A twisted staff of blackened wood entwined with writhing mycelial threads and pustules that ooze a faintly luminescent fluid.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "7829f940-a050-40b5-9ee5-134f1bbd6aab",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "71869620-1138-4401-904b-993d8bbbdba2"
+    },
+    "46f92863-cdfd-41b9-b7ba-75f8506cb6dd": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Usage",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "7829f940-a050-40b5-9ee5-134f1bbd6aab",
+      "id": "46f92863-cdfd-41b9-b7ba-75f8506cb6dd"
+    },
+    "9ee71d18-159e-476e-8a57-868b5e7b150b": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "While attuned, you can use the staff as a spellcasting focus. You gain a +1 bonus to spell attack rolls and your spells deal an extra 1d4 necrotic damage (once per turn). Additionally, you can cast Aura of Putrefaction once per day without expending a spell slot.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "7829f940-a050-40b5-9ee5-134f1bbd6aab",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "9ee71d18-159e-476e-8a57-868b5e7b150b"
+    },
+    "d7c34fc3-d3cb-4211-9fb3-0140b3e98e14": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Lore",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "7829f940-a050-40b5-9ee5-134f1bbd6aab",
+      "id": "d7c34fc3-d3cb-4211-9fb3-0140b3e98e14"
+    },
+    "b9692739-4933-43d2-9c4d-f21c5a590e42": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Said to be a branch pruned from Kurozani’s own fungal grove, it bears the purity of divine rot.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "7829f940-a050-40b5-9ee5-134f1bbd6aab",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "b9692739-4933-43d2-9c4d-f21c5a590e42"
+    },
+    "245b3191-4490-4912-8135-622dc0b3d6aa": {
+      "type": "section",
+      "name": "Magic Item: Ring of Moldering Flesh",
+      "childrenIds": [
+        "aee31560-a7bf-4ec5-98a1-32250e2a0488"
+      ],
+      "parentId": "d8935648-d1d2-4af7-b55a-ef2617def4b1",
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Magic Item: Ring of Moldering Flesh",
+                "textFormat": "h2"
+              }
+            ]
+          }
+        ],
+        "showTitle": true,
+        "styles": {
+          "header": {
+            "borderBottom": "1px solid #882619"
+          }
+        }
+      },
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none",
+          "paddingTop": "4px"
+        },
+        "collapsible": false,
+        "isCollapsed": true,
+        "alternatingCollapsedBackground": "white",
+        "nestedCollapsible": true,
+        "wrapInnerWithContentDisplay": true
+      },
+      "id": "245b3191-4490-4912-8135-622dc0b3d6aa"
+    },
+    "aee31560-a7bf-4ec5-98a1-32250e2a0488": {
+      "type": "section",
+      "name": "Magic Item: Ring of Moldering Flesh",
+      "childrenIds": [
+        "9860d51f-c5e2-496f-9f80-29224d718b5d",
+        "b6f64480-1b9a-40ba-824f-30a86609b968",
+        "dc39177a-235b-46db-a5cd-107e6883d34a",
+        "176a3e6b-aa5c-43f6-bfb1-401e11e3a030",
+        "ea411939-6007-4b20-a648-ea2047cdc24b",
+        "2b1da536-be77-43d9-bf9e-881d1ffd2af7",
+        "c8421527-1ca9-4583-8b39-c86e38c5850e",
+        "cf2c624f-279f-4fe2-b7a7-4f252feffc16"
+      ],
+      "parentId": "245b3191-4490-4912-8135-622dc0b3d6aa",
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Magic Item: Ring of Moldering Flesh",
+                "textFormat": "h1"
+              }
+            ]
+          }
+        ],
+        "showTitle": true
+      },
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none",
+          "paddingTop": "4px"
+        },
+        "collapsible": false,
+        "isCollapsed": false,
+        "alternatingCollapsedBackground": "white"
+      },
+      "id": "aee31560-a7bf-4ec5-98a1-32250e2a0488",
+      "content_type": "magicItem"
+    },
+    "9860d51f-c5e2-496f-9f80-29224d718b5d": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Wondrous Item",
+              "textFormat": "h4"
+            }
+          ]
+        }
+      ],
+      "parentId": "aee31560-a7bf-4ec5-98a1-32250e2a0488",
+      "id": "9860d51f-c5e2-496f-9f80-29224d718b5d"
+    },
+    "b6f64480-1b9a-40ba-824f-30a86609b968": {
+      "type": "StatLine",
+      "content": {
+        "stats": [
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Type"
+                  }
+                ]
+              }
+            ],
+            "value": 0,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Consumable"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Rarity"
+                  }
+                ]
+              }
+            ],
+            "value": 0,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Uncommon"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Price"
+                  }
+                ]
+              }
+            ],
+            "value": 0,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "1000"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Weight"
+                  }
+                ]
+              }
+            ],
+            "value": 0,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "0.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "parentId": "aee31560-a7bf-4ec5-98a1-32250e2a0488",
+      "displayMode": "descriptions",
+      "id": "b6f64480-1b9a-40ba-824f-30a86609b968",
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none"
+        },
+        "statLine": {
+          "width": "100%",
+          "display": "flex",
+          "alignItems": "center",
+          "backgroundColor": "transparent"
+        },
+        "name": {
+          "minWidth": "64px",
+          "fontWeight": "bold",
+          "backgroundColor": "transparent",
+          "color": "#58180D",
+          "flex": "1"
+        },
+        "value": {
+          "width": "32px",
+          "backgroundColor": "transparent",
+          "textAlign": "center",
+          "color": "#000000",
+          "fontFamily": "Noto Serif, Georgia, serif"
+        },
+        "description": {
+          "fontFamily": "Noto Serif, Georgia, serif",
+          "fontSize": "13px",
+          "fontWeight": "normal",
+          "backgroundColor": "transparent",
+          "color": "#000",
+          "lineHeight": "1.25",
+          "margin": "4px 0 0 0",
+          "textAlign": "left",
+          "whiteSpace": "normal",
+          "overflow": "visible",
+          "textOverflow": "clip",
+          "minWidth": "100px",
+          "flex": "1"
+        },
+        "topLine": {
+          "width": "100%",
+          "height": "4px",
+          "marginTop": "4px",
+          "marginBottom": "4px",
+          "background": "linear-gradient(to right, #9D2A1F, transparent)"
+        },
+        "bottomLine": {
+          "width": "100%",
+          "height": "4px",
+          "marginTop": "4px",
+          "marginBottom": "4px",
+          "background": "linear-gradient(to right, #9D2A1F, transparent)"
+        },
+        "showTopLine": true,
+        "showBottomLine": true
+      }
+    },
+    "dc39177a-235b-46db-a5cd-107e6883d34a": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Description",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "aee31560-a7bf-4ec5-98a1-32250e2a0488",
+      "id": "dc39177a-235b-46db-a5cd-107e6883d34a"
+    },
+    "176a3e6b-aa5c-43f6-bfb1-401e11e3a030": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "A corroded ring that feels damp and slightly warm to the touch, as if it pulses with life and death.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "aee31560-a7bf-4ec5-98a1-32250e2a0488",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "176a3e6b-aa5c-43f6-bfb1-401e11e3a030"
+    },
+    "ea411939-6007-4b20-a648-ea2047cdc24b": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Usage",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "aee31560-a7bf-4ec5-98a1-32250e2a0488",
+      "id": "ea411939-6007-4b20-a648-ea2047cdc24b"
+    },
+    "2b1da536-be77-43d9-bf9e-881d1ffd2af7": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "While wearing this ring, you have resistance to poison damage and advantage on saving throws against disease. Once per week, you can cast False Life (1st level) on yourself without expending a spell slot.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "aee31560-a7bf-4ec5-98a1-32250e2a0488",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "2b1da536-be77-43d9-bf9e-881d1ffd2af7"
+    },
+    "c8421527-1ca9-4583-8b39-c86e38c5850e": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Lore",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "aee31560-a7bf-4ec5-98a1-32250e2a0488",
+      "id": "c8421527-1ca9-4583-8b39-c86e38c5850e"
+    },
+    "cf2c624f-279f-4fe2-b7a7-4f252feffc16": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Forged by plague-priests deep in subterranean crypts, it was offered to new initiates as a sign of Kurozani’s favor.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "aee31560-a7bf-4ec5-98a1-32250e2a0488",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "cf2c624f-279f-4fe2-b7a7-4f252feffc16"
+    },
+    "a8fe4f75-1027-4e41-9a97-5b6489567b11": {
+      "type": "section",
+      "name": "Feat: Blessing of Kurozani",
+      "childrenIds": [
+        "dafa46b7-13b4-4eb4-ab19-b73708d59da2"
+      ],
+      "parentId": "d8935648-d1d2-4af7-b55a-ef2617def4b1",
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Feat: Blessing of Kurozani",
+                "textFormat": "h2"
+              }
+            ]
+          }
+        ],
+        "showTitle": true,
+        "styles": {
+          "header": {
+            "borderBottom": "1px solid #882619"
+          }
+        }
+      },
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none",
+          "paddingTop": "4px"
+        },
+        "collapsible": false,
+        "isCollapsed": true,
+        "alternatingCollapsedBackground": "white",
+        "nestedCollapsible": true,
+        "wrapInnerWithContentDisplay": true
+      },
+      "id": "a8fe4f75-1027-4e41-9a97-5b6489567b11"
+    },
+    "dafa46b7-13b4-4eb4-ab19-b73708d59da2": {
+      "type": "section",
+      "name": "Feat: Blessing of Kurozani",
+      "childrenIds": [
+        "26b10238-9e6d-4289-b7ab-14b9edbd0339",
+        "27c6acb8-fd9f-4498-8659-69d78c6ad99c",
+        "41288887-17e8-43fc-b69a-149e8c1c1907",
+        "84b5820d-bbee-4571-bb7d-bd70be14a9db",
+        "d4b30792-986c-4287-b216-dabac6c43285",
+        "571db256-a6f5-4ed0-8419-2151aea9a29c"
+      ],
+      "parentId": "a8fe4f75-1027-4e41-9a97-5b6489567b11",
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Feat: Blessing of Kurozani",
+                "textFormat": "h1"
+              }
+            ]
+          }
+        ],
+        "showTitle": true
+      },
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none",
+          "paddingTop": "4px"
+        },
+        "collapsible": false,
+        "isCollapsed": false,
+        "alternatingCollapsedBackground": "white"
+      },
+      "id": "dafa46b7-13b4-4eb4-ab19-b73708d59da2",
+      "content_type": "feat"
+    },
+    "26b10238-9e6d-4289-b7ab-14b9edbd0339": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Channel Necrosis",
+              "textFormat": "h4"
+            }
+          ]
+        }
+      ],
+      "parentId": "dafa46b7-13b4-4eb4-ab19-b73708d59da2",
+      "styles": {
+        "paddingBottom": "4px"
+      },
+      "id": "26b10238-9e6d-4289-b7ab-14b9edbd0339"
+    },
+    "27c6acb8-fd9f-4498-8659-69d78c6ad99c": {
+      "type": "line",
+      "parentId": "dafa46b7-13b4-4eb4-ab19-b73708d59da2",
+      "styles": {
+        "background": "linear-gradient(to right, #9D2A1F, transparent)",
+        "border": "none",
+        "height": "4px",
+        "width": "100%"
+      },
+      "id": "27c6acb8-fd9f-4498-8659-69d78c6ad99c",
+      "customStyles": {
+        "default": {
+          "background": "linear-gradient(to right, #9D2A1F, transparent)",
+          "border": "none",
+          "height": "4px",
+          "width": "100%"
+        }
+      }
+    },
+    "41288887-17e8-43fc-b69a-149e8c1c1907": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Prerequisites",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "dafa46b7-13b4-4eb4-ab19-b73708d59da2",
+      "id": "41288887-17e8-43fc-b69a-149e8c1c1907"
+    },
+    "84b5820d-bbee-4571-bb7d-bd70be14a9db": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Level: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Cleric level 5 or Warlock level 5",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "dafa46b7-13b4-4eb4-ab19-b73708d59da2",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "84b5820d-bbee-4571-bb7d-bd70be14a9db"
+    },
+    "d4b30792-986c-4287-b216-dabac6c43285": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Description",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "dafa46b7-13b4-4eb4-ab19-b73708d59da2",
+      "id": "d4b30792-986c-4287-b216-dabac6c43285"
+    },
+    "571db256-a6f5-4ed0-8419-2151aea9a29c": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "This dark boon is whispered only to those who prove their devotion by spreading ruin and decay under Kurozani’s name.\n",
+              "textFormat": "description"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "When you cast a necromancy spell that deals damage, you can add your Charisma modifier to one damage roll of that spell. Once you use this trait, you can’t use it again until you finish a short or long rest.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "dafa46b7-13b4-4eb4-ab19-b73708d59da2",
+      "id": "571db256-a6f5-4ed0-8419-2151aea9a29c"
+    },
+    "a1ee8fb0-8899-4dc9-a941-619e940f206e": {
+      "type": "section",
+      "name": "Feat: Moldered Resilience",
+      "childrenIds": [
+        "1cfa1f52-6e8e-4418-84a1-b9c4d7c371b6"
+      ],
+      "parentId": "d8935648-d1d2-4af7-b55a-ef2617def4b1",
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Feat: Moldered Resilience",
+                "textFormat": "h2"
+              }
+            ]
+          }
+        ],
+        "showTitle": true,
+        "styles": {
+          "header": {
+            "borderBottom": "1px solid #882619"
+          }
+        }
+      },
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none",
+          "paddingTop": "4px"
+        },
+        "collapsible": false,
+        "isCollapsed": true,
+        "alternatingCollapsedBackground": "white",
+        "nestedCollapsible": true,
+        "wrapInnerWithContentDisplay": true
+      },
+      "id": "a1ee8fb0-8899-4dc9-a941-619e940f206e"
+    },
+    "1cfa1f52-6e8e-4418-84a1-b9c4d7c371b6": {
+      "type": "section",
+      "name": "Feat: Moldered Resilience",
+      "childrenIds": [
+        "d4c7a11e-12b7-4d3f-aa7c-7cc678576552",
+        "249c9f99-7853-4393-9234-ef0306bfc34c",
+        "c3f50ee2-1983-411d-9741-bf8b042493dc",
+        "36154b44-c811-4e2b-a4fc-2cd7b453d23e",
+        "5cec85b5-d65d-47c3-8d74-346d3090a3df",
+        "0eb01b35-156a-4d82-96ca-18e7b80e0cd8"
+      ],
+      "parentId": "a1ee8fb0-8899-4dc9-a941-619e940f206e",
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Feat: Moldered Resilience",
+                "textFormat": "h1"
+              }
+            ]
+          }
+        ],
+        "showTitle": true
+      },
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none",
+          "paddingTop": "4px"
+        },
+        "collapsible": false,
+        "isCollapsed": false,
+        "alternatingCollapsedBackground": "white"
+      },
+      "id": "1cfa1f52-6e8e-4418-84a1-b9c4d7c371b6",
+      "content_type": "feat"
+    },
+    "d4c7a11e-12b7-4d3f-aa7c-7cc678576552": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Enduring Putrefaction",
+              "textFormat": "h4"
+            }
+          ]
+        }
+      ],
+      "parentId": "1cfa1f52-6e8e-4418-84a1-b9c4d7c371b6",
+      "styles": {
+        "paddingBottom": "4px"
+      },
+      "id": "d4c7a11e-12b7-4d3f-aa7c-7cc678576552"
+    },
+    "249c9f99-7853-4393-9234-ef0306bfc34c": {
+      "type": "line",
+      "parentId": "1cfa1f52-6e8e-4418-84a1-b9c4d7c371b6",
+      "styles": {
+        "background": "linear-gradient(to right, #9D2A1F, transparent)",
+        "border": "none",
+        "height": "4px",
+        "width": "100%"
+      },
+      "id": "249c9f99-7853-4393-9234-ef0306bfc34c",
+      "customStyles": {
+        "default": {
+          "background": "linear-gradient(to right, #9D2A1F, transparent)",
+          "border": "none",
+          "height": "4px",
+          "width": "100%"
+        }
+      }
+    },
+    "c3f50ee2-1983-411d-9741-bf8b042493dc": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Prerequisites",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "1cfa1f52-6e8e-4418-84a1-b9c4d7c371b6",
+      "id": "c3f50ee2-1983-411d-9741-bf8b042493dc"
+    },
+    "36154b44-c811-4e2b-a4fc-2cd7b453d23e": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Attribute: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Constitution 13 or higher",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "1cfa1f52-6e8e-4418-84a1-b9c4d7c371b6",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "36154b44-c811-4e2b-a4fc-2cd7b453d23e"
+    },
+    "5cec85b5-d65d-47c3-8d74-346d3090a3df": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Description",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "1cfa1f52-6e8e-4418-84a1-b9c4d7c371b6",
+      "id": "5cec85b5-d65d-47c3-8d74-346d3090a3df"
+    },
+    "0eb01b35-156a-4d82-96ca-18e7b80e0cd8": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Survivors of the Entombment Rite often emerge tougher in flesh and mind, bearing Kurozani’s mark in scarred skin.\n",
+              "textFormat": "description"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "You gain resistance to poison damage and advantage on saving throws against disease. If you are reduced to 0 hit points by poison damage, you can drop to 1 hit point instead. Once you use this ability, you can’t use it again until you finish a long rest.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "1cfa1f52-6e8e-4418-84a1-b9c4d7c371b6",
+      "id": "0eb01b35-156a-4d82-96ca-18e7b80e0cd8"
+    }
+  }
+}

@@ -14,10 +14,16 @@ import { convertWorldsmith } from "../scripts/converter.mjs";
 import { convertWorldsmithItem } from "../scripts/item-converter.mjs";
 import { convertWorldsmithShop, convertWorldsmithTreasure } from "../scripts/shop-converter.mjs";
 import { convertWorldsmithQuest } from "../scripts/journal-converter.mjs";
+import { convertWorldsmithEncounter } from "../scripts/encounter-converter.mjs";
+import { convertWorldsmithGroup } from "../scripts/group-converter.mjs";
+import { convertWorldsmithRollTable } from "../scripts/table-converter.mjs";
 import { convertWorldsmithSpell } from "../scripts/spell-converter.mjs";
 import { convertWorldsmithFeat } from "../scripts/feat-converter.mjs";
 import { detectWorldsmithType } from "../scripts/detect.mjs";
 import { isStructuredWorldsmith, normalizeWorldsmithData } from "../scripts/worldsmith-parser.mjs";
+import {
+  FEAT_COMPENDIUM_PACKS, SPELL_COMPENDIUM_PACKS, normalizeSrdName
+} from "../scripts/srd-lookup.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const examplesDir = join(__dirname, "..", "examples");
@@ -501,7 +507,17 @@ function activitiesOf(item) {
 {
   console.log("Structured quest (Whispers of the Kitsune)");
   const raw = loadStructured("Whispers_of_the_Kitsune_acff.json");
-  const { journalData } = convertWorldsmithQuest(normalizeWorldsmithData(raw));
+  const normalized = normalizeWorldsmithData(raw);
+  assert(Array.isArray(normalized.actors), "quest has actors array");
+  assert(normalized.actors.length === 2, "quest extracts ally and enemy actors");
+  assert(normalized.actors.some(a => a.identity?.name === "Shinobu, Shrine Courier"), "quest ally actor extracted");
+  assert(normalized.actors.some(a => a.identity?.name === "Lion Clan Constable"), "quest enemy actor extracted");
+  assert(normalized.items.some(i => i.name === "Shrine Token"), "quest inline loot item extracted");
+  for (const actorSource of normalized.actors) {
+    const { actorData } = convertWorldsmith(actorSource);
+    assert(actorData.system.attributes.hp.max > 0, `actor ${actorData.name} has HP`);
+  }
+  const { journalData } = convertWorldsmithQuest(normalized);
   assert(journalData.name === "Whispers of the Kitsune", "quest name");
   assert(journalData.pages.some(p => p.name === "Objectives"), "quest objectives page");
   assert(journalData.pages.some(p => p.name === "Rewards"), "quest rewards page");
@@ -510,9 +526,43 @@ function activitiesOf(item) {
 {
   console.log("Structured treasure (Whispers of the Crane Shrine)");
   const raw = loadStructured("Whispers_of_the_Crane_Shrine_3d2d.json");
-  const { pile } = convertWorldsmithTreasure(normalizeWorldsmithData(raw));
+  const normalized = normalizeWorldsmithData(raw);
+  assert(detectWorldsmithType(normalized) === "treasure", "treasure type detected");
+  assert(normalized.documentKind === "treasure", "treasure document kind");
+  const { pile } = convertWorldsmithTreasure(normalized);
   assert(pile.name === "Whispers of the Crane Shrine", "treasure pile name");
   assert((pile.items?.length ?? 0) > 0, "treasure pile has items");
+  assert(pile.flags["item-piles"]?.data?.type === "pile", "treasure item piles pile flag");
+}
+
+{
+  console.log("Structured treasure (Ember Vault of the Five Rings)");
+  const raw = loadStructured("Ember_Vault_of_the_Five_Rings_Treasure_456a.json");
+  const normalized = normalizeWorldsmithData(raw);
+  assert(detectWorldsmithType(normalized) === "treasure", "ember vault treasure type");
+  assert(normalized.documentKind === "treasure", "ember vault document kind");
+  assert(normalized.name === "Ember Vault of the Five Rings", "ember vault name");
+  assert(normalized.subtitle.includes("Legendary Booty"), "ember vault subtitle");
+  assert(normalized.description.includes("Siege of Kharis"), "ember vault description");
+  assert(normalized.currency.cp === 120, "ember vault copper");
+  assert(normalized.currency.gp === 5220, "ember vault gold");
+  assert(normalized.currency.pp === 150, "ember vault platinum");
+  assert(normalized.basic_items.length === 7, "ember vault basic items");
+  assert(normalized.basic_items.some(i => i.item === "Polished Jade Seal"), "ember vault basic item name");
+  assert(normalized.basic_items.every(i => i.item !== "Item"), "ember vault skips table header row");
+  assert(normalized.notable_items.length === 3, "ember vault notable items");
+  assert(normalized.notable_items.some(i => i.name === "Breath of Mount Ryoshima"), "ember vault naginata");
+  assert(normalized.notable_items.some(i => i.name === "Crane-Dancer's War Fan"), "ember vault war fan");
+  assert(normalized.notable_items.some(i => i.name === "Mask of the Oni's Bellow"), "ember vault mask");
+  assert(normalized.notable_items.find(i => i.name === "Breath of Mount Ryoshima")?.rarity === "Rare", "ember vault naginata rarity");
+  const { pile, warnings } = convertWorldsmithTreasure(normalized);
+  assert(pile.name === "Ember Vault of the Five Rings", "ember vault pile name");
+  assert(pile.items.length === 10, "ember vault pile item count");
+  assert(pile.system.currency.gp === 5220, "ember vault pile currency");
+  assert(pile.flags["worldsmith-foundry-import"].kind === "treasure", "ember vault import flag");
+  assert(pile.flags["item-piles"]?.data?.enabled === true, "ember vault item piles enabled");
+  assert(pile.items.some(i => i.name === "Breath of Mount Ryoshima"), "ember vault pile notable item");
+  assert(warnings.length === 0, "ember vault no conversion warnings");
 }
 
 {
@@ -522,6 +572,237 @@ function activitiesOf(item) {
   assert(actorData.name === "Prince Seppun Genji", "npc name");
   assert(actorData.system.abilities.dex.value === 16, "npc DEX parsed");
   assert(findItem(actorData.items, "Rapier"), "npc rapier action imported");
+}
+
+{
+  console.log("Structured session (Shadows over Tsuma)");
+  const raw = loadStructured("Shadows_over_Tsuma-session_f275.json");
+  const normalized = normalizeWorldsmithData(raw);
+  assert(detectWorldsmithType(normalized) === "session", "session type detected");
+  assert(normalized.documentKind === "session", "session document kind");
+  assert(normalized.actors.length === 4, "session extracts four creature actors");
+  assert(normalized.actors.some(a => a.identity?.name === "Shizuko Nariko"), "session NPC extracted");
+  assert(normalized.actors.some(a => a.identity?.name === "Masked Oni Sorcerer"), "session monster extracted");
+  assert(normalized.items.length === 3, "session extracts three loot items");
+  assert(normalized.items.some(i => i.name === "Jade Amulet of Insight"), "session loot item extracted");
+  assert(normalized.sections.length >= 5, "session encounter pages collected");
+  assert(normalized.objectives.some(o => o.quote), "session objective quotes parsed");
+  const { journalData } = convertWorldsmithQuest(normalized);
+  assert(journalData.flags["worldsmith-foundry-import"].kind === "session", "session journal kind");
+  assert(journalData.pages.some(p => p.name === "Key Details"), "session key details page");
+  assert(journalData.pages.some(p => p.name === "Scene 1: The Magistrate's Call"), "session scene page");
+}
+
+{
+  console.log("Structured deity (Kurozani, the Twelfth Decay)");
+  const raw = loadStructured("Kurozani__the_Twelfth_Decay_650b.json");
+  const normalized = normalizeWorldsmithData(raw);
+  assert(detectWorldsmithType(normalized) === "deity", "deity type detected");
+  assert(normalized.documentKind === "deity", "deity document kind");
+  assert(normalized.name === "Kurozani, the Twelfth Decay", "deity name");
+  assert(normalized.gm_overview.includes("hulking silhouette"), "deity description parsed");
+  assert(normalized.sections.some(s => s.name === "Lore"), "deity lore section");
+  assert(normalized.sections.some(s => s.name === "Followers"), "deity followers section");
+  assert(normalized.sections.some(s => s.name === "Worship"), "deity worship section");
+  assert(normalized.sections.some(s => s.name === "Follower Benefits"), "deity follower benefits section");
+  assert(normalized.spells.length === 3, "deity extracts three spells");
+  assert(normalized.spells.some(s => s.name === "Rotting Touch"), "deity spell name stripped");
+  assert(normalized.feats.length === 2, "deity extracts two feats");
+  assert(normalized.feats.some(f => f.name === "Blessing of Kurozani"), "deity feat name stripped");
+  assert(normalized.items.length === 2, "deity extracts two magic items");
+  assert(normalized.items.some(i => i.name === "Staff of Fungal Decay"), "deity item name stripped");
+  const { journalData } = convertWorldsmithQuest(normalized);
+  assert(journalData.flags["worldsmith-foundry-import"].kind === "deity", "deity journal kind");
+  assert(journalData.pages.some(p => p.name === "Overview"), "deity overview page");
+  assert(journalData.pages.some(p => p.name === "Worship"), "deity worship page");
+  for (const spellSource of normalized.spells) {
+    const { itemData } = convertWorldsmithSpell(spellSource);
+    assert(itemData.name === spellSource.name, `spell ${itemData.name} converts`);
+  }
+  for (const featSource of normalized.feats) {
+    const { itemData } = convertWorldsmithFeat(featSource);
+    assert(itemData.name === featSource.name, `feat ${itemData.name} converts`);
+  }
+}
+
+{
+  console.log("Structured encounter (Ambush of the Silvan Kodama)");
+  const raw = loadStructured("Ambush_of_the_Silvan_Kodama_6b79.json");
+  const normalized = normalizeWorldsmithData(raw);
+  assert(detectWorldsmithType(normalized) === "encounter", "encounter type detected");
+  assert(normalized.documentKind === "encounter", "encounter document kind");
+  assert(normalized.name === "Ambush of the Silvan Kodama", "encounter name");
+  assert(normalized.set_the_scene.includes("narrow forest path"), "encounter set the scene parsed");
+  assert(normalized.objective.includes("Survive the Kodama"), "encounter objective parsed");
+  assert(normalized.key_features.includes("Ancient Torii Ruins"), "encounter key features parsed");
+  assert(normalized.members.length === 1, "encounter extracts one member type");
+  assert(normalized.members[0].identity?.name === "Silvan Kodama", "encounter member name");
+  assert(normalized.members[0].quantity === 1, "encounter member quantity defaults to 1");
+  const { encounterData, memberSources } = convertWorldsmithEncounter(normalized);
+  assert(encounterData.type === "encounter", "encounter actor type");
+  assert(encounterData.system.description.full.includes("Set the Scene"), "encounter description includes scene");
+  assert(encounterData.prototypeToken.actorLink === true, "encounter token is linked");
+  assert(memberSources.length === 1, "encounter converter passes member sources");
+  const { actorData } = convertWorldsmith(memberSources[0]);
+  assert(actorData.type === "npc", "encounter member converts to npc");
+  assert(actorData.name === "Silvan Kodama", "encounter member npc name");
+}
+
+{
+  console.log("Structured dungeon (Kozanji no Miko)");
+  const raw = loadStructured("Kozanji_no_Miko_9e04.json");
+  const normalized = normalizeWorldsmithData(raw);
+  assert(detectWorldsmithType(normalized) === "dungeon", "dungeon type detected");
+  assert(normalized.documentKind === "dungeon", "dungeon document kind");
+  assert(normalized.name === "Kozanji no Miko", "dungeon name");
+  assert(normalized.lore.includes("ancient mountain shrine"), "dungeon lore parsed");
+  assert(normalized.layout.includes("five chambers"), "dungeon layout parsed");
+  assert(normalized.objectives.length === 5, "dungeon objectives parsed");
+  assert(normalized.rooms.length === 5, "dungeon extracts five rooms");
+  assert(normalized.rooms.some(r => r.name === "Overgrown Gatehouse"), "dungeon room name");
+  assert(normalized.rooms.some(r => r.content.includes("moss-slick torii")), "dungeon room content");
+  assert(normalized.encounters.length === 5, "dungeon extracts five encounters");
+  assert(normalized.encounters.every(e => e.documentKind === "encounter"), "dungeon encounter kind");
+  assert(normalized.encounters.some(e => e.members.length > 0), "dungeon encounter has members");
+  const { journalData } = convertWorldsmithQuest(normalized);
+  assert(journalData.flags["worldsmith-foundry-import"].kind === "dungeon", "dungeon journal kind");
+  assert(journalData.pages.some(p => p.name === "Lore"), "dungeon lore page");
+  assert(journalData.pages.some(p => p.name === "Layout"), "dungeon layout page");
+  assert(journalData.pages.some(p => p.name === "Overgrown Gatehouse"), "dungeon room page");
+  const { encounterData } = convertWorldsmithEncounter(normalized.encounters[0]);
+  assert(encounterData.type === "encounter", "nested encounter converts to group actor");
+}
+
+{
+  console.log("Structured group (Order of the Umbral Lotus)");
+  const raw = loadStructured("Order_of_the_Umbral_Lotus_da1e.json");
+  const normalized = normalizeWorldsmithData(raw);
+  assert(detectWorldsmithType(normalized) === "group", "group type detected");
+  assert(normalized.documentKind === "group", "group document kind");
+  assert(normalized.name === "Order of the Umbral Lotus", "group name");
+  assert(normalized.overview.includes("clandestine brotherhood"), "group overview parsed");
+  assert(normalized.basic_information.includes("Secret Society"), "group basic information parsed");
+  assert(normalized.goals.includes("Preserve and expand"), "group goals parsed");
+  assert(normalized.organization_structure.includes("High Matron"), "group organization structure parsed");
+  assert(normalized.members.length === 1, "group extracts one embedded NPC");
+  assert(normalized.members[0].identity?.name === "Matron Akura, the Jade Veil", "group member name");
+  const { groupData, memberSources } = convertWorldsmithGroup(normalized);
+  assert(groupData.type === "group", "group actor type");
+  assert(groupData.system.description.full.includes("Overview"), "group description includes overview");
+  assert(groupData.prototypeToken.actorLink === true, "group token is linked");
+  assert(memberSources.length === 1, "group converter passes member sources");
+  const { actorData } = convertWorldsmith(memberSources[0]);
+  assert(actorData.type === "npc", "group member converts to npc");
+}
+
+{
+  console.log("Structured puzzle (Shrine of the Celestial Kami's Fivefold Test)");
+  const raw = loadStructured("Shrine_of_the_Celestial_Kami_s_Fivefold_Test_puzzle_d7de.json");
+  const normalized = normalizeWorldsmithData(raw);
+  assert(detectWorldsmithType(normalized) === "puzzle", "puzzle type detected");
+  assert(normalized.documentKind === "puzzle", "puzzle document kind");
+  assert(normalized.name === "Shrine of the Celestial Kami’s Fivefold Test", "puzzle name");
+  assert(normalized.subtitle.includes("Aligning the Essence of the Kami"), "puzzle subtitle parsed");
+  assert(normalized.hook.includes("vaulted circular chamber"), "puzzle intro text parsed");
+  assert(normalized.gm_overview.includes("Five Celestial Kami"), "puzzle description parsed");
+  assert(normalized.sections.some(s => s.name === "Hints"), "puzzle hints section");
+  assert(normalized.sections.some(s => s.name === "Solution"), "puzzle solution section");
+  assert(normalized.sections.some(s => s.name === "Failure Consequence"), "puzzle failure section");
+  assert(normalized.sections.find(s => s.name === "Hints")?.content.includes("DC 16 Intelligence"), "puzzle hints content");
+  assert(normalized.sections.find(s => s.name === "Solution")?.content.includes("Earth (brown)"), "puzzle solution content");
+  const { journalData } = convertWorldsmithQuest(normalized);
+  assert(journalData.flags["worldsmith-foundry-import"].kind === "puzzle", "puzzle journal kind");
+  assert(journalData.pages.some(p => p.name === "Overview"), "puzzle overview page");
+  assert(journalData.pages.some(p => p.name === "Intro Text"), "puzzle intro text page");
+  assert(journalData.pages.some(p => p.name === "Hints"), "puzzle hints page");
+  assert(journalData.pages.some(p => p.name === "Solution"), "puzzle solution page");
+  assert(journalData.pages.some(p => p.name === "Failure Consequence"), "puzzle failure page");
+}
+
+{
+  console.log("Structured trap (Senkei Kageblade Petal Trap)");
+  const raw = loadStructured("Senkei_Kageblade_Petal_Trap_9195.json");
+  const normalized = normalizeWorldsmithData(raw);
+  assert(detectWorldsmithType(normalized) === "trap", "trap type detected");
+  assert(normalized.documentKind === "trap", "trap document kind");
+  assert(normalized.name === "Senkei Kageblade Petal Trap", "trap name");
+  assert(normalized.subtitle.includes("Mechanical"), "trap subtitle parsed");
+  assert(normalized.gm_overview.includes("pressure plate"), "trap details parsed");
+  assert(normalized.hook.includes("dimly lit corridor"), "trap description parsed");
+  assert(normalized.sections.some(s => s.name === "Skill Checks"), "trap skill checks section");
+  assert(normalized.sections.some(s => s.name === "Consequence"), "trap consequence section");
+  assert(normalized.sections.find(s => s.name === "Skill Checks")?.content.includes("DC 13 Wisdom"), "trap skill checks content");
+  assert(normalized.sections.find(s => s.name === "Consequence")?.content.includes("6d6 slashing"), "trap consequence content");
+  const { journalData } = convertWorldsmithQuest(normalized);
+  assert(journalData.flags["worldsmith-foundry-import"].kind === "trap", "trap journal kind");
+  assert(journalData.pages.some(p => p.name === "Overview"), "trap overview page");
+  assert(journalData.pages.some(p => p.name === "Description"), "trap description page");
+  assert(journalData.pages.some(p => p.name === "Skill Checks"), "trap skill checks page");
+  assert(journalData.pages.some(p => p.name === "Consequence"), "trap consequence page");
+}
+
+{
+  console.log("Structured roll table (Rumors of Otosan Uchi)");
+  const raw = loadStructured("Rumors_of_Otosan_Uchi-table_f941.json");
+  const normalized = normalizeWorldsmithData(raw);
+  assert(detectWorldsmithType(normalized) === "rollTable", "roll table type detected");
+  assert(normalized.documentKind === "rollTable", "roll table document kind");
+  assert(normalized.name === "Rumors of Otosan Uchi", "roll table name");
+  assert(normalized.subtitle.includes("d100"), "roll table subtitle parsed");
+  assert(normalized.formula === "1d100", "roll table formula parsed");
+  assert(normalized.description.includes("Imperial City of Otosan Uchi"), "roll table description parsed");
+  assert(normalized.results.length === 20, "roll table extracts twenty results");
+  assert(normalized.results[0].range[0] === 1 && normalized.results[0].range[1] === 5, "first result range");
+  assert(normalized.results[0].text.includes("netsuke carving"), "first result text");
+  assert(normalized.results.at(-1).range[0] === 96 && normalized.results.at(-1).range[1] === 100, "last result range");
+  assert(normalized.results.at(-1).text.includes("cursed mirror"), "last result text");
+  const { tableData } = convertWorldsmithRollTable(normalized);
+  assert(tableData.name === "Rumors of Otosan Uchi", "roll table converter name");
+  assert(tableData.formula === "1d100", "roll table converter formula");
+  assert(tableData.replacement === true, "roll table replacement enabled");
+  assert(tableData.displayRoll === true, "roll table display roll enabled");
+  assert(tableData.results.length === 20, "roll table converter result count");
+  assert(tableData.results[0].type === "text", "roll table result type");
+  assert(tableData.results[0].range[0] === 1 && tableData.results[0].range[1] === 5, "roll table result range");
+  assert(tableData.results[0].text.includes("netsuke carving"), "roll table result text");
+  assert(tableData.flags["worldsmith-foundry-import"].kind === "rollTable", "roll table import flag kind");
+}
+
+{
+  console.log("Structured world (Vaelor)");
+  const raw = loadStructured("Vaelor-world_17c0.json");
+  const normalized = normalizeWorldsmithData(raw);
+  assert(detectWorldsmithType(normalized) === "world", "world type detected");
+  assert(normalized.documentKind === "world", "world document kind");
+  assert(normalized.name === "Vaelor", "world name");
+  assert(normalized.subtitle.includes("Land of Looming Shadows"), "world subtitle parsed");
+  assert(normalized.gm_overview.includes("Solarys"), "world description parsed");
+  assert(normalized.gm_overview.includes("Vaelor is a medium"), "world variable resolved in description");
+  assert(normalized.sections.some(s => s.name === "Hallmarks"), "world hallmarks section");
+  assert(normalized.sections.some(s => s.name === "Cultures"), "world cultures section");
+  assert(normalized.sections.some(s => s.name === "Highlights"), "world highlights section");
+  assert(normalized.sections.some(s => s.name === "Timeline"), "world timeline section");
+  assert(normalized.sections.find(s => s.name === "Hallmarks")?.content.includes("Border Tensions"), "world hallmarks content");
+  assert(normalized.sections.find(s => s.name === "Cultures")?.content.includes("Iron Crown Dominion"), "world cultures content");
+  assert(normalized.sections.find(s => s.name === "Highlights")?.content.includes("Frostpeak Dragonshards"), "world highlights content");
+  assert(normalized.sections.find(s => s.name === "Timeline")?.content.includes("Great Sundering"), "world timeline content");
+  assert(/Vaelor.s supercontinent/.test(normalized.sections.find(s => s.name === "Timeline")?.content ?? ""), "world timeline variable resolved");
+  const { journalData } = convertWorldsmithQuest(normalized);
+  assert(journalData.flags["worldsmith-foundry-import"].kind === "world", "world journal kind");
+  assert(journalData.pages.some(p => p.name === "Overview"), "world overview page");
+  assert(journalData.pages.some(p => p.name === "Hallmarks"), "world hallmarks page");
+  assert(journalData.pages.some(p => p.name === "Cultures"), "world cultures page");
+  assert(journalData.pages.some(p => p.name === "Highlights"), "world highlights page");
+  assert(journalData.pages.some(p => p.name === "Timeline"), "world timeline page");
+}
+
+{
+  console.log("SRD name normalization");
+  assert(normalizeSrdName("Spell: Fireball") === "fireball", "strip spell prefix");
+  assert(normalizeSrdName("  False Life  ") === "false life", "trim and lowercase");
+  assert(normalizeSrdName("Feat: Alert") === "alert", "strip feat prefix");
+  assert(SPELL_COMPENDIUM_PACKS.includes("dnd5e.spells24"), "modern spell pack listed");
+  assert(FEAT_COMPENDIUM_PACKS.includes("dnd5e.feats24"), "modern feat pack listed");
 }
 
 console.log(`\n${passed} passed, ${failed} failed`);

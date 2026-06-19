@@ -11,6 +11,13 @@ A [Foundry VTT](https://foundryvtt.com/) module that converts and imports
   merchant actors, with their owners imported as separate NPCs.
 - **Treasure / loot** → Item Piles loot pile actors (with currency).
 - **Quests** → journal entries (one page per quest section).
+- **Encounters** → dnd5e encounter group actors with member NPCs.
+- **Groups** → dnd5e faction/party group actors with member NPCs.
+- **Dungeons** → journal entries with room pages, plus encounter groups per room.
+- **Puzzles** → journal entries (overview, intro text, hints, solution, and failure consequence pages).
+- **Traps** → journal entries (overview, description, skill checks, and consequence pages).
+- **Roll tables** → Foundry rollable tables with ranged text results.
+- **Worlds** → journal entries (overview, hallmarks, cultures, highlights, and timeline pages).
 
 The type of each export is detected automatically.
 
@@ -70,7 +77,10 @@ Converts Worldsmith item exports into the matching dnd5e item type:
 
 ### Spells
 
-Worldsmith spell exports become dnd5e **spell** items:
+Worldsmith spell exports become dnd5e **spell** items. When a spell name matches
+an entry in the dnd5e SRD compendiums (`Spells (SRD)` / `Spells`), the module
+imports that compendium document instead of generating a custom item. Custom or
+homebrew spells still convert normally when no SRD match is found.
 
 - Level and school (mapped to the dnd5e school key).
 - Components → properties: verbal → `vocal`, somatic, material, ritual,
@@ -85,7 +95,10 @@ Worldsmith spell exports become dnd5e **spell** items:
 
 ### Feats
 
-Worldsmith feat exports become dnd5e **feat** items:
+Worldsmith feat exports become dnd5e **feat** items. When a feat name matches an
+entry in the dnd5e SRD compendiums (primarily `Feats`, plus legacy feat packs),
+the module imports that compendium document instead of generating a custom item.
+Custom feats still convert normally when no SRD match is found.
 
 - The mechanics, flavor (lore), category (subtitle), and prerequisites are
   combined into the description.
@@ -156,6 +169,81 @@ section that is present:
 The original JSON is stored under the journal entry's module flags. (Quests that
 are embedded inside a creature or shop owner are also folded into that actor's
 biography; this handles the standalone quest exports.)
+
+### Encounters
+
+Worldsmith encounter exports become a dnd5e **encounter** group actor (the actor
+type used for combat groups in dnd5e v3+):
+
+- Narrative sections (**Set the Scene**, **Objective**, **Key Features**) are
+  written to the encounter actor's description.
+- Each embedded monster stat block is imported as a separate **NPC actor** and
+  linked as a group member with a quantity (parsed from names like `Goblin (x4)`
+  when present, otherwise `1`).
+- The encounter token is actor-linked so the group sheet opens when clicked.
+- Embedded loot, spells, and feats are also imported as separate items when
+  present.
+
+Member NPCs match the same dnd5e structure as standalone creature imports (see
+`examples/foundry-encounter-member-npc.json` for a Foundry export of one such
+member).
+
+### Groups
+
+Worldsmith group exports (factions, organizations, parties) become a dnd5e
+**group** actor:
+
+- Organization sections (**Overview**, **Basic Information**, **Goals**,
+  **Resources**, **Membership Requirements**, **Organization Structure**) are
+  written to the group actor's description
+- Embedded NPC stat blocks are imported as separate actors and linked as group
+  members (no quantities — unlike encounter groups)
+- The group token is actor-linked for quick access to the group sheet
+
+### Dungeons
+
+Worldsmith dungeon exports become a **journal entry** plus one **encounter group
+actor** per room encounter:
+
+- **Overview**, **Lore**, **Layout**, and **Objectives** pages at the dungeon level
+- One journal page per **room**, combining that room's encounters, traps, and puzzles
+- Each embedded encounter section becomes its own encounter group actor (with member
+  NPCs and loot), using the same rules as standalone encounter imports
+
+### Puzzles
+
+Worldsmith puzzle exports become a **journal entry**:
+
+- **Overview** (subtitle and DM description)
+- **Intro Text** (player-facing setup)
+- **Hints**, **Solution**, and **Failure Consequence** pages when present
+- Embedded actors, items, spells, and feats are imported alongside the journal
+
+### Traps
+
+Worldsmith trap exports become a **journal entry**:
+
+- **Overview** (trap type/subtitle and DM details)
+- **Description** (player-facing scene text)
+- **Skill Checks** and **Consequence** pages when present
+- Embedded actors, items, spells, and feats are imported alongside the journal
+
+### Roll Tables
+
+Worldsmith roll table exports become a Foundry **RollTable**:
+
+- Table **description** includes the subtitle and usage notes
+- Each table row becomes a **text result** with a dice **range** (for example `1-5`, `96-100`)
+- Roll formula is parsed from the subtitle when present (for example `(d100)` → `1d100`)
+- Results use replacement drawing and display the roll in chat
+
+### Worlds
+
+Worldsmith world exports become a **journal entry**:
+
+- **Overview** (subtitle and world description)
+- **Hallmarks**, **Cultures**, **Highlights**, and nested sections such as **Timeline**
+- Embedded actors, items, spells, and feats are imported alongside the journal
 
 ## Installation
 

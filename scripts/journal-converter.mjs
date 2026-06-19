@@ -98,13 +98,51 @@ export function convertWorldsmithQuest(data) {
     if (content) pages.push(buildPage(name, content, (sort += 100)));
   };
 
+  if (quest.documentKind === "dungeon") {
+    const overviewParts = [];
+    if (quest.subtitle) overviewParts.push(`<p><em>${escapeHTML(quest.subtitle)}</em></p>`);
+    addPage("Overview", overviewParts.join(""));
+    if (quest.lore) addPage("Lore", textToHTML(quest.lore));
+    if (quest.layout) addPage("Layout", textToHTML(quest.layout));
+    if (Array.isArray(quest.objectives) && quest.objectives.length) {
+      addPage("Objectives", renderObjectives(quest.objectives));
+    }
+    for (const room of quest.rooms ?? []) {
+      if (room?.name && room?.content) addPage(room.name, textToHTML(room.content));
+    }
+    if (!pages.length) addPage(quest.name || "Dungeon", textToHTML(quest.lore ?? ""));
+
+    const journalData = {
+      name: quest.name || "Imported Dungeon",
+      pages,
+      flags: {
+        [MODULE_ID]: {
+          imported: true,
+          kind: "dungeon",
+          version: MODULE_VERSION,
+          source: data
+        }
+      }
+    };
+    return { journalData, warnings };
+  }
+
   // Overview (subtitle + GM overview).
   const overviewParts = [];
   if (quest.subtitle) overviewParts.push(`<p><em>${escapeHTML(quest.subtitle)}</em></p>`);
   if (quest.gm_overview) overviewParts.push(textToHTML(quest.gm_overview));
   addPage("Overview", overviewParts.join(""));
 
-  if (quest.hook) addPage("Adventure Hook", textToHTML(quest.hook));
+  if (quest.hook) {
+    const hookTitle = quest.documentKind === "session"
+      ? "Key Details"
+      : quest.documentKind === "puzzle"
+        ? "Intro Text"
+        : quest.documentKind === "trap"
+          ? "Description"
+          : "Adventure Hook";
+    addPage(hookTitle, textToHTML(quest.hook));
+  }
 
   if (Array.isArray(quest.objectives) && quest.objectives.length) {
     addPage("Objectives", renderObjectives(quest.objectives));
@@ -133,7 +171,7 @@ export function convertWorldsmithQuest(data) {
     flags: {
       [MODULE_ID]: {
         imported: true,
-        kind: "quest",
+        kind: quest.documentKind ?? "quest",
         version: MODULE_VERSION,
         source: data
       }

@@ -10,13 +10,19 @@ import { convertWorldsmith } from "./converter.mjs";
 import { convertWorldsmithItem } from "./item-converter.mjs";
 import { convertWorldsmithShop, convertWorldsmithTreasure } from "./shop-converter.mjs";
 import { convertWorldsmithQuest } from "./journal-converter.mjs";
+import { convertWorldsmithEncounter } from "./encounter-converter.mjs";
+import { convertWorldsmithGroup } from "./group-converter.mjs";
+import { convertWorldsmithRollTable } from "./table-converter.mjs";
 import { convertWorldsmithSpell } from "./spell-converter.mjs";
 import { convertWorldsmithFeat } from "./feat-converter.mjs";
 import { detectWorldsmithType } from "./detect.mjs";
 import { isStructuredWorldsmith, normalizeWorldsmithData } from "./worldsmith-parser.mjs";
 import {
+  FEAT_COMPENDIUM_PACKS, SPELL_COMPENDIUM_PACKS, findSrdFeat, findSrdSpell, normalizeSrdName
+} from "./srd-lookup.mjs";
+import {
   createActorFromWorldsmith, createFeatFromWorldsmith, createFromWorldsmith, createItemFromWorldsmith,
-  createJournalFromWorldsmith, createShopFromWorldsmith, createSpellFromWorldsmith,
+  createJournalFromWorldsmith, createEncounterFromWorldsmith, createGroupFromWorldsmith, createDungeonFromWorldsmith, createRollTableFromWorldsmith, createShopFromWorldsmith, createSpellFromWorldsmith,
   createTreasureFromWorldsmith, importFromText
 } from "./importer.mjs";
 import WorldsmithImportApp from "./import-app.mjs";
@@ -44,6 +50,9 @@ const api = {
   convertWorldsmithShop,
   convertWorldsmithTreasure,
   convertWorldsmithQuest,
+  convertWorldsmithEncounter,
+  convertWorldsmithGroup,
+  convertWorldsmithRollTable,
   convertWorldsmithSpell,
   convertWorldsmithFeat,
   createActorFromWorldsmith,
@@ -51,10 +60,19 @@ const api = {
   createShopFromWorldsmith,
   createTreasureFromWorldsmith,
   createJournalFromWorldsmith,
+  createEncounterFromWorldsmith,
+  createGroupFromWorldsmith,
+  createDungeonFromWorldsmith,
+  createRollTableFromWorldsmith,
   createSpellFromWorldsmith,
   createFeatFromWorldsmith,
   createFromWorldsmith,
-  importFromText
+  importFromText,
+  findSrdSpell,
+  findSrdFeat,
+  normalizeSrdName,
+  SPELL_COMPENDIUM_PACKS,
+  FEAT_COMPENDIUM_PACKS
 };
 
 Hooks.once("init", () => {

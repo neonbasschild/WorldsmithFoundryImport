@@ -31,6 +31,10 @@ const STORY_OVERVIEW_SECTIONS = new Set([
   "pitch", "premise", "synopsis", "overview", "gm overview", "summary"
 ]);
 
+const ITEM_CONTENT_TYPES = new Set(["magicitem", "item"]);
+
+const ENCOUNTER_CONTENT_TYPES = new Set(["encounter", "trap", "puzzle"]);
+
 /**
  * @param {object} data
  * @returns {boolean}
@@ -77,10 +81,19 @@ function parseStructuredExport(data) {
   if (contentType === "feat") return normalizeFeat(root, walk);
   if (contentType === "spell") return normalizeSpell(root, walk);
   if (contentType === "magicitem") return normalizeItem(root, walk);
-  if (contentType === "quest") return normalizeQuest(root, walk);
-  if (contentType === "story") return normalizeStory(root, walk);
+  if (contentType === "deity") return normalizeDeity(root, walk, data.items);
+  if (contentType === "encounter") return normalizeEncounter(root, walk, data.items);
+  if (contentType === "group") return normalizeGroup(root, walk, data.items);
+  if (contentType === "dungeon") return normalizeDungeon(root, walk, data.items);
+  if (contentType === "puzzle") return normalizePuzzle(root, walk, data.items);
+  if (contentType === "trap") return normalizeTrap(root, walk, data.items);
+  if (contentType === "rolltable") return normalizeRollTable(root, walk, data.items);
+  if (contentType === "quest") return normalizeQuest(root, walk, data.items);
+  if (contentType === "story") return normalizeStory(root, walk, data.items);
+  if (contentType === "session") return normalizeSession(root, walk, data.items);
   if (contentType === "shop") return normalizeShop(root, walk, data.items);
   if (contentType === "treasure") return normalizeTreasure(root, walk, data.items);
+  if (contentType === "world") return normalizeWorld(root, walk, data.items);
   if (CREATURE_CONTENT_TYPES.has(contentType)) return normalizeCreature(root, walk);
   if (contentType === "item") return normalizeItem(root, walk);
 
@@ -784,29 +797,41 @@ function mapItemCategory(typeText) {
 /**
  * @param {object} root
  * @param {object} walk
+ * @param {Record<string, object>} items
  * @returns {object}
  */
-function normalizeQuest(root, walk) {
+function normalizeQuest(root, walk, items) {
   const quest = {
     name: root.name,
     subtitle: walk.subtitle ?? "",
+    documentKind: "quest",
     gm_overview: joinBlocks(walk.sections["GM Overview"], root.name),
     hook: joinBlocks(walk.sections.Hook, root.name),
     objectives: parseObjectiveList(walk.sections.Objectives, root.name),
     rewards: parseRewardTables(walk.sections.Rewards, root.name),
     resolution: joinBlocks(walk.sections.Resolution, root.name)
   };
-  return quest;
+  return attachEmbeddedContent(quest, root, items);
 }
 
 /**
  * @param {object} root
  * @param {object} walk
+ * @param {Record<string, object>} items
  * @returns {object}
  */
-function normalizeStory(root, walk) {
-  const quest = normalizeQuest(root, walk);
-  quest.subtitle = walk.subtitle ?? quest.subtitle;
+function normalizeStory(root, walk, items) {
+  const quest = {
+    name: root.name,
+    subtitle: walk.subtitle ?? "",
+    documentKind: "story",
+    gm_overview: joinBlocks(walk.sections["GM Overview"], root.name),
+    hook: joinBlocks(walk.sections.Hook, root.name),
+    objectives: parseObjectiveList(walk.sections.Objectives, root.name),
+    rewards: parseRewardTables(walk.sections.Rewards, root.name),
+    resolution: joinBlocks(walk.sections.Resolution, root.name),
+    sections: []
+  };
 
   const overviewParts = [];
   for (const [header, blocks] of Object.entries(walk.sections)) {
@@ -817,7 +842,6 @@ function normalizeStory(root, walk) {
   }
   if (overviewParts.length) quest.gm_overview = overviewParts.join("\n\n");
 
-  quest.sections = [];
   for (const [header, blocks] of Object.entries(walk.sections)) {
     const lower = header.toLowerCase();
     if (QUEST_SECTION_ALIASES[lower]) continue;
@@ -826,7 +850,509 @@ function normalizeStory(root, walk) {
     if (content) quest.sections.push({ name: header, content });
   }
 
-  return quest;
+  return attachEmbeddedContent(quest, root, items);
+}
+
+/**
+ * @param {object} root
+ * @param {object} walk
+ * @param {Record<string, object>} items
+ * @returns {object}
+ */
+function normalizeSession(root, walk, items) {
+  const session = {
+    name: root.name,
+    subtitle: walk.subtitle ?? "",
+    documentKind: "session",
+    gm_overview: joinBlocks(walk.sections.Description, root.name),
+    hook: joinBlocks(walk.sections["Key Details"], root.name),
+    objectives: parseObjectiveList(walk.sections.Objectives, root.name),
+    sections: collectEncounterSections(root, items)
+  };
+  return attachEmbeddedContent(session, root, items);
+}
+
+/**
+ * @param {object} target
+ * @param {object} root
+ * @param {Record<string, object>} items
+ * @returns {object}
+ */
+function attachEmbeddedContent(target, root, items) {
+  const embedded = collectNestedContent(root, items);
+  target.actors = embedded.actors;
+  target.items = embedded.items;
+  target.treasures = embedded.treasures;
+  target.spells = embedded.spells;
+  target.feats = embedded.feats;
+  return target;
+}
+
+/**
+ * @param {object} root
+ * @param {Record<string, object>} items
+ * @returns {{actors: object[], items: object[], treasures: object[], spells: object[], feats: object[]}}
+ */
+function collectNestedContent(root, items) {
+  return {
+    actors: collectNestedCreatures(root, items),
+    items: collectNestedItems(root, items),
+    treasures: collectNestedTreasures(root, items),
+    spells: collectNestedSpells(root, items),
+    feats: collectNestedFeats(root, items)
+  };
+}
+
+const DEITY_SECTIONS = ["Lore", "Followers", "Worship", "Follower Benefits"];
+
+/**
+ * @param {object} data
+ * @returns {string}
+ */
+function buildFollowerBenefitsSummary(data) {
+  const lines = [];
+  for (const spell of data.spells ?? []) lines.push(`• ${spell.name} (spell)`);
+  for (const item of data.items ?? []) lines.push(`• ${item.name} (magic item)`);
+  for (const feat of data.feats ?? []) lines.push(`• ${feat.name} (feat)`);
+  return lines.join("\n");
+}
+
+/**
+ * @param {object} root
+ * @param {object} walk
+ * @param {Record<string, object>} items
+ * @returns {object}
+ */
+function normalizeDeity(root, walk, items) {
+  const deity = {
+    name: root.name,
+    subtitle: walk.subtitle ?? "",
+    documentKind: "deity",
+    gm_overview: joinBlocks(walk.sections.Description, root.name),
+    sections: []
+  };
+
+  for (const header of DEITY_SECTIONS) {
+    if (header === "Follower Benefits") continue;
+    const content = joinBlocks(walk.sections[header], root.name);
+    if (content) deity.sections.push({ name: header, content });
+  }
+
+  attachEmbeddedContent(deity, root, items);
+
+  if ("Follower Benefits" in walk.sections) {
+    const prose = joinBlocks(walk.sections["Follower Benefits"], root.name);
+    const summary = buildFollowerBenefitsSummary(deity);
+    const content = [prose, summary].filter(Boolean).join("\n\n");
+    if (content) deity.sections.push({ name: "Follower Benefits", content });
+  }
+
+  return deity;
+}
+
+const PUZZLE_SECTIONS = ["Hints", "Solution", "Failure Consequence"];
+
+/**
+ * @param {object} root
+ * @param {object} walk
+ * @param {Record<string, object>} items
+ * @returns {object}
+ */
+function normalizePuzzle(root, walk, items) {
+  const puzzle = {
+    name: root.name,
+    subtitle: walk.subtitle ?? "",
+    documentKind: "puzzle",
+    gm_overview: joinBlocks(walk.sections.Description, root.name),
+    hook: joinBlocks(walk.sections["Intro Text"], root.name),
+    sections: []
+  };
+
+  for (const header of PUZZLE_SECTIONS) {
+    const content = joinBlocks(walk.sections[header], root.name);
+    if (content) puzzle.sections.push({ name: header, content });
+  }
+
+  return attachEmbeddedContent(puzzle, root, items);
+}
+
+const TRAP_SECTIONS = ["Skill Checks", "Consequence"];
+
+/**
+ * @param {object} root
+ * @param {object} walk
+ * @param {Record<string, object>} items
+ * @returns {object}
+ */
+function normalizeTrap(root, walk, items) {
+  const trap = {
+    name: root.name,
+    subtitle: walk.subtitle ?? "",
+    documentKind: "trap",
+    gm_overview: joinBlocks(walk.sections.Details, root.name),
+    hook: joinBlocks(walk.sections.Description, root.name),
+    sections: []
+  };
+
+  for (const header of TRAP_SECTIONS) {
+    const content = joinBlocks(walk.sections[header], root.name);
+    if (content) trap.sections.push({ name: header, content });
+  }
+
+  return attachEmbeddedContent(trap, root, items);
+}
+
+/**
+ * @param {string} text
+ * @returns {{min: number, max: number}|null}
+ */
+function parseRollRange(text) {
+  const normalized = String(text ?? "").trim();
+  if (!normalized || /^d\d+$/i.test(normalized)) return null;
+
+  const rangeMatch = normalized.match(/^(\d+)\s*[-–—]\s*(\d+)$/);
+  if (rangeMatch) {
+    return { min: Number(rangeMatch[1]), max: Number(rangeMatch[2]) };
+  }
+
+  const single = normalized.match(/^(\d+)$/);
+  if (single) {
+    const value = Number(single[1]);
+    return { min: value, max: value };
+  }
+
+  return null;
+}
+
+/**
+ * @param {string} subtitle
+ * @returns {string}
+ */
+function parseRollFormula(subtitle) {
+  const text = String(subtitle ?? "");
+  const match = text.match(/\(\s*d(\d+)\s*\)/i) ?? text.match(/\bd(\d+)\b/i);
+  return match ? `1d${match[1]}` : "";
+}
+
+/**
+ * @param {object} tableNode
+ * @param {string} name
+ * @returns {Array<{range: [number, number], text: string}>}
+ */
+function parseRollTableNode(tableNode, name) {
+  const results = [];
+  for (const row of tableNode.content?.cells ?? []) {
+    const texts = row.map(cell => extractText(cell.content, name).trim());
+    if (!texts.some(Boolean)) continue;
+
+    const range = parseRollRange(texts[0]);
+    if (!range) continue;
+
+    const text = texts.slice(1).filter(Boolean).join(" — ");
+    if (!text) continue;
+
+    results.push({ range: [range.min, range.max], text });
+  }
+  return results;
+}
+
+/**
+ * @param {object} walk
+ * @param {string} name
+ * @returns {Array<{range: [number, number], text: string}>}
+ */
+function collectRollTableResults(walk, name) {
+  const results = [];
+  for (const blocks of Object.values(walk.sections)) {
+    for (const block of blocks ?? []) {
+      if (block.kind !== "table") continue;
+      results.push(...parseRollTableNode(block.node, name));
+    }
+  }
+  return results;
+}
+
+/**
+ * @param {object} root
+ * @param {object} walk
+ * @param {Record<string, object>} items
+ * @returns {object}
+ */
+function normalizeRollTable(root, walk, items) {
+  const rollTable = {
+    name: root.name,
+    subtitle: walk.subtitle ?? "",
+    documentKind: "rollTable",
+    description: joinBlocks(walk.sections.Description, root.name),
+    formula: parseRollFormula(walk.subtitle),
+    results: collectRollTableResults(walk, root.name)
+  };
+  return attachEmbeddedContent(rollTable, root, items);
+}
+
+const ENCOUNTER_SECTIONS = ["Set the Scene", "Objective", "Key Features"];
+
+/**
+ * @param {string} name
+ * @returns {number|null}
+ */
+function parseQuantityFromName(name) {
+  const text = String(name ?? "");
+  const match = text.match(/\(\s*x\s*(\d+)\s*\)/i)
+    || text.match(/\b(\d+)\s*x\b/i)
+    || text.match(/\bx\s*(\d+)\b/i);
+  return match ? Number(match[1]) : null;
+}
+
+/**
+ * @param {object} section
+ * @param {Record<string, object>} items
+ * @returns {number}
+ */
+function parseEncounterQuantity(section, items) {
+  const sources = [section];
+  let current = section;
+  while (current?.parentId) {
+    const parent = items[current.parentId];
+    if (!parent) break;
+    if (parent.type === "section") sources.push(parent);
+    current = parent;
+  }
+  for (const source of sources) {
+    const fromName = parseQuantityFromName(source.name);
+    if (fromName) return fromName;
+  }
+  return 1;
+}
+
+/**
+ * Collect monster stat blocks for an encounter group, preserving quantities.
+ * @param {object} root
+ * @param {Record<string, object>} items
+ * @returns {object[]}
+ */
+function collectEncounterMembers(root, items) {
+  const allSections = collectAllSections(root, items);
+  const byId = new Map();
+
+  for (const section of allSections) {
+    const creatureSection = findCreatureSection(section, items);
+    if (creatureSection) byId.set(creatureSection.id, creatureSection);
+  }
+
+  const unique = [...byId.values()].filter(outer =>
+    ![...byId.values()].some(inner =>
+      inner.id !== outer.id && isDescendantOf(outer.id, inner, items)
+    )
+  );
+
+  const grouped = new Map();
+  for (const section of unique) {
+    const creature = normalizeCreature(section, walkSection(section, items, section.name));
+    const creatureName = creature.identity?.name ?? stripEmbeddedNamePrefix(section.name?.trim());
+    const quantity = parseEncounterQuantity(section, items);
+    const key = creatureName.toLowerCase();
+    if (grouped.has(key)) {
+      grouped.get(key).quantity += quantity;
+    } else {
+      grouped.set(key, { ...creature, quantity });
+    }
+  }
+  return [...grouped.values()];
+}
+
+/**
+ * @param {object} root
+ * @param {object} walk
+ * @param {Record<string, object>} items
+ * @returns {object}
+ */
+function normalizeEncounter(root, walk, items) {
+  const encounter = {
+    name: root.name,
+    subtitle: walk.subtitle ?? "",
+    documentKind: "encounter",
+    set_the_scene: joinBlocks(walk.sections["Set the Scene"], root.name),
+    objective: joinBlocks(walk.sections.Objective, root.name),
+    key_features: joinBlocks(walk.sections["Key Features"], root.name),
+    members: collectEncounterMembers(root, items)
+  };
+
+  const embedded = collectNestedContent(root, items);
+  encounter.items = embedded.items;
+  encounter.treasures = embedded.treasures;
+  encounter.spells = embedded.spells;
+  encounter.feats = embedded.feats;
+  return encounter;
+}
+
+/**
+ * Build readable content for a dungeon room wrapper section.
+ * @param {object} roomWrapper
+ * @param {Record<string, object>} items
+ * @param {string} name
+ * @returns {string}
+ */
+function buildRoomContent(roomWrapper, items, name) {
+  const parts = [];
+  const seen = new Set();
+
+  for (const section of collectAllSections(roomWrapper, items)) {
+    const type = String(section.content_type ?? "").toLowerCase();
+    if (!ENCOUNTER_CONTENT_TYPES.has(type)) continue;
+    if (seen.has(section.id)) continue;
+    seen.add(section.id);
+
+    const sectionName = section.name?.trim() || name;
+    const walk = walkSection(section, items, sectionName);
+    const text = buildEncounterContent(walk, sectionName);
+    if (text) parts.push(text);
+  }
+
+  if (!parts.length) {
+    const inner = resolveContentSection(roomWrapper, items) ?? roomWrapper;
+    const walk = walkSection(inner, items, name);
+    const text = buildEncounterContent(walk, name);
+    if (text) parts.push(text);
+  }
+
+  return parts.join("\n\n");
+}
+
+/**
+ * Collect top-level room sections listed after the Rooms header.
+ * @param {object} root
+ * @param {Record<string, object>} items
+ * @returns {Array<{name: string, content: string}>}
+ */
+function collectDungeonRooms(root, items) {
+  const rooms = [];
+  let afterRooms = false;
+
+  for (const childId of root.childrenIds ?? []) {
+    const child = items[childId];
+    if (!child) continue;
+
+    if (child.type === "simple") {
+      const header = getHeaderText(child);
+      if (header?.toLowerCase() === "rooms") {
+        afterRooms = true;
+        continue;
+      }
+    }
+
+    if (!afterRooms || child.type !== "section") continue;
+    const name = child.name?.trim();
+    if (!name) continue;
+    const content = buildRoomContent(child, items, name);
+    if (content) rooms.push({ name, content });
+  }
+
+  return rooms;
+}
+
+/**
+ * Collect encounter documents embedded in a dungeon for group-actor import.
+ * @param {object} root
+ * @param {Record<string, object>} items
+ * @returns {object[]}
+ */
+function collectDungeonEncounters(root, items) {
+  const encounters = [];
+  const seen = new Set();
+
+  for (const section of collectAllSections(root, items)) {
+    if (String(section.content_type ?? "").toLowerCase() !== "encounter") continue;
+    if (seen.has(section.id)) continue;
+    seen.add(section.id);
+
+    const walk = walkSection(section, items, section.name);
+    encounters.push(normalizeEncounter(section, walk, items));
+  }
+
+  return encounters;
+}
+
+/**
+ * Collect NPC stat blocks embedded in a group document.
+ * @param {object} root
+ * @param {Record<string, object>} items
+ * @returns {object[]}
+ */
+function collectGroupMembers(root, items) {
+  const allSections = collectAllSections(root, items);
+  const byId = new Map();
+
+  for (const section of allSections) {
+    const creatureSection = findCreatureSection(section, items);
+    if (creatureSection) byId.set(creatureSection.id, creatureSection);
+  }
+
+  const unique = [...byId.values()].filter(outer =>
+    ![...byId.values()].some(inner =>
+      inner.id !== outer.id && isDescendantOf(outer.id, inner, items)
+    )
+  );
+
+  const members = [];
+  const seenNames = new Set();
+  for (const section of unique) {
+    const creature = normalizeCreature(section, walkSection(section, items, section.name));
+    const name = creature.identity?.name ?? stripEmbeddedNamePrefix(section.name?.trim());
+    if (!name || seenNames.has(name.toLowerCase())) continue;
+    seenNames.add(name.toLowerCase());
+    members.push(creature);
+  }
+  return members;
+}
+
+/**
+ * @param {object} root
+ * @param {object} walk
+ * @param {Record<string, object>} items
+ * @returns {object}
+ */
+function normalizeGroup(root, walk, items) {
+  const group = {
+    name: root.name,
+    subtitle: walk.subtitle ?? "",
+    documentKind: "group",
+    overview: joinBlocks(walk.sections.Overview, root.name),
+    basic_information: joinBlocks(walk.sections["Basic Information"], root.name),
+    goals: joinBlocks(walk.sections.Goals, root.name),
+    resources: joinBlocks(walk.sections.Resources, root.name),
+    membership_requirements: joinBlocks(walk.sections["Membership Requirements"], root.name),
+    organization_structure: joinBlocks(walk.sections["Organization Structure"], root.name),
+    prominent_figures: joinBlocks(walk.sections["Prominent Figures"], root.name),
+    members: collectGroupMembers(root, items)
+  };
+
+  const embedded = collectNestedContent(root, items);
+  group.items = embedded.items;
+  group.treasures = embedded.treasures;
+  group.spells = embedded.spells;
+  group.feats = embedded.feats;
+  return group;
+}
+
+/**
+ * @param {object} root
+ * @param {object} walk
+ * @param {Record<string, object>} items
+ * @returns {object}
+ */
+function normalizeDungeon(root, walk, items) {
+  const dungeon = {
+    name: root.name,
+    subtitle: walk.subtitle ?? "",
+    documentKind: "dungeon",
+    lore: joinBlocks(walk.sections.Lore, root.name),
+    layout: joinBlocks(walk.sections.Layout, root.name),
+    objectives: parseObjectiveList(walk.sections.Objectives, root.name),
+    rooms: collectDungeonRooms(root, items),
+    encounters: collectDungeonEncounters(root, items)
+  };
+  return dungeon;
 }
 
 /**
@@ -837,21 +1363,55 @@ function normalizeStory(root, walk) {
 function parseObjectiveList(blocks, name) {
   const objectives = [];
   for (const block of blocks ?? []) {
-    const labeled = block.labeled ?? parseLabeledBlock(block.node, name);
-    if (labeled._list) {
-      for (const task of labeled._list) objectives.push({ task });
-      continue;
-    }
+    let parsedFromList = false;
     for (const para of block.node?.content ?? []) {
       if (para.type === "numbered-list" || para.type === "bulleted-list") {
+        parsedFromList = true;
         for (const item of para.children ?? []) {
-          const task = extractText(item, name).trim();
-          if (task) objectives.push({ task });
+          const parsed = parseObjectiveListItem(item, name);
+          if (parsed) objectives.push(parsed);
         }
       }
     }
+    if (parsedFromList) continue;
+
+    const labeled = block.labeled ?? parseLabeledBlock(block.node, name);
+    if (labeled._list) {
+      for (const task of labeled._list) objectives.push({ task });
+    }
   }
   return objectives;
+}
+
+/**
+ * @param {object} listItem
+ * @param {string} name
+ * @returns {{task: string, quote?: string}|null}
+ */
+function parseObjectiveListItem(listItem, name) {
+  const children = listItem.children ?? [];
+  if (!children.length) return null;
+
+  let task = "";
+  let quote = "";
+  for (const child of children) {
+    if (child.type === "paragraph") {
+      for (const span of child.children ?? []) {
+        const text = extractText(span, name).trim();
+        if (!text) continue;
+        const isQuote = span.textFormat === "description" || /^[“"']/.test(text);
+        if (isQuote) quote = text.replace(/^[“"']|[”"']$/g, "");
+        else if (!task) task = text;
+      }
+      continue;
+    }
+    const text = extractText(child, name).trim();
+    if (text && !task) task = text;
+  }
+
+  if (!task) task = extractText(listItem, name).trim();
+  if (!task) return null;
+  return quote ? { task, quote } : { task };
 }
 
 /**
@@ -948,19 +1508,12 @@ function normalizeTreasure(root, walk, items) {
   const treasure = {
     name: root.name,
     subtitle: walk.subtitle ?? "",
+    documentKind: "treasure",
     description: joinBlocks(walk.sections.Description, root.name),
     currency: parseCurrencyFields(walk.sections.Currency, walk.labeledFields),
     basic_items: parseInventoryTables(walk.sections["Basic Items"], root.name),
-    notable_items: []
+    notable_items: collectTreasureNotableItems(root, items)
   };
-
-  for (const nested of walk.nestedSections) {
-    const resolved = resolveContentSection(nested, items);
-    if (!resolved) continue;
-    if (String(resolved.content_type ?? "").toLowerCase() === "magicitem" || hasItemStatLine(resolved, items)) {
-      treasure.notable_items.push(normalizeItem(resolved, walkSection(resolved, items, resolved.name)));
-    }
-  }
 
   if (!treasure.notable_items.length) {
     treasure.notable_items = parseInventoryTables(walk.sections["Notable Items"], root.name).map(entry => ({
@@ -972,6 +1525,97 @@ function normalizeTreasure(root, walk, items) {
   }
 
   return treasure;
+}
+
+const WORLD_SECTIONS = ["Hallmarks", "Cultures", "Highlights"];
+
+/**
+ * @param {object} section
+ * @param {Record<string, object>} items
+ * @param {string} name
+ * @returns {string}
+ */
+function collectNestedSectionContent(section, items, name) {
+  const nestedWalk = walkSection(section, items, section.name ?? name);
+  const parts = [];
+
+  for (const block of nestedWalk.looseBlocks ?? []) {
+    const text = block.text ?? nodePlainText(block.node, name);
+    if (text) parts.push(text);
+  }
+
+  for (const [header, blocks] of Object.entries(nestedWalk.sections)) {
+    const text = joinBlocks(blocks, name);
+    if (text) parts.push(`${header}\n\n${text}`);
+  }
+
+  return parts.join("\n\n").trim();
+}
+
+/**
+ * @param {object} root
+ * @param {object} walk
+ * @param {Record<string, object>} items
+ * @returns {object}
+ */
+function normalizeWorld(root, walk, items) {
+  const world = {
+    name: root.name,
+    subtitle: walk.subtitle ?? "",
+    documentKind: "world",
+    gm_overview: joinBlocks(walk.sections.Description, root.name),
+    sections: []
+  };
+
+  for (const header of WORLD_SECTIONS) {
+    const content = joinBlocks(walk.sections[header], root.name);
+    if (content) world.sections.push({ name: header, content });
+  }
+
+  for (const nested of walk.nestedSections) {
+    const sectionName = nested.name?.trim();
+    if (!sectionName || world.sections.some(s => s.name === sectionName)) continue;
+    const content = collectNestedSectionContent(nested, items, root.name);
+    if (content) world.sections.push({ name: sectionName, content });
+  }
+
+  return attachEmbeddedContent(world, root, items);
+}
+
+/**
+ * Collect embedded magic item stat blocks from a treasure document.
+ * @param {object} root
+ * @param {Record<string, object>} items
+ * @returns {object[]}
+ */
+function collectTreasureNotableItems(root, items) {
+  const allSections = collectAllSections(root, items);
+  const byId = new Map();
+  const seenNames = new Set();
+  const collected = [];
+
+  for (const section of allSections) {
+    const itemSection = findItemSection(section, items);
+    if (!itemSection || itemSection.id === root.id) continue;
+    byId.set(itemSection.id, itemSection);
+  }
+
+  const unique = [...byId.values()].filter(outer =>
+    ![...byId.values()].some(inner =>
+      inner.id !== outer.id && isDescendantOf(outer.id, inner, items)
+    )
+  );
+
+  for (const section of unique) {
+    const name = stripEmbeddedNamePrefix(section.name?.trim());
+    if (!name || seenNames.has(name)) continue;
+    seenNames.add(name);
+    const item = normalizeItem(section, walkSection(section, items, section.name));
+    item.name = name;
+    collected.push(item);
+  }
+
+  return collected;
 }
 
 /**
@@ -999,6 +1643,9 @@ function parseInventoryTables(blocks, name) {
     if (block.kind !== "table") continue;
     for (const row of block.node.content?.cells ?? []) {
       const texts = row.map(cell => extractText(cell.content, name).trim());
+      const isHeaderRow = row.some(cell => cell.isHeader)
+        || /^item$/i.test(texts[0] ?? "");
+      if (isHeaderRow) continue;
       if (!texts[0]) continue;
       entries.push({
         item: texts[0],
@@ -1008,6 +1655,425 @@ function parseInventoryTables(blocks, name) {
     }
   }
   return entries;
+}
+
+/**
+ * @param {object} walk
+ * @param {object} section
+ * @returns {boolean}
+ */
+function isCreatureWalk(walk, section) {
+  const type = String(section.content_type ?? "").toLowerCase();
+  if (ENCOUNTER_CONTENT_TYPES.has(type)) return false;
+  if (CREATURE_CONTENT_TYPES.has(type)) return true;
+  return Boolean(
+    walk.statLine
+    || walk.labeledFields["hit points"]
+    || walk.labeledFields["armor class"]
+  );
+}
+
+/**
+ * @param {object} section
+ * @param {Record<string, object>} items
+ * @returns {object|null}
+ */
+function findCreatureSection(section, items) {
+  const typed = resolveContentSection(section, items);
+  if (typed && typed.id !== section.id) {
+    const typedWalk = walkSection(typed, items, typed.name);
+    if (isCreatureWalk(typedWalk, typed)) return typed;
+  }
+
+  for (const childId of section.childrenIds ?? []) {
+    const child = items[childId];
+    if (child?.type !== "section") continue;
+    const found = findCreatureSection(child, items);
+    if (found) return found;
+  }
+
+  const walk = walkSection(section, items, section.name);
+  if (isCreatureWalk(walk, section)) return section;
+  return null;
+}
+
+/**
+ * @param {string} ancestorId
+ * @param {object} section
+ * @param {Record<string, object>} items
+ * @returns {boolean}
+ */
+function isDescendantOf(ancestorId, section, items) {
+  let current = section;
+  while (current?.parentId) {
+    if (current.parentId === ancestorId) return true;
+    current = items[current.parentId];
+  }
+  return false;
+}
+
+/**
+ * Collect NPC/monster stat blocks embedded anywhere in a narrative document.
+ * @param {object} root
+ * @param {Record<string, object>} items
+ * @returns {object[]}
+ */
+function collectNestedCreatures(root, items) {
+  const allSections = collectAllSections(root, items);
+  const byId = new Map();
+
+  for (const section of allSections) {
+    const creatureSection = findCreatureSection(section, items);
+    if (creatureSection) byId.set(creatureSection.id, creatureSection);
+  }
+
+  const unique = [...byId.values()].filter(outer =>
+    ![...byId.values()].some(inner =>
+      inner.id !== outer.id && isDescendantOf(outer.id, inner, items)
+    )
+  );
+
+  const seenNames = new Set();
+  const creatures = [];
+  for (const section of unique) {
+    const name = section.name?.trim();
+    if (!name || seenNames.has(name)) continue;
+    seenNames.add(name);
+    creatures.push(normalizeCreature(section, walkSection(section, items, section.name)));
+  }
+  return creatures;
+}
+
+/**
+ * @param {object} section
+ * @param {Record<string, object>} items
+ * @returns {object|null}
+ */
+/**
+ * @param {string} name
+ * @returns {string}
+ */
+function stripEmbeddedNamePrefix(name) {
+  return String(name ?? "").replace(/^(?:Spell|Feat|Magic Item):\s*/i, "").trim();
+}
+
+/**
+ * @param {object} section
+ * @param {Record<string, object>} items
+ * @returns {object|null}
+ */
+function findSpellSection(section, items) {
+  if (String(section.content_type ?? "").toLowerCase() === "spell") {
+    const typed = resolveContentSection(section, items);
+    return typed ?? section;
+  }
+
+  for (const childId of section.childrenIds ?? []) {
+    const child = items[childId];
+    if (child?.type !== "section") continue;
+    const found = findSpellSection(child, items);
+    if (found) return found;
+  }
+  return null;
+}
+
+/**
+ * @param {object} section
+ * @param {Record<string, object>} items
+ * @returns {object|null}
+ */
+function findFeatSection(section, items) {
+  if (String(section.content_type ?? "").toLowerCase() === "feat") {
+    const typed = resolveContentSection(section, items);
+    return typed ?? section;
+  }
+
+  for (const childId of section.childrenIds ?? []) {
+    const child = items[childId];
+    if (child?.type !== "section") continue;
+    const found = findFeatSection(child, items);
+    if (found) return found;
+  }
+  return null;
+}
+
+function findItemSection(section, items) {
+  const type = String(section.content_type ?? "").toLowerCase();
+  if (ITEM_CONTENT_TYPES.has(type)) {
+    const typed = resolveContentSection(section, items);
+    return typed ?? section;
+  }
+
+  for (const childId of section.childrenIds ?? []) {
+    const child = items[childId];
+    if (child?.type !== "section") continue;
+    const found = findItemSection(child, items);
+    if (found) return found;
+  }
+
+  if (hasItemStatLine(section, items)) return section;
+  return null;
+}
+
+/**
+ * @param {object} section
+ * @param {Record<string, object>} items
+ * @returns {object|null}
+ */
+function findTreasureSection(section, items) {
+  if (String(section.content_type ?? "").toLowerCase() === "treasure") {
+    const typed = resolveContentSection(section, items);
+    return typed ?? section;
+  }
+
+  for (const childId of section.childrenIds ?? []) {
+    const child = items[childId];
+    if (child?.type !== "section") continue;
+    const found = findTreasureSection(child, items);
+    if (found) return found;
+  }
+  return null;
+}
+
+/**
+ * @param {object} section
+ * @param {Record<string, object>} items
+ * @returns {boolean}
+ */
+function isInsideCreatureSection(section, items) {
+  let current = section;
+  while (current?.parentId) {
+    const parent = items[current.parentId];
+    if (!parent) break;
+    if (parent.type === "section") {
+      const type = String(parent.content_type ?? "").toLowerCase();
+      if (CREATURE_CONTENT_TYPES.has(type)) return true;
+      const walk = walkSection(parent, items, parent.name);
+      if (isCreatureWalk(walk, parent)) return true;
+    }
+    current = parent;
+  }
+  return false;
+}
+
+/**
+ * @param {string} description
+ * @returns {string|number}
+ */
+function parseLootValue(description) {
+  const match = String(description ?? "").match(/([\d,]+)\s*(pp|gp|ep|sp|cp)\b/i);
+  if (!match) return "";
+  return `${match[1]} ${match[2].toLowerCase()}`;
+}
+
+/**
+ * Collect magic items and standalone loot entries from narrative documents.
+ * @param {object} root
+ * @param {Record<string, object>} items
+ * @returns {object[]}
+ */
+function collectNestedItems(root, items) {
+  const allSections = collectAllSections(root, items);
+  const byId = new Map();
+  const seenNames = new Set();
+
+  for (const section of allSections) {
+    const itemSection = findItemSection(section, items);
+    if (itemSection) byId.set(itemSection.id, itemSection);
+  }
+
+  const unique = [...byId.values()].filter(outer =>
+    ![...byId.values()].some(inner =>
+      inner.id !== outer.id && isDescendantOf(outer.id, inner, items)
+    )
+  );
+
+  const collected = [];
+  for (const section of unique) {
+    const name = stripEmbeddedNamePrefix(section.name?.trim());
+    if (!name || seenNames.has(name)) continue;
+    seenNames.add(name);
+    const item = normalizeItem(section, walkSection(section, items, section.name));
+    item.name = name;
+    collected.push(item);
+  }
+
+  for (const section of allSections) {
+    if (isInsideCreatureSection(section, items)) continue;
+    const walk = walkSection(section, items, section.name);
+    for (const block of walk.sections.Loot ?? []) {
+      for (const entry of parseNamedEntries([block], section.name)) {
+        const name = entry.name?.trim();
+        if (!name || seenNames.has(name)) continue;
+        seenNames.add(name);
+        collected.push({
+          name,
+          category: "Wondrous Item",
+          description: entry.description,
+          value: parseLootValue(entry.description)
+        });
+      }
+    }
+  }
+
+  return collected;
+}
+
+/**
+ * Collect treasure pile sections embedded in narrative documents.
+ * @param {object} root
+ * @param {Record<string, object>} items
+ * @returns {object[]}
+ */
+function collectNestedTreasures(root, items) {
+  const allSections = collectAllSections(root, items);
+  const byId = new Map();
+
+  for (const section of allSections) {
+    const treasureSection = findTreasureSection(section, items);
+    if (treasureSection) byId.set(treasureSection.id, treasureSection);
+  }
+
+  const unique = [...byId.values()].filter(outer =>
+    ![...byId.values()].some(inner =>
+      inner.id !== outer.id && isDescendantOf(outer.id, inner, items)
+    )
+  );
+
+  const seenNames = new Set();
+  const treasures = [];
+  for (const section of unique) {
+    const name = section.name?.trim();
+    if (!name || seenNames.has(name)) continue;
+    seenNames.add(name);
+    treasures.push(normalizeTreasure(section, walkSection(section, items, section.name), items));
+  }
+  return treasures;
+}
+
+/**
+ * Collect spell sections embedded in narrative documents.
+ * @param {object} root
+ * @param {Record<string, object>} items
+ * @returns {object[]}
+ */
+function collectNestedSpells(root, items) {
+  const allSections = collectAllSections(root, items);
+  const byId = new Map();
+
+  for (const section of allSections) {
+    const spellSection = findSpellSection(section, items);
+    if (spellSection) byId.set(spellSection.id, spellSection);
+  }
+
+  const unique = [...byId.values()].filter(outer =>
+    ![...byId.values()].some(inner =>
+      inner.id !== outer.id && isDescendantOf(outer.id, inner, items)
+    )
+  );
+
+  const seenNames = new Set();
+  const spells = [];
+  for (const section of unique) {
+    const name = stripEmbeddedNamePrefix(section.name?.trim());
+    if (!name || seenNames.has(name)) continue;
+    seenNames.add(name);
+    const spell = normalizeSpell(section, walkSection(section, items, section.name));
+    spell.name = name;
+    spells.push(spell);
+  }
+  return spells;
+}
+
+/**
+ * Collect feat sections embedded in narrative documents.
+ * @param {object} root
+ * @param {Record<string, object>} items
+ * @returns {object[]}
+ */
+function collectNestedFeats(root, items) {
+  const allSections = collectAllSections(root, items);
+  const byId = new Map();
+
+  for (const section of allSections) {
+    const featSection = findFeatSection(section, items);
+    if (featSection) byId.set(featSection.id, featSection);
+  }
+
+  const unique = [...byId.values()].filter(outer =>
+    ![...byId.values()].some(inner =>
+      inner.id !== outer.id && isDescendantOf(outer.id, inner, items)
+    )
+  );
+
+  const seenNames = new Set();
+  const feats = [];
+  for (const section of unique) {
+    const name = stripEmbeddedNamePrefix(section.name?.trim());
+    if (!name || seenNames.has(name)) continue;
+    seenNames.add(name);
+    const feat = normalizeFeat(section, walkSection(section, items, section.name));
+    feat.name = name;
+    feats.push(feat);
+  }
+  return feats;
+}
+
+/**
+ * Build journal section summaries for encounters, traps, and puzzles.
+ * @param {object} root
+ * @param {Record<string, object>} items
+ * @returns {Array<{name: string, content: string}>}
+ */
+function collectEncounterSections(root, items) {
+  const sections = [];
+  const seen = new Set();
+
+  for (const section of collectAllSections(root, items)) {
+    const type = String(section.content_type ?? "").toLowerCase();
+    if (!ENCOUNTER_CONTENT_TYPES.has(type)) continue;
+
+    const name = section.name?.trim();
+    if (!name || seen.has(name)) continue;
+    seen.add(name);
+
+    const walk = walkSection(section, items, name);
+    const content = buildEncounterContent(walk, name);
+    if (content) sections.push({ name, content });
+  }
+  return sections;
+}
+
+/**
+ * @param {object} walk
+ * @param {string} name
+ * @returns {string}
+ */
+function buildEncounterContent(walk, name) {
+  const parts = [];
+  if (walk.subtitle) parts.push(walk.subtitle);
+  for (const [header, blocks] of Object.entries(walk.sections)) {
+    if (header === "Loot") continue;
+    const text = joinBlocks(blocks, name);
+    if (text) parts.push(`${header}\n\n${text}`);
+  }
+  return parts.join("\n\n");
+}
+
+/**
+ * @param {object} section
+ * @param {Record<string, object>} items
+ * @param {object[]} [list]
+ * @returns {object[]}
+ */
+function collectAllSections(section, items, list = []) {
+  for (const childId of section.childrenIds ?? []) {
+    const child = items[childId];
+    if (child?.type !== "section") continue;
+    list.push(child);
+    collectAllSections(child, items, list);
+  }
+  return list;
 }
 
 /**
