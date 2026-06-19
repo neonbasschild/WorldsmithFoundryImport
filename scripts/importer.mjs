@@ -12,6 +12,7 @@ import { convertWorldsmithQuest } from "./journal-converter.mjs";
 import { convertWorldsmithSpell } from "./spell-converter.mjs";
 import { convertWorldsmithFeat } from "./feat-converter.mjs";
 import { detectWorldsmithType } from "./detect.mjs";
+import { normalizeWorldsmithData } from "./worldsmith-parser.mjs";
 
 /**
  * Resolve a folder id to apply, only when it matches the document type.
@@ -215,7 +216,7 @@ export async function importFromText(text, options = {}) {
   const items = [];
   const journals = [];
   for (const entry of entries) {
-    const result = await createFromWorldsmith(entry, options);
+    const result = await createFromWorldsmith(normalizeWorldsmithData(entry), options);
     actors.push(...(result.actors ?? []));
     items.push(...(result.items ?? []));
     journals.push(...(result.journals ?? []));

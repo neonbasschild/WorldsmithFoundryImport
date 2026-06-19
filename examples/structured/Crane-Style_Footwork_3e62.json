@@ -1,0 +1,194 @@
+{
+  "rootId": "573b6256-5387-47ab-ba05-e3610b6f4251",
+  "items": {
+    "573b6256-5387-47ab-ba05-e3610b6f4251": {
+      "model_type": "structured",
+      "content_type": "feat",
+      "type": "section",
+      "name": "Crane-Style Footwork",
+      "childrenIds": [
+        "29eca6c3-0572-4788-bded-2d04b76caa50",
+        "5f7f2328-c409-4fc2-9ae6-39620a63e19d",
+        "c286649b-1664-4bb2-b19a-adbea22e8503",
+        "a1552b3d-366e-43af-a4db-70253b02a0e7",
+        "afb45c9c-ceeb-40e9-8bdd-d0c43f363b49",
+        "ad85d7db-c09f-4f25-b2f0-76bf7744178a"
+      ],
+      "parentId": null,
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Crane-Style Footwork",
+                "textFormat": "h1"
+              }
+            ]
+          }
+        ],
+        "showTitle": true,
+        "styles": {
+          "borderBottom": "1px solid #882619"
+        }
+      },
+      "id": "573b6256-5387-47ab-ba05-e3610b6f4251",
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none"
+        },
+        "collapsible": false,
+        "isCollapsed": false,
+        "alternatingCollapsedBackground": "white"
+      }
+    },
+    "29eca6c3-0572-4788-bded-2d04b76caa50": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Graceful as the crane in flight",
+              "textFormat": "h4"
+            }
+          ]
+        }
+      ],
+      "parentId": "573b6256-5387-47ab-ba05-e3610b6f4251",
+      "styles": {
+        "paddingBottom": "4px"
+      },
+      "id": "29eca6c3-0572-4788-bded-2d04b76caa50"
+    },
+    "5f7f2328-c409-4fc2-9ae6-39620a63e19d": {
+      "type": "line",
+      "parentId": "573b6256-5387-47ab-ba05-e3610b6f4251",
+      "styles": {
+        "background": "linear-gradient(to right, #9D2A1F, transparent)",
+        "border": "none",
+        "height": "4px",
+        "width": "100%"
+      },
+      "id": "5f7f2328-c409-4fc2-9ae6-39620a63e19d",
+      "customStyles": {
+        "default": {
+          "background": "linear-gradient(to right, #9D2A1F, transparent)",
+          "border": "none",
+          "height": "4px",
+          "width": "100%"
+        }
+      }
+    },
+    "c286649b-1664-4bb2-b19a-adbea22e8503": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Prerequisites",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "573b6256-5387-47ab-ba05-e3610b6f4251",
+      "id": "c286649b-1664-4bb2-b19a-adbea22e8503"
+    },
+    "a1552b3d-366e-43af-a4db-70253b02a0e7": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Level: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Character level 3 or higher",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Attribute: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Dexterity 13 or higher",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Proficiency: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Proficiency in the Acrobatics skill",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "573b6256-5387-47ab-ba05-e3610b6f4251",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "a1552b3d-366e-43af-a4db-70253b02a0e7"
+    },
+    "afb45c9c-ceeb-40e9-8bdd-d0c43f363b49": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Description",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "573b6256-5387-47ab-ba05-e3610b6f4251",
+      "id": "afb45c9c-ceeb-40e9-8bdd-d0c43f363b49"
+    },
+    "ad85d7db-c09f-4f25-b2f0-76bf7744178a": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "In the courts of Rokugan’s Crane Clan, duels are as much about artful presentation as deadly precision. Kakita duellists weave through blades with balletic poise, their footwork reflecting the serene but unrelenting grace of the crane in flight. Initiates train for years polishing spins, slides, and feints, so that each movement feels both effortless and inescapable. Those who master the Crane’s secret pathways can slip past defenses, leave opponents grasping at air, and land from great heights with the light touch of a falling petal.\n",
+              "textFormat": "description"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "• Acrobatics Mastery. You gain proficiency in the Acrobatics skill. If you already have proficiency, you gain expertise instead, doubling your proficiency bonus on Acrobatics checks.\n\n• Graceful Crane Step. When you move through a hostile creature’s space on your turn, you can attempt a Dexterity (Acrobatics) check contested by that creature’s Strength (Athletics) or Dexterity (Acrobatics) (its choice). On a success, you don’t provoke opportunity attacks from that creature for the rest of your turn.\n\n• Evasive Flourish. When you make a Dexterity (Acrobatics) check to escape a grapple or to tumble through a creature’s space, you have advantage on the check.\n\n• Aerial Descent (1/Rest). When you fall and aren’t incapacitated, you can use your reaction to reduce any falling damage you take by an amount equal to five times your proficiency bonus.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "573b6256-5387-47ab-ba05-e3610b6f4251",
+      "id": "ad85d7db-c09f-4f25-b2f0-76bf7744178a"
+    }
+  }
+}

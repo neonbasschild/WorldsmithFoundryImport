@@ -1,0 +1,1104 @@
+{
+  "rootId": "2b933e25-d41b-4799-a55a-caf2dc0d278c",
+  "items": {
+    "2b933e25-d41b-4799-a55a-caf2dc0d278c": {
+      "model_type": "structured",
+      "content_type": "familiar",
+      "type": "section",
+      "name": "Miru, the Whimsy Tail",
+      "childrenIds": [
+        "df152a74-87b6-47e5-9bac-170f72f8c070",
+        "0acf1c10-47d2-4949-8e99-8edf668dbbeb",
+        "aeb3b315-25f6-44af-ac28-b975a4019ffc",
+        "aa7dc28e-ae4c-400e-8c0b-eaab766c4d44",
+        "033ba48c-7c61-43a3-aa2b-2172afeb7eec",
+        "2e2efb38-1575-4df0-9a6b-089f938f4adc",
+        "69273118-24b6-4847-ab66-9d8977d6b698",
+        "f0788868-b637-4eca-be77-6a5da4f75f3b",
+        "0cdab854-9aa5-47fa-a2c5-8d2572523c07",
+        "59c8b5af-c926-475b-a03f-33ded0bcf1f2",
+        "68eacb11-7148-4307-87a6-e756c7885b58",
+        "cda41f4a-b4b5-4a14-82d5-47d19dd1cda7",
+        "fe659450-ad41-4e9f-b95b-03ed73692d37",
+        "1c00e5dd-86df-48a6-8bd5-6920611a879c",
+        "cf1c97ca-01a5-45c2-9269-5e5d3f344439",
+        "c7fc005d-3738-47bf-ab22-a95a06d28146",
+        "25de0726-3691-4127-a2ee-8da716d67e77",
+        "87b34f23-9cec-4f8e-8cd1-4ea8f742b961",
+        "e214064c-daf7-463b-a221-62419d27ff97",
+        "5183618a-8f9e-4d94-9b1a-66eb182e1f7b",
+        "241ae090-75b7-4fdd-82eb-9b66bc0c5847",
+        "906246e1-c0e3-4171-b679-e4bd9d722659",
+        "8ee6a406-bc98-406e-bb46-006813630bde",
+        "47c7ad8f-8944-40aa-b6d0-c3efcdf38c14",
+        "772c1f74-a6cf-432f-b18d-3cf5de8a1a5c",
+        "eed599fb-052f-4e93-b5a6-76769e2a7978",
+        "79768cd2-b508-4e02-91d6-5baa727623e2",
+        "32d0e0ca-05f9-4d8f-ae25-e0eba090c8de"
+      ],
+      "parentId": null,
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Miru, the Whimsy Tail",
+                "textFormat": "h1"
+              }
+            ]
+          }
+        ],
+        "showTitle": true,
+        "styles": {
+          "borderBottom": "1px solid #882619"
+        }
+      },
+      "id": "2b933e25-d41b-4799-a55a-caf2dc0d278c",
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none"
+        },
+        "collapsible": false,
+        "isCollapsed": false,
+        "alternatingCollapsedBackground": "white"
+      }
+    },
+    "df152a74-87b6-47e5-9bac-170f72f8c070": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Tiny Beast, Chaotic neutral • Kitsune Trickster Familiar",
+              "textFormat": "h4"
+            }
+          ]
+        }
+      ],
+      "parentId": "2b933e25-d41b-4799-a55a-caf2dc0d278c",
+      "styles": {
+        "paddingBottom": "4px"
+      },
+      "id": "df152a74-87b6-47e5-9bac-170f72f8c070"
+    },
+    "0acf1c10-47d2-4949-8e99-8edf668dbbeb": {
+      "type": "line",
+      "parentId": "2b933e25-d41b-4799-a55a-caf2dc0d278c",
+      "styles": {
+        "background": "linear-gradient(to right, #9D2A1F, transparent)",
+        "border": "none",
+        "height": "4px",
+        "width": "100%"
+      },
+      "id": "0acf1c10-47d2-4949-8e99-8edf668dbbeb",
+      "customStyles": {
+        "default": {
+          "background": "linear-gradient(to right, #9D2A1F, transparent)",
+          "border": "none",
+          "height": "4px",
+          "width": "100%"
+        }
+      }
+    },
+    "aeb3b315-25f6-44af-ac28-b975a4019ffc": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Description",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "2b933e25-d41b-4799-a55a-caf2dc0d278c",
+      "id": "aeb3b315-25f6-44af-ac28-b975a4019ffc"
+    },
+    "aa7dc28e-ae4c-400e-8c0b-eaab766c4d44": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Miru appears as a small, snowy-white fox with nine slender tails tipped in pale lavender. Her emerald eyes glint with intelligence, and faint motes of silvery light swirl around her when she’s amused.",
+              "textFormat": "description"
+            }
+          ]
+        }
+      ],
+      "parentId": "2b933e25-d41b-4799-a55a-caf2dc0d278c",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "aa7dc28e-ae4c-400e-8c0b-eaab766c4d44"
+    },
+    "033ba48c-7c61-43a3-aa2b-2172afeb7eec": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Lore",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "2b933e25-d41b-4799-a55a-caf2dc0d278c",
+      "id": "033ba48c-7c61-43a3-aa2b-2172afeb7eec"
+    },
+    "2e2efb38-1575-4df0-9a6b-089f938f4adc": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Born under a silvered moon at a hidden forest shrine in Rokugan, Miru is one of the rare kitsune that bonds with a mortal as a familiar rather than wandering the spirit world. Revered by local monks for her playful heart, she delights in pranks and illusions, guiding her master through subtle lessons and moonlit mysteries.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "2b933e25-d41b-4799-a55a-caf2dc0d278c",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "2e2efb38-1575-4df0-9a6b-089f938f4adc"
+    },
+    "69273118-24b6-4847-ab66-9d8977d6b698": {
+      "type": "line",
+      "parentId": "2b933e25-d41b-4799-a55a-caf2dc0d278c",
+      "styles": {
+        "background": "linear-gradient(to right, #9D2A1F, transparent)",
+        "border": "none",
+        "height": "4px",
+        "width": "100%"
+      },
+      "id": "69273118-24b6-4847-ab66-9d8977d6b698",
+      "customStyles": {
+        "default": {
+          "background": "linear-gradient(to right, #9D2A1F, transparent)",
+          "border": "none",
+          "height": "4px",
+          "width": "100%"
+        }
+      }
+    },
+    "f0788868-b637-4eca-be77-6a5da4f75f3b": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Hit Points: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "7 (2d4 + 3)",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Armor Class: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "13 (natural armor)",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Speed: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "40 ft.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "2b933e25-d41b-4799-a55a-caf2dc0d278c",
+      "id": "f0788868-b637-4eca-be77-6a5da4f75f3b"
+    },
+    "0cdab854-9aa5-47fa-a2c5-8d2572523c07": {
+      "type": "StatLine",
+      "content": {
+        "stats": [
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "STR"
+                  }
+                ]
+              }
+            ],
+            "value": 4,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Strength"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "DEX"
+                  }
+                ]
+              }
+            ],
+            "value": 18,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Dexterity"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "CON"
+                  }
+                ]
+              }
+            ],
+            "value": 12,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Constitution"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "INT"
+                  }
+                ]
+              }
+            ],
+            "value": 14,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Intelligence"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "WIS"
+                  }
+                ]
+              }
+            ],
+            "value": 12,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Wisdom"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "CHA"
+                  }
+                ]
+              }
+            ],
+            "value": 16,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Charisma"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "parentId": "2b933e25-d41b-4799-a55a-caf2dc0d278c",
+      "displayMode": "values",
+      "id": "0cdab854-9aa5-47fa-a2c5-8d2572523c07",
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none"
+        },
+        "statLine": {
+          "width": "100%",
+          "display": "flex",
+          "alignItems": "center",
+          "backgroundColor": "transparent"
+        },
+        "name": {
+          "minWidth": "64px",
+          "fontWeight": "bold",
+          "backgroundColor": "transparent",
+          "color": "#58180D",
+          "flex": "1"
+        },
+        "value": {
+          "width": "32px",
+          "backgroundColor": "transparent",
+          "textAlign": "center",
+          "color": "#000000",
+          "fontFamily": "Noto Serif, Georgia, serif"
+        },
+        "description": {
+          "fontFamily": "Noto Serif, Georgia, serif",
+          "fontSize": "13px",
+          "fontWeight": "normal",
+          "backgroundColor": "transparent",
+          "color": "#000",
+          "lineHeight": "1.25",
+          "margin": "4px 0 0 0",
+          "textAlign": "left",
+          "whiteSpace": "normal",
+          "overflow": "visible",
+          "textOverflow": "clip",
+          "minWidth": "100px",
+          "flex": "1"
+        },
+        "topLine": {
+          "width": "100%",
+          "height": "4px",
+          "marginTop": "4px",
+          "marginBottom": "4px",
+          "background": "linear-gradient(to right, #9D2A1F, transparent)"
+        },
+        "bottomLine": {
+          "width": "100%",
+          "height": "4px",
+          "marginTop": "4px",
+          "marginBottom": "4px",
+          "background": "linear-gradient(to right, #9D2A1F, transparent)"
+        },
+        "showTopLine": true,
+        "showBottomLine": true
+      }
+    },
+    "59c8b5af-c926-475b-a03f-33ded0bcf1f2": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Skills: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Stealth (+8), Perception (+4), Deception (+6)",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Languages: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Common, Sylvan, Rokugani",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Senses: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Darkvision 60 ft., Passive Perception 14",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Challenge Rating: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "0",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Experience Points: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "10",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "2b933e25-d41b-4799-a55a-caf2dc0d278c",
+      "id": "59c8b5af-c926-475b-a03f-33ded0bcf1f2"
+    },
+    "68eacb11-7148-4307-87a6-e756c7885b58": {
+      "type": "line",
+      "parentId": "2b933e25-d41b-4799-a55a-caf2dc0d278c",
+      "styles": {
+        "background": "linear-gradient(to right, #9D2A1F, transparent)",
+        "border": "none",
+        "height": "4px",
+        "width": "100%"
+      },
+      "id": "68eacb11-7148-4307-87a6-e756c7885b58",
+      "customStyles": {
+        "default": {
+          "background": "linear-gradient(to right, #9D2A1F, transparent)",
+          "border": "none",
+          "height": "4px",
+          "width": "100%"
+        }
+      }
+    },
+    "cda41f4a-b4b5-4a14-82d5-47d19dd1cda7": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Features",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "2b933e25-d41b-4799-a55a-caf2dc0d278c",
+      "id": "cda41f4a-b4b5-4a14-82d5-47d19dd1cda7"
+    },
+    "fe659450-ad41-4e9f-b95b-03ed73692d37": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Familiar Bond: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "While within 100 ft of its bonded master, Miru can share her senses. As an action, the master sees and hears through Miru’s eyes and ears until the start of the master’s next turn.",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Keen Senses: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Miru has advantage on Wisdom (Perception) checks that rely on hearing or smell.",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Illusory Fur: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Miru has advantage on saving throws against illusion spells and effects.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "2b933e25-d41b-4799-a55a-caf2dc0d278c",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "fe659450-ad41-4e9f-b95b-03ed73692d37"
+    },
+    "1c00e5dd-86df-48a6-8bd5-6920611a879c": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Actions",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "2b933e25-d41b-4799-a55a-caf2dc0d278c",
+      "id": "1c00e5dd-86df-48a6-8bd5-6920611a879c"
+    },
+    "cf1c97ca-01a5-45c2-9269-5e5d3f344439": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "One",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "2b933e25-d41b-4799-a55a-caf2dc0d278c",
+      "id": "cf1c97ca-01a5-45c2-9269-5e5d3f344439"
+    },
+    "c7fc005d-3738-47bf-ab22-a95a06d28146": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Bite: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit: 1d4 + 6 piercing damage.",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Illusory Trick (At Will): ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Miru casts the minor illusion cantrip, using Intelligence as her spellcasting ability (spell save DC 12).",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Fox’s Cunning (Recharge 5–6): ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Miru bestows a moment of clarity on her master. The bonded master may reroll one ability check or saving throw and must use the new roll.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "2b933e25-d41b-4799-a55a-caf2dc0d278c",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "c7fc005d-3738-47bf-ab22-a95a06d28146"
+    },
+    "25de0726-3691-4127-a2ee-8da716d67e77": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Reactions",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "2b933e25-d41b-4799-a55a-caf2dc0d278c",
+      "id": "25de0726-3691-4127-a2ee-8da716d67e77"
+    },
+    "87b34f23-9cec-4f8e-8cd1-4ea8f742b961": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Tail Flick: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "When a creature within 5 feet misses Miru with a melee attack, she can impose disadvantage on that creature’s next attack roll before the end of its next turn.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "2b933e25-d41b-4799-a55a-caf2dc0d278c",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "87b34f23-9cec-4f8e-8cd1-4ea8f742b961"
+    },
+    "e214064c-daf7-463b-a221-62419d27ff97": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Loot",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "2b933e25-d41b-4799-a55a-caf2dc0d278c",
+      "id": "e214064c-daf7-463b-a221-62419d27ff97"
+    },
+    "5183618a-8f9e-4d94-9b1a-66eb182e1f7b": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Silver Kitsune Bell: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "A small bell that, when rung, calms minor fey spirits in a 10-foot radius for 1 minute.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "2b933e25-d41b-4799-a55a-caf2dc0d278c",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "5183618a-8f9e-4d94-9b1a-66eb182e1f7b"
+    },
+    "241ae090-75b7-4fdd-82eb-9b66bc0c5847": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Familiar Basics",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "2b933e25-d41b-4799-a55a-caf2dc0d278c",
+      "id": "241ae090-75b7-4fdd-82eb-9b66bc0c5847"
+    },
+    "906246e1-c0e3-4171-b679-e4bd9d722659": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Carrying Capacity: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "60 lbs",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Summoning Method: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "A moonlit ritual at a forest shrine, offering tea and incense for three consecutive nights.",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Bonding Ritual: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Exchanging a personal token and sharing a synchronized dream under the full moon.",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Care Level: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Low",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Intelligence: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Sentient",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "2b933e25-d41b-4799-a55a-caf2dc0d278c",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "906246e1-c0e3-4171-b679-e4bd9d722659"
+    },
+    "8ee6a406-bc98-406e-bb46-006813630bde": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Care Information",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "2b933e25-d41b-4799-a55a-caf2dc0d278c",
+      "id": "8ee6a406-bc98-406e-bb46-006813630bde"
+    },
+    "47c7ad8f-8944-40aa-b6d0-c3efcdf38c14": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Monthly Cost: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "2 GP",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Daily Exercise: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "One moonlit walk or playful chase among trees",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Housing Requirements: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "A small shrine-like alcove with soft bedding and space to leap",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Preferred Environment: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Moonlit groves and shrine forests of Rokugan",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Dietary Habits: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Small bits of rice, fresh fish, and the occasional sweet treat infused with a drop of honey",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "2b933e25-d41b-4799-a55a-caf2dc0d278c",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "47c7ad8f-8944-40aa-b6d0-c3efcdf38c14"
+    },
+    "772c1f74-a6cf-432f-b18d-3cf5de8a1a5c": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Positive Care Effects",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "2b933e25-d41b-4799-a55a-caf2dc0d278c",
+      "id": "772c1f74-a6cf-432f-b18d-3cf5de8a1a5c"
+    },
+    "eed599fb-052f-4e93-b5a6-76769e2a7978": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "numbered-list",
+          "children": [
+            {
+              "type": "list-item",
+              "children": [
+                {
+                  "text": "Daily interaction: Miru grants advantage on one Deception check per day.",
+                  "textFormat": "paragraph"
+                }
+              ]
+            },
+            {
+              "type": "list-item",
+              "children": [
+                {
+                  "text": "Weekly moonlit walk: Miru learns one additional illusion effect, expanding her Illusory Trick.",
+                  "textFormat": "paragraph"
+                }
+              ]
+            },
+            {
+              "type": "list-item",
+              "children": [
+                {
+                  "text": "Weekly shrine offering: Miru allows the bonded master to deliver touch spells as a bonus action once per long rest.",
+                  "textFormat": "paragraph"
+                }
+              ]
+            },
+            {
+              "type": "list-item",
+              "children": [
+                {
+                  "text": "Monthly tea ceremony: While bonded, the master gains +1 bonus to AC against one attack per day.",
+                  "textFormat": "paragraph"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "parentId": "2b933e25-d41b-4799-a55a-caf2dc0d278c",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "eed599fb-052f-4e93-b5a6-76769e2a7978"
+    },
+    "79768cd2-b508-4e02-91d6-5baa727623e2": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Negative Care Effects",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "2b933e25-d41b-4799-a55a-caf2dc0d278c",
+      "id": "79768cd2-b508-4e02-91d6-5baa727623e2"
+    },
+    "32d0e0ca-05f9-4d8f-ae25-e0eba090c8de": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "numbered-list",
+          "children": [
+            {
+              "type": "list-item",
+              "children": [
+                {
+                  "text": "Missed daily interaction: Miru imposes disadvantage on your next Stealth check.",
+                  "textFormat": "paragraph"
+                }
+              ]
+            },
+            {
+              "type": "list-item",
+              "children": [
+                {
+                  "text": "Missed weekly moonlit walk: Miru refuses to share senses until the bond is refreshed.",
+                  "textFormat": "paragraph"
+                }
+              ]
+            },
+            {
+              "type": "list-item",
+              "children": [
+                {
+                  "text": "No shrine offering for a month: Miru declines to deliver spells or use Fox’s Cunning for 24 hours.",
+                  "textFormat": "paragraph"
+                }
+              ]
+            },
+            {
+              "type": "list-item",
+              "children": [
+                {
+                  "text": "Neglected for a season: Miru withdraws entirely, requiring a DC 15 Animal Handling check to restore the bond.",
+                  "textFormat": "paragraph"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "parentId": "2b933e25-d41b-4799-a55a-caf2dc0d278c",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "32d0e0ca-05f9-4d8f-ae25-e0eba090c8de"
+    }
+  }
+}

@@ -17,9 +17,11 @@ import { convertWorldsmithQuest } from "../scripts/journal-converter.mjs";
 import { convertWorldsmithSpell } from "../scripts/spell-converter.mjs";
 import { convertWorldsmithFeat } from "../scripts/feat-converter.mjs";
 import { detectWorldsmithType } from "../scripts/detect.mjs";
+import { isStructuredWorldsmith, normalizeWorldsmithData } from "../scripts/worldsmith-parser.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const examplesDir = join(__dirname, "..", "examples");
+const structuredDir = join(examplesDir, "structured");
 
 let passed = 0;
 let failed = 0;
@@ -35,6 +37,10 @@ function assert(condition, message) {
 
 function load(name) {
   return JSON.parse(readFileSync(join(examplesDir, name), "utf8"));
+}
+
+function loadStructured(name) {
+  return JSON.parse(readFileSync(join(structuredDir, name), "utf8"));
 }
 
 function findItem(items, name) {
@@ -450,6 +456,72 @@ function activitiesOf(item) {
   const { journalData } = convertWorldsmithQuest(wrapped);
   assert(journalData.name === "Side Quest", "unwraps { data } quest shape");
   assert(journalData.pages.length >= 1, "wrapped quest produces pages");
+}
+
+// --- Structured Worldsmith format (rootId + items map) --------------------
+{
+  console.log("Structured format detection");
+  const raw = loadStructured("Crane-Style_Footwork_3e62.json");
+  assert(isStructuredWorldsmith(raw), "feat export detected as structured");
+  const normalized = normalizeWorldsmithData(raw);
+  assert(normalized.name === "Crane-Style Footwork", "feat name normalised");
+  assert(Array.isArray(normalized.prerequisites), "feat prerequisites array");
+  assert(detectWorldsmithType(normalized) === "feat", "normalised feat type");
+}
+
+{
+  console.log("Structured familiar (Miru)");
+  const raw = loadStructured("Miru__the_Whimsy_Tail_db68.json");
+  const { actorData, warnings } = convertWorldsmith(normalizeWorldsmithData(raw));
+  assert(actorData.name === "Miru, the Whimsy Tail", "familiar name");
+  assert(actorData.system.abilities.dex.value === 18, "Miru DEX parsed from StatLine");
+  assert(actorData.system.attributes.hp.max === 7, "Miru HP parsed");
+  assert(findItem(actorData.items, "Bite"), "Miru bite action imported");
+  console.log(`  warnings: ${warnings.length}`);
+}
+
+{
+  console.log("Structured spell (Void Shackle)");
+  const raw = loadStructured("Void_Shackle_83c1.json");
+  const { itemData } = convertWorldsmithSpell(normalizeWorldsmithData(raw));
+  assert(itemData.name === "Void Shackle", "spell name");
+  assert(itemData.system.level === 4, "spell level from StatLine");
+  assert(itemData.system.school === "enc", "spell school");
+  assert(itemData.system.properties.includes("concentration"), "concentration flag");
+}
+
+{
+  console.log("Structured magic item (Scroll of the First Dawn)");
+  const raw = loadStructured("Scroll_of_the_First_Dawn_2823.json");
+  const { itemData } = convertWorldsmithItem(normalizeWorldsmithData(raw));
+  assert(itemData.name === "Scroll of the First Dawn", "item name");
+  assert(itemData.system.rarity === "artifact", "item rarity");
+}
+
+{
+  console.log("Structured quest (Whispers of the Kitsune)");
+  const raw = loadStructured("Whispers_of_the_Kitsune_acff.json");
+  const { journalData } = convertWorldsmithQuest(normalizeWorldsmithData(raw));
+  assert(journalData.name === "Whispers of the Kitsune", "quest name");
+  assert(journalData.pages.some(p => p.name === "Objectives"), "quest objectives page");
+  assert(journalData.pages.some(p => p.name === "Rewards"), "quest rewards page");
+}
+
+{
+  console.log("Structured treasure (Whispers of the Crane Shrine)");
+  const raw = loadStructured("Whispers_of_the_Crane_Shrine_3d2d.json");
+  const { pile } = convertWorldsmithTreasure(normalizeWorldsmithData(raw));
+  assert(pile.name === "Whispers of the Crane Shrine", "treasure pile name");
+  assert((pile.items?.length ?? 0) > 0, "treasure pile has items");
+}
+
+{
+  console.log("Structured NPC (Prince Seppun Genji)");
+  const raw = loadStructured("Prince_Seppun_Genji_8e85.json");
+  const { actorData } = convertWorldsmith(normalizeWorldsmithData(raw));
+  assert(actorData.name === "Prince Seppun Genji", "npc name");
+  assert(actorData.system.abilities.dex.value === 16, "npc DEX parsed");
+  assert(findItem(actorData.items, "Rapier"), "npc rapier action imported");
 }
 
 console.log(`\n${passed} passed, ${failed} failed`);

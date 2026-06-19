@@ -1,0 +1,338 @@
+{
+  "rootId": "5809101d-9928-4c14-ab6c-71dce935fafd",
+  "items": {
+    "5809101d-9928-4c14-ab6c-71dce935fafd": {
+      "model_type": "structured",
+      "content_type": "magicItem",
+      "type": "section",
+      "name": "Scroll of the First Dawn",
+      "childrenIds": [
+        "7c62eb4a-b7af-437b-acea-66f125df7bb5",
+        "33da1cff-1d95-44b5-b921-137e043afe66",
+        "0d0bc4da-4c93-41c8-9f0e-d26ac68eaac4",
+        "3f2c9c1d-8401-4dec-8c26-5cacb787af1c",
+        "dabd68a6-a6c0-45e0-9281-de517c7cc96f",
+        "754d6949-962b-4e3c-985b-04a2c15a800f",
+        "5ce6717d-7432-470f-b9e5-b68cd3dd4760",
+        "4092b1ba-29fa-4873-9592-ecba668d957d"
+      ],
+      "parentId": null,
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Scroll of the First Dawn",
+                "textFormat": "h1"
+              }
+            ]
+          }
+        ],
+        "showTitle": true,
+        "styles": {
+          "borderBottom": "1px solid #882619"
+        }
+      },
+      "id": "5809101d-9928-4c14-ab6c-71dce935fafd",
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none"
+        },
+        "collapsible": false,
+        "isCollapsed": false,
+        "alternatingCollapsedBackground": "white"
+      }
+    },
+    "7c62eb4a-b7af-437b-acea-66f125df7bb5": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "The Kami’s Sunrise Haiku",
+              "textFormat": "h4"
+            }
+          ]
+        }
+      ],
+      "parentId": "5809101d-9928-4c14-ab6c-71dce935fafd",
+      "id": "7c62eb4a-b7af-437b-acea-66f125df7bb5"
+    },
+    "33da1cff-1d95-44b5-b921-137e043afe66": {
+      "type": "StatLine",
+      "content": {
+        "stats": [
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Type"
+                  }
+                ]
+              }
+            ],
+            "value": 0,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Consumable"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Rarity"
+                  }
+                ]
+              }
+            ],
+            "value": 0,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Artifact"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Price"
+                  }
+                ]
+              }
+            ],
+            "value": 0,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "100000"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Weight"
+                  }
+                ]
+              }
+            ],
+            "value": 0,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "0.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "parentId": "5809101d-9928-4c14-ab6c-71dce935fafd",
+      "displayMode": "descriptions",
+      "id": "33da1cff-1d95-44b5-b921-137e043afe66",
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none"
+        },
+        "statLine": {
+          "width": "100%",
+          "display": "flex",
+          "alignItems": "center",
+          "backgroundColor": "transparent"
+        },
+        "name": {
+          "minWidth": "64px",
+          "fontWeight": "bold",
+          "backgroundColor": "transparent",
+          "color": "#58180D",
+          "flex": "1"
+        },
+        "value": {
+          "width": "32px",
+          "backgroundColor": "transparent",
+          "textAlign": "center",
+          "color": "#000000",
+          "fontFamily": "Noto Serif, Georgia, serif"
+        },
+        "description": {
+          "fontFamily": "Noto Serif, Georgia, serif",
+          "fontSize": "13px",
+          "fontWeight": "normal",
+          "backgroundColor": "transparent",
+          "color": "#000",
+          "lineHeight": "1.25",
+          "margin": "4px 0 0 0",
+          "textAlign": "left",
+          "whiteSpace": "normal",
+          "overflow": "visible",
+          "textOverflow": "clip",
+          "minWidth": "100px",
+          "flex": "1"
+        },
+        "topLine": {
+          "width": "100%",
+          "height": "4px",
+          "marginTop": "4px",
+          "marginBottom": "4px",
+          "background": "linear-gradient(to right, #9D2A1F, transparent)"
+        },
+        "bottomLine": {
+          "width": "100%",
+          "height": "4px",
+          "marginTop": "4px",
+          "marginBottom": "4px",
+          "background": "linear-gradient(to right, #9D2A1F, transparent)"
+        },
+        "showTopLine": true,
+        "showBottomLine": true
+      }
+    },
+    "0d0bc4da-4c93-41c8-9f0e-d26ac68eaac4": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Description",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "5809101d-9928-4c14-ab6c-71dce935fafd",
+      "id": "0d0bc4da-4c93-41c8-9f0e-d26ac68eaac4"
+    },
+    "3f2c9c1d-8401-4dec-8c26-5cacb787af1c": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "This long parchment is woven from silvery-white silk fibers and edged with fine golden thread. The scroll’s surface shimmers with an inner light, and across its face is inscribed the haiku in gilded ink: “Dawn’s golden embrace,\nShadows flee before its light,\nThe Sun bows to none.” When unrolled, the ink seems to glow like the first rays of sunrise.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "5809101d-9928-4c14-ab6c-71dce935fafd",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "3f2c9c1d-8401-4dec-8c26-5cacb787af1c"
+    },
+    "dabd68a6-a6c0-45e0-9281-de517c7cc96f": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Usage",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "5809101d-9928-4c14-ab6c-71dce935fafd",
+      "id": "dabd68a6-a6c0-45e0-9281-de517c7cc96f"
+    },
+    "754d6949-962b-4e3c-985b-04a2c15a800f": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Reading the ",
+              "textFormat": "paragraph"
+            },
+            {
+              "text": "{{Scroll_of_the_First_Dawn}}",
+              "variable": true,
+              "textFormat": "paragraph"
+            },
+            {
+              "text": " requires an action. As soon as you finish reading, the scroll dissolves into motes of radiant light. All creatures of your choice within 30 feet must succeed on a DC 19 Constitution saving throw or take 4d8 radiant damage (half on a successful save). The area is then bathed in bright sunlight (as the *Daylight* spell) for 1 minute.\n\nAfter this burst, you are granted a single Legendary Action before the end of the current round. You can use this Legendary Action to take one of the following options:\n • Stride: You move up to half your speed without provoking opportunity attacks.\n • Radiant Strike: You make one melee weapon attack. On a hit, the attack deals an extra 2d6 radiant damage.\n • Blinding Ward: You emit a flash of light; each creature of your choice within 10 feet must succeed on a DC 19 Constitution save or be blinded until the end of its next turn.\n\nYou may use this Legendary Action only once and only before the end of the round in which you read the scroll.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "5809101d-9928-4c14-ab6c-71dce935fafd",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "754d6949-962b-4e3c-985b-04a2c15a800f"
+    },
+    "5ce6717d-7432-470f-b9e5-b68cd3dd4760": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Lore",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "5809101d-9928-4c14-ab6c-71dce935fafd",
+      "id": "5ce6717d-7432-470f-b9e5-b68cd3dd4760"
+    },
+    "4092b1ba-29fa-4873-9592-ecba668d957d": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "This is the first of twelve scrolls penned by the Kami themselves at the dawn of the world. It is said each scroll embodies a facet of celestial power tied to the cycles of the sun and moon. Shamans and seekers of enlightenment have quested for centuries to gather them, believing that uniting all twelve could reshape the fate of Rokugan. Few have seen this scroll and lived to tell the tale, for it humbles even the mightiest warlord with the brilliance of a true sunrise.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "5809101d-9928-4c14-ab6c-71dce935fafd",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "4092b1ba-29fa-4873-9592-ecba668d957d"
+    }
+  }
+}

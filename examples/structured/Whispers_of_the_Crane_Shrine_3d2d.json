@@ -1,0 +1,1771 @@
+{
+  "rootId": "55215080-08a2-428c-b699-0201f55248bb",
+  "items": {
+    "55215080-08a2-428c-b699-0201f55248bb": {
+      "model_type": "structured",
+      "content_type": "treasure",
+      "type": "section",
+      "name": "Whispers of the Crane Shrine",
+      "childrenIds": [
+        "97981988-befb-44ef-9673-85b45690da76",
+        "aacff3b3-ece8-4a7c-bc42-15ccb93daf0e",
+        "01ebf6da-48d7-4f4f-8cbe-47f6b0bd146f",
+        "2586ea99-4c83-41f5-8317-6967d9e92474",
+        "f5aad4f3-601e-45d0-8a94-521948078bbf",
+        "b8d82b58-bb8b-422e-8f22-cc49473cb5ab",
+        "c51989db-3b03-4d6a-8303-8bd2b4a512bf",
+        "cc254afc-c65f-40fc-a57c-292dc6405329",
+        "5825b114-3c4c-471b-84c4-3849f7289466",
+        "b9ae57b1-3aae-4241-88f4-c1149ae7d5d0",
+        "9cff5ed1-cdbe-41db-92f8-5417440c19c2",
+        "1d13da34-59da-4400-a77e-6a217185bb32"
+      ],
+      "parentId": null,
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Whispers of the Crane Shrine",
+                "textFormat": "h1"
+              }
+            ]
+          }
+        ],
+        "showTitle": true,
+        "styles": {
+          "borderBottom": "1px solid #882619"
+        }
+      },
+      "id": "55215080-08a2-428c-b699-0201f55248bb",
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none"
+        },
+        "collapsible": false,
+        "isCollapsed": false,
+        "alternatingCollapsedBackground": "white"
+      }
+    },
+    "97981988-befb-44ef-9673-85b45690da76": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Hidden Hoard of the Whispering Crane",
+              "textFormat": "h4"
+            }
+          ]
+        }
+      ],
+      "parentId": "55215080-08a2-428c-b699-0201f55248bb",
+      "id": "97981988-befb-44ef-9673-85b45690da76"
+    },
+    "aacff3b3-ece8-4a7c-bc42-15ccb93daf0e": {
+      "type": "line",
+      "parentId": "55215080-08a2-428c-b699-0201f55248bb",
+      "styles": {
+        "background": "linear-gradient(to right, #9D2A1F, transparent)",
+        "border": "none",
+        "height": "4px",
+        "width": "100%"
+      },
+      "id": "aacff3b3-ece8-4a7c-bc42-15ccb93daf0e",
+      "customStyles": {
+        "default": {
+          "background": "linear-gradient(to right, #9D2A1F, transparent)",
+          "border": "none",
+          "height": "4px",
+          "width": "100%"
+        }
+      }
+    },
+    "01ebf6da-48d7-4f4f-8cbe-47f6b0bd146f": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Description",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "55215080-08a2-428c-b699-0201f55248bb",
+      "id": "01ebf6da-48d7-4f4f-8cbe-47f6b0bd146f"
+    },
+    "2586ea99-4c83-41f5-8317-6967d9e92474": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Buried for centuries beneath a moss-covered shrine deep in the bamboo forests, this hoard was curated by Crane samurai to preserve their legacy. It contains prized art, rare treats, and magical treasures infused with the Crane Clan’s elegance and discipline.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "55215080-08a2-428c-b699-0201f55248bb",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "2586ea99-4c83-41f5-8317-6967d9e92474"
+    },
+    "f5aad4f3-601e-45d0-8a94-521948078bbf": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Currency",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "55215080-08a2-428c-b699-0201f55248bb",
+      "id": "f5aad4f3-601e-45d0-8a94-521948078bbf"
+    },
+    "b8d82b58-bb8b-422e-8f22-cc49473cb5ab": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "cp: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "0",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "sp: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "200",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "gp: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "1000",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "pp: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "20",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "55215080-08a2-428c-b699-0201f55248bb",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "b8d82b58-bb8b-422e-8f22-cc49473cb5ab"
+    },
+    "c51989db-3b03-4d6a-8303-8bd2b4a512bf": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Basic Items",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "55215080-08a2-428c-b699-0201f55248bb",
+      "id": "c51989db-3b03-4d6a-8303-8bd2b4a512bf"
+    },
+    "cc254afc-c65f-40fc-a57c-292dc6405329": {
+      "type": "table",
+      "content": {
+        "cells": [
+          [
+            {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "Item",
+                      "textFormat": "h3",
+                      "bold": true
+                    }
+                  ]
+                }
+              ],
+              "isHeader": true
+            },
+            {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "Price",
+                      "textFormat": "h3",
+                      "bold": true
+                    }
+                  ]
+                }
+              ],
+              "isHeader": true
+            },
+            {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "Details",
+                      "textFormat": "h3",
+                      "bold": true
+                    }
+                  ]
+                }
+              ],
+              "isHeader": true
+            }
+          ],
+          [
+            {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "Jade Crane statuettes",
+                      "textFormat": "red"
+                    }
+                  ]
+                }
+              ],
+              "isHeader": false
+            },
+            {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "50 gp each",
+                      "textFormat": "red"
+                    }
+                  ]
+                }
+              ],
+              "isHeader": false
+            },
+            {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "Intricately carved, worth 150 gp total",
+                      "textFormat": "red"
+                    }
+                  ]
+                }
+              ],
+              "isHeader": false
+            }
+          ],
+          [
+            {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "Silk scrolls of Crane poetry",
+                      "textFormat": "red"
+                    }
+                  ]
+                }
+              ],
+              "isHeader": false
+            },
+            {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "75 gp each",
+                      "textFormat": "red"
+                    }
+                  ]
+                }
+              ],
+              "isHeader": false
+            },
+            {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "Woven with silver thread",
+                      "textFormat": "red"
+                    }
+                  ]
+                }
+              ],
+              "isHeader": false
+            }
+          ],
+          [
+            {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "Potion of Healing",
+                      "textFormat": "red"
+                    }
+                  ]
+                }
+              ],
+              "isHeader": false
+            },
+            {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "50 gp",
+                      "textFormat": "red"
+                    }
+                  ]
+                }
+              ],
+              "isHeader": false
+            },
+            {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "Standard 2d4+2 HP",
+                      "textFormat": "red"
+                    }
+                  ]
+                }
+              ],
+              "isHeader": false
+            }
+          ],
+          [
+            {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "Potion of Resistance (Cold)",
+                      "textFormat": "red"
+                    }
+                  ]
+                }
+              ],
+              "isHeader": false
+            },
+            {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "300 gp",
+                      "textFormat": "red"
+                    }
+                  ]
+                }
+              ],
+              "isHeader": false
+            },
+            {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "Grants advantage on saves vs. cold for 1 hour",
+                      "textFormat": "red"
+                    }
+                  ]
+                }
+              ],
+              "isHeader": false
+            }
+          ]
+        ]
+      },
+      "tableConfig": {
+        "columnFlex": {
+          "col1": 2,
+          "col2": 1,
+          "col3": 4
+        },
+        "headerRow": "above"
+      },
+      "parentId": "55215080-08a2-428c-b699-0201f55248bb",
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none"
+        },
+        "tableContainer": {
+          "width": "100%",
+          "overflow": "auto",
+          "position": "relative",
+          "marginBottom": "30px",
+          "marginTop": "12px"
+        },
+        "table": {
+          "width": "100%",
+          "borderCollapse": "collapse",
+          "border": "none",
+          "tableLayout": "fixed"
+        },
+        "tableHeader": {
+          "fontWeight": 400,
+          "textAlign": "center",
+          "border": "none",
+          "borderBottom": "1px solid #9D2A1F",
+          "verticalAlign": "left"
+        },
+        "tableCell": {
+          "paddingTop": "2px",
+          "paddingRight": "2px",
+          "paddingBottom": "2px",
+          "paddingLeft": "2px",
+          "border": "none",
+          "padding": "4px",
+          "fontFamily": "Noto Serif, Georgia, serif",
+          "color": "rgb(88,24,13)"
+        },
+        "showTableHeader": true,
+        "alternatingRowBackground": "white",
+        "showCellBorders": false
+      },
+      "id": "cc254afc-c65f-40fc-a57c-292dc6405329"
+    },
+    "5825b114-3c4c-471b-84c4-3849f7289466": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Notable Items",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "55215080-08a2-428c-b699-0201f55248bb",
+      "styles": {
+        "paddingTop": "8px"
+      },
+      "id": "5825b114-3c4c-471b-84c4-3849f7289466"
+    },
+    "b9ae57b1-3aae-4241-88f4-c1149ae7d5d0": {
+      "type": "section",
+      "name": "Koi-Scale Katana",
+      "childrenIds": [
+        "36c57881-5834-4079-a5b5-c68d7de61074"
+      ],
+      "parentId": "55215080-08a2-428c-b699-0201f55248bb",
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Koi-Scale Katana",
+                "textFormat": "h2"
+              }
+            ]
+          }
+        ],
+        "showTitle": true,
+        "styles": {
+          "header": {
+            "borderBottom": "1px solid #882619"
+          }
+        }
+      },
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none",
+          "paddingTop": "4px"
+        },
+        "collapsible": false,
+        "isCollapsed": true,
+        "alternatingCollapsedBackground": "white",
+        "nestedCollapsible": true,
+        "wrapInnerWithContentDisplay": true
+      },
+      "id": "b9ae57b1-3aae-4241-88f4-c1149ae7d5d0"
+    },
+    "36c57881-5834-4079-a5b5-c68d7de61074": {
+      "type": "section",
+      "name": "Koi-Scale Katana",
+      "childrenIds": [
+        "2201dbd0-25fc-45cf-a0e6-8522465dc018",
+        "95b034a8-6504-4479-8927-1afa2a351b10",
+        "ba88b3d7-2794-4440-a37f-931ec6a03f52",
+        "c9e714ae-2396-4e91-a0b3-c5f58c5befd9",
+        "562787d0-293b-46e6-8fb5-8eb60d3c33f8",
+        "4dbe470b-ad44-4dba-a280-daad5bb02742",
+        "475bbb88-9312-44a8-af22-7fa7f9427aae",
+        "de76810b-3687-48c4-a2d1-34577161e0d7",
+        "ae773a99-bd26-4905-b37e-03ac37b68077",
+        "362f187e-b6bb-4843-b963-5dc24fc6ab58"
+      ],
+      "parentId": "b9ae57b1-3aae-4241-88f4-c1149ae7d5d0",
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Koi-Scale Katana",
+                "textFormat": "h1"
+              }
+            ]
+          }
+        ],
+        "showTitle": true
+      },
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none",
+          "paddingTop": "4px"
+        },
+        "collapsible": false,
+        "isCollapsed": false,
+        "alternatingCollapsedBackground": "white"
+      },
+      "id": "36c57881-5834-4079-a5b5-c68d7de61074"
+    },
+    "2201dbd0-25fc-45cf-a0e6-8522465dc018": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Blade of the Whispering Waters",
+              "textFormat": "h4"
+            }
+          ]
+        }
+      ],
+      "parentId": "36c57881-5834-4079-a5b5-c68d7de61074",
+      "id": "2201dbd0-25fc-45cf-a0e6-8522465dc018"
+    },
+    "95b034a8-6504-4479-8927-1afa2a351b10": {
+      "type": "StatLine",
+      "content": {
+        "stats": [
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Type"
+                  }
+                ]
+              }
+            ],
+            "value": 0,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Weapon"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Rarity"
+                  }
+                ]
+              }
+            ],
+            "value": 0,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Very Rare"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Price"
+                  }
+                ]
+              }
+            ],
+            "value": 0,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "5000"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Weight"
+                  }
+                ]
+              }
+            ],
+            "value": 0,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "3"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Weapon Type"
+                  }
+                ]
+              }
+            ],
+            "value": 0,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Katana"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Damage"
+                  }
+                ]
+              }
+            ],
+            "value": 0,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "1d8 slashing (versatile 1d10)"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Range"
+                  }
+                ]
+              }
+            ],
+            "value": 0,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "—"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Properties"
+                  }
+                ]
+              }
+            ],
+            "value": 0,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Finesse, versatile, magical +1"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "parentId": "36c57881-5834-4079-a5b5-c68d7de61074",
+      "displayMode": "descriptions",
+      "id": "95b034a8-6504-4479-8927-1afa2a351b10",
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none"
+        },
+        "statLine": {
+          "width": "100%",
+          "display": "flex",
+          "alignItems": "center",
+          "backgroundColor": "transparent"
+        },
+        "name": {
+          "minWidth": "64px",
+          "fontWeight": "bold",
+          "backgroundColor": "transparent",
+          "color": "#58180D",
+          "flex": "1"
+        },
+        "value": {
+          "width": "32px",
+          "backgroundColor": "transparent",
+          "textAlign": "center",
+          "color": "#000000",
+          "fontFamily": "Noto Serif, Georgia, serif"
+        },
+        "description": {
+          "fontFamily": "Noto Serif, Georgia, serif",
+          "fontSize": "13px",
+          "fontWeight": "normal",
+          "backgroundColor": "transparent",
+          "color": "#000",
+          "lineHeight": "1.25",
+          "margin": "4px 0 0 0",
+          "textAlign": "left",
+          "whiteSpace": "normal",
+          "overflow": "visible",
+          "textOverflow": "clip",
+          "minWidth": "100px",
+          "flex": "1"
+        },
+        "topLine": {
+          "width": "100%",
+          "height": "4px",
+          "marginTop": "4px",
+          "marginBottom": "4px",
+          "background": "linear-gradient(to right, #9D2A1F, transparent)"
+        },
+        "bottomLine": {
+          "width": "100%",
+          "height": "4px",
+          "marginTop": "4px",
+          "marginBottom": "4px",
+          "background": "linear-gradient(to right, #9D2A1F, transparent)"
+        },
+        "showTopLine": true,
+        "showBottomLine": true
+      }
+    },
+    "ba88b3d7-2794-4440-a37f-931ec6a03f52": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Attunement",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "36c57881-5834-4079-a5b5-c68d7de61074",
+      "styles": {
+        "paddingTop": "4px"
+      },
+      "id": "ba88b3d7-2794-4440-a37f-931ec6a03f52"
+    },
+    "c9e714ae-2396-4e91-a0b3-c5f58c5befd9": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Required: Must be wielded by a creature with proficiency in martial weapons",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "36c57881-5834-4079-a5b5-c68d7de61074",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "c9e714ae-2396-4e91-a0b3-c5f58c5befd9"
+    },
+    "562787d0-293b-46e6-8fb5-8eb60d3c33f8": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Description",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "36c57881-5834-4079-a5b5-c68d7de61074",
+      "id": "562787d0-293b-46e6-8fb5-8eb60d3c33f8"
+    },
+    "4dbe470b-ad44-4dba-a280-daad5bb02742": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "The blade’s steel shimmers with an iridescent pattern like koi scales. When drawn, it whispers faint water sounds.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "36c57881-5834-4079-a5b5-c68d7de61074",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "4dbe470b-ad44-4dba-a280-daad5bb02742"
+    },
+    "475bbb88-9312-44a8-af22-7fa7f9427aae": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Usage",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "36c57881-5834-4079-a5b5-c68d7de61074",
+      "id": "475bbb88-9312-44a8-af22-7fa7f9427aae"
+    },
+    "de76810b-3687-48c4-a2d1-34577161e0d7": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "You gain a +1 bonus to attack and damage rolls made with this weapon. Once per short rest, as a reaction when you would be hit by an attack, you can evoke the Blade’s Whisper: the blade hums with flowing water, granting you a +2 bonus to AC against that attack.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "36c57881-5834-4079-a5b5-c68d7de61074",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "de76810b-3687-48c4-a2d1-34577161e0d7"
+    },
+    "ae773a99-bd26-4905-b37e-03ac37b68077": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Lore",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "36c57881-5834-4079-a5b5-c68d7de61074",
+      "id": "ae773a99-bd26-4905-b37e-03ac37b68077"
+    },
+    "362f187e-b6bb-4843-b963-5dc24fc6ab58": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Forged by a master smith of the Crane Clan at the foot of the Sacred River, this katana was said to carry the spirit of koi that overcame all obstacles.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "36c57881-5834-4079-a5b5-c68d7de61074",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "362f187e-b6bb-4843-b963-5dc24fc6ab58"
+    },
+    "9cff5ed1-cdbe-41db-92f8-5417440c19c2": {
+      "type": "section",
+      "name": "Fan of the Celestial Breeze",
+      "childrenIds": [
+        "56aa7e26-b50c-4146-b287-780535ff408b"
+      ],
+      "parentId": "55215080-08a2-428c-b699-0201f55248bb",
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Fan of the Celestial Breeze",
+                "textFormat": "h2"
+              }
+            ]
+          }
+        ],
+        "showTitle": true,
+        "styles": {
+          "header": {
+            "borderBottom": "1px solid #882619"
+          }
+        }
+      },
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none",
+          "paddingTop": "4px"
+        },
+        "collapsible": false,
+        "isCollapsed": true,
+        "alternatingCollapsedBackground": "white",
+        "nestedCollapsible": true,
+        "wrapInnerWithContentDisplay": true
+      },
+      "id": "9cff5ed1-cdbe-41db-92f8-5417440c19c2"
+    },
+    "56aa7e26-b50c-4146-b287-780535ff408b": {
+      "type": "section",
+      "name": "Fan of the Celestial Breeze",
+      "childrenIds": [
+        "7dcdcc2e-76f3-4df5-95d6-05e99d4f225c",
+        "42b9d5c8-8b93-403c-8b2b-407cc2f24bda",
+        "6615de8b-724a-47ef-bac5-b66eceb550af",
+        "55dc4da7-f227-4d38-8440-a5fa8bae62c1",
+        "f3e8923a-cb5d-4f8a-aa75-029bb166f1b0",
+        "047222ce-ac87-4cba-80a3-b0816a2bc724",
+        "4954ea39-0117-426f-8543-fcd9a0edd6e8",
+        "aa28c209-6c7d-44f4-8468-113a7527f194"
+      ],
+      "parentId": "9cff5ed1-cdbe-41db-92f8-5417440c19c2",
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Fan of the Celestial Breeze",
+                "textFormat": "h1"
+              }
+            ]
+          }
+        ],
+        "showTitle": true
+      },
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none",
+          "paddingTop": "4px"
+        },
+        "collapsible": false,
+        "isCollapsed": false,
+        "alternatingCollapsedBackground": "white"
+      },
+      "id": "56aa7e26-b50c-4146-b287-780535ff408b"
+    },
+    "7dcdcc2e-76f3-4df5-95d6-05e99d4f225c": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Crane Court’s Windcaller",
+              "textFormat": "h4"
+            }
+          ]
+        }
+      ],
+      "parentId": "56aa7e26-b50c-4146-b287-780535ff408b",
+      "id": "7dcdcc2e-76f3-4df5-95d6-05e99d4f225c"
+    },
+    "42b9d5c8-8b93-403c-8b2b-407cc2f24bda": {
+      "type": "StatLine",
+      "content": {
+        "stats": [
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Type"
+                  }
+                ]
+              }
+            ],
+            "value": 0,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Tool"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Rarity"
+                  }
+                ]
+              }
+            ],
+            "value": 0,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Rare"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Price"
+                  }
+                ]
+              }
+            ],
+            "value": 0,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "2500"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Weight"
+                  }
+                ]
+              }
+            ],
+            "value": 0,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "2"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "parentId": "56aa7e26-b50c-4146-b287-780535ff408b",
+      "displayMode": "descriptions",
+      "id": "42b9d5c8-8b93-403c-8b2b-407cc2f24bda",
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none"
+        },
+        "statLine": {
+          "width": "100%",
+          "display": "flex",
+          "alignItems": "center",
+          "backgroundColor": "transparent"
+        },
+        "name": {
+          "minWidth": "64px",
+          "fontWeight": "bold",
+          "backgroundColor": "transparent",
+          "color": "#58180D",
+          "flex": "1"
+        },
+        "value": {
+          "width": "32px",
+          "backgroundColor": "transparent",
+          "textAlign": "center",
+          "color": "#000000",
+          "fontFamily": "Noto Serif, Georgia, serif"
+        },
+        "description": {
+          "fontFamily": "Noto Serif, Georgia, serif",
+          "fontSize": "13px",
+          "fontWeight": "normal",
+          "backgroundColor": "transparent",
+          "color": "#000",
+          "lineHeight": "1.25",
+          "margin": "4px 0 0 0",
+          "textAlign": "left",
+          "whiteSpace": "normal",
+          "overflow": "visible",
+          "textOverflow": "clip",
+          "minWidth": "100px",
+          "flex": "1"
+        },
+        "topLine": {
+          "width": "100%",
+          "height": "4px",
+          "marginTop": "4px",
+          "marginBottom": "4px",
+          "background": "linear-gradient(to right, #9D2A1F, transparent)"
+        },
+        "bottomLine": {
+          "width": "100%",
+          "height": "4px",
+          "marginTop": "4px",
+          "marginBottom": "4px",
+          "background": "linear-gradient(to right, #9D2A1F, transparent)"
+        },
+        "showTopLine": true,
+        "showBottomLine": true
+      }
+    },
+    "6615de8b-724a-47ef-bac5-b66eceb550af": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Description",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "56aa7e26-b50c-4146-b287-780535ff408b",
+      "id": "6615de8b-724a-47ef-bac5-b66eceb550af"
+    },
+    "55dc4da7-f227-4d38-8440-a5fa8bae62c1": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "A lacquered folding fan emblazoned with the Crane crest and inlaid with silver cloud motifs.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "56aa7e26-b50c-4146-b287-780535ff408b",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "55dc4da7-f227-4d38-8440-a5fa8bae62c1"
+    },
+    "f3e8923a-cb5d-4f8a-aa75-029bb166f1b0": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Usage",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "56aa7e26-b50c-4146-b287-780535ff408b",
+      "id": "f3e8923a-cb5d-4f8a-aa75-029bb166f1b0"
+    },
+    "047222ce-ac87-4cba-80a3-b0816a2bc724": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "While holding the fan, you can use an action to cast gust of wind (save DC 15). The fan regains this property at dawn.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "56aa7e26-b50c-4146-b287-780535ff408b",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "047222ce-ac87-4cba-80a3-b0816a2bc724"
+    },
+    "4954ea39-0117-426f-8543-fcd9a0edd6e8": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Lore",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "56aa7e26-b50c-4146-b287-780535ff408b",
+      "id": "4954ea39-0117-426f-8543-fcd9a0edd6e8"
+    },
+    "aa28c209-6c7d-44f4-8468-113a7527f194": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Used by the highest-ranking courtiers to control the air in banquets and defend the honor of the clan, this fan channels the subtle power of the heavens.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "56aa7e26-b50c-4146-b287-780535ff408b",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "aa28c209-6c7d-44f4-8468-113a7527f194"
+    },
+    "1d13da34-59da-4400-a77e-6a217185bb32": {
+      "type": "section",
+      "name": "Mask of the Hidden Oni",
+      "childrenIds": [
+        "e964a6fc-ecd8-40dd-99f4-5da5ae61fff0"
+      ],
+      "parentId": "55215080-08a2-428c-b699-0201f55248bb",
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Mask of the Hidden Oni",
+                "textFormat": "h2"
+              }
+            ]
+          }
+        ],
+        "showTitle": true,
+        "styles": {
+          "header": {
+            "borderBottom": "1px solid #882619"
+          }
+        }
+      },
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none",
+          "paddingTop": "4px"
+        },
+        "collapsible": false,
+        "isCollapsed": true,
+        "alternatingCollapsedBackground": "white",
+        "nestedCollapsible": true,
+        "wrapInnerWithContentDisplay": true
+      },
+      "id": "1d13da34-59da-4400-a77e-6a217185bb32"
+    },
+    "e964a6fc-ecd8-40dd-99f4-5da5ae61fff0": {
+      "type": "section",
+      "name": "Mask of the Hidden Oni",
+      "childrenIds": [
+        "bda28f50-7da9-4bb8-b6b8-075a22de449e",
+        "2f9a75f1-8f20-4af5-8bce-1b4c94acbcff",
+        "93a20bf8-8286-4693-898f-409bbc6f751b",
+        "4f701caa-3434-490f-b073-d70f67ac39c0",
+        "fc123cf0-65b0-4ca7-b0a6-8d70d43c5433",
+        "da07b712-7e78-4cc5-9aff-0247a9f36375",
+        "e005bf18-bb69-49fc-9649-4724ed9f9b90",
+        "05f92578-f90b-4b8e-8262-ed8bcca0d40f",
+        "1e2c14be-1d1a-462c-9557-eb4b2563439a",
+        "f207b23f-604a-40c9-b940-812309b1b0d9"
+      ],
+      "parentId": "1d13da34-59da-4400-a77e-6a217185bb32",
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Mask of the Hidden Oni",
+                "textFormat": "h1"
+              }
+            ]
+          }
+        ],
+        "showTitle": true
+      },
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none",
+          "paddingTop": "4px"
+        },
+        "collapsible": false,
+        "isCollapsed": false,
+        "alternatingCollapsedBackground": "white"
+      },
+      "id": "e964a6fc-ecd8-40dd-99f4-5da5ae61fff0"
+    },
+    "bda28f50-7da9-4bb8-b6b8-075a22de449e": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Spirit-Ward of the Moonlit Grove",
+              "textFormat": "h4"
+            }
+          ]
+        }
+      ],
+      "parentId": "e964a6fc-ecd8-40dd-99f4-5da5ae61fff0",
+      "id": "bda28f50-7da9-4bb8-b6b8-075a22de449e"
+    },
+    "2f9a75f1-8f20-4af5-8bce-1b4c94acbcff": {
+      "type": "StatLine",
+      "content": {
+        "stats": [
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Type"
+                  }
+                ]
+              }
+            ],
+            "value": 0,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Wondrous Item"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Rarity"
+                  }
+                ]
+              }
+            ],
+            "value": 0,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Legendary"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Price"
+                  }
+                ]
+              }
+            ],
+            "value": 0,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "12000"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Weight"
+                  }
+                ]
+              }
+            ],
+            "value": 0,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "1"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "parentId": "e964a6fc-ecd8-40dd-99f4-5da5ae61fff0",
+      "displayMode": "descriptions",
+      "id": "2f9a75f1-8f20-4af5-8bce-1b4c94acbcff",
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none"
+        },
+        "statLine": {
+          "width": "100%",
+          "display": "flex",
+          "alignItems": "center",
+          "backgroundColor": "transparent"
+        },
+        "name": {
+          "minWidth": "64px",
+          "fontWeight": "bold",
+          "backgroundColor": "transparent",
+          "color": "#58180D",
+          "flex": "1"
+        },
+        "value": {
+          "width": "32px",
+          "backgroundColor": "transparent",
+          "textAlign": "center",
+          "color": "#000000",
+          "fontFamily": "Noto Serif, Georgia, serif"
+        },
+        "description": {
+          "fontFamily": "Noto Serif, Georgia, serif",
+          "fontSize": "13px",
+          "fontWeight": "normal",
+          "backgroundColor": "transparent",
+          "color": "#000",
+          "lineHeight": "1.25",
+          "margin": "4px 0 0 0",
+          "textAlign": "left",
+          "whiteSpace": "normal",
+          "overflow": "visible",
+          "textOverflow": "clip",
+          "minWidth": "100px",
+          "flex": "1"
+        },
+        "topLine": {
+          "width": "100%",
+          "height": "4px",
+          "marginTop": "4px",
+          "marginBottom": "4px",
+          "background": "linear-gradient(to right, #9D2A1F, transparent)"
+        },
+        "bottomLine": {
+          "width": "100%",
+          "height": "4px",
+          "marginTop": "4px",
+          "marginBottom": "4px",
+          "background": "linear-gradient(to right, #9D2A1F, transparent)"
+        },
+        "showTopLine": true,
+        "showBottomLine": true
+      }
+    },
+    "93a20bf8-8286-4693-898f-409bbc6f751b": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Attunement",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "e964a6fc-ecd8-40dd-99f4-5da5ae61fff0",
+      "styles": {
+        "paddingTop": "4px"
+      },
+      "id": "93a20bf8-8286-4693-898f-409bbc6f751b"
+    },
+    "4f701caa-3434-490f-b073-d70f67ac39c0": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Required: Must be worn by a humanoid",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "e964a6fc-ecd8-40dd-99f4-5da5ae61fff0",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "4f701caa-3434-490f-b073-d70f67ac39c0"
+    },
+    "fc123cf0-65b0-4ca7-b0a6-8d70d43c5433": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Description",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "e964a6fc-ecd8-40dd-99f4-5da5ae61fff0",
+      "id": "fc123cf0-65b0-4ca7-b0a6-8d70d43c5433"
+    },
+    "da07b712-7e78-4cc5-9aff-0247a9f36375": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "A slender mask carved from pale wood, with delicately painted oni features. The eyes are inlaid with moonstone.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "e964a6fc-ecd8-40dd-99f4-5da5ae61fff0",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "da07b712-7e78-4cc5-9aff-0247a9f36375"
+    },
+    "e005bf18-bb69-49fc-9649-4724ed9f9b90": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Usage",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "e964a6fc-ecd8-40dd-99f4-5da5ae61fff0",
+      "id": "e005bf18-bb69-49fc-9649-4724ed9f9b90"
+    },
+    "05f92578-f90b-4b8e-8262-ed8bcca0d40f": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "While wearing the mask, you gain darkvision out to 60 feet. Once per long rest, you can activate its magic to become invisible for up to 1 hour or until you attack or cast a spell. You can speak the mask’s command word (in Old Rokugan dialect) as a bonus action.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "e964a6fc-ecd8-40dd-99f4-5da5ae61fff0",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "05f92578-f90b-4b8e-8262-ed8bcca0d40f"
+    },
+    "1e2c14be-1d1a-462c-9557-eb4b2563439a": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Lore",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "e964a6fc-ecd8-40dd-99f4-5da5ae61fff0",
+      "id": "1e2c14be-1d1a-462c-9557-eb4b2563439a"
+    },
+    "f207b23f-604a-40c9-b940-812309b1b0d9": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Legends speak of a Crane monk who trapped a mischievous oni’s essence within this mask. It now offers protection to those who honor restraint and clarity of mind.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "e964a6fc-ecd8-40dd-99f4-5da5ae61fff0",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "f207b23f-604a-40c9-b940-812309b1b0d9"
+    }
+  }
+}

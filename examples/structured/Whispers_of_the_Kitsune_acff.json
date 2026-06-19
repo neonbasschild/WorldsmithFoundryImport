@@ -1,0 +1,2399 @@
+{
+  "rootId": "baa73f97-fdf3-4d02-ae27-620e9bfcb288",
+  "items": {
+    "baa73f97-fdf3-4d02-ae27-620e9bfcb288": {
+      "model_type": "structured",
+      "content_type": "quest",
+      "type": "section",
+      "name": "Whispers of the Kitsune",
+      "childrenIds": [
+        "de3a1bf1-7c39-49dd-93a9-302550ffa676",
+        "85d01230-4a5f-485a-a158-632c9e77f7dc",
+        "31569efc-364c-45f6-9f9b-6d33edb14601",
+        "8b504773-4683-41bc-a287-0afbf0efd44d",
+        "3a479507-976d-415c-a307-59fb9943c2fb",
+        "3ca1b0a3-b5c7-4b71-9116-11dd6f6f44a7",
+        "51e5dbdf-a9e7-4371-861e-b56ae99174f1",
+        "8b02881e-72d5-45c1-a29b-ea79f2dd36d1",
+        "a24d2576-15ae-488e-b7b2-669875e94e8c",
+        "aba5fa32-4d29-4b67-88d7-6538877302f0",
+        "a88bebff-9d9f-4d32-bbd5-390d92aea50b",
+        "f439ebea-9d8e-49dc-a1d0-8ee3c72d4214",
+        "9e715866-ce54-4bec-ad84-bff8e54c76bf",
+        "07b67ca6-a3fc-42c7-ab48-663ab2bf5c24",
+        "300daf50-f8ed-4dab-a70a-022e3523cd43",
+        "c2b4b288-2856-4d2a-b9e2-199429c9df6f",
+        "0ae66055-7d93-4b9f-b5dd-c7603fd6494e"
+      ],
+      "parentId": null,
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Whispers of the Kitsune",
+                "textFormat": "h1"
+              }
+            ]
+          }
+        ],
+        "showTitle": true,
+        "styles": {
+          "borderBottom": "1px solid #882619"
+        }
+      },
+      "id": "baa73f97-fdf3-4d02-ae27-620e9bfcb288",
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none"
+        },
+        "collapsible": false,
+        "isCollapsed": false,
+        "alternatingCollapsedBackground": "white"
+      }
+    },
+    "de3a1bf1-7c39-49dd-93a9-302550ffa676": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "A Spirit, A Secret, A Choice",
+              "textFormat": "h4"
+            }
+          ]
+        }
+      ],
+      "parentId": "baa73f97-fdf3-4d02-ae27-620e9bfcb288",
+      "id": "de3a1bf1-7c39-49dd-93a9-302550ffa676"
+    },
+    "85d01230-4a5f-485a-a158-632c9e77f7dc": {
+      "type": "line",
+      "parentId": "baa73f97-fdf3-4d02-ae27-620e9bfcb288",
+      "styles": {
+        "background": "linear-gradient(to right, #9D2A1F, transparent)",
+        "border": "none",
+        "height": "4px",
+        "width": "100%"
+      },
+      "id": "85d01230-4a5f-485a-a158-632c9e77f7dc",
+      "customStyles": {
+        "default": {
+          "background": "linear-gradient(to right, #9D2A1F, transparent)",
+          "border": "none",
+          "height": "4px",
+          "width": "100%"
+        }
+      }
+    },
+    "31569efc-364c-45f6-9f9b-6d33edb14601": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "GM Overview",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "baa73f97-fdf3-4d02-ae27-620e9bfcb288",
+      "id": "31569efc-364c-45f6-9f9b-6d33edb14601"
+    },
+    "8b504773-4683-41bc-a287-0afbf0efd44d": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "In a remote corner of Rokugan’s Emerald Empire, a fox spirit named Shinobu—tasked with carrying secret messages between the minor fox shrine and the Unicorn Clan—has vanished. Rumors claim she’s hiding or protecting a powerful ancient spirit imprisoned in the nearby forest. The Lion Clan magistrate views the spirit as a threat and orders her capture. The PCs, commissioned by a sympathetic Unicorn Clan bushi, must track Shinobu’s trail, navigate her illusions, and decide whether to hand her over—or risk dishonoring their own code by aiding the mysterious spirit.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "baa73f97-fdf3-4d02-ae27-620e9bfcb288",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "8b504773-4683-41bc-a287-0afbf0efd44d"
+    },
+    "3a479507-976d-415c-a307-59fb9943c2fb": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Hook",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "baa73f97-fdf3-4d02-ae27-620e9bfcb288",
+      "id": "3a479507-976d-415c-a307-59fb9943c2fb"
+    },
+    "3ca1b0a3-b5c7-4b71-9116-11dd6f6f44a7": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "A mounted Unicorn samurai finds the PCs at a roadside inn, whispering: “A fox spirit carries a message that must never see Lion Clan hands. Will you uphold the blade of honor—or watch Rokugan’s balance shatter?”",
+              "textFormat": "description"
+            }
+          ]
+        }
+      ],
+      "parentId": "baa73f97-fdf3-4d02-ae27-620e9bfcb288",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "3ca1b0a3-b5c7-4b71-9116-11dd6f6f44a7"
+    },
+    "51e5dbdf-a9e7-4371-861e-b56ae99174f1": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Objectives",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "baa73f97-fdf3-4d02-ae27-620e9bfcb288",
+      "id": "51e5dbdf-a9e7-4371-861e-b56ae99174f1"
+    },
+    "8b02881e-72d5-45c1-a29b-ea79f2dd36d1": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "numbered-list",
+          "children": [
+            {
+              "type": "list-item",
+              "children": [
+                {
+                  "text": "Investigate the hillside fox shrine for clues to Shinobu’s disappearance",
+                  "textFormat": "paragraph"
+                }
+              ]
+            },
+            {
+              "type": "list-item",
+              "children": [
+                {
+                  "text": "Follow Shinobu’s illusion-tangled trail through the ancient oak grove",
+                  "textFormat": "paragraph"
+                }
+              ]
+            },
+            {
+              "type": "list-item",
+              "children": [
+                {
+                  "text": "Confront the Lion Clan constables hunting the kitsune",
+                  "textFormat": "paragraph"
+                }
+              ]
+            },
+            {
+              "type": "list-item",
+              "children": [
+                {
+                  "text": "Locate the sealed spirit bound beneath the shrine’s ancestral tree",
+                  "textFormat": "paragraph"
+                }
+              ]
+            },
+            {
+              "type": "list-item",
+              "children": [
+                {
+                  "text": "Choose: deliver Shinobu and the spirit to the magistrate or free the ancient power and flee",
+                  "textFormat": "paragraph"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "parentId": "baa73f97-fdf3-4d02-ae27-620e9bfcb288",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "8b02881e-72d5-45c1-a29b-ea79f2dd36d1"
+    },
+    "a24d2576-15ae-488e-b7b2-669875e94e8c": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Resolution",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "baa73f97-fdf3-4d02-ae27-620e9bfcb288",
+      "id": "a24d2576-15ae-488e-b7b2-669875e94e8c"
+    },
+    "aba5fa32-4d29-4b67-88d7-6538877302f0": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Open-ended: PCs may deliver Shinobu and the spirit, earning Lion Clan favor but incurring Unicorn dishonor, or free the spirit—gaining its gratitude but risking a clan feud. Their choice echoes across Rokugan.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "baa73f97-fdf3-4d02-ae27-620e9bfcb288",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "aba5fa32-4d29-4b67-88d7-6538877302f0"
+    },
+    "a88bebff-9d9f-4d32-bbd5-390d92aea50b": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Rewards",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "baa73f97-fdf3-4d02-ae27-620e9bfcb288",
+      "id": "a88bebff-9d9f-4d32-bbd5-390d92aea50b"
+    },
+    "f439ebea-9d8e-49dc-a1d0-8ee3c72d4214": {
+      "type": "table",
+      "content": {
+        "cells": [
+          [
+            {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "Unicorn Clan Favor",
+                      "textFormat": "red"
+                    }
+                  ]
+                }
+              ],
+              "isHeader": false
+            },
+            {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "",
+                      "textFormat": "red"
+                    }
+                  ]
+                }
+              ],
+              "isHeader": false
+            },
+            {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "Grants advantage on one social check with Unicorn Clan members",
+                      "textFormat": "red"
+                    }
+                  ]
+                }
+              ],
+              "isHeader": false
+            }
+          ],
+          [
+            {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "Minor Kitsune’s Cloak",
+                      "textFormat": "red"
+                    }
+                  ]
+                }
+              ],
+              "isHeader": false
+            },
+            {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "",
+                      "textFormat": "red"
+                    }
+                  ]
+                }
+              ],
+              "isHeader": false
+            },
+            {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "Wondrous item, uncommon. While worn, advantage on Deception and Stealth checks once per long rest.",
+                      "textFormat": "red"
+                    }
+                  ]
+                }
+              ],
+              "isHeader": false
+            }
+          ],
+          [
+            {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "30 gp",
+                      "textFormat": "red"
+                    }
+                  ]
+                }
+              ],
+              "isHeader": false
+            },
+            {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "",
+                      "textFormat": "red"
+                    }
+                  ]
+                }
+              ],
+              "isHeader": false
+            },
+            {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "Paid by Unicorn samurai patron",
+                      "textFormat": "red"
+                    }
+                  ]
+                }
+              ],
+              "isHeader": false
+            }
+          ]
+        ]
+      },
+      "tableConfig": {
+        "columnFlex": {
+          "col1": 2,
+          "col2": 1,
+          "col3": 4
+        },
+        "headerRow": "none"
+      },
+      "parentId": "baa73f97-fdf3-4d02-ae27-620e9bfcb288",
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none"
+        },
+        "tableContainer": {
+          "width": "100%",
+          "overflow": "auto",
+          "position": "relative",
+          "marginBottom": "30px",
+          "marginTop": "12px"
+        },
+        "table": {
+          "width": "100%",
+          "borderCollapse": "collapse",
+          "border": "none",
+          "tableLayout": "fixed"
+        },
+        "tableHeader": {
+          "fontWeight": 400,
+          "textAlign": "center",
+          "border": "none",
+          "borderBottom": "1px solid #9D2A1F",
+          "verticalAlign": "left"
+        },
+        "tableCell": {
+          "paddingTop": "2px",
+          "paddingRight": "2px",
+          "paddingBottom": "2px",
+          "paddingLeft": "2px",
+          "border": "none",
+          "padding": "4px",
+          "fontFamily": "Noto Serif, Georgia, serif",
+          "color": "rgb(88,24,13)"
+        },
+        "showTableHeader": true,
+        "alternatingRowBackground": "white",
+        "showCellBorders": false
+      },
+      "id": "f439ebea-9d8e-49dc-a1d0-8ee3c72d4214"
+    },
+    "9e715866-ce54-4bec-ad84-bff8e54c76bf": {
+      "type": "section",
+      "name": "Timeline",
+      "childrenIds": [
+        "5adea567-d147-442d-9c9c-8c14c4c5ac68",
+        "d811378a-e002-4f59-a605-c1ff8da88910",
+        "f249c9f3-2fb9-42e8-9e2a-4c7dc38eca48"
+      ],
+      "parentId": "baa73f97-fdf3-4d02-ae27-620e9bfcb288",
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Timeline",
+                "textFormat": "h2"
+              }
+            ]
+          }
+        ],
+        "showTitle": true,
+        "styles": {
+          "header": {
+            "borderBottom": "1px solid #882619"
+          }
+        }
+      },
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none",
+          "paddingTop": "4px"
+        },
+        "collapsible": false,
+        "isCollapsed": false,
+        "alternatingCollapsedBackground": "white",
+        "isTabSection": true,
+        "activeTabIndex": 0
+      },
+      "id": "9e715866-ce54-4bec-ad84-bff8e54c76bf"
+    },
+    "5adea567-d147-442d-9c9c-8c14c4c5ac68": {
+      "type": "section",
+      "name": "Act I: Vanished in the Grove",
+      "childrenIds": [
+        "b6513d29-bad6-4d99-8518-e44bc3b87b72",
+        "d02651be-6df2-454e-8366-a8060475dc40"
+      ],
+      "parentId": "9e715866-ce54-4bec-ad84-bff8e54c76bf",
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Act I: Vanished in the Grove",
+                "textFormat": "h2"
+              }
+            ]
+          }
+        ],
+        "showTitle": false
+      },
+      "customStyles": {
+        "default": {
+          "backgroundColor": "rgba(255, 255, 255, 0.65)",
+          "border": "none",
+          "borderBottomColor": "rgb(0, 0, 0)",
+          "borderBottomStyle": "solid",
+          "borderBottomWidth": "1px",
+          "borderImageOutset": "9px 0px",
+          "borderImageRepeat": "stretch",
+          "borderImageSlice": "12",
+          "borderImageSource": "url(/_next/static/media/noteBorderTopBotArrows.640fe86f.png)",
+          "borderImageWidth": "11px",
+          "borderLeftColor": "rgb(0, 0, 0)",
+          "borderLeftStyle": "solid",
+          "borderLeftWidth": "1px",
+          "borderRightColor": "rgb(0, 0, 0)",
+          "borderRightStyle": "solid",
+          "borderRightWidth": "1px",
+          "borderTopColor": "rgb(0, 0, 0)",
+          "borderTopStyle": "solid",
+          "borderTopWidth": "1px",
+          "padding": "4px",
+          "margin": "20px"
+        },
+        "collapsible": false,
+        "isCollapsed": false,
+        "alternatingCollapsedBackground": "white"
+      },
+      "id": "5adea567-d147-442d-9c9c-8c14c4c5ac68"
+    },
+    "b6513d29-bad6-4d99-8518-e44bc3b87b72": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "PCs gather clues at the fox shrine and uncover Shinobu’s illusion wards.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "5adea567-d147-442d-9c9c-8c14c4c5ac68",
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Act I: Vanished in the Grove",
+                "textFormat": "h2"
+              }
+            ]
+          }
+        ],
+        "showTitle": true,
+        "styles": {
+          "header": {
+            "borderBottom": "1px solid #882619"
+          }
+        }
+      },
+      "id": "b6513d29-bad6-4d99-8518-e44bc3b87b72"
+    },
+    "d02651be-6df2-454e-8366-a8060475dc40": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Session 1: Shrine Investigation: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Search the shrine, interact with ward spirits, solve a minor illusion puzzle to unseal the back chamber.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "5adea567-d147-442d-9c9c-8c14c4c5ac68",
+      "id": "d02651be-6df2-454e-8366-a8060475dc40"
+    },
+    "d811378a-e002-4f59-a605-c1ff8da88910": {
+      "type": "section",
+      "name": "Act II: Illusions and Iron",
+      "childrenIds": [
+        "76180360-bcaf-44a0-bced-7acb1d21275a",
+        "a914c133-ff1a-4b11-8488-bdfa92a0ce37"
+      ],
+      "parentId": "9e715866-ce54-4bec-ad84-bff8e54c76bf",
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Act II: Illusions and Iron",
+                "textFormat": "h2"
+              }
+            ]
+          }
+        ],
+        "showTitle": false
+      },
+      "customStyles": {
+        "default": {
+          "backgroundColor": "rgba(255, 255, 255, 0.65)",
+          "border": "none",
+          "borderBottomColor": "rgb(0, 0, 0)",
+          "borderBottomStyle": "solid",
+          "borderBottomWidth": "1px",
+          "borderImageOutset": "9px 0px",
+          "borderImageRepeat": "stretch",
+          "borderImageSlice": "12",
+          "borderImageSource": "url(/_next/static/media/noteBorderTopBotArrows.640fe86f.png)",
+          "borderImageWidth": "11px",
+          "borderLeftColor": "rgb(0, 0, 0)",
+          "borderLeftStyle": "solid",
+          "borderLeftWidth": "1px",
+          "borderRightColor": "rgb(0, 0, 0)",
+          "borderRightStyle": "solid",
+          "borderRightWidth": "1px",
+          "borderTopColor": "rgb(0, 0, 0)",
+          "borderTopStyle": "solid",
+          "borderTopWidth": "1px",
+          "padding": "4px",
+          "margin": "20px"
+        },
+        "collapsible": false,
+        "isCollapsed": false,
+        "alternatingCollapsedBackground": "white"
+      },
+      "id": "d811378a-e002-4f59-a605-c1ff8da88910"
+    },
+    "76180360-bcaf-44a0-bced-7acb1d21275a": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Tracking through the forest, PCs face illusionary trials and Lion Clan constables.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "d811378a-e002-4f59-a605-c1ff8da88910",
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Act II: Illusions and Iron",
+                "textFormat": "h2"
+              }
+            ]
+          }
+        ],
+        "showTitle": true,
+        "styles": {
+          "header": {
+            "borderBottom": "1px solid #882619"
+          }
+        }
+      },
+      "id": "76180360-bcaf-44a0-bced-7acb1d21275a"
+    },
+    "a914c133-ff1a-4b11-8488-bdfa92a0ce37": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Session 1: Forest of Mirrors: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Navigate shifting illusions (Wisdom saves DC 12) and find the real trail.",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Session 2: Ambush at Dusk: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Battle two Lion Clan constables and decide Shinobu’s fate.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "d811378a-e002-4f59-a605-c1ff8da88910",
+      "id": "a914c133-ff1a-4b11-8488-bdfa92a0ce37"
+    },
+    "f249c9f3-2fb9-42e8-9e2a-4c7dc38eca48": {
+      "type": "section",
+      "name": "Act III: The Bound Spirit",
+      "childrenIds": [
+        "81bef0bf-838d-49c4-b595-f05977b9a957",
+        "0fc4ce38-9141-49a8-ab41-6b39d69c5076"
+      ],
+      "parentId": "9e715866-ce54-4bec-ad84-bff8e54c76bf",
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Act III: The Bound Spirit",
+                "textFormat": "h2"
+              }
+            ]
+          }
+        ],
+        "showTitle": false
+      },
+      "customStyles": {
+        "default": {
+          "backgroundColor": "rgba(255, 255, 255, 0.65)",
+          "border": "none",
+          "borderBottomColor": "rgb(0, 0, 0)",
+          "borderBottomStyle": "solid",
+          "borderBottomWidth": "1px",
+          "borderImageOutset": "9px 0px",
+          "borderImageRepeat": "stretch",
+          "borderImageSlice": "12",
+          "borderImageSource": "url(/_next/static/media/noteBorderTopBotArrows.640fe86f.png)",
+          "borderImageWidth": "11px",
+          "borderLeftColor": "rgb(0, 0, 0)",
+          "borderLeftStyle": "solid",
+          "borderLeftWidth": "1px",
+          "borderRightColor": "rgb(0, 0, 0)",
+          "borderRightStyle": "solid",
+          "borderRightWidth": "1px",
+          "borderTopColor": "rgb(0, 0, 0)",
+          "borderTopStyle": "solid",
+          "borderTopWidth": "1px",
+          "padding": "4px",
+          "margin": "20px"
+        },
+        "collapsible": false,
+        "isCollapsed": false,
+        "alternatingCollapsedBackground": "white"
+      },
+      "id": "f249c9f3-2fb9-42e8-9e2a-4c7dc38eca48"
+    },
+    "81bef0bf-838d-49c4-b595-f05977b9a957": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Discover the ancient spirit and choose a side.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "f249c9f3-2fb9-42e8-9e2a-4c7dc38eca48",
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Act III: The Bound Spirit",
+                "textFormat": "h2"
+              }
+            ]
+          }
+        ],
+        "showTitle": true,
+        "styles": {
+          "header": {
+            "borderBottom": "1px solid #882619"
+          }
+        }
+      },
+      "id": "81bef0bf-838d-49c4-b595-f05977b9a957"
+    },
+    "0fc4ce38-9141-49a8-ab41-6b39d69c5076": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Session 1: Beneath the Ancestral Oak: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Negotiate with Shinobu and the spirit (Charisma DC 13) or break the seal (Strength DC 12).",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "f249c9f3-2fb9-42e8-9e2a-4c7dc38eca48",
+      "id": "0fc4ce38-9141-49a8-ab41-6b39d69c5076"
+    },
+    "07b67ca6-a3fc-42c7-ab48-663ab2bf5c24": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Allies",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "baa73f97-fdf3-4d02-ae27-620e9bfcb288",
+      "id": "07b67ca6-a3fc-42c7-ab48-663ab2bf5c24"
+    },
+    "300daf50-f8ed-4dab-a70a-022e3523cd43": {
+      "type": "section",
+      "name": "Shinobu, Shrine Courier",
+      "childrenIds": [
+        "2fafb154-4b9a-44e3-a758-05ef03f37cac"
+      ],
+      "parentId": "baa73f97-fdf3-4d02-ae27-620e9bfcb288",
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Shinobu, Shrine Courier",
+                "textFormat": "h2"
+              }
+            ]
+          }
+        ],
+        "showTitle": true,
+        "styles": {
+          "header": {
+            "borderBottom": "1px solid #882619"
+          }
+        }
+      },
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none",
+          "paddingTop": "4px"
+        },
+        "collapsible": false,
+        "isCollapsed": true,
+        "alternatingCollapsedBackground": "white",
+        "nestedCollapsible": true,
+        "wrapInnerWithContentDisplay": true
+      },
+      "id": "300daf50-f8ed-4dab-a70a-022e3523cd43"
+    },
+    "2fafb154-4b9a-44e3-a758-05ef03f37cac": {
+      "type": "section",
+      "name": "Shinobu, Shrine Courier",
+      "childrenIds": [
+        "9d5e13b7-e1d2-434d-b4eb-a352e9a08abd",
+        "d5fcd28e-2557-4846-9216-25b7d09faea6",
+        "8148f16a-dae6-4330-a880-32672a7b3b25",
+        "b18c95c9-91bc-4e0f-9683-953e902af29a",
+        "6ee6b96e-2427-469a-9830-a6732e1f0b6d",
+        "71a0fd98-fb9f-4e69-816b-458a1c92ee65",
+        "1692a9f8-3971-44ae-af26-b77524ed1f24",
+        "ba179e26-2b3a-4329-bf92-abd477f308f9",
+        "26d62675-6aeb-4c07-9b87-30c912546aa7",
+        "e5c54c8b-3b75-4a30-8ca2-b40045e5baff",
+        "322db47c-3e21-48cb-9a88-1462b177acd1",
+        "08cf8dec-173b-4c6b-9db4-240298a22a72",
+        "515650f7-dac5-4b50-9466-bbaefc2e2803",
+        "0e32eded-f803-4625-9bb3-65d7f39c09ab",
+        "c33ac92d-7c4e-455c-a17a-c1508c673827",
+        "f55b26b5-82a4-4585-b749-cb1ab0319564",
+        "47a9085c-be80-45c0-8806-733935e3a429",
+        "1bd7c1f9-19fd-4554-b15b-83480a149523",
+        "af0afc6b-75d7-42fc-a0de-75313a39759c",
+        "23baf369-f698-460e-904b-3f8fadbb0c2a"
+      ],
+      "parentId": "300daf50-f8ed-4dab-a70a-022e3523cd43",
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Shinobu, Shrine Courier",
+                "textFormat": "h1"
+              }
+            ]
+          }
+        ],
+        "showTitle": true
+      },
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none",
+          "paddingTop": "4px"
+        },
+        "collapsible": false,
+        "isCollapsed": false,
+        "alternatingCollapsedBackground": "white"
+      },
+      "id": "2fafb154-4b9a-44e3-a758-05ef03f37cac",
+      "content_type": "npc"
+    },
+    "9d5e13b7-e1d2-434d-b4eb-a352e9a08abd": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Medium Humanoid (kitsune), Neutral good • Fox Spirit Messenger",
+              "textFormat": "h4"
+            }
+          ]
+        }
+      ],
+      "parentId": "2fafb154-4b9a-44e3-a758-05ef03f37cac",
+      "styles": {
+        "paddingBottom": "4px"
+      },
+      "id": "9d5e13b7-e1d2-434d-b4eb-a352e9a08abd"
+    },
+    "d5fcd28e-2557-4846-9216-25b7d09faea6": {
+      "type": "line",
+      "parentId": "2fafb154-4b9a-44e3-a758-05ef03f37cac",
+      "styles": {
+        "background": "linear-gradient(to right, #9D2A1F, transparent)",
+        "border": "none",
+        "height": "4px",
+        "width": "100%"
+      },
+      "id": "d5fcd28e-2557-4846-9216-25b7d09faea6",
+      "customStyles": {
+        "default": {
+          "background": "linear-gradient(to right, #9D2A1F, transparent)",
+          "border": "none",
+          "height": "4px",
+          "width": "100%"
+        }
+      }
+    },
+    "8148f16a-dae6-4330-a880-32672a7b3b25": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Description",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "2fafb154-4b9a-44e3-a758-05ef03f37cac",
+      "id": "8148f16a-dae6-4330-a880-32672a7b3b25"
+    },
+    "b18c95c9-91bc-4e0f-9683-953e902af29a": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "A slender woman with pale orange fox ears and a bushy tail, wearing travel-worn robes embroidered with paw motifs.",
+              "textFormat": "description"
+            }
+          ]
+        }
+      ],
+      "parentId": "2fafb154-4b9a-44e3-a758-05ef03f37cac",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "b18c95c9-91bc-4e0f-9683-953e902af29a"
+    },
+    "6ee6b96e-2427-469a-9830-a6732e1f0b6d": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Lore",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "2fafb154-4b9a-44e3-a758-05ef03f37cac",
+      "id": "6ee6b96e-2427-469a-9830-a6732e1f0b6d"
+    },
+    "71a0fd98-fb9f-4e69-816b-458a1c92ee65": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Shinobu serves a hidden fox shrine and carries clan secrets in her illusions. Known for kindness but bound by duty.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "2fafb154-4b9a-44e3-a758-05ef03f37cac",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "71a0fd98-fb9f-4e69-816b-458a1c92ee65"
+    },
+    "1692a9f8-3971-44ae-af26-b77524ed1f24": {
+      "type": "line",
+      "parentId": "2fafb154-4b9a-44e3-a758-05ef03f37cac",
+      "styles": {
+        "background": "linear-gradient(to right, #9D2A1F, transparent)",
+        "border": "none",
+        "height": "4px",
+        "width": "100%"
+      },
+      "id": "1692a9f8-3971-44ae-af26-b77524ed1f24",
+      "customStyles": {
+        "default": {
+          "background": "linear-gradient(to right, #9D2A1F, transparent)",
+          "border": "none",
+          "height": "4px",
+          "width": "100%"
+        }
+      }
+    },
+    "ba179e26-2b3a-4329-bf92-abd477f308f9": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Hit Points: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "27 (5d8 + 5)",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Armor Class: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "13 (leather armor)",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Speed: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "30 ft.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "2fafb154-4b9a-44e3-a758-05ef03f37cac",
+      "id": "ba179e26-2b3a-4329-bf92-abd477f308f9"
+    },
+    "26d62675-6aeb-4c07-9b87-30c912546aa7": {
+      "type": "StatLine",
+      "content": {
+        "stats": [
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "STR"
+                  }
+                ]
+              }
+            ],
+            "value": 8,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Strength"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "DEX"
+                  }
+                ]
+              }
+            ],
+            "value": 14,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Dexterity"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "CON"
+                  }
+                ]
+              }
+            ],
+            "value": 12,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Constitution"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "INT"
+                  }
+                ]
+              }
+            ],
+            "value": 12,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Intelligence"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "WIS"
+                  }
+                ]
+              }
+            ],
+            "value": 13,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Wisdom"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "CHA"
+                  }
+                ]
+              }
+            ],
+            "value": 16,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Charisma"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "parentId": "2fafb154-4b9a-44e3-a758-05ef03f37cac",
+      "displayMode": "values",
+      "id": "26d62675-6aeb-4c07-9b87-30c912546aa7",
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none"
+        },
+        "statLine": {
+          "width": "100%",
+          "display": "flex",
+          "alignItems": "center",
+          "backgroundColor": "transparent"
+        },
+        "name": {
+          "minWidth": "64px",
+          "fontWeight": "bold",
+          "backgroundColor": "transparent",
+          "color": "#58180D",
+          "flex": "1"
+        },
+        "value": {
+          "width": "32px",
+          "backgroundColor": "transparent",
+          "textAlign": "center",
+          "color": "#000000",
+          "fontFamily": "Noto Serif, Georgia, serif"
+        },
+        "description": {
+          "fontFamily": "Noto Serif, Georgia, serif",
+          "fontSize": "13px",
+          "fontWeight": "normal",
+          "backgroundColor": "transparent",
+          "color": "#000",
+          "lineHeight": "1.25",
+          "margin": "4px 0 0 0",
+          "textAlign": "left",
+          "whiteSpace": "normal",
+          "overflow": "visible",
+          "textOverflow": "clip",
+          "minWidth": "100px",
+          "flex": "1"
+        },
+        "topLine": {
+          "width": "100%",
+          "height": "4px",
+          "marginTop": "4px",
+          "marginBottom": "4px",
+          "background": "linear-gradient(to right, #9D2A1F, transparent)"
+        },
+        "bottomLine": {
+          "width": "100%",
+          "height": "4px",
+          "marginTop": "4px",
+          "marginBottom": "4px",
+          "background": "linear-gradient(to right, #9D2A1F, transparent)"
+        },
+        "showTopLine": true,
+        "showBottomLine": true
+      }
+    },
+    "e5c54c8b-3b75-4a30-8ca2-b40045e5baff": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Skills: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Deception (+5), Insight (+3), Stealth (+4)",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Languages: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Common, Sylvan",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Senses: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Darkvision 60 ft., Passive Perception 11",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Challenge Rating: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "1/2",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Experience Points: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "100",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "2fafb154-4b9a-44e3-a758-05ef03f37cac",
+      "id": "e5c54c8b-3b75-4a30-8ca2-b40045e5baff"
+    },
+    "322db47c-3e21-48cb-9a88-1462b177acd1": {
+      "type": "line",
+      "parentId": "2fafb154-4b9a-44e3-a758-05ef03f37cac",
+      "styles": {
+        "background": "linear-gradient(to right, #9D2A1F, transparent)",
+        "border": "none",
+        "height": "4px",
+        "width": "100%"
+      },
+      "id": "322db47c-3e21-48cb-9a88-1462b177acd1",
+      "customStyles": {
+        "default": {
+          "background": "linear-gradient(to right, #9D2A1F, transparent)",
+          "border": "none",
+          "height": "4px",
+          "width": "100%"
+        }
+      }
+    },
+    "08cf8dec-173b-4c6b-9db4-240298a22a72": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Features",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "2fafb154-4b9a-44e3-a758-05ef03f37cac",
+      "id": "08cf8dec-173b-4c6b-9db4-240298a22a72"
+    },
+    "515650f7-dac5-4b50-9466-bbaefc2e2803": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Kitsune Magic: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Shinobu knows Minor Illusion and Disguise Self (self only), Charisma is spellcasting ability (save DC 12).",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Change Shape: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Shinobu can polymorph into a Tiny fox or her humanoid form as an action.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "2fafb154-4b9a-44e3-a758-05ef03f37cac",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "515650f7-dac5-4b50-9466-bbaefc2e2803"
+    },
+    "0e32eded-f803-4625-9bb3-65d7f39c09ab": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Actions",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "2fafb154-4b9a-44e3-a758-05ef03f37cac",
+      "id": "0e32eded-f803-4625-9bb3-65d7f39c09ab"
+    },
+    "c33ac92d-7c4e-455c-a17a-c1508c673827": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "1",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "2fafb154-4b9a-44e3-a758-05ef03f37cac",
+      "id": "c33ac92d-7c4e-455c-a17a-c1508c673827"
+    },
+    "f55b26b5-82a4-4585-b749-cb1ab0319564": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Rapier: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "+4 to hit, reach 5 ft., one target. Hit: 1d8+2 piercing.",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Fox Bite (Fox Form): ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "+3 to hit, reach 5 ft., one target. Hit: 1d4+1 piercing.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "2fafb154-4b9a-44e3-a758-05ef03f37cac",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "f55b26b5-82a4-4585-b749-cb1ab0319564"
+    },
+    "47a9085c-be80-45c0-8806-733935e3a429": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Loot",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "2fafb154-4b9a-44e3-a758-05ef03f37cac",
+      "id": "47a9085c-be80-45c0-8806-733935e3a429"
+    },
+    "1bd7c1f9-19fd-4554-b15b-83480a149523": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Shrine Token: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "A carved fox amulet worth 5 gp",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "2fafb154-4b9a-44e3-a758-05ef03f37cac",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "1bd7c1f9-19fd-4554-b15b-83480a149523"
+    },
+    "af0afc6b-75d7-42fc-a0de-75313a39759c": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Additional Details",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "2fafb154-4b9a-44e3-a758-05ef03f37cac",
+      "id": "af0afc6b-75d7-42fc-a0de-75313a39759c"
+    },
+    "23baf369-f698-460e-904b-3f8fadbb0c2a": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "History: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Found lost as a kitsune child, raised by shrine caretakers.",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Affiliations: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Fox Shrine, Unicorn Clan sympathizers.",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Fear: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Losing her ancestral magic.",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Secret: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Guards a spirit bound long ago by Lion Clan ancestor.",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Quest Hook: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Shinobu pleads: “Help me free what was unjustly bound, or carry me away to face dishonor.”",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "2fafb154-4b9a-44e3-a758-05ef03f37cac",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "23baf369-f698-460e-904b-3f8fadbb0c2a"
+    },
+    "c2b4b288-2856-4d2a-b9e2-199429c9df6f": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Enemies",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "baa73f97-fdf3-4d02-ae27-620e9bfcb288",
+      "id": "c2b4b288-2856-4d2a-b9e2-199429c9df6f"
+    },
+    "0ae66055-7d93-4b9f-b5dd-c7603fd6494e": {
+      "type": "section",
+      "name": "Lion Clan Constable",
+      "childrenIds": [
+        "b8b4f405-379d-4e24-98e9-5544b3744f86"
+      ],
+      "parentId": "baa73f97-fdf3-4d02-ae27-620e9bfcb288",
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Lion Clan Constable",
+                "textFormat": "h2"
+              }
+            ]
+          }
+        ],
+        "showTitle": true,
+        "styles": {
+          "header": {
+            "borderBottom": "1px solid #882619"
+          }
+        }
+      },
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none",
+          "paddingTop": "4px"
+        },
+        "collapsible": false,
+        "isCollapsed": true,
+        "alternatingCollapsedBackground": "white",
+        "nestedCollapsible": true,
+        "wrapInnerWithContentDisplay": true,
+        "maxHp": 11,
+        "currentHp": 11,
+        "armorClass": 16
+      },
+      "id": "0ae66055-7d93-4b9f-b5dd-c7603fd6494e"
+    },
+    "b8b4f405-379d-4e24-98e9-5544b3744f86": {
+      "type": "section",
+      "name": "Lion Clan Constable",
+      "childrenIds": [
+        "7e68f465-68a5-4374-8489-eb878ca4a412",
+        "866c42d5-1dcc-4999-870c-109e6ef92726",
+        "800cbc8b-78b0-47ca-9cfa-056c7b054768",
+        "b0c12c2d-80ef-4f59-a8e4-2318ebd29014",
+        "210ea5af-6ca8-4195-bbc8-53b88b733282",
+        "22b8fe15-a25f-4b35-81b2-69468d450fd0",
+        "aa5b95c6-8151-45b0-99a9-8ea425adb38e",
+        "61a6e0e6-7b3b-4d6d-bbc5-54637e41543c",
+        "523fdbb4-d9e6-4f43-8c96-8f8a660cd244",
+        "602b442f-9977-477e-bd7f-505df24f8730",
+        "4b8ce261-69ba-47a3-aa5d-2f78142f25cc",
+        "4dc1471a-2711-4caa-975a-cba592bf5697",
+        "aec9815b-b237-44bc-ae48-9658942a20e0",
+        "d00b67e5-39f6-4cb7-8b95-a1282fe18b84",
+        "9c877706-05d0-4633-afb9-457f0a53e2cb",
+        "9314ec2a-628a-4d3a-82ed-9ee8e7c672a4"
+      ],
+      "parentId": "0ae66055-7d93-4b9f-b5dd-c7603fd6494e",
+      "header": {
+        "title": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Lion Clan Constable",
+                "textFormat": "h1"
+              }
+            ]
+          }
+        ],
+        "showTitle": true
+      },
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none",
+          "paddingTop": "4px"
+        },
+        "collapsible": false,
+        "isCollapsed": false,
+        "alternatingCollapsedBackground": "white"
+      },
+      "id": "b8b4f405-379d-4e24-98e9-5544b3744f86",
+      "content_type": "monster"
+    },
+    "7e68f465-68a5-4374-8489-eb878ca4a412": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Medium Humanoid (human), Lawful neutral • Clan Constable",
+              "textFormat": "h4"
+            }
+          ]
+        }
+      ],
+      "parentId": "b8b4f405-379d-4e24-98e9-5544b3744f86",
+      "styles": {
+        "paddingBottom": "4px"
+      },
+      "id": "7e68f465-68a5-4374-8489-eb878ca4a412"
+    },
+    "866c42d5-1dcc-4999-870c-109e6ef92726": {
+      "type": "line",
+      "parentId": "b8b4f405-379d-4e24-98e9-5544b3744f86",
+      "styles": {
+        "background": "linear-gradient(to right, #9D2A1F, transparent)",
+        "border": "none",
+        "height": "4px",
+        "width": "100%"
+      },
+      "id": "866c42d5-1dcc-4999-870c-109e6ef92726",
+      "customStyles": {
+        "default": {
+          "background": "linear-gradient(to right, #9D2A1F, transparent)",
+          "border": "none",
+          "height": "4px",
+          "width": "100%"
+        }
+      }
+    },
+    "800cbc8b-78b0-47ca-9cfa-056c7b054768": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Description",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "b8b4f405-379d-4e24-98e9-5544b3744f86",
+      "id": "800cbc8b-78b0-47ca-9cfa-056c7b054768"
+    },
+    "b0c12c2d-80ef-4f59-a8e4-2318ebd29014": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "A stern samurai in partial plate embossed with the Lion crest.",
+              "textFormat": "description"
+            }
+          ]
+        }
+      ],
+      "parentId": "b8b4f405-379d-4e24-98e9-5544b3744f86",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "b0c12c2d-80ef-4f59-a8e4-2318ebd29014"
+    },
+    "210ea5af-6ca8-4195-bbc8-53b88b733282": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Lore",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "b8b4f405-379d-4e24-98e9-5544b3744f86",
+      "id": "210ea5af-6ca8-4195-bbc8-53b88b733282"
+    },
+    "22b8fe15-a25f-4b35-81b2-69468d450fd0": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Devoted to preserving Lion Clan order, these guards enforce magistrate decrees without mercy.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "b8b4f405-379d-4e24-98e9-5544b3744f86",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "22b8fe15-a25f-4b35-81b2-69468d450fd0"
+    },
+    "aa5b95c6-8151-45b0-99a9-8ea425adb38e": {
+      "type": "line",
+      "parentId": "b8b4f405-379d-4e24-98e9-5544b3744f86",
+      "styles": {
+        "background": "linear-gradient(to right, #9D2A1F, transparent)",
+        "border": "none",
+        "height": "4px",
+        "width": "100%"
+      },
+      "id": "aa5b95c6-8151-45b0-99a9-8ea425adb38e",
+      "customStyles": {
+        "default": {
+          "background": "linear-gradient(to right, #9D2A1F, transparent)",
+          "border": "none",
+          "height": "4px",
+          "width": "100%"
+        }
+      }
+    },
+    "61a6e0e6-7b3b-4d6d-bbc5-54637e41543c": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Hit Points: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "11 (2d8 + 2)",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Armor Class: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "16 (chain shirt)",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Speed: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "30 ft.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "b8b4f405-379d-4e24-98e9-5544b3744f86",
+      "id": "61a6e0e6-7b3b-4d6d-bbc5-54637e41543c"
+    },
+    "523fdbb4-d9e6-4f43-8c96-8f8a660cd244": {
+      "type": "StatLine",
+      "content": {
+        "stats": [
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "STR"
+                  }
+                ]
+              }
+            ],
+            "value": 13,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Strength"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "DEX"
+                  }
+                ]
+              }
+            ],
+            "value": 12,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Dexterity"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "CON"
+                  }
+                ]
+              }
+            ],
+            "value": 12,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Constitution"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "INT"
+                  }
+                ]
+              }
+            ],
+            "value": 10,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Intelligence"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "WIS"
+                  }
+                ]
+              }
+            ],
+            "value": 11,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Wisdom"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "CHA"
+                  }
+                ]
+              }
+            ],
+            "value": 10,
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Charisma"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "parentId": "b8b4f405-379d-4e24-98e9-5544b3744f86",
+      "displayMode": "values",
+      "id": "523fdbb4-d9e6-4f43-8c96-8f8a660cd244",
+      "customStyles": {
+        "default": {
+          "backgroundColor": "transparent",
+          "border": "none"
+        },
+        "statLine": {
+          "width": "100%",
+          "display": "flex",
+          "alignItems": "center",
+          "backgroundColor": "transparent"
+        },
+        "name": {
+          "minWidth": "64px",
+          "fontWeight": "bold",
+          "backgroundColor": "transparent",
+          "color": "#58180D",
+          "flex": "1"
+        },
+        "value": {
+          "width": "32px",
+          "backgroundColor": "transparent",
+          "textAlign": "center",
+          "color": "#000000",
+          "fontFamily": "Noto Serif, Georgia, serif"
+        },
+        "description": {
+          "fontFamily": "Noto Serif, Georgia, serif",
+          "fontSize": "13px",
+          "fontWeight": "normal",
+          "backgroundColor": "transparent",
+          "color": "#000",
+          "lineHeight": "1.25",
+          "margin": "4px 0 0 0",
+          "textAlign": "left",
+          "whiteSpace": "normal",
+          "overflow": "visible",
+          "textOverflow": "clip",
+          "minWidth": "100px",
+          "flex": "1"
+        },
+        "topLine": {
+          "width": "100%",
+          "height": "4px",
+          "marginTop": "4px",
+          "marginBottom": "4px",
+          "background": "linear-gradient(to right, #9D2A1F, transparent)"
+        },
+        "bottomLine": {
+          "width": "100%",
+          "height": "4px",
+          "marginTop": "4px",
+          "marginBottom": "4px",
+          "background": "linear-gradient(to right, #9D2A1F, transparent)"
+        },
+        "showTopLine": true,
+        "showBottomLine": true
+      }
+    },
+    "602b442f-9977-477e-bd7f-505df24f8730": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Skills: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Athletics (+3)",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Languages: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Common",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Senses: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Passive Perception 10",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Challenge Rating: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "1/8",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Experience Points: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "25",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "b8b4f405-379d-4e24-98e9-5544b3744f86",
+      "id": "602b442f-9977-477e-bd7f-505df24f8730"
+    },
+    "4b8ce261-69ba-47a3-aa5d-2f78142f25cc": {
+      "type": "line",
+      "parentId": "b8b4f405-379d-4e24-98e9-5544b3744f86",
+      "styles": {
+        "background": "linear-gradient(to right, #9D2A1F, transparent)",
+        "border": "none",
+        "height": "4px",
+        "width": "100%"
+      },
+      "id": "4b8ce261-69ba-47a3-aa5d-2f78142f25cc",
+      "customStyles": {
+        "default": {
+          "background": "linear-gradient(to right, #9D2A1F, transparent)",
+          "border": "none",
+          "height": "4px",
+          "width": "100%"
+        }
+      }
+    },
+    "4dc1471a-2711-4caa-975a-cba592bf5697": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Actions",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "b8b4f405-379d-4e24-98e9-5544b3744f86",
+      "id": "4dc1471a-2711-4caa-975a-cba592bf5697"
+    },
+    "aec9815b-b237-44bc-ae48-9658942a20e0": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Put text here",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "b8b4f405-379d-4e24-98e9-5544b3744f86",
+      "id": "aec9815b-b237-44bc-ae48-9658942a20e0"
+    },
+    "d00b67e5-39f6-4cb7-8b95-a1282fe18b84": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Longsword: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "+3 to hit, reach 5 ft., one target. Hit: 1d8+1 slashing.",
+              "textFormat": "paragraph"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Javelin: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "+3 to hit, range 30/120 ft., one target. Hit: 1d6+1 piercing.",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "b8b4f405-379d-4e24-98e9-5544b3744f86",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "d00b67e5-39f6-4cb7-8b95-a1282fe18b84"
+    },
+    "9c877706-05d0-4633-afb9-457f0a53e2cb": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Loot",
+              "textFormat": "underline-h2"
+            }
+          ]
+        }
+      ],
+      "parentId": "b8b4f405-379d-4e24-98e9-5544b3744f86",
+      "id": "9c877706-05d0-4633-afb9-457f0a53e2cb"
+    },
+    "9314ec2a-628a-4d3a-82ed-9ee8e7c672a4": {
+      "type": "simple",
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Lion Clan Emblem: ",
+              "textFormat": "paragraph",
+              "bold": true
+            },
+            {
+              "text": "Badge of rank, can be sold for 1 gp",
+              "textFormat": "paragraph"
+            }
+          ]
+        }
+      ],
+      "parentId": "b8b4f405-379d-4e24-98e9-5544b3744f86",
+      "styles": {
+        "paddingBottom": "8px"
+      },
+      "id": "9314ec2a-628a-4d3a-82ed-9ee8e7c672a4"
+    }
+  }
+}
