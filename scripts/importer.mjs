@@ -335,6 +335,35 @@ export async function createFeatFromWorldsmith(data, { folderId = null, renderSh
 }
 
 /**
+ * Import embedded NPC actors, treasure piles, and item/spell/feat documents
+ * collected during structured parsing of a narrative or container document.
+ * @param {object} data
+ * @param {object} [options]
+ * @param {string|null} [options.folderId]
+ * @returns {Promise<{actors: Actor[], items: Item[]}>}
+ */
+export async function importAllEmbeddedContent(data, { folderId = null } = {}) {
+  const actors = [];
+  const items = [];
+  const actorFolder = resolveFolder(folderId, "Actor");
+
+  for (const actorSource of data.actors ?? []) {
+    const actor = await createActorFromWorldsmith(actorSource, { folderId: actorFolder, renderSheet: false });
+    if (actor) actors.push(actor);
+  }
+
+  for (const treasureSource of data.treasures ?? []) {
+    const result = await createTreasureFromWorldsmith(treasureSource, { folderId: actorFolder, renderSheet: false });
+    actors.push(...(result.actors ?? []));
+    items.push(...(result.items ?? []));
+  }
+
+  items.push(...await importEmbeddedContentItems(data, { folderId }));
+
+  return { actors, items };
+}
+
+/**
  * Create a JournalEntry from a Worldsmith quest export.
  * @param {object} data
  * @param {object} [options]
@@ -350,22 +379,7 @@ export async function createJournalFromWorldsmith(data, { folderId = null, rende
   const journal = await JournalEntry.create(journalData, { renderSheet });
   for (const warning of warnings) console.warn(`${MODULE_ID} | ${journalData.name}: ${warning}`);
 
-  const actors = [];
-  const actorFolder = resolveFolder(folderId, "Actor");
-  for (const actorSource of data.actors ?? []) {
-    const { actorData, warnings: actorWarnings } = convertWorldsmith(actorSource);
-    if (actorFolder) actorData.folder = actorFolder;
-    const actor = await Actor.create(actorData);
-    if (actor) actors.push(actor);
-    for (const warning of actorWarnings) console.warn(`${MODULE_ID} | ${actorData.name}: ${warning}`);
-  }
-
-  for (const treasureSource of data.treasures ?? []) {
-    const result = await createTreasureFromWorldsmith(treasureSource, { folderId: actorFolder, renderSheet: false });
-    actors.push(...(result.actors ?? []));
-  }
-
-  const items = await importEmbeddedContentItems(data, { folderId });
+  const { actors, items } = await importAllEmbeddedContent(data, { folderId });
 
   return { actors, items, journals: journal ? [journal] : [] };
 }
@@ -485,8 +499,10 @@ export async function createDungeonFromWorldsmith(data, { folderId = null, rende
   const journal = await JournalEntry.create(journalData, { renderSheet });
   for (const warning of warnings) console.warn(`${MODULE_ID} | ${journalData.name}: ${warning}`);
 
-  const actors = [];
-  const items = [];
+  const embedded = await importAllEmbeddedContent(data, { folderId });
+  const actors = [...embedded.actors];
+  const items = [...embedded.items];
+
   for (const encounterSource of data.encounters ?? []) {
     const result = await createEncounterFromWorldsmith(encounterSource, { folderId, renderSheet: false });
     actors.push(...(result.actors ?? []));
@@ -512,17 +528,7 @@ export async function createRollTableFromWorldsmith(data, { folderId = null, ren
   const table = await RollTable.create(tableData, { renderSheet });
   for (const warning of warnings) console.warn(`${MODULE_ID} | ${tableData.name}: ${warning}`);
 
-  const actors = [];
-  const actorFolder = resolveFolder(folderId, "Actor");
-  for (const actorSource of data.actors ?? []) {
-    const { actorData, warnings: actorWarnings } = convertWorldsmith(actorSource);
-    if (actorFolder) actorData.folder = actorFolder;
-    const actor = await Actor.create(actorData);
-    if (actor) actors.push(actor);
-    for (const warning of actorWarnings) console.warn(`${MODULE_ID} | ${actorData.name}: ${warning}`);
-  }
-
-  const items = await importEmbeddedContentItems(data, { folderId });
+  const { actors, items } = await importAllEmbeddedContent(data, { folderId });
 
   return { actors, items, journals: [], tables: table ? [table] : [] };
 }
@@ -538,6 +544,7 @@ export async function createFromWorldsmith(data, options = {}) {
   if (type === "shop") return createShopFromWorldsmith(data, options);
   if (type === "treasure") return createTreasureFromWorldsmith(data, options);
   if (type === "world") return createJournalFromWorldsmith(data, options);
+  if (type === "story") return createJournalFromWorldsmith(data, options);
   if (type === "session") return createJournalFromWorldsmith(data, options);
   if (type === "deity") return createJournalFromWorldsmith(data, options);
   if (type === "encounter") return createEncounterFromWorldsmith(data, options);

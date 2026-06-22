@@ -25,7 +25,7 @@ import {
 import {
   createActorFromWorldsmith, createFeatFromWorldsmith, createFromWorldsmith, createItemFromWorldsmith,
   createJournalFromWorldsmith, createEncounterFromWorldsmith, createGroupFromWorldsmith, createDungeonFromWorldsmith, createRollTableFromWorldsmith, createShopFromWorldsmith, createSpellFromWorldsmith,
-  createTreasureFromWorldsmith, importFromText
+  createTreasureFromWorldsmith, importAllEmbeddedContent, importFromText
 } from "./importer.mjs";
 import WorldsmithImportApp from "./import-app.mjs";
 
@@ -69,6 +69,7 @@ const api = {
   createSpellFromWorldsmith,
   createFeatFromWorldsmith,
   createFromWorldsmith,
+  importAllEmbeddedContent,
   importFromText,
   findSrdSpell,
   findSrdFeat,

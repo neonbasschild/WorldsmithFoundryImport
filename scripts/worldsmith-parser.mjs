@@ -1352,7 +1352,7 @@ function normalizeDungeon(root, walk, items) {
     rooms: collectDungeonRooms(root, items),
     encounters: collectDungeonEncounters(root, items)
   };
-  return dungeon;
+  return attachEmbeddedContent(dungeon, root, items);
 }
 
 /**
