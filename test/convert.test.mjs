@@ -576,6 +576,13 @@ function activitiesOf(item) {
 }
 
 {
+  console.log("Story document kind detection");
+  const story = { documentKind: "story", name: "The Fall of Ashford" };
+  assert(detectWorldsmithType(story) === "story", "story type detected from documentKind");
+  assert(detectWorldsmithType({ documentKind: "quest", name: "Rescue the Prince" }) === "quest", "quest type detected from documentKind");
+}
+
+{
   console.log("Structured session (Shadows over Tsuma)");
   const raw = loadStructured("Shadows_over_Tsuma-session_f275.json");
   const normalized = normalizeWorldsmithData(raw);
@@ -665,6 +672,9 @@ function activitiesOf(item) {
   assert(normalized.encounters.length === 5, "dungeon extracts five encounters");
   assert(normalized.encounters.every(e => e.documentKind === "encounter"), "dungeon encounter kind");
   assert(normalized.encounters.some(e => e.members.length > 0), "dungeon encounter has members");
+  assert(Array.isArray(normalized.actors), "dungeon has embedded actors array");
+  assert(Array.isArray(normalized.items), "dungeon has embedded items array");
+  assert(Array.isArray(normalized.treasures), "dungeon has embedded treasures array");
   const { journalData } = convertWorldsmithQuest(normalized);
   assert(journalData.flags["worldsmith-foundry-import"].kind === "dungeon", "dungeon journal kind");
   assert(journalData.pages.some(p => p.name === "Lore"), "dungeon lore page");

@@ -10,7 +10,8 @@ A [Foundry VTT](https://foundryvtt.com/) module that converts and imports
 - **Shops** → [Item Piles](https://fantasycomputer.works/FoundryVTT-ItemPiles/)
   merchant actors, with their owners imported as separate NPCs.
 - **Treasure / loot** → Item Piles loot pile actors (with currency).
-- **Quests** → journal entries (one page per quest section).
+- **Quests / stories / sessions** → journal entries (one page per section), with
+  embedded NPCs, items, spells, feats, and treasure piles imported alongside.
 - **Encounters** → dnd5e encounter group actors with member NPCs.
 - **Groups** → dnd5e faction/party group actors with member NPCs.
 - **Dungeons** → journal entries with room pages, plus encounter groups per room.
@@ -178,6 +179,24 @@ The original JSON is stored under the journal entry's module flags. (Quests that
 are embedded inside a creature or shop owner are also folded into that actor's
 biography; this handles the standalone quest exports.)
 
+Embedded **NPC stat blocks** are imported as separate actors, embedded **magic
+items / spells / feats** become world items (with SRD compendium preference when
+a match exists), and embedded **treasure hoards** become Item Piles loot piles.
+Everything is created during import so the journal, actors, and items are ready
+to use immediately.
+
+### Stories
+
+Worldsmith story exports use the same journal layout as quests, plus any extra
+narrative sections present in the export. Embedded NPCs, items, spells, feats,
+and treasure piles are imported the same way as quests.
+
+### Sessions
+
+Worldsmith session exports become a **journal entry** with scene pages, key
+details, objectives, and rewards. Embedded NPCs, items, spells, feats, and
+treasure piles are imported alongside the journal.
+
 ### Encounters
 
 Worldsmith encounter exports become a dnd5e **encounter** group actor (the actor
@@ -217,6 +236,8 @@ actor** per room encounter:
 - One journal page per **room**, combining that room's encounters, traps, and puzzles
 - Each embedded encounter section becomes its own encounter group actor (with member
   NPCs and loot), using the same rules as standalone encounter imports
+- Dungeon-level embedded NPCs, items, spells, feats, and treasure piles (outside
+  room encounters) are also imported alongside the journal
 
 ### Puzzles
 
@@ -301,6 +322,9 @@ const { pile } = WorldsmithImport.convertWorldsmithTreasure(parsedTreasure);
 const { journalData } = WorldsmithImport.convertWorldsmithQuest(parsedQuest);
 const { itemData: spellData } = WorldsmithImport.convertWorldsmithSpell(parsedSpell);
 const { itemData: featData } = WorldsmithImport.convertWorldsmithFeat(parsedFeat);
+
+// Import embedded actors/items from a parsed narrative document (without creating the journal)
+await WorldsmithImport.importAllEmbeddedContent(parsedQuest, { folderId });
 ```
 
 ## Examples
